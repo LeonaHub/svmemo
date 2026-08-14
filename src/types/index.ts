@@ -1,8 +1,9 @@
-export type { Word, WordForms, Pos, Cefr, Gender } from './word'
+export type { Word, WordForms, Pos, Cefr, Gender, Example } from './word'
 export {
   wordSchema,
   wordListSchema,
   wordFormsSchema,
+  exampleSchema,
   posSchema,
   cefrSchema,
   genderSchema,
@@ -14,6 +15,7 @@ export type {
   Deck,
   DeckWord,
   CardRecord,
+  SavedCard,
   ReviewLogRecord,
   Settings,
   DailyStats,

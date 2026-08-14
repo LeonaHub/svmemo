@@ -1,4 +1,4 @@
-import a1Core from '../data/a1-core.json'
+import { a1Words } from '../data/a1'
 import {
   A1_CORE_DECK_ID,
   DEFAULT_SETTINGS,
@@ -14,42 +14,76 @@ export type SeedResult = {
 let inFlight: Promise<SeedResult> | null = null
 
 export function seedIfEmpty(): Promise<SeedResult> {
-  inFlight ??= runSeed()
+  inFlight ??= syncCatalog()
   return inFlight
 }
 
-async function runSeed(): Promise<SeedResult> {
-  const existing = await db.words.count()
-  if (existing > 0) {
-    return { seeded: false, wordCount: existing }
-  }
-
-  const words = wordListSchema.parse(a1Core)
+async function syncCatalog(): Promise<SeedResult> {
+  const words = wordListSchema.parse(a1Words)
+  const keepIds = new Set(words.map((word) => word.id))
 
   await db.transaction(
     'rw',
-    [db.words, db.decks, db.deckWords, db.settings],
+    [db.words, db.decks, db.deckWords, db.cards, db.reviewLogs, db.settings],
     async () => {
-      if ((await db.words.count()) > 0) {
-        return
+      await db.words.clear()
+      await db.words.bulkPut(words)
+
+      const deck = await db.decks.get(A1_CORE_DECK_ID)
+      if (!deck) {
+        await db.decks.add({
+          id: A1_CORE_DECK_ID,
+          name: '我的词表',
+          cefr: 'B1',
+          description: '当前词表：你选定的单词，含变形和例句。',
+        })
+      } else {
+        await db.decks.update(A1_CORE_DECK_ID, {
+          name: '我的词表',
+          cefr: 'B1',
+          description: '当前词表：你选定的单词，含变形和例句。',
+        })
       }
 
-      await db.words.bulkAdd(words)
-      await db.decks.add({
-        id: A1_CORE_DECK_ID,
-        name: 'A1 核心',
-        cefr: 'A1',
-        description: '第一批校对过的 A1 词，用来跑通学习闭环。',
-      })
+      await db.deckWords.clear()
       await db.deckWords.bulkAdd(
         words.map((word) => ({
           deckId: A1_CORE_DECK_ID,
           wordId: word.id,
         })),
       )
-      await db.settings.add(DEFAULT_SETTINGS)
+
+      const staleCards = (await db.cards.toArray()).filter(
+        (card) => !keepIds.has(card.wordId),
+      )
+      if (staleCards.length > 0) {
+        await db.cards.bulkDelete(
+          staleCards
+            .map((card) => card.id)
+            .filter((id): id is number => typeof id === 'number'),
+        )
+      }
+
+      const staleLogs = (await db.reviewLogs.toArray()).filter(
+        (log) => !keepIds.has(log.wordId),
+      )
+      if (staleLogs.length > 0) {
+        await db.reviewLogs.bulkDelete(
+          staleLogs
+            .map((log) => log.id)
+            .filter((id): id is number => typeof id === 'number'),
+        )
+      }
+
+      const settings = await db.settings.get('default')
+      if (!settings) {
+        await db.settings.add(DEFAULT_SETTINGS)
+      }
     },
   )
 
-  return { seeded: true, wordCount: await db.words.count() }
+  return {
+    seeded: true,
+    wordCount: await db.words.count(),
+  }
 }

@@ -64,6 +64,7 @@ export type CardType = z.infer<typeof cardTypeSchema>
 export type Deck = z.infer<typeof deckSchema>
 export type DeckWord = z.infer<typeof deckWordSchema>
 export type CardRecord = z.infer<typeof cardRecordSchema>
+export type SavedCard = CardRecord & { id: number }
 export type ReviewLogRecord = z.infer<typeof reviewLogSchema>
 export type Settings = z.infer<typeof settingsSchema>
 export type DailyStats = z.infer<typeof dailyStatsSchema>
