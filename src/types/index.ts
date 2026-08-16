@@ -1,9 +1,11 @@
-export type { Word, WordForms, Pos, Cefr, Gender, Example } from './word'
+export type { Word, WordForms, Pos, Cefr, Gender, Example, Compound, CompoundPart } from './word'
 export {
   wordSchema,
   wordListSchema,
   wordFormsSchema,
   exampleSchema,
+  compoundSchema,
+  compoundPartSchema,
   posSchema,
   cefrSchema,
   genderSchema,
@@ -19,6 +21,7 @@ export type {
   ReviewLogRecord,
   Settings,
   DailyStats,
+  WordMark,
 } from './progress'
 export {
   cardTypeSchema,
@@ -28,6 +31,7 @@ export {
   reviewLogSchema,
   settingsSchema,
   dailyStatsSchema,
+  wordMarkSchema,
   DEFAULT_SETTINGS,
   A1_CORE_DECK_ID,
 } from './progress'

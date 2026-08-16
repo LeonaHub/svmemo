@@ -103,8 +103,13 @@ export function spellingDiff(input: string, answer: string): DiffMark[] {
   const expected = normalizeSpelling(answer)
   const length = Math.max(typed.length, expected.length)
 
-  return Array.from({ length }, (_, index) => ({
-    char: expected[index] ?? typed[index] ?? '',
-    ok: typed[index] !== undefined && typed[index] === expected[index],
-  }))
+  return Array.from({ length }, (_, index) => {
+    const expectedChar = expected[index] ?? ''
+    const typedChar = typed[index]
+    const ok = typedChar !== undefined && typedChar === expectedChar
+    return {
+      char: ok ? expectedChar : typedChar || '\u00A0',
+      ok,
+    }
+  })
 }

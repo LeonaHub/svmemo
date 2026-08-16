@@ -42,6 +42,16 @@ export const exampleSchema = z.object({
   zh: z.string().min(1),
 })
 
+export const compoundPartSchema = z.object({
+  sv: z.string().min(1),
+  zh: z.string().min(1),
+})
+
+export const compoundSchema = z.object({
+  parts: z.array(compoundPartSchema).min(2),
+  together: z.string().min(1),
+})
+
 export const wordSchema = z.object({
   /** 主键，格式 `{lemma}__{pos}`，空格改成下划线，例如 `hej_då__phrase` */
   id: z.string().min(1),
@@ -54,6 +64,7 @@ export const wordSchema = z.object({
   glossEn: z.string().min(1).optional(),
   examples: z.array(exampleSchema).optional(),
   tags: z.array(z.string().min(1)).optional(),
+  compound: compoundSchema.optional(),
 })
 
 export const wordListSchema = z.array(wordSchema)
@@ -63,6 +74,8 @@ export type Cefr = z.infer<typeof cefrSchema>
 export type Gender = z.infer<typeof genderSchema>
 export type WordForms = z.infer<typeof wordFormsSchema>
 export type Example = z.infer<typeof exampleSchema>
+export type CompoundPart = z.infer<typeof compoundPartSchema>
+export type Compound = z.infer<typeof compoundSchema>
 export type Word = z.infer<typeof wordSchema>
 
 export function wordId(lemma: string, pos: Pos): string {

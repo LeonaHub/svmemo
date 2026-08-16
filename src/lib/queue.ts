@@ -1,4 +1,4 @@
-import type { SavedCard, Settings } from '../types/progress'
+import type { SavedCard } from '../types/progress'
 
 export const ROUND_SIZE = 7
 
@@ -31,18 +31,11 @@ export function shuffle<T>(
   return next
 }
 
+/** 今日新词 = 计划里还没背过的词。从词库加入多少，今天就能背多少。 */
 export function planDailyQueue(
-  settings: Pick<Settings, 'dailyLimit' | 'maxNewPerDay'>,
-  dueCount: number,
   unlearnedWordIds: readonly string[],
 ): { newWordIds: string[] } {
-  const remaining = Math.max(0, settings.dailyLimit - dueCount)
-  const newCount = Math.min(
-    remaining,
-    settings.maxNewPerDay,
-    unlearnedWordIds.length,
-  )
-  return { newWordIds: unlearnedWordIds.slice(0, newCount) }
+  return { newWordIds: [...unlearnedWordIds] }
 }
 
 export function pickStudyMode(reps: number): 'recognition' | 'spelling' {

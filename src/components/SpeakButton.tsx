@@ -1,18 +1,50 @@
-import { useState, type MouseEvent } from 'react'
-import { speakSwedish, ttsHint, type SpeakResult } from '../lib/tts'
+import { useEffect, useState, type MouseEvent } from 'react'
+import { speakSwedish, stopSpeaking, ttsHint, type SpeakResult } from '../lib/tts'
 
 type SpeakButtonProps = {
   text: string
   label?: string
+  autoPlay?: boolean
 }
 
-export function SpeakButton({ text, label = '发音' }: SpeakButtonProps) {
+export function SpeakButton({
+  text,
+  label = '发音',
+  autoPlay = false,
+}: SpeakButtonProps) {
   const [hint, setHint] = useState<string | null>(null)
+
+  async function play() {
+    const result: SpeakResult = await speakSwedish(text)
+    setHint(ttsHint(result))
+  }
+
+  useEffect(() => {
+    if (!autoPlay) {
+      return
+    }
+    let cancelled = false
+    void speakSwedish(text).then((result) => {
+      if (!cancelled) {
+        setHint(ttsHint(result))
+      }
+    })
+    return () => {
+      cancelled = true
+      stopSpeaking()
+    }
+  }, [autoPlay, text])
+
+  function handleMouseDown(event: MouseEvent<HTMLButtonElement>) {
+    event.preventDefault()
+    event.stopPropagation()
+  }
 
   async function handleClick(event: MouseEvent<HTMLButtonElement>) {
     event.stopPropagation()
-    const result: SpeakResult = await speakSwedish(text)
-    setHint(ttsHint(result))
+    const button = event.currentTarget
+    await play()
+    button.blur()
   }
 
   return (
@@ -21,6 +53,7 @@ export function SpeakButton({ text, label = '发音' }: SpeakButtonProps) {
         type="button"
         className="icon-btn"
         aria-label={label}
+        onMouseDown={handleMouseDown}
         onClick={(event) => void handleClick(event)}
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

@@ -15,6 +15,18 @@ type StudySessionProps = {
   onExit: () => void
 }
 
+function isPlainKey(event: KeyboardEvent, key: string): boolean {
+  return (
+    event.key === key &&
+    !event.repeat &&
+    !event.isComposing &&
+    !event.altKey &&
+    !event.ctrlKey &&
+    !event.metaKey &&
+    !event.shiftKey
+  )
+}
+
 function ActionScreen({
   title,
   message,
@@ -28,7 +40,7 @@ function ActionScreen({
 }) {
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (event.key !== 'Enter' || event.repeat || event.isComposing) {
+      if (!isPlainKey(event, 'Enter') && !isPlainKey(event, 'ArrowRight')) {
         return
       }
       event.preventDefault()
@@ -54,6 +66,19 @@ function ActionScreen({
   )
 }
 
+function checkpointMessage(current: StudyItem, next: StudyItem): string | null {
+  if (next.round <= current.round) {
+    return null
+  }
+  if (current.kind === 'due') {
+    return '到期复习过完了。下面按每组 7 个学新词：先看卡片，再拼写。'
+  }
+  if (current.kind === 'round-review') {
+    return `第 ${current.round} 组过完了。下一组还是先熟悉，再立刻复习。`
+  }
+  return null
+}
+
 export function StudySession({ items: initialItems, onExit }: StudySessionProps) {
   const [items, setItems] = useState(initialItems)
   const [index, setIndex] = useState(0)
@@ -63,17 +88,43 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
   const [finished, setFinished] = useState(initialItems.length === 0)
   const [attemptKey, setAttemptKey] = useState(0)
   const [checkpoint, setCheckpoint] = useState<string | null>(null)
-  const fsrsDoneRef = useRef(false)
+  const committedRef = useRef(new Set<number>())
 
   const item = items[index]
   const remaining = Math.max(0, items.length - index)
   const progress = items.length === 0 ? 0 : (index / items.length) * 100
 
   useEffect(() => {
-    fsrsDoneRef.current = false
     setAttemptKey(0)
     setFlipped(false)
   }, [index, item?.card.id])
+
+  function goBack() {
+    if (finished || busy) {
+      return
+    }
+    if (checkpoint) {
+      setCheckpoint(null)
+      setIndex((current) => Math.max(0, current - 1))
+      return
+    }
+    if (index <= 0) {
+      return
+    }
+    setIndex((current) => current - 1)
+  }
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (!isPlainKey(event, 'ArrowLeft')) {
+        return
+      }
+      event.preventDefault()
+      goBack()
+    }
+    window.addEventListener('keydown', onKey, true)
+    return () => window.removeEventListener('keydown', onKey, true)
+  }, [busy, index, checkpoint, finished])
 
   async function commit(rating: Grade): Promise<boolean> {
     if (!item || busy) {
@@ -98,19 +149,6 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
     } finally {
       setBusy(false)
     }
-  }
-
-  function checkpointMessage(current: StudyItem, next: StudyItem): string | null {
-    if (next.round <= current.round) {
-      return null
-    }
-    if (current.kind === 'due') {
-      return '到期复习过完了。下面按每组 7 个学新词：先看卡片，再拼写。'
-    }
-    if (current.kind === 'round-review') {
-      return `第 ${current.round} 组过完了。下一组还是先熟悉，再立刻复习。`
-    }
-    return null
   }
 
   async function advance(requeued: boolean) {
@@ -139,10 +177,10 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
   }
 
   async function handleSpellingAnswer(rating: Grade) {
-    if (!item || fsrsDoneRef.current) {
+    if (!item || committedRef.current.has(index)) {
       return
     }
-    fsrsDoneRef.current = true
+    committedRef.current.add(index)
     await submitReview(item.card, rating)
   }
 
@@ -154,12 +192,48 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
     setAttemptKey((current) => current + 1)
   }
 
+  async function skipMasteredWord() {
+    if (!item) {
+      return
+    }
+    const wordId = item.word.id
+    const skipped = item
+    const nextItems = items.filter((entry, entryIndex) => {
+      if (entryIndex < index) {
+        return true
+      }
+      return entry.word.id !== wordId
+    })
+    setItems(nextItems)
+    setFlipped(false)
+    setAttemptKey(0)
+    if (index >= nextItems.length) {
+      await markTodayComplete()
+      setFinished(true)
+      return
+    }
+    const next = nextItems[index]
+    if (next) {
+      const message = checkpointMessage(skipped, next)
+      if (message) {
+        setCheckpoint(message)
+      }
+    }
+  }
+
+  function handleMasteredChange(mastered: boolean) {
+    if (!mastered) {
+      return
+    }
+    void skipMasteredWord()
+  }
+
   if (finished || (!item && !checkpoint)) {
     return (
       <ActionScreen
         title="今天先到这里"
         message="进度已经记在这台浏览器里。明天打开会先出现到期复习。"
-        actionLabel="回到今日（回车）"
+        actionLabel="回到今日（回车 / →）"
         onAction={onExit}
       />
     )
@@ -170,7 +244,7 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
       <ActionScreen
         title="这一组过完了"
         message={checkpoint}
-        actionLabel="继续（回车）"
+        actionLabel="继续（回车 / →）"
         onAction={() => setCheckpoint(null)}
       />
     )
@@ -203,6 +277,7 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
           onFlip={() => setFlipped(true)}
           onContinue={() => void advance(false)}
           onGrade={(rating) => void handleGrade(rating)}
+          onMasteredChange={handleMasteredChange}
         />
       ) : (
         <SpellingCard
@@ -211,6 +286,7 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
           kicker={itemKicker(item)}
           onAnswer={handleSpellingAnswer}
           onContinue={handleSpellingContinue}
+          onMasteredChange={handleMasteredChange}
         />
       )}
     </section>

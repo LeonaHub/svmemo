@@ -1,17 +1,26 @@
 import { useEffect, useState } from 'react'
 import { seedIfEmpty } from './db/seed'
 import { StudySession } from './components/StudySession'
+import { MatchSession } from './components/MatchSession'
+import { SentenceSession } from './components/SentenceSession'
+import { SentencePage } from './components/SentencePage'
 import { TodayPage } from './components/TodayPage'
 import { WordList } from './components/WordList'
-import type { StudyItem } from './db/study'
+import type { MatchPair, StudyItem } from './db/study'
+import type { SentenceItem } from './lib/sentence-drill'
 import './App.css'
 
-type Tab = 'today' | 'words'
+type Tab = 'today' | 'sentences' | 'words'
+
+type Session =
+  | { type: 'words'; items: StudyItem[] }
+  | { type: 'match'; pairs: MatchPair[] }
+  | { type: 'sentences'; items: SentenceItem[] }
 
 export default function App() {
   const [seedError, setSeedError] = useState<string | null>(null)
   const [tab, setTab] = useState<Tab>('today')
-  const [session, setSession] = useState<StudyItem[] | null>(null)
+  const [session, setSession] = useState<Session | null>(null)
 
   useEffect(() => {
     void seedIfEmpty().catch((error: unknown) => {
@@ -19,10 +28,29 @@ export default function App() {
     })
   }, [])
 
-  if (session) {
+  if (session?.type === 'words') {
     return (
       <div className="shell shell-study">
-        <StudySession items={session} onExit={() => setSession(null)} />
+        <StudySession items={session.items} onExit={() => setSession(null)} />
+      </div>
+    )
+  }
+
+  if (session?.type === 'match') {
+    return (
+      <div className="shell shell-study is-match">
+        <MatchSession
+          pairs={session.pairs.filter((pair) => pair.word?.id)}
+          onExit={() => setSession(null)}
+        />
+      </div>
+    )
+  }
+
+  if (session?.type === 'sentences') {
+    return (
+      <div className="shell shell-study">
+        <SentenceSession items={session.items} onExit={() => setSession(null)} />
       </div>
     )
   }
@@ -42,6 +70,18 @@ export default function App() {
         </button>
         <button
           type="button"
+          className={tab === 'sentences' ? 'tab active' : 'tab'}
+          onClick={() => setTab('sentences')}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M5 7h14" />
+            <path d="M5 12h14" />
+            <path d="M5 17h9" />
+          </svg>
+          例句
+        </button>
+        <button
+          type="button"
           className={tab === 'words' ? 'tab active' : 'tab'}
           onClick={() => setTab('words')}
         >
@@ -57,7 +97,15 @@ export default function App() {
         {seedError ? <p className="error">{seedError}</p> : null}
         {tab === 'today' ? (
           <TodayPage
-            onStart={setSession}
+            onStart={(items) => setSession({ type: 'words', items })}
+            onStartMatch={(pairs) => setSession({ type: 'match', pairs })}
+            onStartSentences={(items) => setSession({ type: 'sentences', items })}
+            onBrowseWords={() => setTab('words')}
+            onBrowseSentences={() => setTab('sentences')}
+          />
+        ) : tab === 'sentences' ? (
+          <SentencePage
+            onStart={(items) => setSession({ type: 'sentences', items })}
             onBrowseWords={() => setTab('words')}
           />
         ) : (

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
-import { Rating, type Grade } from 'ts-fsrs'
+import type { Grade } from 'ts-fsrs'
 import {
   assembleSpelling,
   clipSpellingInput,
@@ -12,16 +12,17 @@ import {
 } from '../lib/spelling'
 import { isExactSpelling } from '../lib/spelling-drill'
 import type { Word } from '../types/word'
+import { CardMarks } from './CardMarks'
 import { SpeakButton } from './SpeakButton'
 import { WordExtras } from './WordExtras'
 
 const LETTERS = ['å', 'ä', 'ö'] as const
 
-const RESULT_LABEL: Record<Grade, string> = {
-  [Rating.Again]: '再练一次',
-  [Rating.Hard]: '很接近',
-  [Rating.Good]: '正确',
-  [Rating.Easy]: '正确',
+const RESULT_LABEL: Record<1 | 2 | 3 | 4, string> = {
+  1: '再练一次',
+  2: '很接近',
+  3: '正确',
+  4: '正确',
 }
 
 type SpellingCardProps = {
@@ -29,13 +30,15 @@ type SpellingCardProps = {
   kicker?: string
   onAnswer: (rating: Grade) => Promise<void>
   onContinue: (passed: boolean) => void
+  onMasteredChange?: (mastered: boolean) => void
 }
 
 export function SpellingCard({
   word,
-  kicker = '拼写',
+  kicker,
   onAnswer,
   onContinue,
+  onMasteredChange,
 }: SpellingCardProps) {
   const [input, setInput] = useState('')
   const [result, setResult] = useState<{
@@ -57,7 +60,15 @@ export function SpellingCard({
       return
     }
     function onKey(event: KeyboardEvent) {
-      if (event.key !== 'Enter' || event.repeat || event.isComposing) {
+      if (
+        (event.key !== 'Enter' && event.key !== 'ArrowRight') ||
+        event.repeat ||
+        event.isComposing ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey
+      ) {
         return
       }
       event.preventDefault()
@@ -108,11 +119,14 @@ export function SpellingCard({
     <div className="study-stage">
       <div className="card-stack">
         <article className={result ? 'flashcard is-flipped' : 'flashcard'}>
-          <p className="card-kicker">{kicker}</p>
+          <div className="card-top">
+            <p className="card-kicker">{kicker ?? '拼写'}</p>
+            <CardMarks wordId={word.id} onMasteredChange={onMasteredChange} />
+          </div>
           <div className="card-center">
             <p className="card-gloss">{word.glossZh}</p>
             {word.glossEn ? <p className="card-en">{word.glossEn}</p> : null}
-            <SpeakButton text={word.lemma} label="听发音" />
+            <SpeakButton text={word.lemma} label="听发音" autoPlay />
 
             {result ? (
               <div className="spelling-result">
@@ -203,7 +217,7 @@ export function SpellingCard({
       <div className="study-dock">
         {result ? (
           <button type="button" className="btn btn-primary btn-lg" onClick={() => onContinue(exact)}>
-            {exact ? '下一题（回车）' : '再试一次（回车）'}
+            {exact ? '下一题（回车 / →）' : '再试一次（回车 / →）'}
           </button>
         ) : (
           <button

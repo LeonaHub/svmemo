@@ -79,3 +79,12 @@ export function formsSummary(word: Word): string | null {
   const values = inflectionRows(word).map((row) => row.value)
   return values.length > 0 ? values.join(' · ') : null
 }
+
+export function compoundSummary(word: Word): string | null {
+  const compound = word.compound
+  if (!compound) {
+    return null
+  }
+  const parts = compound.parts.map((part) => `${part.sv}（${part.zh}）`).join(' + ')
+  return `${parts} → ${compound.together}`
+}

@@ -2,15 +2,16 @@ import { useEffect } from 'react'
 import { Rating } from 'ts-fsrs'
 import type { Grade } from 'ts-fsrs'
 import type { Word } from '../types/word'
+import { CardMarks } from './CardMarks'
 import { SpeakButton } from './SpeakButton'
 import { WordExtras } from './WordExtras'
 
-const GRADES: { rating: Grade; label: string; hint: string; className: string }[] = [
-  { rating: Rating.Again, label: '忘记', hint: 'Again', className: 'grade-again' },
-  { rating: Rating.Hard, label: '困难', hint: 'Hard', className: 'grade-hard' },
-  { rating: Rating.Good, label: '认识', hint: 'Good', className: 'grade-good' },
-  { rating: Rating.Easy, label: '简单', hint: 'Easy', className: 'grade-easy' },
-]
+const GRADES = [
+  { rating: Rating.Again, label: '忘记', className: 'grade-again' },
+  { rating: Rating.Hard, label: '困难', className: 'grade-hard' },
+  { rating: Rating.Good, label: '认识', className: 'grade-good' },
+  { rating: Rating.Easy, label: '简单', className: 'grade-easy' },
+] as const
 
 type RecognitionCardProps = {
   word: Word
@@ -21,6 +22,7 @@ type RecognitionCardProps = {
   onFlip: () => void
   onContinue?: () => void
   onGrade?: (rating: Grade) => void
+  onMasteredChange?: (mastered: boolean) => void
 }
 
 function pills(word: Word): string[] {
@@ -31,17 +33,27 @@ export function RecognitionCard({
   word,
   flipped,
   busy,
-  kicker = '认识',
+  kicker,
   preview = false,
   onFlip,
   onContinue,
   onGrade,
+  onMasteredChange,
 }: RecognitionCardProps) {
   const extras = pills(word)
+  const heading = kicker ?? '认识'
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (event.key !== 'Enter' || event.repeat || event.isComposing) {
+      if (
+        (event.key !== 'Enter' && event.key !== 'ArrowRight') ||
+        event.repeat ||
+        event.isComposing ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey
+      ) {
         return
       }
       event.preventDefault()
@@ -64,10 +76,13 @@ export function RecognitionCard({
           className={flipped ? 'flashcard is-flipped' : 'flashcard is-tap'}
           onClick={flipped ? undefined : onFlip}
         >
-          <p className="card-kicker">{kicker}</p>
+          <div className="card-top">
+            <p className="card-kicker">{heading}</p>
+            <CardMarks wordId={word.id} onMasteredChange={onMasteredChange} />
+          </div>
           <div className="card-center">
             <p className="card-lemma">{word.lemma}</p>
-            <SpeakButton text={word.lemma} />
+            <SpeakButton text={word.lemma} autoPlay />
             {flipped ? (
               <>
                 <p className="card-gloss">{word.glossZh}</p>
@@ -98,7 +113,7 @@ export function RecognitionCard({
             onClick={onFlip}
             disabled={busy}
           >
-            显示释义（回车）
+            显示释义（回车 / →）
           </button>
         ) : preview ? (
           <button
@@ -107,7 +122,7 @@ export function RecognitionCard({
             onClick={() => onContinue?.()}
             disabled={busy}
           >
-            下一张（回车）
+            下一张（回车 / →）
           </button>
         ) : (
           <div className="grades">
@@ -120,7 +135,6 @@ export function RecognitionCard({
                 onClick={() => onGrade?.(grade.rating)}
               >
                 {grade.label}
-                <small>{grade.hint}</small>
               </button>
             ))}
           </div>

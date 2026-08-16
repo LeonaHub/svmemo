@@ -50,6 +50,8 @@ export const settingsSchema = z.object({
   dailyLimit: z.number().int().positive(),
   maxNewPerDay: z.number().int().nonnegative(),
   spellingRatio: z.number().min(0).max(1),
+  /** 最近消过的配对词，下次优先换一批。不写 FSRS。 */
+  recentMatchWordIds: z.array(z.string()).default([]),
 })
 
 export const dailyStatsSchema = z.object({
@@ -60,6 +62,16 @@ export const dailyStatsSchema = z.object({
   completed: z.boolean(),
 })
 
+export const wordMarkSchema = z.object({
+  wordId: z.string().min(1),
+  /** 已掌握：不再进入每日学习和普通复习 */
+  mastered: z.boolean(),
+  /** 收藏进单词本，方便以后加练难词 */
+  starred: z.boolean(),
+  masteredAt: z.date().optional(),
+  starredAt: z.date().optional(),
+})
+
 export type CardType = z.infer<typeof cardTypeSchema>
 export type Deck = z.infer<typeof deckSchema>
 export type DeckWord = z.infer<typeof deckWordSchema>
@@ -68,12 +80,14 @@ export type SavedCard = CardRecord & { id: number }
 export type ReviewLogRecord = z.infer<typeof reviewLogSchema>
 export type Settings = z.infer<typeof settingsSchema>
 export type DailyStats = z.infer<typeof dailyStatsSchema>
+export type WordMark = z.infer<typeof wordMarkSchema>
 
 export const DEFAULT_SETTINGS: Settings = {
   id: 'default',
   dailyLimit: 40,
   maxNewPerDay: 15,
   spellingRatio: 0.5,
+  recentMatchWordIds: [],
 }
 
 export const A1_CORE_DECK_ID = 'a1-core'

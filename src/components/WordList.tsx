@@ -1,23 +1,45 @@
 import { useMemo, useState, type MouseEvent } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../db'
+import { toggleMastered, toggleStarred } from '../db/marks'
 import { enrollWords, unenrollWords } from '../db/study'
 import { a1Words } from '../data/a1'
-import { formsSummary } from '../lib/inflection'
-import type { Pos, Word } from '../types/word'
+import { compoundSummary, formsSummary } from '../lib/inflection'
+import { POS_LABEL } from '../lib/pos'
+import type { Word } from '../types/word'
+
+type WordFilter = 'all' | 'unenrolled' | 'plan' | 'starred' | 'mastered'
+
+const FILTERS: { id: WordFilter; label: string }[] = [
+  { id: 'all', label: '全部' },
+  { id: 'unenrolled', label: '未加入' },
+  { id: 'plan', label: '计划中' },
+  { id: 'starred', label: '单词本' },
+  { id: 'mastered', label: '已掌握' },
+]
 
 const CATALOG_ORDER = new Map(a1Words.map((word, index) => [word.id, index]))
 
-const POS_LABEL: Record<Pos, string> = {
-  noun: '名词',
-  verb: '动词',
-  adj: '形容词',
-  adv: '副词',
-  pron: '代词',
-  phrase: '短语',
-  intj: '感叹',
-  proper: '专有',
-  other: '其他',
+function inFilter(
+  wordId: string,
+  filter: WordFilter,
+  enrolled: Set<string>,
+  mastered: Set<string>,
+  starred: Set<string>,
+): boolean {
+  if (filter === 'unenrolled') {
+    return !enrolled.has(wordId) && !mastered.has(wordId)
+  }
+  if (filter === 'plan') {
+    return enrolled.has(wordId) && !mastered.has(wordId)
+  }
+  if (filter === 'starred') {
+    return starred.has(wordId)
+  }
+  if (filter === 'mastered') {
+    return mastered.has(wordId)
+  }
+  return true
 }
 
 function inflected(word: Word): string | null {
@@ -26,9 +48,10 @@ function inflected(word: Word): string | null {
 
 export function WordList() {
   const catalog = useLiveQuery(async () => {
-    const [words, cards] = await Promise.all([
+    const [words, cards, marks] = await Promise.all([
       db.words.toArray(),
       db.cards.toArray(),
+      db.wordMarks.toArray(),
     ])
     return {
       words,
@@ -36,9 +59,16 @@ export function WordList() {
       studied: new Set(
         cards.filter((card) => card.reps > 0).map((card) => card.wordId),
       ),
+      mastered: new Set(
+        marks.filter((mark) => mark.mastered).map((mark) => mark.wordId),
+      ),
+      starred: new Set(
+        marks.filter((mark) => mark.starred).map((mark) => mark.wordId),
+      ),
     }
   })
   const [query, setQuery] = useState('')
+  const [filter, setFilter] = useState<WordFilter>('all')
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [message, setMessage] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -46,6 +76,8 @@ export function WordList() {
   const words = catalog?.words
   const enrolled = catalog?.enrolled ?? new Set<string>()
   const studied = catalog?.studied ?? new Set<string>()
+  const mastered = catalog?.mastered ?? new Set<string>()
+  const starred = catalog?.starred ?? new Set<string>()
 
   const filtered = useMemo(() => {
     if (!words) {
@@ -60,9 +92,17 @@ export function WordList() {
             (word.glossEn?.toLowerCase().includes(needle) ?? false),
         )
       : words
-    return [...matched].sort((left, right) => {
-      const leftEnrolled = enrolled.has(left.id) ? 0 : 1
-      const rightEnrolled = enrolled.has(right.id) ? 0 : 1
+    const scoped = matched.filter((word) =>
+      inFilter(word.id, filter, enrolled, mastered, starred),
+    )
+    return [...scoped].sort((left, right) => {
+      const leftStarred = starred.has(left.id) ? 0 : 1
+      const rightStarred = starred.has(right.id) ? 0 : 1
+      if (filter === 'starred' && leftStarred !== rightStarred) {
+        return leftStarred - rightStarred
+      }
+      const leftEnrolled = enrolled.has(left.id) && !mastered.has(left.id) ? 0 : 1
+      const rightEnrolled = enrolled.has(right.id) && !mastered.has(right.id) ? 0 : 1
       if (leftEnrolled !== rightEnrolled) {
         return leftEnrolled - rightEnrolled
       }
@@ -71,14 +111,46 @@ export function WordList() {
         (CATALOG_ORDER.get(right.id) ?? Number.MAX_SAFE_INTEGER)
       )
     })
-  }, [words, query, enrolled])
+  }, [words, query, enrolled, mastered, starred, filter])
+
+  const filterCounts = useMemo(() => {
+    const counts: Record<WordFilter, number> = {
+      all: 0,
+      unenrolled: 0,
+      plan: 0,
+      starred: 0,
+      mastered: 0,
+    }
+    if (!words) {
+      return counts
+    }
+    counts.all = words.length
+    for (const word of words) {
+      if (inFilter(word.id, 'unenrolled', enrolled, mastered, starred)) {
+        counts.unenrolled += 1
+      }
+      if (inFilter(word.id, 'plan', enrolled, mastered, starred)) {
+        counts.plan += 1
+      }
+      if (inFilter(word.id, 'starred', enrolled, mastered, starred)) {
+        counts.starred += 1
+      }
+      if (inFilter(word.id, 'mastered', enrolled, mastered, starred)) {
+        counts.mastered += 1
+      }
+    }
+    return counts
+  }, [words, enrolled, mastered, starred])
 
   const availableIds = filtered
-    .filter((word) => !enrolled.has(word.id))
+    .filter((word) => !enrolled.has(word.id) && !mastered.has(word.id))
     .map((word) => word.id)
   const selectedCount = [...selected].filter((id) => !enrolled.has(id)).length
 
   function toggle(wordId: string) {
+    if (mastered.has(wordId)) {
+      return
+    }
     if (enrolled.has(wordId)) {
       void removeFromPlan([wordId])
       return
@@ -173,7 +245,7 @@ export function WordList() {
           <h1>我的词表</h1>
           <p className="date-line">
             {words
-              ? `共 ${words.length} 个词，已加入计划 ${enrolled.size} 个。已加入的在前，新词在后。点空心圆圈选中后加入计划；点已打勾的圆圈或「移出」可取消。`
+              ? `共 ${words.length} 个词，计划中 ${enrolled.size - [...enrolled].filter((id) => mastered.has(id)).length}，收藏 ${starred.size}，已掌握 ${mastered.size}。星标进单词本，掌握后不再出现在每日学习里。`
               : '正在读取词库…'}
           </p>
         </div>
@@ -185,6 +257,22 @@ export function WordList() {
           type="search"
         />
       </header>
+
+      <div className="word-filters" role="tablist" aria-label="词库筛选">
+        {FILTERS.map(({ id, label }) => (
+          <button
+            key={id}
+            type="button"
+            role="tab"
+            aria-selected={filter === id}
+            className={filter === id ? 'chip is-on' : 'chip'}
+            onClick={() => setFilter(id)}
+          >
+            {label}
+            <span className="chip-count">{filterCounts[id]}</span>
+          </button>
+        ))}
+      </div>
 
       <div className="word-toolbar">
         <button
@@ -223,7 +311,9 @@ export function WordList() {
       <div className="word-list">
         {filtered.map((word) => {
           const isEnrolled = enrolled.has(word.id)
-          const isSelected = selected.has(word.id) && !isEnrolled
+          const isMastered = mastered.has(word.id)
+          const isStarred = starred.has(word.id)
+          const isSelected = selected.has(word.id) && !isEnrolled && !isMastered
           const extra = inflected(word)
 
           return (
@@ -233,6 +323,8 @@ export function WordList() {
                 'word-row',
                 isSelected ? 'is-selected' : '',
                 isEnrolled ? 'is-enrolled' : '',
+                isMastered ? 'is-mastered' : '',
+                isStarred ? 'is-starred' : '',
               ]
                 .filter(Boolean)
                 .join(' ')}
@@ -248,7 +340,7 @@ export function WordList() {
               tabIndex={0}
             >
               <span className="pick" aria-hidden="true">
-                {isEnrolled ? '✓' : ''}
+                {isMastered ? '✓' : isEnrolled ? '✓' : ''}
               </span>
               <div className="word-body">
                 <div className="word-row-top">
@@ -256,30 +348,61 @@ export function WordList() {
                   <span className="pill">
                     {word.gender ? `${word.gender} · ` : ''}
                     {POS_LABEL[word.pos]}
+                    {isStarred ? ' · 收藏' : ''}
+                    {isMastered ? ' · 已掌握' : ''}
                   </span>
                 </div>
                 <p className="gloss">{word.glossZh}</p>
+                {word.compound ? (
+                  <p className="compound-line">{compoundSummary(word)}</p>
+                ) : null}
                 {extra ? <p className="forms">{extra}</p> : null}
               </div>
-              {isEnrolled ? (
+              <div className="word-actions">
                 <button
                   type="button"
-                  className="btn btn-remove"
-                  onClick={(event) => handleRowRemove(event, word.id)}
-                  disabled={busy}
+                  className={isStarred ? 'mark-btn is-starred' : 'mark-btn'}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    void toggleStarred(word.id)
+                  }}
+                  aria-label={isStarred ? '取消收藏' : '收藏到单词本'}
+                  title={isStarred ? '已在单词本' : '收藏到单词本'}
                 >
-                  移出
+                  ★
                 </button>
-              ) : (
                 <button
                   type="button"
-                  className="btn btn-add"
-                  onClick={(event) => handleRowAdd(event, word.id)}
-                  disabled={busy}
+                  className={isMastered ? 'mark-btn is-mastered' : 'mark-btn'}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    void toggleMastered(word.id)
+                  }}
+                  aria-label={isMastered ? '取消已掌握' : '标记为已掌握'}
+                  title={isMastered ? '已掌握，点此恢复学习' : '已掌握，不再学'}
                 >
-                  加入
+                  掌握
                 </button>
-              )}
+                {isEnrolled && !isMastered ? (
+                  <button
+                    type="button"
+                    className="btn btn-remove"
+                    onClick={(event) => handleRowRemove(event, word.id)}
+                    disabled={busy}
+                  >
+                    移出
+                  </button>
+                ) : !isEnrolled && !isMastered ? (
+                  <button
+                    type="button"
+                    className="btn btn-add"
+                    onClick={(event) => handleRowAdd(event, word.id)}
+                    disabled={busy}
+                  >
+                    加入
+                  </button>
+                ) : null}
+              </div>
             </article>
           )
         })}

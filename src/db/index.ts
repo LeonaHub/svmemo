@@ -7,6 +7,7 @@ import type {
   DeckWord,
   ReviewLogRecord,
   Settings,
+  WordMark,
 } from '../types/progress'
 
 export class SvmemoDB extends Dexie {
@@ -17,6 +18,7 @@ export class SvmemoDB extends Dexie {
   reviewLogs!: EntityTable<ReviewLogRecord, 'id'>
   settings!: EntityTable<Settings, 'id'>
   dailyStats!: EntityTable<DailyStats, 'date'>
+  wordMarks!: EntityTable<WordMark, 'wordId'>
 
   constructor() {
     super('svmemo')
@@ -28,6 +30,16 @@ export class SvmemoDB extends Dexie {
       reviewLogs: '++id, cardId, wordId, reviewedAt',
       settings: 'id',
       dailyStats: 'date',
+    })
+    this.version(2).stores({
+      words: 'id, lemma, cefr, pos, *tags',
+      decks: 'id, cefr',
+      deckWords: '++id, &[deckId+wordId], deckId, wordId',
+      cards: '++id, wordId, cardType, due, state, &[wordId+cardType]',
+      reviewLogs: '++id, cardId, wordId, reviewedAt',
+      settings: 'id',
+      dailyStats: 'date',
+      wordMarks: 'wordId, mastered, starred',
     })
   }
 }

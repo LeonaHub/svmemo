@@ -6,10 +6,11 @@ import type {
   DeckWord,
   ReviewLogRecord,
   Settings,
+  WordMark,
 } from '../types/progress'
 import type { Word } from '../types/word'
 
-export const BACKUP_VERSION = 1
+export const BACKUP_VERSION = 2
 
 export type SvmemoBackup = {
   version: number
@@ -21,6 +22,7 @@ export type SvmemoBackup = {
   reviewLogs: ReviewLogRecord[]
   settings: Settings[]
   dailyStats: DailyStats[]
+  wordMarks?: WordMark[]
 }
 
 function asDate(value: unknown): Date {
@@ -41,6 +43,7 @@ export async function exportBackup(): Promise<SvmemoBackup> {
     reviewLogs: await db.reviewLogs.toArray(),
     settings: await db.settings.toArray(),
     dailyStats: await db.dailyStats.toArray(),
+    wordMarks: await db.wordMarks.toArray(),
   }
 }
 
@@ -56,12 +59,28 @@ export function downloadBackup(backup: SvmemoBackup): void {
   URL.revokeObjectURL(url)
 }
 
+export async function copyBackup(backup: SvmemoBackup): Promise<void> {
+  await navigator.clipboard.writeText(JSON.stringify(backup))
+}
+
+export async function readClipboardBackup(): Promise<unknown> {
+  const text = (await navigator.clipboard.readText()).trim()
+  if (!text) {
+    throw new Error('剪贴板是空的')
+  }
+  try {
+    return JSON.parse(text) as unknown
+  } catch {
+    throw new Error('剪贴板里不是备份数据')
+  }
+}
+
 export async function importBackup(raw: unknown): Promise<void> {
   if (
     typeof raw !== 'object' ||
     raw === null ||
     !('version' in raw) ||
-    (raw as SvmemoBackup).version !== BACKUP_VERSION
+    !((raw as SvmemoBackup).version === 1 || (raw as SvmemoBackup).version === 2)
   ) {
     throw new Error('备份文件格式不对')
   }
@@ -78,6 +97,7 @@ export async function importBackup(raw: unknown): Promise<void> {
       db.reviewLogs,
       db.settings,
       db.dailyStats,
+      db.wordMarks,
     ],
     async () => {
       await db.words.clear()
@@ -87,6 +107,7 @@ export async function importBackup(raw: unknown): Promise<void> {
       await db.reviewLogs.clear()
       await db.settings.clear()
       await db.dailyStats.clear()
+      await db.wordMarks.clear()
 
       await db.words.bulkAdd(backup.words)
       await db.decks.bulkAdd(backup.decks)
@@ -110,6 +131,15 @@ export async function importBackup(raw: unknown): Promise<void> {
       )
       await db.settings.bulkAdd(backup.settings)
       await db.dailyStats.bulkAdd(backup.dailyStats)
+      if (backup.wordMarks && backup.wordMarks.length > 0) {
+        await db.wordMarks.bulkAdd(
+          backup.wordMarks.map((mark) => ({
+            ...mark,
+            masteredAt: mark.masteredAt ? asDate(mark.masteredAt) : undefined,
+            starredAt: mark.starredAt ? asDate(mark.starredAt) : undefined,
+          })),
+        )
+      }
     },
   )
 }
