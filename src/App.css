@@ -1320,24 +1320,19 @@ button.today-pill:disabled {
 }
 
 .sentence-prompt {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  column-gap: 0;
-  row-gap: 8px;
+  display: block;
+  text-align: center;
   width: 100%;
   padding: 4px 2px 2px;
   font-family: var(--font-word);
   font-size: clamp(22px, 5vw, 32px);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.45;
   color: var(--text-h);
 }
 
 .sentence-prompt-text {
   white-space: pre-wrap;
-  padding-bottom: 6px;
   color: var(--text);
   letter-spacing: -0.02em;
 }
@@ -1346,21 +1341,49 @@ button.today-pill:disabled {
 .sentence-blank-result {
   display: inline-flex;
   flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 4px;
-  margin: 0 1px;
+  align-items: baseline;
+  gap: 0.1em;
+  margin: 0 0.08em;
+  vertical-align: baseline;
 }
 
 .sentence-blank .spell-slot {
-  width: 22px;
-  min-width: 22px;
-  height: 40px;
-  font-size: 22px;
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 0.78em;
+  min-width: 0.78em;
+  height: auto;
+  font: inherit;
+  line-height: 1;
+  padding: 0 0 1px;
+  color: inherit;
+}
+
+.sentence-blank .spell-slot::before {
+  content: '\200b';
+}
+
+.sentence-blank .spell-caret {
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 2px;
+  height: 0.9em;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.sentence-blank .spell-gap {
+  display: inline;
+  width: auto;
+  height: auto;
+  font: inherit;
 }
 
 .sentence-blank-result {
   gap: 0;
-  padding-bottom: 4px;
 }
 
 .sentence-answer {
