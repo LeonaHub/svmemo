@@ -1,57 +1,36 @@
 :root {
-  --bg: #efe8dc;
-  --bg-study: #e7dfd1;
-  --surface: #fffcf7;
-  --surface-2: #f4eee4;
-  --text: #5c564c;
-  --text-h: #1c1915;
-  --border: rgba(40, 32, 20, 0.08);
-  --brand: #0f6b5c;
-  --brand-2: #148576;
-  --brand-soft: #d7efe9;
-  --gold: #c8962e;
-  --gold-soft: #f6e7b4;
-  --danger: #c4473a;
-  --danger-soft: #fde8e4;
-  --warn: #c47b12;
-  --warn-soft: #f8e7c6;
-  --ok: #2f7d4a;
-  --ok-soft: #ddf3e4;
-  --shadow: 0 18px 40px -28px rgba(48, 36, 16, 0.45);
-  --shadow-card: 0 24px 50px -32px rgba(48, 36, 16, 0.5);
-  --radius: 22px;
-  --font-ui: "Plus Jakarta Sans", "PingFang SC", "Noto Sans SC", sans-serif;
-  --font-word: "Fraunces", "Songti SC", Georgia, serif;
+  --bg: #f4f1ec;
+  --bg-study: #f4f1ec;
+  --surface: #fffcf8;
+  --surface-2: #e4dfd6;
+  --text: #3d4a45;
+  --text-h: #174d38;
+  --border: rgba(23, 77, 56, 0.12);
+  --brand: #174d38;
+  --brand-2: #1f5c44;
+  --brand-soft: rgba(23, 77, 56, 0.12);
+  --gold: #4d1717;
+  --gold-soft: rgba(77, 23, 23, 0.12);
+  --danger: #4d1717;
+  --danger-soft: rgba(77, 23, 23, 0.12);
+  --warn: #4d1717;
+  --warn-soft: rgba(77, 23, 23, 0.1);
+  --ok: #174d38;
+  --ok-soft: rgba(23, 77, 56, 0.12);
+  --shadow: 0 10px 28px -20px rgba(23, 77, 56, 0.28);
+  --shadow-card: 0 16px 36px -24px rgba(23, 77, 56, 0.22);
+  --radius: 16px;
+  --font-ui: Inter, "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-word: Newsreader, "Songti SC", "Noto Serif SC", Georgia, serif;
 
   font: 16px/1.5 var(--font-ui);
+  font-feature-settings: "ss01", "cv11";
   color: var(--text);
   background: var(--bg);
-  color-scheme: light dark;
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161411;
-    --bg-study: #12100e;
-    --surface: #221f1b;
-    --surface-2: #2b2722;
-    --text: #b7b0a4;
-    --text-h: #f4efe6;
-    --border: rgba(255, 248, 236, 0.08);
-    --brand: #3cb89f;
-    --brand-2: #2f9d88;
-    --brand-soft: #1a3b34;
-    --gold: #e0b34a;
-    --gold-soft: #3d3218;
-    --danger-soft: #3d1d19;
-    --warn-soft: #3d2e14;
-    --ok-soft: #1c3324;
-    --shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.7);
-    --shadow-card: 0 24px 50px -28px rgba(0, 0, 0, 0.75);
-  }
 }
 
 * {
@@ -66,10 +45,7 @@ body,
 
 body {
   margin: 0;
-  background:
-    radial-gradient(1200px 500px at 80% -10%, rgba(200, 150, 46, 0.16), transparent 50%),
-    radial-gradient(900px 420px at -10% 0%, rgba(15, 107, 92, 0.14), transparent 46%),
-    var(--bg);
+  background: var(--bg);
 }
 
 button,
@@ -88,7 +64,7 @@ h1 {
   font-size: 34px;
   line-height: 1.15;
   margin: 0 0 8px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 @media (max-width: 640px) {
