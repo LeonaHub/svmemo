@@ -101,7 +101,7 @@ export function retrievability(
       return value
     }
   } catch {
-    // 旧卡或缺字段时退回 0，让配对仍能按到期日排序。
+    // 旧卡或缺字段时退回 0，让到期列表仍能按到期日排序。
   }
   return 0
 }

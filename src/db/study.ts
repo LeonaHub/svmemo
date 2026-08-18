@@ -5,6 +5,7 @@ import {
   isDueReview,
   newCardRecord,
   PROGRESS_CARD_TYPE,
+  retrievability,
   schedule,
 } from '../lib/fsrs'
 import {
@@ -15,11 +16,6 @@ import {
   type SessionKind,
 } from '../lib/queue'
 import { buildSentenceQueue, type SentenceItem } from '../lib/sentence-drill'
-import {
-  MATCH_PAIR_COUNT,
-  pickAtRiskCards,
-  type MatchPair,
-} from '../lib/match-drill'
 import { listWordMarks, setWordMark } from './marks'
 import {
   A1_CORE_DECK_ID,
@@ -31,7 +27,14 @@ import {
 import type { Word } from '../types/word'
 
 export type { SentenceItem } from '../lib/sentence-drill'
-export type { MatchPair } from '../lib/match-drill'
+
+export type DueReviewRow = {
+  card: SavedCard
+  word: Word
+  starred: boolean
+  dueNow: boolean
+  when: string
+}
 
 export type TodayOverview = {
   settings: Settings
@@ -154,7 +157,7 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
   const dayStart = startOfLocalDay(now)
   const dayEnd = startOfNextLocalDay(now)
 
-  const [settings, cards, unlearnedWordIds, catalog, todayLogs, marks] =
+  const [settings, cards, unlearnedWordIds, catalog, todayLogs, marks, todayStats] =
     await Promise.all([
       getSettings(),
       db.cards.toArray(),
@@ -165,6 +168,7 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
         .between(dayStart, dayEnd, true, false)
         .toArray(),
       listWordMarks(),
+      db.dailyStats.get(localDateString(now)),
     ])
 
   const mastered = new Set(
@@ -192,7 +196,10 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
     reviewableCount,
     unlearnedCount: unlearnedWordIds.length,
     wordCount: catalog.length,
-    wordsToday: new Set(todayLogs.map((log) => log.wordId)).size,
+    wordsToday: new Set([
+      ...todayLogs.map((log) => log.wordId),
+      ...(todayStats?.matchedWordIds ?? []),
+    ]).size,
     masteredCount: mastered.size,
     starredCount: starredIds.size,
     sentenceCount: active.reduce((sum, card) => sum + exampleCount(card.wordId), 0),
@@ -254,41 +261,71 @@ export async function startTodaySession(now = new Date()): Promise<StudyItem[]> 
   return specsToItems(buildQuizletQueue(dueCards, newCards))
 }
 
-export async function startMatchSession(now = new Date()): Promise<MatchPair[]> {
-  const [saved, settings] = await Promise.all([
-    activeCards().then((cards) => cards.filter((card) => card.reps > 0)),
-    getSettings(),
-  ])
-  const picked = pickAtRiskCards(
-    saved,
-    now,
-    MATCH_PAIR_COUNT,
-    settings.recentMatchWordIds,
+function sortByForgetting<T extends SavedCard>(cards: readonly T[], now: Date): T[] {
+  return [...cards].sort((left, right) => {
+    const delta = retrievability(left, now) - retrievability(right, now)
+    if (delta !== 0) {
+      return delta
+    }
+    return asDate(left.due).getTime() - asDate(right.due).getTime()
+  })
+}
+
+function reviewWhen(card: SavedCard, now: Date): { dueNow: boolean; when: string } {
+  if (isDueReview(card, now)) {
+    return { dueNow: true, when: '到期' }
+  }
+  const dueAt = asDate(card.due)
+  if (dueAt.getTime() <= now.getTime()) {
+    return { dueNow: true, when: '到期' }
+  }
+  const days = Math.round(
+    (startOfLocalDay(dueAt).getTime() - startOfLocalDay(now).getTime()) /
+      86_400_000,
   )
-  const byId = new Map((await db.words.toArray()).map((word) => [word.id, word]))
-  return picked.flatMap((card) => {
+  if (days <= 0) {
+    return { dueNow: false, when: '稍后' }
+  }
+  if (days === 1) {
+    return { dueNow: false, when: '明天' }
+  }
+  return { dueNow: false, when: `${days}天后` }
+}
+
+export async function listDueReviews(now = new Date()): Promise<DueReviewRow[]> {
+  const [saved, marks, catalog] = await Promise.all([
+    activeCards(),
+    listWordMarks(),
+    db.words.toArray(),
+  ])
+  const starred = new Set(
+    marks.filter((mark) => mark.starred).map((mark) => mark.wordId),
+  )
+  const learned = saved.filter((card) => card.reps > 0)
+  const due = sortByForgetting(
+    learned.filter((card) => isDueReview(card, now)),
+    now,
+  )
+  const later = sortByForgetting(
+    learned.filter((card) => !isDueReview(card, now)),
+    now,
+  )
+  const byId = new Map(catalog.map((word) => [word.id, word]))
+  return [...due, ...later].flatMap((card) => {
     const word = byId.get(card.wordId)
     if (!word) {
       return []
     }
-    return [{ card, word }]
+    const { dueNow, when } = reviewWhen(card, now)
+    return [{ card, word, starred: starred.has(word.id), dueNow, when }]
   })
 }
 
-export async function rememberMatchedWords(
-  wordIds: readonly string[],
-): Promise<void> {
-  const unique = [...new Set(wordIds.filter(Boolean))]
-  if (unique.length === 0) {
-    return
-  }
-  const settings = await getSettings()
-  const recent = settings.recentMatchWordIds.filter((id) => !unique.includes(id))
-  recent.push(...unique)
-  await db.settings.put({
-    ...settings,
-    recentMatchWordIds: recent,
-  })
+export async function startDueSession(now = new Date()): Promise<StudyItem[]> {
+  const rows = await listDueReviews(now)
+  return specsToItems(
+    buildReviewRounds(rows.filter((row) => row.dueNow).map((row) => row.card)),
+  )
 }
 
 export async function startStarredSession(): Promise<StudyItem[]> {
@@ -363,6 +400,7 @@ export async function submitReview(
           newCount: wasNew ? 1 : 0,
           reviewCount: wasNew ? 0 : 1,
           completed: false,
+          matchedWordIds: [],
         })
       } else {
         await db.dailyStats.update(date, {
@@ -385,6 +423,7 @@ export async function markTodayComplete(now = new Date()): Promise<void> {
       newCount: 0,
       reviewCount: 0,
       completed: true,
+      matchedWordIds: [],
     })
     return
   }

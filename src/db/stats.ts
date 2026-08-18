@@ -117,7 +117,22 @@ export function buildDayDetails(
   for (const row of stats) {
     const day = dayOf(row.date)
     day.completed = row.completed
-    if (day.answerCount === 0 && (row.newCount > 0 || row.reviewCount > 0)) {
+    const inNew = new Set(day.newWords.map((word) => word.wordId))
+    const inReview = new Set(day.reviewWords.map((word) => word.wordId))
+    for (const wordId of row.matchedWordIds ?? []) {
+      if (inNew.has(wordId) || inReview.has(wordId)) {
+        continue
+      }
+      day.reviewWords.push(toDayWord(wordId, 1, words))
+      inReview.add(wordId)
+    }
+    if (day.reviewWords.length > 0) {
+      day.reviewWords.sort((left, right) => left.lemma.localeCompare(right.lemma, 'sv'))
+    }
+    if (day.newWords.length + day.reviewWords.length > 0) {
+      day.newCount = day.newWords.length
+      day.reviewCount = day.reviewWords.length
+    } else if (row.newCount > 0 || row.reviewCount > 0) {
       day.newCount = row.newCount
       day.reviewCount = row.reviewCount
     }

@@ -2203,4 +2203,494 @@ export const customWords: Word[] = [
     ['Det finns regnskogar och djungler.', '有雨林，也有丛林。'],
     ['Djunglerna är svåra att ta sig igenom.', '那些丛林很难穿过去。'],
   ])),
+  b1(noun('förbannelse', 'en', '诅咒；灾祸', 'curse / plague', 'förbannelsen', 'förbannelser', 'förbannelserna', [
+    ['Det lät som en förbannelse.', '那听起来像一句诅咒。'],
+    ['Förbannelsen följde släkten.', '那个诅咒跟着这个家族。'],
+    ['Gamla förbannelser skrämmer henne.', '那些古老的诅咒让她害怕。'],
+    ['Förbannelserna ekade i rummet.', '那些咒骂在房间里回响。'],
+  ]), c(
+    [
+      ['förbanna', '诅咒；咒骂'],
+      ['-else', '行为名词后缀'],
+    ],
+    '由“诅咒”这个动作变成名词，就是一句诅咒、一场灾祸。',
+  )),
+  b1(other('för närvarande', 'phrase', '目前；眼下', 'at present / currently', [
+    ['För närvarande bor hon i Malmö.', '她目前住在马尔默。'],
+    ['Vi har för närvarande inga platser kvar.', '我们眼下已经没有名额了。'],
+    ['För närvarande är det lugnt.', '目前还算平静。'],
+    ['Arbetet är för närvarande pausat.', '这项工作眼下暂停了。'],
+  ]), c(
+    [
+      ['för', '就……而言'],
+      ['närvarande', '当前的；在场的'],
+    ],
+    '“就当前在场的情况而言”，就是目前、眼下。',
+  )),
+  b1(other('snett', 'adv', '歪地；不对劲', 'askew / awry', [
+    ['Hatten sitter snett.', '帽子戴歪了。'],
+    ['Han tittade snett på henne.', '他斜眼看了她一眼。'],
+    ['Det gick snett från början.', '从一开始就不对劲。'],
+    ['Bilen stod snett mot kanten.', '车斜着停在路边。'],
+  ]), c(
+    [
+      ['sned', '歪的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'sned 是“歪的”，snett 就是歪地；事情走偏也说 gå snett。',
+  )),
+  b1(verb('anmäla', '举报；报名；通知', 'to report / to register / to notify', 'anmäler', 'anmälde', 'anmält', 'anmäl', [
+    ['Han anmäler stölden till polisen.', '他向警察举报这起盗窃。'],
+    ['Hon anmälde sig till kursen.', '她报了那门课。'],
+    ['Vi har anmält felet.', '我们已经把故障报上去了。'],
+    ['Anmäl dig i tid.', '及时报名。'],
+  ]), c(
+    [
+      ['an-', '朝向'],
+      ['mäla', '陈述（旧）'],
+    ],
+    '“向某处陈述”，就是举报、报名、通知。',
+  )),
+  b1(other('såsom', 'adv', '诸如；作为', 'such as / as', [
+    ['Hon gillar frukt, såsom äpplen och päron.', '她喜欢水果，诸如苹果和梨。'],
+    ['Han talade såsom representant för gruppen.', '他作为小组代表发言。'],
+    ['Djur såsom hundar och katter bor här.', '诸如狗和猫这样的动物住在这里。'],
+    ['Hon agerade såsom lärare.', '她是以老师的身份行事的。'],
+  ]), c(
+    [
+      ['så', '如此'],
+      ['som', '像；作为'],
+    ],
+    '“就像……那样”，列举时是诸如，身份上是作为。',
+  )),
+  b1(adj('smutsig', '脏的；不干净的', 'dirty', 'smutsigt', 'smutsiga', [
+    ['Skjortan är smutsig.', '这件衬衫是脏的。'],
+    ['Ett smutsigt golv.', '一块脏地板。'],
+    ['De smutsiga händerna måste tvättas.', '那些脏手必须洗。'],
+    ['Affären var smutsig.', '那笔买卖不干净。'],
+  ], { comparative: 'smutsigare', superlative: 'smutsigast' }), c(
+    [
+      ['smuts', '污垢'],
+      ['-ig', '带有……的'],
+    ],
+    '“带有污垢的”，就是脏的；也可指买卖不正当。',
+  )),
+  b1(verb('vittna', '作证；表明', 'to testify / to bear witness', 'vittnar', 'vittnade', 'vittnat', 'vittna', [
+    ['Hon vittnar i rätten i morgon.', '她明天在法庭作证。'],
+    ['Han vittnade mot grannen.', '他指证了邻居。'],
+    ['Flera har vittnat om samma sak.', '好几个人都为此作过证。'],
+    ['Beslutet vittnar om dåligt omdöme.', '这个决定表明判断力很差。'],
+  ]), c(
+    [
+      ['vittne', '证人'],
+      ['-a', '动词词尾'],
+    ],
+    '由“证人”变成动词，就是作证；也可表示某事表明了什么。',
+  )),
+  b1(verb('upphöra', '停止；终止', 'to cease / to stop', 'upphör', 'upphörde', 'upphört', 'upphör', [
+    ['Regnet upphör snart.', '雨很快会停。'],
+    ['Verksamheten upphörde i fjol.', '那项业务去年终止了。'],
+    ['De har upphört med reklam.', '他们已经停止做广告了。'],
+    ['Upphör med det genast!', '立刻停下来！'],
+  ]), c(
+    [
+      ['upp', '起来；停住'],
+      ['höra', '进行（构词词根，同德语 aufhören）'],
+    ],
+    '“停住不再进行”，就是停止、终止。',
+  )),
+  b1(verb('utnyttja', '利用；剥削', 'to make use of / to exploit', 'utnyttjar', 'utnyttjade', 'utnyttjat', 'utnyttja', [
+    ['Hon utnyttjar tiden till läsning.', '她利用时间读书。'],
+    ['De utnyttjade hans godhet.', '他们利用了他的好心。'],
+    ['Han har utnyttjat sin ställning.', '他利用了自己的职位。'],
+    ['Utnyttja inte barnen.', '别剥削孩子。'],
+  ]), c(
+    [
+      ['ut', '充分；向外'],
+      ['nyttja', '使用'],
+    ],
+    '“把用处使尽”，就是利用；损人利己时就是剥削。',
+  )),
+  b1(verb('ingå', '包含在内；订立', 'to be included / to enter into', 'ingår', 'ingick', 'ingått', 'ingå', [
+    ['Frakten ingår i priset.', '运费包含在价格里。'],
+    ['De ingick äktenskap i juni.', '他们六月结了婚。'],
+    ['Vi har ingått ett avtal.', '我们已经订立了一份协议。'],
+    ['Ingå inte det avtalet.', '别签那份协议。'],
+  ]), c(
+    [
+      ['in', '进入'],
+      ['gå', '走'],
+    ],
+    '“走进去成为一部分”，就是包含在内；走进协议就是订立。',
+  )),
+  b1(other('till följd av', 'phrase', '由于；因……的结果', 'as a result of / owing to', [
+    ['Till följd av stormen ställdes tåget in.', '由于风暴，那班火车取消了。'],
+    ['Hon blev sjuk till följd av kylan.', '她因寒冷而生病了。'],
+    ['Priserna steg till följd av kriget.', '价格因战争上涨了。'],
+    ['Till följd av felet kom vi sent.', '由于那个差错我们迟到了。'],
+  ]), c(
+    [
+      ['till', '到；由于'],
+      ['följd', '后果'],
+      ['av', '由'],
+    ],
+    '“到由某事引起的后果”，就是由于、因……的结果。',
+  )),
+  b1(verb('råna', '抢劫', 'to rob', 'rånar', 'rånade', 'rånat', 'råna', [
+    ['De rånar banker om natten.', '他们夜里抢银行。'],
+    ['Någon rånade henne på vägen.', '有人在路上抢劫了她。'],
+    ['Butiken har rånats två gånger.', '这家店已经被抢过两次。'],
+    ['Råna ingen.', '谁也别抢。'],
+  ])),
+  b1(verb('haja', '明白；搞懂（口）', 'to get it / to grasp (informal)', 'hajar', 'hajade', 'hajat', 'haja', [
+    ['Hajar du vad jag menar?', '你明白我的意思吗？'],
+    ['Jag hajade ingenting först.', '我一开始什么都没搞懂。'],
+    ['Har du hajat reglerna?', '你搞懂规则了吗？'],
+    ['Haja nu, det är viktigt.', '现在搞明白，这很重要。'],
+  ])),
+  b1(noun('överenskommelse', 'en', '协议；约定', 'agreement / settlement', 'överenskommelsen', 'överenskommelser', 'överenskommelserna', [
+    ['Vi nådde en överenskommelse.', '我们达成了一项协议。'],
+    ['Överenskommelsen gäller i ett år.', '这项约定有效期一年。'],
+    ['Flera överenskommelser skrevs under.', '好几项协议签了字。'],
+    ['Överenskommelserna måste hållas.', '那些约定必须遵守。'],
+  ]), c(
+    [
+      ['överens', '一致；谈妥'],
+      ['komma', '达成；到来'],
+      ['-else', '行为名词后缀'],
+    ],
+    '“谈妥之后达成的结果”，就是协议、约定。',
+  )),
+  b1(noun('dussin', 'ett', '一打（十二个）', 'dozen', 'dussinet', 'dussin', 'dussinen', [
+    ['Hon köpte ett dussin ägg.', '她买了一打鸡蛋。'],
+    ['Dussinet är fullt.', '这一打齐了。'],
+    ['Vi behöver två dussin koppar.', '我们需要两打杯子。'],
+    ['Dussinen stod i kartongen.', '那些按打装的货在纸箱里。'],
+  ])),
+  b1(noun('motstånd', 'ett', '抵抗；阻力；电阻', 'resistance / opposition / resistor', 'motståndet', 'motstånd', 'motstånden', [
+    ['Förslaget mötte motstånd.', '这个提议遇到了抵抗。'],
+    ['Motståndet mot lagen växte.', '对这项法律的阻力在增大。'],
+    ['Det sitter tre motstånd på kretskortet.', '电路板上有三个电阻。'],
+    ['Motstånden blev för heta.', '那些电阻太烫了。'],
+  ]), c(
+    [
+      ['mot', '对着'],
+      ['stånd', '站立；立场'],
+    ],
+    '“对着站着不让”，就是抵抗、阻力；电路里挡住电流的元件也叫 motstånd。',
+  )),
+  b1(noun('torn', 'ett', '塔；（国际象棋）车', 'tower / rook', 'tornet', 'torn', 'tornen', [
+    ['Kyrkan har ett högt torn.', '教堂有一座高塔。'],
+    ['Tornet syns från sjön.', '从湖上能看见那座塔。'],
+    ['Slottet har fyra torn.', '城堡有四座塔。'],
+    ['Tornen i schacket står i hörnen.', '国际象棋里的车在边角。'],
+  ])),
+  b1(adj('berömd', '著名的', 'famous / celebrated', 'berömt', 'berömda', [
+    ['Hon är en berömd författare.', '她是一位著名作家。'],
+    ['Ett berömt museum ligger där.', '那里有一座著名的博物馆。'],
+    ['De berömda målningarna hänger i salen.', '那些名画挂在大厅里。'],
+    ['Staden är berömd för osten.', '这座城因奶酪而著名。'],
+  ]), c(
+    [
+      ['be-', '构词前缀'],
+      ['römd', '被称赞的（berömma 称赞）'],
+    ],
+    '“被人称赞过的”，就是著名的。',
+  )),
+  b1(noun('tunga', 'en', '舌头', 'tongue', 'tungan', 'tungor', 'tungorna', [
+    ['Hon brände tungan på soppan.', '她被汤烫到了舌头。'],
+    ['Tungan gör ont.', '舌头疼。'],
+    ['Barnen räcker ut tungorna.', '孩子们把舌头伸出来。'],
+    ['Tungorna var röda av saften.', '那些舌头被果汁染红了。'],
+  ])),
+  b1(noun('kryp', 'ett', '虫子；小爬虫', 'insect / bug / crawler', 'krypet', 'kryp', 'krypen', [
+    ['Ett litet kryp kröp på bladet.', '一只小虫子在叶子上爬。'],
+    ['Krypet föll ner i glaset.', '那只虫子掉进杯子里了。'],
+    ['Det fanns kryp i mjölet.', '面粉里有虫子。'],
+    ['Krypen samlades under stenen.', '那些小爬虫聚在石头下面。'],
+  ])),
+  b1(noun('föreställning', 'en', '演出；观念', 'performance / idea / conception', 'föreställningen', 'föreställningar', 'föreställningarna', [
+    ['Vi såg en föreställning i går.', '我们昨天看了一场演出。'],
+    ['Föreställningen börjar klockan sju.', '演出七点开始。'],
+    ['Hon har vaga föreställningar om framtiden.', '她对未来只有模糊的观念。'],
+    ['Föreställningarna såldes slut.', '那些场次的票卖完了。'],
+  ]), c(
+    [
+      ['föreställa', '上演；设想'],
+      ['-ning', '行为名词后缀'],
+    ],
+    '由“搬上舞台 / 在心里摆出来”变成名词，就是演出，或头脑里的观念。',
+  )),
+  b1(noun('ondska', 'en', '邪恶；恶意', 'evil / wickedness', 'ondskan', null, null, [
+    ['Det finns för mycket ondska i världen.', '世界上有太多邪恶。'],
+    ['Ondskan visade sig i hans leende.', '恶意从他的笑容里露了出来。'],
+    ['Hon tror inte på ren ondska.', '她不相信纯粹的邪恶。'],
+    ['Vi måste stå emot ondskan.', '我们必须对抗邪恶。'],
+  ]), c(
+    [
+      ['ond', '坏的；恶的'],
+      ['-ska', '性质名词后缀'],
+    ],
+    '由“恶的”变成名词，就是邪恶、恶意。',
+  )),
+  b1(noun('fruktan', 'en', '恐惧', 'fear / dread', 'fruktan', null, null, [
+    ['Hon levde i fruktan.', '她生活在恐惧中。'],
+    ['Fruktan höll honom vaken.', '恐惧让他睡不着。'],
+    ['De växlar mellan hopp och fruktan.', '他们在希望和恐惧之间摇摆。'],
+    ['Utan fruktan gick hon in.', '她毫无恐惧地走了进去。'],
+  ]), c(
+    [
+      ['frukta', '害怕'],
+      ['-an', '行为名词词尾'],
+    ],
+    '由“害怕”这个动作变成名词，就是恐惧。',
+  )),
+  b1(noun('samling', 'en', '集合；收藏', 'gathering / collection', 'samlingen', 'samlingar', 'samlingarna', [
+    ['Samling klockan tre vid porten.', '三点在门口集合。'],
+    ['Samlingen av frimärken är stor.', '这套邮票收藏很大。'],
+    ['Flera samlingar visas på museet.', '博物馆展出好几批收藏。'],
+    ['Samlingarna börjar efter rasten.', '那些集会在休息之后开始。'],
+  ]), c(
+    [
+      ['samla', '收集；聚集'],
+      ['-ing', '行为名词后缀'],
+    ],
+    '由“聚集 / 收集”变成名词，就是一次集合，或一批收藏。',
+  )),
+  b1(verb('beundra', '钦佩；欣赏', 'to admire', 'beundrar', 'beundrade', 'beundrat', 'beundra', [
+    ['Jag beundrar hennes tålamod.', '我钦佩她的耐心。'],
+    ['De beundrade utsikten.', '他们欣赏了那片景色。'],
+    ['Hon har länge beundrat läraren.', '她钦佩那位老师已经很久了。'],
+    ['Beundra det medan det varar.', '趁还在，好好欣赏。'],
+  ]), c(
+    [
+      ['be-', '构词前缀'],
+      ['undra', '感到惊奇'],
+    ],
+    '“对某事感到惊奇而抬头看”，就是钦佩、欣赏。',
+  )),
+  b1(other('rejält', 'adv', '相当地；结实地', 'considerably / properly', [
+    ['Priserna har ökat rejält.', '价格涨了不少。'],
+    ['Hon blev rejält sjuk.', '她病得不轻。'],
+    ['Vi åt rejält till middag.', '晚饭我们吃得很扎实。'],
+    ['Det regnade rejält i natt.', '夜里雨下得很大。'],
+  ]), c(
+    [
+      ['rejäl', '结实的；像样的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'rejäl 是“结实、像样的”，rejält 就是相当地、结实地。',
+  )),
+  b1(noun('blick', 'en', '目光；一眼', 'look / glance / gaze', 'blicken', 'blickar', 'blickarna', [
+    ['Hon kastade en blick på klockan.', '她朝时钟瞥了一眼。'],
+    ['Blicken var kall.', '那目光很冷。'],
+    ['Deras blickar möttes.', '他们的目光碰上了。'],
+    ['Blickarna följde henne ut.', '那些目光跟着她出去了。'],
+  ])),
+  b1(noun('tvivel', 'ett', '怀疑', 'doubt', 'tvivlet', 'tvivel', 'tvivlen', [
+    ['Jag har inget tvivel.', '我毫不怀疑。'],
+    ['Tvivlet växte i henne.', '怀疑在她心里变大。'],
+    ['Det finns tvivel om resultatet.', '对这个结果存在怀疑。'],
+    ['Tvivlen försvann till slut.', '那些怀疑终于消失了。'],
+  ])),
+  b1(noun('inbrott', 'ett', '入室盗窃；（夜等的）降临', 'burglary / onset', 'inbrottet', 'inbrott', 'inbrotten', [
+    ['Det skedde ett inbrott i natt.', '夜里发生了一起入室盗窃。'],
+    ['Inbrottet upptäcktes på morgonen.', '那起入室盗窃是早上发现的。'],
+    ['Flera inbrott har skett i området.', '这一带发生过好几起入室盗窃。'],
+    ['Vid mörkrets inbrott gick vi hem.', '夜幕降临时我们回家了。'],
+  ]), c(
+    [
+      ['in', '进去'],
+      ['brott', '破；断裂'],
+    ],
+    '“破门进去”，就是入室盗窃；夜色破进来，就是夜幕降临。',
+  )),
+  b1(adj('löjlig', '可笑的；荒唐的', 'ridiculous', 'löjligt', 'löjliga', [
+    ['Förslaget är löjligt.', '这个提议很荒唐。'],
+    ['Ett löjligt misstag.', '一个可笑的错误。'],
+    ['De löjliga hatterna fick oss att skratta.', '那些可笑的帽子让我们笑了。'],
+    ['Han såg löjlig ut i den kostymen.', '他穿那套西装看起来很可笑。'],
+  ], { comparative: 'löjligare', superlative: 'löjligast' }), c(
+    [
+      ['löje', '可笑'],
+      ['-lig', '带有……性质的'],
+    ],
+    '“带有可笑性质的”，就是可笑的、荒唐的。',
+  )),
+  b1(verb('sy', '缝', 'to sew / to stitch', 'syr', 'sydde', 'sytt', 'sy', [
+    ['Hon syr en klänning.', '她在缝一条连衣裙。'],
+    ['Han sydde ihop såret.', '他把伤口缝上了。'],
+    ['Byxorna är redan sydda.', '裤子已经缝好了。'],
+    ['Sy knappen fast.', '把扣子缝牢。'],
+  ])),
+  b1(other('allt mer', 'phrase', '越来越', 'more and more / increasingly', [
+    ['Hon blir allt mer trött.', '她越来越累。'],
+    ['Trafiken ökar allt mer.', '车流越来越多。'],
+    ['Allt mer folk flyttar hit.', '越来越多的人搬到这里。'],
+    ['Problemet blir allt mer tydligt.', '这个问题越来越明显。'],
+  ]), c(
+    [
+      ['allt', '越发；一直'],
+      ['mer', '更多'],
+    ],
+    '“一直更多”，就是越来越。也常写成一个词 alltmer。',
+  )),
+  b1(verb('spy', '呕吐', 'to vomit / to throw up', 'spyr', 'spydde', 'spytt', 'spy', [
+    ['Barnet spyr i vasken.', '孩子在水槽里呕吐。'],
+    ['Han spydde efter båtturen.', '坐完船他吐了。'],
+    ['Hon har spytt hela natten.', '她吐了一整夜。'],
+    ['Skorstenen spydde ut rök.', '烟囱喷出了烟。'],
+  ])),
+  b1(verb('tända', '点燃；打开（灯）', 'to light / to turn on', 'tänder', 'tände', 'tänt', 'tänd', [
+    ['Hon tänder lampan.', '她打开灯。'],
+    ['Han tände en cigarett.', '他点了一支烟。'],
+    ['Vi har tänt brasan.', '我们已经把火炉点燃了。'],
+    ['Tänd ljuset, det är mörkt.', '把灯打开，太黑了。'],
+  ])),
+  b1(noun('förmåga', 'en', '能力', 'ability / capacity', 'förmågan', 'förmågor', 'förmågorna', [
+    ['Hon har en förmåga att lyssna.', '她有倾听的能力。'],
+    ['Förmågan kom tillbaka efter vilan.', '休息之后能力回来了。'],
+    ['Olika förmågor behövs i laget.', '队里需要不同的能力。'],
+    ['Förmågorna utvecklas med tiden.', '那些能力会随着时间增强。'],
+  ]), c(
+    [
+      ['förmå', '能够；促使'],
+      ['-ga', '名词词尾'],
+    ],
+    '由“能够做到”变成名词，就是能力。',
+  )),
+  b1(other('nuförtiden', 'adv', '如今；现在', 'nowadays', [
+    ['Nuförtiden jobbar många hemifrån.', '如今很多人在家办公。'],
+    ['Ungdomar läser nuförtiden mer på skärmen.', '现在年轻人更多地在屏幕上读。'],
+    ['Nuförtiden är det dyrare.', '如今更贵了。'],
+    ['Vi ses sällan nuförtiden.', '我们现在很少见面。'],
+  ]), c(
+    [
+      ['nu', '现在'],
+      ['för', '就……而言'],
+      ['tiden', '这个时代'],
+    ],
+    '“就现在这个时代而言”，就是如今、现在。',
+  )),
+  b1(other('vanligtvis', 'adv', '通常', 'usually', [
+    ['Hon kommer vanligtvis i tid.', '她通常会准时到。'],
+    ['Vi äter vanligtvis hemma.', '我们通常在家吃饭。'],
+    ['Vanligtvis regnar det i november.', '十一月通常会下雨。'],
+    ['Han tar vanligtvis bussen.', '他通常坐公交。'],
+  ]), c(
+    [
+      ['vanlig', '平常的'],
+      ['-tvis', '以……方式'],
+    ],
+    '“以平常的方式”，就是通常。',
+  )),
+  b1(verb('rensa', '清理；除掉', 'to clean / to clear / to weed', 'rensar', 'rensade', 'rensat', 'rensa', [
+    ['Hon rensar fisken i köket.', '她在厨房处理鱼。'],
+    ['De rensade ogräset i rabatten.', '他们除掉了花坛里的杂草。'],
+    ['Vi har rensat ut gamla kläder.', '我们已经清理掉旧衣服了。'],
+    ['Rensa bordet efter maten.', '吃完把桌子清理一下。'],
+  ])),
+  b1(verb('samlas', '聚集；集合', 'to gather / to assemble', 'samlas', 'samlades', 'samlats', null, [
+    ['Vi samlas klockan tre.', '我们三点集合。'],
+    ['Folket samlades på torget.', '人们聚集在广场上。'],
+    ['Alla har samlats i salen.', '所有人都已经在大厅里集合了。'],
+    ['Damm samlas i hörnen.', '灰尘积在角落里。'],
+  ]), c(
+    [
+      ['samla', '收集；聚集'],
+      ['-s', '不及物／相互（自己聚到一起）'],
+    ],
+    '“自己聚到一起”，就是聚集、集合。',
+  )),
+  b1(adj('villig', '愿意的', 'willing', 'villigt', 'villiga', [
+    ['Hon är villig att hjälpa.', '她愿意帮忙。'],
+    ['Ett villigt svar kom direkt.', '一个愿意的答复马上到了。'],
+    ['De villiga eleverna stannade kvar.', '那些愿意的学生留了下来。'],
+    ['Vi är villiga att betala mer.', '我们愿意多付一些。'],
+  ]), c(
+    [
+      ['vilja', '意愿'],
+      ['-ig', '有……的'],
+    ],
+    '“有意愿的”，就是愿意的。',
+  )),
+  b1(verb('skylla', '责怪；归咎', 'to blame', 'skyller', 'skyllde', 'skyllt', 'skyll', [
+    ['Han skyller alltid på andra.', '他总是责怪别人。'],
+    ['Hon skyllde på vädret.', '她把原因归到天气上。'],
+    ['De har skyllt ifrån sig.', '他们把责任推掉了。'],
+    ['Skyll inte på mig.', '别怪我。'],
+  ])),
+  b1(adj('döv', '聋的', 'deaf', 'dövt', 'döva', [
+    ['Han är döv på vänster öra.', '他左耳聋。'],
+    ['Ett dövt öra hör inget.', '一只聋耳朵什么也听不见。'],
+    ['De döva barnen lärde sig teckenspråk.', '那些耳聋的孩子学了手语。'],
+    ['Orden föll för döva öron.', '那些话没人听。'],
+  ])),
+  b1(noun('slöseri', 'ett', '浪费', 'waste / wastefulness', 'slöseriet', null, null, [
+    ['Det är slöseri med tid.', '这是在浪费时间。'],
+    ['Slöseriet måste stoppas.', '这种浪费必须制止。'],
+    ['Hon hatar slöseri.', '她讨厌浪费。'],
+    ['Slöseri med mat är vanligt.', '浪费食物很常见。'],
+  ]), c(
+    [
+      ['slösa', '挥霍'],
+      ['-eri', '行为／状态'],
+    ],
+    '由“挥霍”变成名词，就是浪费。',
+  )),
+  b1(other('sorgligt', 'adv', '令人难过地；可惜', 'sadly / unfortunately', [
+    ['Det slutade sorgligt.', '结局令人难过。'],
+    ['Sorgligt nog kom hon för sent.', '可惜她来得太晚了。'],
+    ['Han skakade sorgligt på huvudet.', '他难过地摇了摇头。'],
+    ['Det är sorgligt att säga, men hon har rätt.', '说来遗憾，但她是对的。'],
+  ]), c(
+    [
+      ['sorg', '悲伤'],
+      ['-lig', '带有……的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'sorglig 是“令人悲伤的”，sorgligt 就是令人难过地、可惜。',
+  )),
+  b1(verb('mista', '失去', 'to lose', 'mister', 'miste', 'mist', 'mista', [
+    ['Han mister jobbet i höst.', '他秋天会失去工作。'],
+    ['Hon miste sin far tidigt.', '她很早就失去了父亲。'],
+    ['De har mist allt i branden.', '他们在火灾中失去了一切。'],
+    ['Mista inte hoppet.', '别失去希望。'],
+  ])),
+  b1(adj('avundsjuk', '嫉妒的', 'jealous / envious', 'avundsjukt', 'avundsjuka', [
+    ['Han är avundsjuk på kollegan.', '他嫉妒那个同事。'],
+    ['Ett avundsjukt leende.', '一个嫉妒的微笑。'],
+    ['De avundsjuka blickarna syntes.', '那些嫉妒的目光能看出来。'],
+    ['Var inte avundsjuk.', '别嫉妒。'],
+  ]), c(
+    [
+      ['avund', '嫉妒'],
+      ['sjuk', '有病的'],
+    ],
+    '“得了嫉妒这种病”，就是嫉妒的。',
+  )),
+  b1(verb('såra', '伤害；使受伤', 'to hurt / to wound', 'sårar', 'sårade', 'sårat', 'såra', [
+    ['Orden sårar henne.', '那些话伤害了她。'],
+    ['Han sårade mig med skämtet.', '他用那个玩笑伤害了我。'],
+    ['Många sårades i olyckan.', '事故中许多人受伤了。'],
+    ['Såra inte barnen.', '别伤害孩子们。'],
+  ]), c(
+    [
+      ['sår', '伤口'],
+      ['-a', '动词词尾'],
+    ],
+    '由“伤口”变成动词，就是造成伤害，身体或心里都可以。',
+  )),
+  b1(verb('sjunka', '下沉；下降', 'to sink / to fall', 'sjunker', 'sjönk', 'sjunkit', 'sjunk', [
+    ['Båten sjunker långsamt.', '船在慢慢下沉。'],
+    ['Priserna sjönk i våras.', '今年春天价格下降了。'],
+    ['Fartyget har sjunkit utanför kusten.', '那艘船已经在岸边沉了。'],
+    ['Sjunk inte ihop nu.', '现在别瘫下去。'],
+  ])),
+  b1(adj('yttre', '外部的；外在的', 'outer / external', 'yttre', 'yttre', [
+    ['Den yttre dörren är låst.', '外面那扇门锁着。'],
+    ['Ett yttre tecken syns redan.', '一个外在的迹象已经能看见。'],
+    ['De yttre rummen är kalla.', '那些靠外的房间很冷。'],
+    ['Yttre förhållanden påverkar oss.', '外部环境会影响我们。'],
+  ], { superlative: 'ytterst' })),
 ]

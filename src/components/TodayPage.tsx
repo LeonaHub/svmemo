@@ -2,14 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import {
   getTodayOverview,
-  startMatchSession,
   startSentenceSession,
   startStarredSession,
   startTodaySession,
-  type MatchPair,
   type StudyItem,
 } from '../db/study'
-import { MATCH_PAIR_COUNT } from '../lib/match-drill'
 import type { SentenceItem } from '../lib/sentence-drill'
 import { StudyCalendar } from './StudyCalendar'
 import {
@@ -22,7 +19,7 @@ import {
 
 type TodayPageProps = {
   onStart: (items: StudyItem[]) => void
-  onStartMatch: (pairs: MatchPair[]) => void
+  onOpenDueList: () => void
   onStartSentences: (items: SentenceItem[]) => void
   onBrowseWords: () => void
   onBrowseSentences: () => void
@@ -65,7 +62,7 @@ function useClock(intervalMs = 30_000): Date {
 
 export function TodayPage({
   onStart,
-  onStartMatch,
+  onOpenDueList,
   onStartSentences,
   onBrowseWords,
   onBrowseSentences,
@@ -75,7 +72,7 @@ export function TodayPage({
   const fileInput = useRef<HTMLInputElement>(null)
   const [message, setMessage] = useState<string | null>(null)
   const [starting, setStarting] = useState<
-    'today' | 'review' | 'starred' | 'sentences' | null
+    'today' | 'starred' | 'sentences' | null
   >(null)
 
   const remaining = overview
@@ -84,7 +81,7 @@ export function TodayPage({
   const reviewable = overview?.reviewableCount ?? 0
   const starredCount = overview?.starredCount ?? 0
   const canStartToday = remaining > 0
-  const canReview = reviewable > 0
+  const canOpenDueList = reviewable > 0
   const canReviewStarred = starredCount > 0
   const needsWords = Boolean(overview && overview.learnedCount === 0)
 
@@ -97,7 +94,7 @@ export function TodayPage({
     try {
       const items = await startTodaySession(now)
       if (items.length === 0) {
-        setMessage('今天没有到期任务。下次复习由间隔算法决定。想加练可以点下面的配对。')
+        setMessage('今天没有到期任务。下次复习由间隔算法决定。')
         return
       }
       onStart(items)
@@ -108,24 +105,11 @@ export function TodayPage({
     }
   }
 
-  async function handleReview() {
-    if (starting) {
+  function handleOpenDueList() {
+    if (starting || !canOpenDueList) {
       return
     }
-    setStarting('review')
-    setMessage(null)
-    try {
-      const items = await startMatchSession()
-      if (items.length === 0) {
-        setMessage('计划里还没有背过的词。先去词库加入，再点开始背单词。')
-        return
-      }
-      onStartMatch(items.filter((pair) => pair.word?.id && pair.word.lemma))
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : '无法开始复习')
-    } finally {
-      setStarting(null)
-    }
+    onOpenDueList()
   }
 
   async function handleStarred() {
@@ -209,7 +193,7 @@ export function TodayPage({
     ? '先复习到期的，再学新词。每 7 个一组。'
     : overview && overview.learnedCount === 0
       ? '还没有词在计划里。先去词库勾选，再回来开始。'
-      : '今天的到期和新词都过完了。下次出现由间隔算法决定。'
+      : '今天的到期和新词都过完了。下次出现由间隔算法决定。点「到期复习」能看到已学的词还要几天。'
 
   return (
     <section className="today-page">
@@ -234,10 +218,20 @@ export function TodayPage({
                 <strong>{remaining}</strong>
               </p>
               <div className="today-pills">
-                <span className="today-pill is-review">
+                <button
+                  type="button"
+                  className="today-pill is-review"
+                  disabled={!canOpenDueList}
+                  onClick={handleOpenDueList}
+                  title={
+                    canOpenDueList
+                      ? '查看已学词：哪些到期，哪些还要等几天'
+                      : '还没有已学的词'
+                  }
+                >
                   <strong>{overview.dueCount}</strong>
                   到期复习
-                </span>
+                </button>
                 <span className="today-pill is-new">
                   <strong>{overview.newCount}</strong>
                   新词
@@ -285,27 +279,6 @@ export function TodayPage({
           </ul>
 
           <div className="today-extras">
-            <article className="today-extra">
-              <p className="today-extra-kicker">加练</p>
-              <p className="today-extra-title">快忘的对上就消</p>
-              <p className="today-extra-meta">
-                {canReview
-                  ? `按间隔算法挑出最容易忘的 ${Math.min(MATCH_PAIR_COUNT, reviewable)} 个。深一点的是瑞典语，浅一点的是中文，点成对消掉。`
-                  : '先背一些词，之后随时可以回来配对加练。'}
-              </p>
-              <button
-                type="button"
-                className="btn"
-                disabled={!canReview || Boolean(starting)}
-                onClick={() => void handleReview()}
-              >
-                {starting === 'review'
-                  ? '准备中…'
-                  : canReview
-                    ? '开始配对'
-                    : '还没有可加练的词'}
-              </button>
-            </article>
             <article className="today-extra is-starred">
               <p className="today-extra-kicker">单词本</p>
               <p className="today-extra-title">难词放这里</p>

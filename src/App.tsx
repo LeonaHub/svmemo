@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { seedIfEmpty } from './db/seed'
 import { StudySession } from './components/StudySession'
-import { MatchSession } from './components/MatchSession'
+import { DueReviewPage } from './components/DueReviewPage'
 import { SentenceSession } from './components/SentenceSession'
 import { SentencePage } from './components/SentencePage'
 import { TodayPage } from './components/TodayPage'
 import { WordList } from './components/WordList'
-import type { MatchPair, StudyItem } from './db/study'
+import type { StudyItem } from './db/study'
 import type { SentenceItem } from './lib/sentence-drill'
 import './App.css'
 
@@ -14,7 +14,7 @@ type Tab = 'today' | 'sentences' | 'words'
 
 type Session =
   | { type: 'words'; items: StudyItem[] }
-  | { type: 'match'; pairs: MatchPair[] }
+  | { type: 'due-list' }
   | { type: 'sentences'; items: SentenceItem[] }
 
 export default function App() {
@@ -36,12 +36,12 @@ export default function App() {
     )
   }
 
-  if (session?.type === 'match') {
+  if (session?.type === 'due-list') {
     return (
-      <div className="shell shell-study is-match">
-        <MatchSession
-          pairs={session.pairs.filter((pair) => pair.word?.id)}
+      <div className="shell shell-study">
+        <DueReviewPage
           onExit={() => setSession(null)}
+          onStart={(items) => setSession({ type: 'words', items })}
         />
       </div>
     )
@@ -98,7 +98,7 @@ export default function App() {
         {tab === 'today' ? (
           <TodayPage
             onStart={(items) => setSession({ type: 'words', items })}
-            onStartMatch={(pairs) => setSession({ type: 'match', pairs })}
+            onOpenDueList={() => setSession({ type: 'due-list' })}
             onStartSentences={(items) => setSession({ type: 'sentences', items })}
             onBrowseWords={() => setTab('words')}
             onBrowseSentences={() => setTab('sentences')}

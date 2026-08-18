@@ -7,6 +7,7 @@ import { a1Words } from '../data/a1'
 import { compoundSummary, formsSummary } from '../lib/inflection'
 import { POS_LABEL } from '../lib/pos'
 import type { Word } from '../types/word'
+import { releaseMarkButton } from './CardMarks'
 
 type WordFilter = 'all' | 'unenrolled' | 'plan' | 'starred' | 'mastered'
 
@@ -365,6 +366,7 @@ export function WordList() {
                   onClick={(event) => {
                     event.stopPropagation()
                     void toggleStarred(word.id)
+                    releaseMarkButton(event)
                   }}
                   aria-label={isStarred ? '取消收藏' : '收藏到单词本'}
                   title={isStarred ? '已在单词本' : '收藏到单词本'}

@@ -130,7 +130,12 @@ export async function importBackup(raw: unknown): Promise<void> {
         })),
       )
       await db.settings.bulkAdd(backup.settings)
-      await db.dailyStats.bulkAdd(backup.dailyStats)
+      await db.dailyStats.bulkAdd(
+        backup.dailyStats.map((row) => ({
+          ...row,
+          matchedWordIds: row.matchedWordIds ?? [],
+        })),
+      )
       if (backup.wordMarks && backup.wordMarks.length > 0) {
         await db.wordMarks.bulkAdd(
           backup.wordMarks.map((mark) => ({

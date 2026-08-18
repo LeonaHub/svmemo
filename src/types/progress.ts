@@ -60,6 +60,8 @@ export const dailyStatsSchema = z.object({
   newCount: z.number().int().nonnegative(),
   reviewCount: z.number().int().nonnegative(),
   completed: z.boolean(),
+  /** 当天配对消掉的词。不写 FSRS，但计入日历「复习」。缺省当 []。 */
+  matchedWordIds: z.array(z.string()).default([]),
 })
 
 export const wordMarkSchema = z.object({
