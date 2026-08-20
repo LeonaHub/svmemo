@@ -5,17 +5,16 @@ type WordExtrasProps = {
   word: Word
 }
 
-export function WordExtras({ word }: WordExtrasProps) {
+export function WordForms({ word }: WordExtrasProps) {
   const rows = inflectionRows(word)
-  const examples = examplesOf(word)
   const compound = word.compound
 
-  if (rows.length === 0 && examples.length === 0 && !compound) {
+  if (rows.length === 0 && !compound) {
     return null
   }
 
   return (
-    <div className="word-extras">
+    <div className="word-extras-forms">
       {compound ? (
         <div className="compound">
           <p className="compound-label">构词</p>
@@ -41,16 +40,27 @@ export function WordExtras({ word }: WordExtrasProps) {
           ))}
         </dl>
       ) : null}
-      {examples.length > 0 ? (
-        <ul className="examples">
-          {examples.map((example) => (
-            <li key={example.sv}>
-              <strong>{example.sv}</strong>
-              <span>{example.zh}</span>
-            </li>
-          ))}
-        </ul>
-      ) : null}
+    </div>
+  )
+}
+
+export function WordExamples({ word }: WordExtrasProps) {
+  const examples = examplesOf(word)
+  if (examples.length === 0) {
+    return null
+  }
+
+  return (
+    <div className="word-extras-examples">
+      <p className="examples-label">例句</p>
+      <ul className="examples">
+        {examples.map((example) => (
+          <li key={example.sv}>
+            <strong>{example.sv}</strong>
+            <span>{example.zh}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

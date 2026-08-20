@@ -3521,4 +3521,1400 @@ export const customWords: Word[] = [
     ],
     '“用话说过去”，合起来就是说服。',
   )),
+  b1(verb('begå', '犯下；做出（罪行、错误）', 'to commit (a crime / mistake)', 'begår', 'begick', 'begått', 'begå', [
+    ['Han begår ett brott.', '他在犯罪。'],
+    ['Hon begick ett misstag.', '她犯了一个错误。'],
+    ['Mordet har begåtts i natt.', '这起谋杀是夜里犯下的。'],
+    ['Begå inte samma fel igen.', '别再犯同样的错。'],
+  ]), c(
+    [
+      ['be-', '构词前缀'],
+      ['gå', '走'],
+    ],
+    '“走过去做成某事”，现在几乎只用于犯下罪行或错误。',
+  )),
+  b1(noun('bränsle', 'ett', '燃料', 'fuel', 'bränslet', 'bränslen', 'bränslena', [
+    ['Bilen behöver mer bränsle.', '这车需要更多燃料。'],
+    ['Bränslet är dyrt just nu.', '现在燃料很贵。'],
+    ['Olika bränslen ger olika utsläpp.', '不同燃料排放不同。'],
+    ['Bränslena förvaras säkert.', '那些燃料妥善存放。'],
+  ]), c(
+    [
+      ['bränna', '烧'],
+      ['-sle', '材料/工具后缀'],
+    ],
+    '“用来烧的东西”，就是燃料。',
+  )),
+  b1(noun('roman', 'en', '长篇小说', 'novel', 'romanen', 'romaner', 'romanerna', [
+    ['Jag läser en spännande roman.', '我在读一本精彩的长篇小说。'],
+    ['Romanen är tjock.', '那部长篇小说很厚。'],
+    ['Hon har skrivit tre romaner.', '她写了三部长篇小说。'],
+    ['Romanerna står i hyllan.', '那些长篇小说在书架上。'],
+  ])),
+  b1(noun('omständighet', 'en', '情况；情形', 'circumstance', 'omständigheten', 'omständigheter', 'omständigheterna', [
+    ['Under rådande omständigheter stannar vi.', '在目前情况下我们留下。'],
+    ['Omständigheten ändrade allt.', '那个情况改变了一切。'],
+    ['Berätta alla omständigheter.', '把所有情况都说一下。'],
+    ['Omständigheterna är oklara.', '那些情况还不清楚。'],
+  ]), c(
+    [
+      ['omständig', '具体情境的；周全的'],
+      ['-het', '抽象名词后缀'],
+    ],
+    '“具体情境的状态”，就是情况、情形。',
+  )),
+  b1(noun('omgång', 'en', '一轮；一回', 'round / turn', 'omgången', 'omgångar', 'omgångarna', [
+    ['Det är dags för nästa omgång.', '该进入下一轮了。'],
+    ['Omgången var jämn.', '这一轮打得很均势。'],
+    ['Vi spelar tre omgångar.', '我们打三轮。'],
+    ['Omgångarna tar lång tid.', '那些轮次要花很长时间。'],
+  ]), c(
+    [
+      ['om', '再；绕一圈'],
+      ['gång', '走；一次'],
+    ],
+    '“再走一圈”，合起来就是一轮、一回。',
+  )),
+  b1(noun('dumhet', 'en', '愚蠢；蠢事', 'stupidity / foolish act', 'dumheten', 'dumheter', 'dumheterna', [
+    ['Det var en dumhet att gå ut.', '出去是件蠢事。'],
+    ['Dumheten kostade dyrt.', '那件蠢事代价很大。'],
+    ['Han har gjort flera dumheter.', '他干了好几件蠢事。'],
+    ['Dumheterna slutar här.', '那些蠢事到此为止。'],
+  ]), c(
+    [
+      ['dum', '蠢的'],
+      ['-het', '抽象名词后缀'],
+    ],
+    '“蠢的状态”，就是愚蠢，也指一件蠢事。',
+  )),
+  b1(noun('skinn', 'ett', '皮；皮革', 'skin / leather', 'skinnet', 'skinn', 'skinnen', [
+    ['Jackan är av skinn.', '这件夹克是皮的。'],
+    ['Skinnet på äpplet är rött.', '苹果皮是红的。'],
+    ['Hon köpte två skinn.', '她买了两张皮。'],
+    ['Skinnen hänger på tork.', '那些皮在晾着。'],
+  ])),
+  b1(noun('ledtråd', 'en', '线索', 'clue', 'ledtråden', 'ledtrådar', 'ledtrådarna', [
+    ['Polisen hittade en ledtråd.', '警察找到一条线索。'],
+    ['Ledtråden ledde till huset.', '那条线索指向那栋房子。'],
+    ['Det fanns flera ledtrådar.', '有好几条线索。'],
+    ['Ledtrådarna räckte inte.', '那些线索还不够。'],
+  ]), c(
+    [
+      ['leda', '带领'],
+      ['tråd', '线'],
+    ],
+    '“带领人往前的线”，合起来就是线索。',
+  )),
+  b1(noun('dal', 'en', '山谷', 'valley', 'dalen', 'dalar', 'dalarna', [
+    ['Huset ligger i en dal.', '房子在山谷里。'],
+    ['Dalen är grön på våren.', '春天山谷是绿的。'],
+    ['Det finns tre dalar här.', '这里有三条山谷。'],
+    ['Dalarna mellan bergen är djupa.', '山间那些山谷很深。'],
+  ])),
+  b1(noun('böna', 'en', '豆子', 'bean', 'bönan', 'bönor', 'bönorna', [
+    ['Hon kokade bönor till middag.', '她煮豆子当晚饭。'],
+    ['Bönan är grön.', '这颗豆子是绿的。'],
+    ['Två bönor föll på golvet.', '两颗豆子掉到地板上。'],
+    ['Bönorna måste blötläggas.', '那些豆子得泡一下。'],
+  ])),
+  b1(verb('återstå', '还剩下；尚待', 'to remain / to be left', 'återstår', 'återstod', 'återstått', 'återstå', [
+    ['Det återstår tre dagar.', '还剩三天。'],
+    ['Bara kaffet återstod.', '只剩下咖啡了。'],
+    ['Mycket har återstått ogjort.', '还有很多没做完。'],
+    ['Vad återstår att göra?', '还剩什么要做？'],
+  ]), c(
+    [
+      ['åter', '还；再'],
+      ['stå', '站；处于'],
+    ],
+    '“还站在那里”，合起来就是还剩下。',
+  )),
+  b1(noun('utrymme', 'ett', '空间；余地', 'space / room', 'utrymmet', 'utrymmen', 'utrymmena', [
+    ['Det finns inte utrymme i hallen.', '门厅里没有空间。'],
+    ['Utrymmet under trappan är litet.', '楼梯下的空间很小。'],
+    ['Vi behöver fler utrymmen.', '我们需要更多空间。'],
+    ['Utrymmena i källaren hyrs ut.', '地下室那些空间租出去了。'],
+  ]), c(
+    [
+      ['ut', '向外'],
+      ['rymma', '装得下；腾出'],
+    ],
+    '“能腾出来、装得下的地方”，就是空间、余地。',
+  )),
+  b1(adj('skicklig', '熟练的；高明的', 'skilled / skilful', 'skickligt', 'skickliga', [
+    ['Hon är en skicklig kock.', '她是个手艺高超的厨师。'],
+    ['Ett skickligt jobb.', '一份干得很漂亮的活。'],
+    ['De skickliga hantverkarna är dyra.', '那些手艺好的工匠很贵。'],
+    ['Han är skickligare än jag.', '他比我更熟练。'],
+  ], { comparative: 'skickligare', superlative: 'skickligast' }), c(
+    [
+      ['skick', '本事；样子'],
+      ['-lig', '带有……性质的'],
+    ],
+    '“带有本事的”，就是熟练的、高明的。',
+  )),
+  b1(verb('bege sig', '动身；前往', 'to set off / to go', 'beger sig', 'begav sig', 'begett sig', 'bege dig', [
+    ['Vi beger oss hem nu.', '我们现在动身回家。'],
+    ['Hon begav sig till stan.', '她动身进城了。'],
+    ['De har begett sig av redan.', '他们已经出发了。'],
+    ['Bege dig inte dit ensam.', '别一个人往那儿去。'],
+  ]), c(
+    [
+      ['be-', '构词前缀'],
+      ['ge', '给'],
+      ['sig', '自己'],
+    ],
+    '“把自己交给某个方向”，合起来就是动身、前往。',
+  )),
+  b1(noun('motorväg', 'en', '高速公路', 'motorway / highway', 'motorvägen', 'motorvägar', 'motorvägarna', [
+    ['Vi kör på motorvägen.', '我们在高速公路上开。'],
+    ['Motorvägen var avstängd.', '那条高速公路封了。'],
+    ['Två motorvägar möts där.', '两条高速公路在那里交汇。'],
+    ['Motorvägarna är fulla i rusningen.', '高峰时那些高速公路都堵。'],
+  ]), c(
+    [
+      ['motor', '发动机'],
+      ['väg', '路'],
+    ],
+    '“给机动车走的路”，就是高速公路。',
+  )),
+  b1(noun('besökare', 'en', '访客；参观者', 'visitor', 'besökaren', 'besökare', 'besökarna', [
+    ['Museet har många besökare.', '博物馆有很多访客。'],
+    ['Besökaren glömde väskan.', '那位访客忘了包。'],
+    ['Flera besökare väntade.', '好几位访客在等。'],
+    ['Besökarna måste köpa biljett.', '那些访客必须买票。'],
+  ]), c(
+    [
+      ['besöka', '拜访'],
+      ['-are', '做这事的人'],
+    ],
+    '“来拜访的人”，就是访客、参观者。',
+  )),
+  b1(noun('vrede', 'en', '怒气；愤怒', 'wrath / anger', 'vreden', null, null, [
+    ['Han skakade av vrede.', '他气得发抖。'],
+    ['Vreden lade sig långsamt.', '怒气慢慢消了。'],
+    ['Tala inte i vrede.', '别在怒气中说话。'],
+    ['Hennes vrede var tydlig.', '她的怒气很明显。'],
+  ])),
+  b1(noun('växel', 'en', '挡位；零钱；总机', 'gear / change / switchboard', 'växeln', 'växlar', 'växlarna', [
+    ['Lägg i treans växel.', '挂上三挡。'],
+    ['Har du växel för bussen?', '你有坐公交的零钱吗？'],
+    ['Ring växeln och fråga.', '打总机问一下。'],
+    ['Växlarna i lastbilen är tunga.', '卡车里那些挡很沉。'],
+  ]), c(
+    [
+      ['växla', '交换；换挡'],
+      ['-el', '名词后缀'],
+    ],
+    '由“交换、换挡”变成名词，就是挡位、零钱、总机。',
+  )),
+  b1(noun('kärring', 'en', '老太婆（口，常带贬或不敬）', 'old woman (colloquial, often pejorative)', 'kärringen', 'kärringar', 'kärringarna', [
+    ['Han sa kärring och hon blev arg.', '他说了“老太婆”，她生气了。'],
+    ['Kärringen bodde i stugan.', '那个老太婆住在小屋里。'],
+    ['Några kärringar satt på bänken.', '几个老太婆坐在长椅上。'],
+    ['Kärringarna skrattade högt.', '那些老太婆大声笑。'],
+  ])),
+  b1(verb('anropa', '呼叫；召唤', 'to call / to hail', 'anropar', 'anropade', 'anropat', 'anropa', [
+    ['Fartyget anropar hamnen.', '船在呼叫港口。'],
+    ['Hon anropade räddningstjänsten i radio.', '她用无线电呼叫了救援。'],
+    ['Planet har anropats från tornet.', '塔台已经呼叫过那架飞机。'],
+    ['Anropa oss på kanal sexton.', '用十六频道呼叫我们。'],
+  ]), c(
+    [
+      ['an-', '朝向'],
+      ['ropa', '喊'],
+    ],
+    '“朝某处喊”，合起来就是呼叫、召唤。',
+  )),
+  b1(noun('mus', 'en', '老鼠；鼠标', 'mouse', 'musen', 'möss', 'mössen', [
+    ['En mus sprang över golvet.', '一只老鼠从地板上跑过。'],
+    ['Klicka med musen.', '用鼠标点一下。'],
+    ['Katten jagar möss.', '猫在抓老鼠。'],
+    ['Mössen har ätit osten.', '那些老鼠把奶酪吃了。'],
+  ])),
+  b1(verb('roa', '逗乐；使开心', 'to amuse / to entertain', 'roar', 'roade', 'roat', 'roa', [
+    ['Clownen roar barnen.', '小丑逗孩子们开心。'],
+    ['Filmen roadade oss.', '那部电影把我们逗乐了。'],
+    ['Vi har roat oss hela kvällen.', '我们整晚都玩得很开心。'],
+    ['Roa gästerna lite.', '逗客人开心一下。'],
+  ])),
+  b1(noun('förare', 'en', '司机；驾驶员', 'driver', 'föraren', 'förare', 'förarna', [
+    ['Föraren stannade bussen.', '司机把公交车停了。'],
+    ['En förare väntar utanför.', '一名司机在外面等。'],
+    ['Två förare turas om.', '两名司机轮班。'],
+    ['Förarna ska vila efter körningen.', '那些司机开完要休息。'],
+  ]), c(
+    [
+      ['föra', '驾驶；带领'],
+      ['-are', '做这事的人'],
+    ],
+    '“驾驶或带领的人”，就是司机、驾驶员。',
+  )),
+  b1(noun('pastor', 'en', '牧师', 'pastor', 'pastorn', 'pastorer', 'pastorerna', [
+    ['Pastorn talar i kyrkan.', '牧师在教堂讲话。'],
+    ['En pastor leder vigseln.', '一位牧师主持婚礼。'],
+    ['Flera pastorer var inbjudna.', '好几位牧师受了邀请。'],
+    ['Pastorerna möttes i går.', '那些牧师昨天见了面。'],
+  ])),
+  b1(verb('inta', '占领；就座；进食', 'to occupy / to take (a seat or meal)', 'intar', 'intog', 'intagit', 'inta', [
+    ['Soldaterna intar staden.', '士兵占领这座城市。'],
+    ['Vi intog frukosten tidigt.', '我们很早就吃了早餐。'],
+    ['Platserna har intagits redan.', '那些座位已经被占了。'],
+    ['Inta era platser.', '请入座。'],
+  ]), c(
+    [
+      ['in', '进入'],
+      ['ta', '拿'],
+    ],
+    '“拿进来占住”，就是占领、就座，也指进食。',
+  )),
+  b1(noun('damm', 'ett', '灰尘；尘土', 'dust', 'dammet', null, null, [
+    ['Det ligger damm på hyllan.', '架子上有灰。'],
+    ['Dammet yr i luften.', '灰尘在空气里扬起来。'],
+    ['Hon torkade damm i hallen.', '她在门厅掸灰。'],
+    ['Dammet täckte golvet.', '灰尘盖住了地板。'],
+  ])),
+  b1(noun('nonsens', 'ett', '废话；胡说', 'nonsense', 'nonsenset', null, null, [
+    ['Det där är rent nonsens.', '那纯粹是胡说。'],
+    ['Nonsenset i mejlet retade henne.', '邮件里的废话惹恼了她。'],
+    ['Prata inte nonsens.', '别说废话。'],
+    ['Hon tröttnade på nonsens.', '她听烦了那些胡说。'],
+  ])),
+  b1(other('med anledning av', 'phrase', '由于；鉴于', 'due to / on the occasion of', [
+    ['Mötet ställs in med anledning av sjukdomen.', '由于生病，会议取消。'],
+    ['Med anledning av brevet svarar vi så här.', '鉴于来信，我们这样回复。'],
+    ['Festen ges med anledning av jubileet.', '宴会是为了周年纪念举行的。'],
+    ['Med anledning av klagomålen ändrades reglerna.', '由于那些投诉，规定改了。'],
+  ]), c(
+    [
+      ['med', '以；带着'],
+      ['anledning', '缘由；起因'],
+      ['av', '由'],
+    ],
+    '“带着由某事引起的缘由”，就是由于、鉴于。',
+  )),
+  b1(noun('lager', 'ett', '仓库；存货；层', 'warehouse / stock / layer', 'lagret', 'lager', 'lagren', [
+    ['Varorna ligger på lagret.', '货在仓库里。'],
+    ['Lagret är tomt just nu.', '库存现在空了。'],
+    ['Måla två lager färg.', '刷两层漆。'],
+    ['Lagren i jorden syns tydligt.', '地层看得很清楚。'],
+  ])),
+  b1(verb('orsaka', '造成；引起', 'to cause', 'orsakar', 'orsakade', 'orsakat', 'orsaka', [
+    ['Misstaget orsakar förseningar.', '这个错误造成延误。'],
+    ['Regnet orsakade översvämning.', '雨造成了洪水。'],
+    ['Skadan har orsakats av slitage.', '损坏是磨损造成的。'],
+    ['Orsaka inte mer problem.', '别再造成更多问题。'],
+  ]), c(
+    [
+      ['orsak', '原因'],
+      ['-a', '动词词尾'],
+    ],
+    '由“原因”变成动词，就是造成、引起。',
+  )),
+  b1(verb('ogilla', '不喜欢；不赞同', 'to dislike', 'ogillar', 'ogillade', 'ogillat', 'ogilla', [
+    ['Jag ogillar kaffe.', '我不喜欢咖啡。'],
+    ['Hon ogillade förslaget.', '她不喜欢那个提议。'],
+    ['Förändringen har ogillats av många.', '许多人已经表示不喜欢这个变化。'],
+    ['Ogilla gärna, men säg varför.', '不喜欢也行，但要说出原因。'],
+  ]), c(
+    [
+      ['o-', '否定前缀'],
+      ['gilla', '喜欢'],
+    ],
+    '“不喜欢”，就是讨厌、不赞同。',
+  )),
+  b1(adj('tillfällig', '临时的；暂时的', 'temporary / occasional', 'tillfälligt', 'tillfälliga', [
+    ['Det är en tillfällig lösning.', '这是个临时办法。'],
+    ['Ett tillfälligt jobb.', '一份临时工作。'],
+    ['De tillfälliga skyltarna tas bort imorgon.', '那些临时牌子明天撤掉。'],
+    ['Störningen är bara tillfällig.', '这次干扰只是暂时的。'],
+  ]), c(
+    [
+      ['tillfälle', '时机；场合'],
+      ['-ig', '带有……性质的'],
+    ],
+    '“只属于某一时机的”，就是临时的、暂时的。',
+  )),
+  b1(noun('mynt', 'ett', '硬币', 'coin', 'myntet', 'mynt', 'mynten', [
+    ['Ett mynt ramlade ur fickan.', '一枚硬币从口袋掉出来。'],
+    ['Myntet är gammalt.', '这枚硬币很旧。'],
+    ['Hon samlar på mynt.', '她收集硬币。'],
+    ['Mynten ligger i skålen.', '那些硬币在碗里。'],
+  ])),
+  b1(noun('firma', 'en', '公司；商号', 'firm / company', 'firman', 'firmor', 'firmorna', [
+    ['Han startade en firma.', '他开了一家公司。'],
+    ['Firman ligger i stan.', '那家公司在城里。'],
+    ['Två firmor samarbetar.', '两家公司在合作。'],
+    ['Firmorna slog sig ihop.', '那些公司合并了。'],
+  ])),
+  b1(verb('luta', '倾斜；倚靠', 'to lean / to tilt', 'lutar', 'lutade', 'lutat', 'luta', [
+    ['Tornet lutar lite.', '塔有点斜。'],
+    ['Hon lutade sig mot väggen.', '她靠在墙上。'],
+    ['Stolen har lutat länge.', '这椅子歪了很久。'],
+    ['Luta inte stolen bakåt.', '别把椅子往后仰。'],
+  ])),
+  b1(noun('gloria', 'en', '光环；荣光', 'halo / glory', 'glorian', 'glorior', 'gloriorna', [
+    ['Helgonet har en gloria.', '圣像头上有光环。'],
+    ['Glorian lyser på tavlan.', '画上的光环在发亮。'],
+    ['Några glorior målades i guld.', '几个光环用金色画成。'],
+    ['Gloriorna runt lamporna syns i dimman.', '灯周围那些光晕在雾里看得见。'],
+  ])),
+  b1(noun('utväg', 'en', '出路；办法', 'way out', 'utvägen', 'utvägar', 'utvägarna', [
+    ['Vi måste hitta en utväg.', '我们必须找到一条出路。'],
+    ['Utvägen visade sig vara enkel.', '那条出路其实很简单。'],
+    ['Det fanns få utvägar.', '出路不多。'],
+    ['Utvägarna är slut.', '那些出路都没了。'],
+  ]), c(
+    [
+      ['ut', '向外'],
+      ['väg', '路'],
+    ],
+    '“向外的路”，就是出路、办法。',
+  )),
+  b1(adj('pank', '没钱的；破产的', 'broke / penniless', 'pankt', 'panka', [
+    ['Jag är pank just nu.', '我这会儿没钱了。'],
+    ['Kontot är pankt efter hyran.', '交完房租账户空了。'],
+    ['De är panka efter festen.', '他们办完派对没钱了。'],
+    ['Bli inte pank före löning.', '发薪前别把自己花穷了。'],
+  ])),
+  b1(noun('kulle', 'en', '小山；丘', 'hill', 'kullen', 'kullar', 'kullarna', [
+    ['Huset står på en kulle.', '房子在一座小山上。'],
+    ['Kullen är grön på sommaren.', '夏天那座小山是绿的。'],
+    ['Barnen sprang uppför två kullar.', '孩子们跑上了两座小山。'],
+    ['Kullarna syns från vägen.', '从路上能看见那些小山。'],
+  ])),
+  b1(noun('koma', 'en', '昏迷', 'coma', 'koman', null, null, [
+    ['Han ligger i koma.', '他处于昏迷中。'],
+    ['Koman varade i tre dagar.', '那次昏迷持续了三天。'],
+    ['Patienten föll i koma.', '病人陷入了昏迷。'],
+    ['Hon vaknade ur koman.', '她从昏迷中醒来。'],
+  ])),
+  b1(adj('vice', '副的；代理的', 'vice / deputy', 'vice', 'vice', [
+    ['Hon är vice ordförande.', '她是副主席。'],
+    ['Vice rektor tog emot oss.', '副校长接待了我们。'],
+    ['De vice cheferna möttes i dag.', '那些副主管今天见了面。'],
+    ['Han utsågs till vice kapten.', '他被任命为副队长。'],
+  ])),
+  b1(verb('råda', '劝告；盛行；存在', 'to advise / to prevail', 'råder', 'rådde', 'rått', 'råd', [
+    ['Det råder brist på lärare.', '教师短缺。'],
+    ['Läkaren rådde henne att vila.', '医生劝她休息。'],
+    ['Tystnad har rått i rummet.', '房间里一直很安静。'],
+    ['Råd honom att vänta.', '劝他等一等。'],
+  ])),
+  b1(noun('reklam', 'en', '广告', 'advertising / advert', 'reklamen', 'reklamer', 'reklamerna', [
+    ['Det är för mycket reklam på tv.', '电视上广告太多了。'],
+    ['Reklamen irriterar mig.', '那个广告惹我烦。'],
+    ['De har gjort flera reklamer.', '他们做了好几则广告。'],
+    ['Reklamerna kommer tätt.', '那些广告接连出现。'],
+  ])),
+  b1(verb('fattas', '缺少；欠缺', 'to be missing / to be lacking', 'fattas', 'fattades', 'fattats', null, [
+    ['Det fattas salt i soppan.', '汤里缺盐。'],
+    ['Det fattades två namn på listan.', '名单上当时缺两个名字。'],
+    ['Pengar har fattats hela månaden.', '这个月一直缺钱。'],
+    ['Vad fattas nu då?', '这会儿又缺什么？'],
+  ]), c(
+    [
+      ['fatta', '抓住；理解'],
+      ['-s', '被动/感觉动词词尾'],
+    ],
+    '“没被抓住、到不了手”，合起来就是缺少、欠缺。',
+  )),
+  b1(noun('samband', 'ett', '联系；关联', 'connection / relation', 'sambandet', 'samband', 'sambanden', [
+    ['Det finns ett samband mellan sömn och hälsa.', '睡眠和健康之间有联系。'],
+    ['Sambandet är svagt.', '这种关联很弱。'],
+    ['I samband med flytten slutade hon.', '她是在搬家的时候辞职的。'],
+    ['Sambanden utreds fortfarande.', '那些关联还在调查。'],
+  ]), c(
+    [
+      ['sam', '一起'],
+      ['band', '带子；联系'],
+    ],
+    '“连在一起的带子”，就是联系、关联。',
+  )),
+  b1(noun('ras', 'en', '品种；种族', 'breed / race', 'rasen', 'raser', 'raserna', [
+    ['Vilken ras är hunden?', '这条狗是什么品种？'],
+    ['Rasen är känd för att vara snäll.', '这个品种以温顺出名。'],
+    ['Olika raser har olika päls.', '不同品种毛色不同。'],
+    ['Raserna i stallet är blandade.', '马厩里那些品种是混的。'],
+  ])),
+  b1(noun('kris', 'en', '危机', 'crisis', 'krisen', 'kriser', 'kriserna', [
+    ['Landet är i kris.', '这个国家处于危机中。'],
+    ['Krisen drabbade företaget.', '这场危机冲击了那家公司。'],
+    ['Vi har gått igenom flera kriser.', '我们经历过好几次危机。'],
+    ['Kriserna kom tätt.', '那些危机接连到来。'],
+  ])),
+  b1(other('isär', 'adv', '分开；散开', 'apart', [
+    ['Ta isär leksaken försiktigt.', '小心地把玩具拆开。'],
+    ['Paret gick isär i fjol.', '那对伴侣去年分开了。'],
+    ['Sidorna föll isär.', '书页散开了。'],
+    ['Håll isär de två högarna.', '把那两堆分开。'],
+  ]), c(
+    [
+      ['i', '在'],
+      ['sär', '分开的（旧词）'],
+    ],
+    '“处于分开的状态”，就是分开、散开。',
+  )),
+  b1(noun('passion', 'en', '激情；热情', 'passion', 'passionen', 'passioner', 'passionerna', [
+    ['Hon har en passion för musik.', '她对音乐有热情。'],
+    ['Passionen drev honom vidare.', '那股激情推着他往前。'],
+    ['Två passioner styr hennes liv.', '两股热情主导着她的生活。'],
+    ['Passionerna ebbade ut.', '那些激情消退了。'],
+  ])),
+  b1(noun('attityd', 'en', '态度', 'attitude', 'attityden', 'attityder', 'attityderna', [
+    ['Hans attityd retar kollegorna.', '他的态度惹恼了同事。'],
+    ['Attityden måste ändras.', '这种态度必须改。'],
+    ['Olika attityder krockade.', '不同态度撞上了。'],
+    ['Attityderna på jobbet är bättre nu.', '现在工作上那些态度好多了。'],
+  ])),
+  b1(noun('intryck', 'ett', '印象', 'impression', 'intrycket', 'intryck', 'intrycken', [
+    ['Första intrycket räknas.', '第一印象很重要。'],
+    ['Intrycket var positivt.', '那个印象是正面的。'],
+    ['Resan gav starka intryck.', '这趟旅行留下了深刻印象。'],
+    ['Intrycken satt kvar länge.', '那些印象留了很久。'],
+  ]), c(
+    [
+      ['in', '进入'],
+      ['tryck', '压；印'],
+    ],
+    '“压进去留下的痕迹”，合起来就是印象。',
+  )),
+  b1(noun('tidpunkt', 'en', '时点；时刻', 'point in time', 'tidpunkten', 'tidpunkter', 'tidpunkterna', [
+    ['Vid vilken tidpunkt kommer du?', '你什么时候到？'],
+    ['Tidpunkten passade dåligt.', '那个时刻不太合适。'],
+    ['Vi ska boka tre tidpunkter.', '我们要约三个时点。'],
+    ['Tidpunkterna ska hållas.', '那些时刻必须守住。'],
+  ]), c(
+    [
+      ['tid', '时间'],
+      ['punkt', '点'],
+    ],
+    '“时间上的一个点”，就是时点、时刻。',
+  )),
+  b1(other('enormt', 'adv', '极其；巨大地', 'enormously / extremely', [
+    ['Huset är enormt stort.', '这房子极大。'],
+    ['Hon hjälpte oss enormt.', '她帮了我们极大的忙。'],
+    ['Det gick enormt snabbt.', '那进行得极快。'],
+    ['Jag är enormt tacksam.', '我极其感激。'],
+  ]), c(
+    [
+      ['enorm', '巨大的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'enorm 是“巨大的”，enormt 就是极其、巨大地。',
+  )),
+  b1(noun('styrelse', 'en', '董事会；理事会', 'board (of directors)', 'styrelsen', 'styrelser', 'styrelserna', [
+    ['Styrelsen möts i morgon.', '董事会明天开会。'],
+    ['Hon sitter i styrelsen.', '她在董事会里。'],
+    ['Flera styrelser samarbetar.', '好几个理事会在合作。'],
+    ['Styrelserna tog samma beslut.', '那些董事会做了同样的决定。'],
+  ]), c(
+    [
+      ['styra', '掌管；驾驶'],
+      ['-else', '行为/结果名词后缀'],
+    ],
+    '“掌管所形成的机构”，就是董事会、理事会。',
+  )),
+  b1(verb('överge', '抛弃；放弃', 'to abandon', 'överger', 'övergav', 'övergett', 'överge', [
+    ['Hon överger inte vännerna.', '她不会抛弃朋友。'],
+    ['De övergav huset.', '他们抛弃了那栋房子。'],
+    ['Planen har övergetts.', '计划已经被放弃了。'],
+    ['Överge inte hoppet.', '别放弃希望。'],
+  ]), c(
+    [
+      ['över', '越过；置于一旁'],
+      ['ge', '给'],
+    ],
+    '“把某物丢到一边给出去”，合起来就是抛弃、放弃。',
+  )),
+  b1(adj('utsökt', '精美的；极好的', 'exquisite / delicious', 'utsökt', 'utsökta', [
+    ['Maten var utsökt.', '饭菜精美极了。'],
+    ['Ett utsökt vin stod på bordet.', '桌上放着一种极好的酒。'],
+    ['De utsökta desserterna sålde slut.', '那些精美的甜点卖完了。'],
+    ['Hon har en utsökt smak.', '她品味很高。'],
+  ]), c(
+    [
+      ['ut', '向外'],
+      ['sökt', '被寻找的（söka 找）'],
+    ],
+    '“被精挑细选出来的”，就是精美的、极好的。',
+  )),
+  b1(other('i och för sig', 'phrase', '本身；其实；诚然', 'in and of itself / admittedly', [
+    ['I och för sig har du rätt.', '本身来说你是对的。'],
+    ['Idén är i och för sig bra.', '这个主意本身不错。'],
+    ['Jag förstår i och för sig.', '其实我理解。'],
+    ['Det går i och för sig att vänta.', '其实可以再等。'],
+  ]), c(
+    [
+      ['i', '在'],
+      ['och', '和'],
+      ['för sig', '就其本身'],
+    ],
+    '“就其本身而言”，就是本身、其实、诚然。',
+  )),
+  b1(other('frivilligt', 'adv', '自愿地', 'voluntarily', [
+    ['Hon ställde upp frivilligt.', '她自愿参加。'],
+    ['De kom frivilligt till mötet.', '他们自愿来开会。'],
+    ['Han betalade frivilligt.', '他自愿付了钱。'],
+    ['Ingen gör det frivilligt.', '没有人会自愿做这事。'],
+  ]), c(
+    [
+      ['fri', '自由的'],
+      ['villig', '愿意的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'frivillig 是“自愿的”，frivilligt 就是自愿地。',
+  )),
+  b1(noun('ärende', 'ett', '事务；差事；案件', 'errand / matter / case', 'ärendet', 'ärenden', 'ärendena', [
+    ['Jag har ett ärende i stan.', '我在城里有点事。'],
+    ['Ärendet tar bara fem minuter.', '这点差事只要五分钟。'],
+    ['Hon skötte tre ärenden.', '她办了三件事。'],
+    ['Ärendena ligger på chefens bord.', '那些事务在老板桌上。'],
+  ])),
+  b1(verb('insistera', '坚持', 'to insist', 'insisterar', 'insisterade', 'insisterat', 'insistera', [
+    ['Hon insisterar på att betala.', '她坚持要付钱。'],
+    ['Han insisterade på sanningen.', '他坚持要真相。'],
+    ['De har insisterat länge.', '他们坚持了很久。'],
+    ['Insistera inte så hårt.', '别坚持得那么狠。'],
+  ])),
+  b1(adj('envis', '固执的；顽强的', 'stubborn / persistent', 'envist', 'envisa', [
+    ['Barnet är envis.', '这孩子很固执。'],
+    ['Ett envist motstånd höll i sig.', '一股顽固的阻力一直没散。'],
+    ['De envisa frågorna fortsatte.', '那些固执的问题还在继续。'],
+    ['Hon är envisare än jag.', '她比我更倔。'],
+  ], { comparative: 'envisare', superlative: 'envisast' }), c(
+    [
+      ['en', '一个；同一'],
+      ['vis', '样子；方式'],
+    ],
+    '“就一个样子不改”，合起来就是固执的、顽强的。',
+  )),
+  b1(noun('bricka', 'en', '托盘；牌子；棋子', 'tray / badge / tile', 'brickan', 'brickor', 'brickorna', [
+    ['Hon bar kaffet på en bricka.', '她用托盘端咖啡。'],
+    ['Brickan är tung.', '这个托盘很重。'],
+    ['Lägg brickorna på bordet.', '把那些棋子放到桌上。'],
+    ['Brickorna i spelet är gula.', '游戏里那些牌子是黄的。'],
+  ])),
+  b1(other('leve', 'intj', '万岁；愿……长存', 'long live', [
+    ['Leve konungen!', '国王万岁！'],
+    ['Leve födelsedagsbarnet!', '寿星万岁！'],
+    ['Han leve! Hurra, hurra, hurra!', '愿他长寿！好哇，好哇，好哇！'],
+    ['Alla skrek leve.', '大家都喊万岁。'],
+  ])),
+  b1(noun('riksdagsledamot', 'en', '国会议员', 'member of parliament', 'riksdagsledamoten', 'riksdagsledamöter', 'riksdagsledamöterna', [
+    ['En riksdagsledamot talade i tv.', '一位国会议员在电视上讲话。'],
+    ['Riksdagsledamoten röstade nej.', '那位国会议员投了反对票。'],
+    ['Flera riksdagsledamöter var frånvarande.', '好几位国会议员缺席。'],
+    ['Riksdagsledamöterna samlades i kammaren.', '那些国会议员在议院集合。'],
+  ]), c(
+    [
+      ['riksdag', '议会'],
+      ['ledamot', '成员'],
+    ],
+    '“议会里的成员”，就是国会议员。',
+  )),
+  b1(other('förhoppningsvis', 'adv', '但愿；希望能', 'hopefully', [
+    ['Förhoppningsvis kommer bussen snart.', '但愿公交车马上到。'],
+    ['Vi ses förhoppningsvis i morgon.', '但愿明天能见。'],
+    ['Förhoppningsvis regnar det inte.', '但愿别下雨。'],
+    ['Det går förhoppningsvis bra.', '但愿会顺利。'],
+  ]), c(
+    [
+      ['förhoppning', '希望'],
+      ['-s-', '连接音'],
+      ['-vis', '以……的方式'],
+    ],
+    '“带着希望的方式”，就是但愿、希望能。',
+  )),
+  b1(verb('segla', '航行；扬帆', 'to sail', 'seglar', 'seglade', 'seglat', 'segla', [
+    ['Vi seglar till Gotland.', '我们航行去哥得兰。'],
+    ['De seglade över sjön.', '他们驶过湖面。'],
+    ['Båten har seglat i natt.', '船夜里已经开了。'],
+    ['Segla inte i stormen.', '别在风暴里航行。'],
+  ]), c(
+    [
+      ['segel', '帆'],
+      ['-a', '动词词尾'],
+    ],
+    '由“帆”变成动词，就是扬帆航行。',
+  )),
+  b1(verb('lysa', '发光；宣布', 'to shine / to announce', 'lyser', 'lyste', 'lyst', 'lys', [
+    ['Lampan lyser svagt.', '灯微微发光。'],
+    ['Månen lyste i natt.', '月亮夜里发光了。'],
+    ['Tjänsten har lysts ut.', '这个职位已经公布了。'],
+    ['Lys upp rummet.', '把房间照亮。'],
+  ])),
+  b1(noun('blogginlägg', 'ett', '博客文章', 'blog post', 'blogginlägget', 'blogginlägg', 'blogginläggen', [
+    ['Hon skrev ett blogginlägg i går.', '她昨天写了一篇博客。'],
+    ['Blogginlägget blev läst av många.', '那篇博客很多人看了。'],
+    ['Han har tre blogginlägg klara.', '他已经写好三篇博客。'],
+    ['Blogginläggen handlar om mat.', '那些博客是关于食物的。'],
+  ]), c(
+    [
+      ['blogg', '博客'],
+      ['inlägg', '帖子；投入'],
+    ],
+    '“博客上的帖子”，就是博客文章。',
+  )),
+  b1(noun('grotta', 'en', '洞穴', 'cave', 'grottan', 'grottor', 'grottorna', [
+    ['Vi gick in i en grotta.', '我们走进一个洞穴。'],
+    ['Grottan var mörk och fuktig.', '那个洞穴又暗又潮。'],
+    ['Det finns två grottor vid havet.', '海边有两个洞穴。'],
+    ['Grottorna är stängda på vintern.', '那些洞穴冬天关闭。'],
+  ])),
+  b1(verb('slicka', '舔', 'to lick', 'slickar', 'slickade', 'slickat', 'slicka', [
+    ['Hunden slickar tassen.', '狗在舔爪子。'],
+    ['Barnet slickade glassen.', '孩子舔了冰淇淋。'],
+    ['Katten har slickat skålen.', '猫把碗舔过了。'],
+    ['Slicka inte på kniven.', '别舔刀。'],
+  ])),
+  b1(noun('ratt', 'en', '方向盘', 'steering wheel', 'ratten', 'rattar', 'rattarna', [
+    ['Håll båda händerna på ratten.', '双手握着方向盘。'],
+    ['Ratten är kall på morgonen.', '早上方向盘是冰的。'],
+    ['Bilarna har olika rattar.', '这些车的方向盘不一样。'],
+    ['Rattarna ska sitta fast.', '那些方向盘必须装牢。'],
+  ])),
+  b1(other('till dess', 'phrase', '到那时；直到', 'until then / until', [
+    ['Vänta till dess.', '等到那时候。'],
+    ['Till dess får du vila.', '在那之前你先休息。'],
+    ['Vi stannar till dess att bussen kommer.', '我们等到公交车来。'],
+    ['Till dess är allt oklart.', '在那之前一切都不清楚。'],
+  ]), c(
+    [
+      ['till', '到'],
+      ['dess', '那时；那一点'],
+    ],
+    '“到那个时候”，就是到那时、直到。',
+  )),
+  b1(adj('vettig', '明智的；讲理的', 'sensible / reasonable', 'vettigt', 'vettiga', [
+    ['Det var ett vettigt förslag.', '那是个明智的提议。'],
+    ['Ett vettigt svar kom till slut.', '终于来了一个讲理的答复。'],
+    ['De vettiga argumenten vann.', '那些讲理的论点赢了。'],
+    ['Var lite vettig nu.', '现在讲点道理。'],
+  ]), c(
+    [
+      ['vett', '理智；常识'],
+      ['-ig', '带有……性质的'],
+    ],
+    '“带有理智的”，就是明智的、讲理的。',
+  )),
+  b1(adj('mäktig', '强大的；撑人的', 'powerful / filling (of food)', 'mäktigt', 'mäktiga', [
+    ['Kungen var en mäktig man.', '国王是个强大的人。'],
+    ['Ett mäktigt slott låg på kullen.', '山上有一座雄伟的城堡。'],
+    ['De mäktiga företagen styr mycket.', '那些强大的公司管着很多事。'],
+    ['Middagen var för mäktig.', '这顿晚饭太撑人了。'],
+  ], { comparative: 'mäktigare', superlative: 'mäktigast' })),
+  b1(noun('tillit', 'en', '信任', 'trust / confidence', 'tilliten', null, null, [
+    ['Vi har tillit till varandra.', '我们彼此信任。'],
+    ['Tilliten skadades av lögnen.', '那句谎言伤害了信任。'],
+    ['Hon visade stor tillit.', '她表现出很大的信任。'],
+    ['Utan tillit går det inte.', '没有信任就行不通。'],
+  ]), c(
+    [
+      ['till', '向；对'],
+      ['lit', '信赖（lita 信赖）'],
+    ],
+    '“向某人信赖”，合起来就是信任。',
+  )),
+  b1(noun('brand', 'en', '火灾；火', 'fire (blaze)', 'branden', 'bränder', 'bränderna', [
+    ['En brand bröt ut i huset.', '房子里起火了。'],
+    ['Branden släcktes snabbt.', '那场火灾很快被扑灭。'],
+    ['Flera bränder rasade i somras.', '夏天有好几场火灾在烧。'],
+    ['Bränderna syntes långt bort.', '那些火从很远就能看见。'],
+  ])),
+  b1(noun('kors', 'ett', '十字架；十字', 'cross', 'korset', 'kors', 'korsen', [
+    ['Ett kors står vid vägen.', '路边立着一个十字架。'],
+    ['Korset är av trä.', '那个十字架是木头的。'],
+    ['Hon ritade två kors på kartan.', '她在地图上画了两个十字。'],
+    ['Korsen på kyrkogården är gamla.', '墓园里那些十字架很旧。'],
+  ])),
+  b1(adj('meningslös', '无意义的；徒劳的', 'meaningless / pointless', 'meningslöst', 'meningslösa', [
+    ['Det känns meningslöst att vänta.', '等下去感觉没意义。'],
+    ['Ett meningslöst bråk startade.', '一场毫无意义的争吵开始了。'],
+    ['De meningslösa mötena slopades.', '那些没用的会议取消了。'],
+    ['Grälet var helt meningslöst.', '那场争吵完全没意义。'],
+  ]), c(
+    [
+      ['mening', '意义；句子'],
+      ['-s-', '连接音'],
+      ['lös', '没有的'],
+    ],
+    '“没有意义的”，就是无意义的、徒劳的。',
+  )),
+  b1(noun('folkomröstning', 'en', '全民公投', 'referendum', 'folkomröstningen', 'folkomröstningar', 'folkomröstningarna', [
+    ['Det blir en folkomröstning i höst.', '秋天会举行全民公投。'],
+    ['Folkomröstningen gällde euron.', '那次公投是关于欧元的。'],
+    ['Landet har haft tre folkomröstningar.', '这个国家举行过三次公投。'],
+    ['Folkomröstningarna samlade många väljare.', '那些公投聚集了很多选民。'],
+  ]), c(
+    [
+      ['folk', '人民'],
+      ['omröstning', '表决'],
+    ],
+    '“由人民来表决”，就是全民公投。',
+  )),
+  b1(other('därnere', 'adv', '在下面那边', 'down there', [
+    ['Nyckeln ligger därnere.', '钥匙在下面那边。'],
+    ['De väntar därnere i hallen.', '他们在下面门厅等。'],
+    ['Titta därnere vid sjön.', '看下面湖边那边。'],
+    ['Vi ses därnere.', '我们在下面那边见。'],
+  ]), c(
+    [
+      ['där', '那里'],
+      ['nere', '在下面'],
+    ],
+    '“在那里的下面”，就是在下面那边。',
+  )),
+  b1(noun('ställning', 'en', '立场；姿势；排名；架子', 'position / stance / ranking / stand', 'ställningen', 'ställningar', 'ställningarna', [
+    ['Vad är din ställning i frågan?', '你在这个问题上的立场是什么？'],
+    ['Ställningen i matchen är 2–1.', '比赛比分是 2–1。'],
+    ['Bygget har flera ställningar.', '工地上有好几座脚手架。'],
+    ['Ställningarna ska monteras ner.', '那些架子要拆掉。'],
+  ]), c(
+    [
+      ['ställa', '放置；使处于'],
+      ['-ning', '行为/结果名词后缀'],
+    ],
+    '“被放成的样子”，可以是姿势、立场、排名，也可以是架子。',
+  )),
+  b1(verb('heja', '加油；欢呼', 'to cheer', 'hejar', 'hejade', 'hejat', 'heja', [
+    ['Vi hejar på laget.', '我们给这队加油。'],
+    ['Publiken hejade högt.', '观众大声加油。'],
+    ['De har hejat i nittio minuter.', '他们加了九十分钟油。'],
+    ['Heja på henne!', '给她加油！'],
+  ])),
+  b1(noun('användning', 'en', '使用；用途', 'use / usage', 'användningen', 'användningar', 'användningarna', [
+    ['Mobilen har många användningar.', '手机有很多用途。'],
+    ['Användningen av plast ska minska.', '塑料的使用要减少。'],
+    ['Det finns flera användningar för resterna.', '剩料有好几种用途。'],
+    ['Användningarna skiljer sig åt.', '那些用途各不相同。'],
+  ]), c(
+    [
+      ['använda', '使用'],
+      ['-ning', '行为/结果名词后缀'],
+    ],
+    '由“使用”这个动作变成名词，就是使用、用途。',
+  )),
+  b1(noun('väninna', 'en', '女朋友（女性友人）', 'female friend', 'väninnan', 'väninnor', 'väninnorna', [
+    ['Hon träffade en gammal väninna.', '她见了一个老朋友。'],
+    ['Väninnan bor i Lund.', '那位女友住在隆德。'],
+    ['Två väninnor kom på fika.', '两位女友来喝咖啡。'],
+    ['Väninnorna skrattade högt.', '那些女友大声笑。'],
+  ]), c(
+    [
+      ['vän', '朋友'],
+      ['-inna', '女性后缀'],
+    ],
+    '“女性的朋友”，就是女朋友（指女性友人，不是恋爱对象）。',
+  )),
+  b1(verb('tina', '解冻；融化', 'to thaw', 'tinar', 'tinade', 'tinat', 'tina', [
+    ['Snön tinar i solen.', '雪在太阳下化。'],
+    ['Hon tinade köttet.', '她把肉解冻了。'],
+    ['Isen har tinat bort.', '冰已经化掉了。'],
+    ['Tina maten i kylen.', '在冰箱里把食物解冻。'],
+  ])),
+  b1(adj('nuvarande', '现在的；现任的', 'current / present', 'nuvarande', 'nuvarande', [
+    ['Hon är nuvarande chef.', '她是现任老板。'],
+    ['Ett nuvarande problem är hyran.', '当前的一个问题是房租。'],
+    ['De nuvarande reglerna gäller fortfarande.', '现在这些规定仍然有效。'],
+    ['Min nuvarande adress står på kortet.', '我现在的地址写在卡片上。'],
+  ]), c(
+    [
+      ['nu', '现在'],
+      ['varande', '存在着的（vara 是）'],
+    ],
+    '“现在存在着的”，就是现在的、现任的。',
+  )),
+  b1(noun('stånd', 'ett', '摊位；状态；立场', 'stall / state / stand', 'ståndet', 'stånd', 'stånden', [
+    ['De säljer korv i ett stånd.', '他们在一个摊位卖香肠。'],
+    ['Ståndet stängde klockan fem.', '那个摊位五点关了。'],
+    ['Hon är i stånd att hjälpa.', '她有能力帮忙。'],
+    ['Stånden på torget var fulla.', '广场上那些摊位都满了。'],
+  ]), c(
+    [
+      ['stå', '站'],
+      ['-nd', '名词词尾'],
+    ],
+    '“站着形成的位置”，可以是摊位、状态，也可以是站住的立场。',
+  )),
+  b1(adj('angenäm', '愉快的；惬意的', 'pleasant / agreeable', 'angenämt', 'angenäma', [
+    ['Det var en angenäm kväll.', '那是个愉快的晚上。'],
+    ['Ett angenämt samtal följde.', '接着是一次愉快的谈话。'],
+    ['De angenäma dofterna spred sig.', '那些好闻的气味散开了。'],
+    ['Vistelsen var mycket angenäm.', '这段逗留非常惬意。'],
+  ])),
+  b1(verb('rinna', '流；淌', 'to flow / to run (of liquid)', 'rinner', 'rann', 'runnit', 'rinn', [
+    ['Vattnet rinner ur kranen.', '水从水龙头流出来。'],
+    ['Bäcken rann genom skogen.', '小溪流过森林。'],
+    ['Mjölken har runnit ut.', '牛奶已经流出来了。'],
+    ['Låt det rinna en stund.', '让它流一会儿。'],
+  ])),
+  b1(noun('vetenskap', 'en', '科学', 'science', 'vetenskapen', 'vetenskaper', 'vetenskaperna', [
+    ['Hon läser naturvetenskap.', '她在学自然科学。'],
+    ['Vetenskapen går framåt.', '科学在前进。'],
+    ['Olika vetenskaper samarbetar.', '不同科学在合作。'],
+    ['Vetenskaperna kräver evidens.', '那些科学都需要证据。'],
+  ]), c(
+    [
+      ['veta', '知道'],
+      ['-skap', '状态/领域后缀'],
+    ],
+    '“知道所形成的领域”，就是科学。',
+  )),
+  b1(adj('framtida', '将来的；未来的', 'future', 'framtida', 'framtida', [
+    ['Hon är en framtida stjärna.', '她是一颗未来的明星。'],
+    ['Ett framtida möte bokades in.', '约好了一次将来的会面。'],
+    ['De framtida planerna är oklara.', '那些未来的计划还不清楚。'],
+    ['Tänk på framtida generationer.', '想想未来的世代。'],
+  ]), c(
+    [
+      ['framtid', '未来'],
+      ['-a', '形容词词尾'],
+    ],
+    '由“未来”变成形容词，就是将来的。',
+  )),
+  b1(noun('legend', 'en', '传说；传奇人物', 'legend', 'legenden', 'legender', 'legenderna', [
+    ['Det är en gammal legend.', '这是一个古老的传说。'],
+    ['Legenden lever kvar i byn.', '那个传说还在村里流传。'],
+    ['Han blev en legend i sporten.', '他成了这项运动的传奇。'],
+    ['Legenderna berättas vid elden.', '那些传说在火边讲。'],
+  ])),
+  b1(other('från och med', 'phrase', '从……起（含当天）', 'from … onwards / as of', [
+    ['Från och med måndag är vi stängda.', '从星期一起我们关门。'],
+    ['Priset gäller från och med idag.', '价格从今天起生效。'],
+    ['Hon jobbar från och med augusti.', '她从八月起上班。'],
+    ['Från och med nu talar vi svenska.', '从现在起我们说瑞典语。'],
+  ]), c(
+    [
+      ['från', '从'],
+      ['och', '和'],
+      ['med', '随着；包括'],
+    ],
+    '“从某时起并且把该时算进去”，就是从……起。',
+  )),
+  b1(noun('docka', 'en', '玩偶；娃娃', 'doll', 'dockan', 'dockor', 'dockorna', [
+    ['Barnet lekte med en docka.', '孩子在玩一个娃娃。'],
+    ['Dockan saknar ett öga.', '那个娃娃缺了一只眼睛。'],
+    ['Två dockor låg i sängen.', '床上躺着两个娃娃。'],
+    ['Dockorna ska tvättas.', '那些娃娃要洗。'],
+  ])),
+  b1(noun('grind', 'en', '大门；栅栏门', 'gate', 'grinden', 'grindar', 'grindarna', [
+    ['Stäng grinden efter dig.', '随手关上大门。'],
+    ['Grinden gnisslar.', '那扇大门吱呀响。'],
+    ['Det finns två grindar till gården.', '院子有两扇大门。'],
+    ['Grindarna låstes klockan nio.', '那些大门九点上了锁。'],
+  ])),
+  b1(verb('knacka', '敲', 'to knock', 'knackar', 'knackade', 'knackat', 'knacka', [
+    ['Någon knackar på dörren.', '有人在敲门。'],
+    ['Hon knackade tre gånger.', '她敲了三下。'],
+    ['Han har knackat förgäves.', '他白敲了。'],
+    ['Knacka innan du går in.', '进去前先敲门。'],
+  ])),
+  b1(adj('osynlig', '看不见的；无形的', 'invisible', 'osynligt', 'osynliga', [
+    ['Gasen är osynlig.', '这种气体看不见。'],
+    ['Ett osynligt staket fanns där.', '那里有一道看不见的栅栏。'],
+    ['De osynliga skillnaderna märks ändå.', '那些看不见的差别还是能感觉到。'],
+    ['Hon kände sig osynlig i rummet.', '她在房间里觉得自己像隐形了。'],
+  ]), c(
+    [
+      ['o-', '否定前缀'],
+      ['synlig', '看得见的'],
+    ],
+    '“看不见的”，就是无形的。',
+  )),
+  b1(other('vansinnigt', 'adv', '疯狂地；极其', 'insanely / extremely', [
+    ['Det var vansinnigt dyrt.', '那贵得离谱。'],
+    ['Hon körde vansinnigt fort.', '她开得疯狂地快。'],
+    ['De skrattade vansinnigt.', '他们笑得不行。'],
+    ['Jag är vansinnigt trött.', '我累极了。'],
+  ]), c(
+    [
+      ['vansinnig', '疯狂的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'vansinnig 是“疯的”，vansinnigt 就是疯狂地、极其。',
+  )),
+  b1(verb('vänja', '使习惯；适应', 'to accustom / to get used to', 'vänjer', 'vande', 'vant', 'vänj', [
+    ['Man vänjer sig.', '人会习惯的。'],
+    ['Han vande sig vid kylan.', '他习惯了寒冷。'],
+    ['Hästen har vant sig vid sadeln.', '马已经习惯了马鞍。'],
+    ['Vänj barnet vid rutinerna.', '让孩子习惯这些作息。'],
+  ])),
+  b1(noun('tavla', 'en', '画；牌子；大错（口）', 'painting / board / blunder (colloquial)', 'tavlan', 'tavlor', 'tavlorna', [
+    ['En tavla hänger på väggen.', '墙上挂着一幅画。'],
+    ['Tavlan är målad i olja.', '那幅画是油画。'],
+    ['Hon köpte två tavlor.', '她买了两幅画。'],
+    ['Tavlorna ska dammas.', '那些画该掸灰了。'],
+  ])),
+  b1(verb('förhålla sig', '对待；保持（某种态度）', 'to relate (to) / to conduct oneself', 'förhåller sig', 'förhöll sig', 'förhållit sig', 'förhåll dig', [
+    ['Hon förhåller sig lugn.', '她保持冷静。'],
+    ['De förhöll sig neutrala.', '他们当时保持中立。'],
+    ['Hur har du förhållit dig till det?', '你对此是怎么处理的？'],
+    ['Förhåll dig sakligt.', '请就事论事。'],
+  ]), c(
+    [
+      ['för-', '构词前缀'],
+      ['hålla', '保持'],
+      ['sig', '自己'],
+    ],
+    '“把自己保持成某种样子”，合起来就是对待、保持某种态度。',
+  )),
+  b1(noun('kant', 'en', '边；边缘', 'edge / border', 'kanten', 'kanter', 'kanterna', [
+    ['Sitt inte på kanten.', '别坐在边上。'],
+    ['Kanten är vass.', '那条边很锋利。'],
+    ['Skivan har tre kanter.', '这块板有三条边。'],
+    ['Kanterna ska slipas.', '那些边要打磨。'],
+  ])),
+  b1(noun('lapp', 'en', '纸条；补丁', 'slip of paper / patch', 'lappen', 'lappar', 'lapparna', [
+    ['Hon skrev en lapp till mig.', '她给我写了张纸条。'],
+    ['Lappen låg på bordet.', '那张纸条在桌上。'],
+    ['Byxorna har två lappar.', '裤子上有两块补丁。'],
+    ['Lapparna blåste iväg.', '那些纸条被吹走了。'],
+  ])),
+  b1(verb('återkomma', '回来；再谈；复发', 'to come back / to return (to a topic)', 'återkommer', 'återkom', 'återkommit', 'återkom', [
+    ['Jag återkommer i morgon.', '我明天再来。'],
+    ['Hon återkom till ämnet senare.', '她后来又回到这个话题。'],
+    ['Febern har återkommit.', '烧又回来了。'],
+    ['Återkom när du vet mer.', '你知道更多以后再来。'],
+  ]), c(
+    [
+      ['åter', '再；回'],
+      ['komma', '来'],
+    ],
+    '“再过来”，合起来就是回来、再谈。',
+  )),
+  b1(other('medvetet', 'adv', '故意地；有意识地', 'deliberately / consciously', [
+    ['Hon sa det medvetet.', '她是故意那么说的。'],
+    ['Han undvek frågan medvetet.', '他有意避开这个问题。'],
+    ['De valde medvetet ett billigare alternativ.', '他们有意识地选了更便宜的方案。'],
+    ['Felet gjordes inte medvetet.', '这个错不是故意犯的。'],
+  ]), c(
+    [
+      ['medveten', '有意识的；故意的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'medveten 是“有意识的”，medvetet 就是故意地、有意识地。',
+  )),
+  b1(noun('trut', 'en', '喙；嘴（口）；鸥', 'beak / gob (colloquial) / large gull', 'truten', 'trutar', 'trutarna', [
+    ['Ankan har en gul trut.', '这只鸭子有黄色的喙。'],
+    ['Håll truten!', '闭上嘴！'],
+    ['Två trutar skrek över vattnet.', '两只鸥在水面上叫。'],
+    ['Trutarna stal korven.', '那些鸥把香肠偷走了。'],
+  ])),
+  b1(noun('flykt', 'en', '逃跑；飞走', 'escape / flight', 'flykten', 'flykter', 'flykterna', [
+    ['Tjuven tog till flykt.', '小偷逃走了。'],
+    ['Flykten lyckades i natt.', '这次逃跑夜里成功了。'],
+    ['Fåglarna gör långa flykter.', '这些鸟做长途飞行。'],
+    ['Flykterna över havet är farliga.', '那些飞越海面的行程很危险。'],
+  ]), c(
+    [
+      ['fly', '逃；飞'],
+      ['-kt', '行为名词词尾'],
+    ],
+    '由“逃、飞”变成名词，就是逃跑、飞走。',
+  )),
+  b1(adj('sådan här', '这样的；这种', 'this kind of / like this', 'sådant här', 'sådana här', [
+    ['Jag vill ha en sådan här väska.', '我想要一只这样的包。'],
+    ['Ett sådant här fel är vanligt.', '这种错误很常见。'],
+    ['Sådana här dagar är sällsynta.', '这样的日子很少见。'],
+    ['Hur gör man en sådan här sås?', '这种酱怎么做？'],
+  ]), c(
+    [
+      ['sådan', '这样的'],
+      ['här', '这里；眼前的'],
+    ],
+    '“眼前的这样一种”，就是这样的、这种。',
+  )),
+  b1(adj('kontant', '现金的；用现金', 'cash / in cash', 'kontant', 'kontanta', [
+    ['Hon betalade kontant.', '她付了现金。'],
+    ['Ett kontant belopp lades fram.', '一笔现金被拿了出来。'],
+    ['De kontanta köpen minskar.', '那些现金购买在减少。'],
+    ['Har du kontant på dig?', '你身上有现金吗？'],
+  ])),
+  b1(noun('bi', 'ett', '蜜蜂', 'bee', 'biet', 'bin', 'bina', [
+    ['Ett bi landade på blomman.', '一只蜜蜂落在花上。'],
+    ['Biet stack honom i handen.', '那只蜜蜂蜇了他的手。'],
+    ['Det finns många bin i trädgården.', '花园里有很多蜜蜂。'],
+    ['Bina samlar honung.', '那些蜜蜂在采蜜。'],
+  ])),
+  b1(verb('flyta', '漂浮；流动', 'to float / to flow', 'flyter', 'flöt', 'flutit', 'flyt', [
+    ['Trä flyter på vatten.', '木头浮在水上。'],
+    ['Båten flöt iväg.', '船漂走了。'],
+    ['Oljan har flutit ut.', '油已经漂散开了。'],
+    ['Flyt med strömmen en stund.', '先顺着水流漂一会儿。'],
+  ])),
+  b1(noun('åklagare', 'en', '检察官', 'prosecutor', 'åklagaren', 'åklagare', 'åklagarna', [
+    ['Åklagaren yrkade på fängelse.', '检察官要求判刑。'],
+    ['En åklagare ledde målet.', '一位检察官主办这个案子。'],
+    ['Två åklagare samarbetade.', '两位检察官在合作。'],
+    ['Åklagarna överklagade domen.', '那些检察官对判决提出上诉。'],
+  ]), c(
+    [
+      ['åklaga', '起诉'],
+      ['-are', '做这事的人'],
+    ],
+    '“做起诉这件事的人”，就是检察官。',
+  )),
+  b1(noun('svaghet', 'en', '弱点；软弱', 'weakness', 'svagheten', 'svagheter', 'svagheterna', [
+    ['Choklad är hennes svaghet.', '巧克力是她的弱点。'],
+    ['Svagheten syntes i rösten.', '声音里听得出软弱。'],
+    ['Alla har sina svagheter.', '每个人都有自己的弱点。'],
+    ['Svagheterna måste rättas till.', '那些弱点必须改掉。'],
+  ]), c(
+    [
+      ['svag', '弱的'],
+      ['-het', '抽象名词后缀'],
+    ],
+    '“弱的状态”，就是弱点、软弱。',
+  )),
+  b1(verb('ersätta', '替换；赔偿', 'to replace / to compensate', 'ersätter', 'ersatte', 'ersatt', 'ersätt', [
+    ['Vi ersätter den trasiga lampan.', '我们更换坏掉的灯。'],
+    ['Hon ersatte chefen i ett år.', '她顶替了老板一年。'],
+    ['Skadan har ersatts av försäkringen.', '损失已经由保险赔偿。'],
+    ['Ersätt inte socker med mer socker.', '别用更多糖来代替糖。'],
+  ]), c(
+    [
+      ['er-', '构词前缀'],
+      ['sätta', '放'],
+    ],
+    '“放到原来的位置上顶替”，就是替换，也指赔偿。',
+  )),
+  b1(verb('gottgöra', '弥补；赔偿', 'to make up for / to compensate', 'gottgör', 'gottgjorde', 'gottgjort', 'gottgör', [
+    ['Jag gottgör skadan.', '我赔偿损失。'],
+    ['Hon gottgjorde honom med blommor.', '她用花向他赔罪。'],
+    ['Felet har gottgjorts.', '那个过错已经弥补了。'],
+    ['Gottgör vad du har ställt till.', '把你惹的事补上。'],
+  ]), c(
+    [
+      ['gott', '好的（中性）'],
+      ['göra', '做'],
+    ],
+    '“把事情做好、补好”，合起来就是弥补、赔偿。',
+  )),
+  b1(noun('tröst', 'en', '安慰', 'comfort / consolation', 'trösten', 'tröster', 'trösterna', [
+    ['Det var en tröst att höra.', '听到这个是个安慰。'],
+    ['Trösten kom för sent.', '安慰来得太晚了。'],
+    ['Små tröster räcker ibland.', '小小的安慰有时也够。'],
+    ['Trösterna hjälpte inte mycket.', '那些安慰没帮上多大忙。'],
+  ])),
+  b1(other('härnäst', 'adv', '接下来；下一步', 'next', [
+    ['Vad gör vi härnäst?', '我们接下来做什么？'],
+    ['Härnäst tar vi en paus.', '接下来我们休息一下。'],
+    ['Hon talar härnäst.', '接下来是她发言。'],
+    ['Härnäst kommer kaffet.', '下一步上咖啡。'],
+  ]), c(
+    [
+      ['här', '这里；现在这点'],
+      ['näst', '下一个'],
+    ],
+    '“这里的下一个”，就是接下来、下一步。',
+  )),
+  b1(verb('återgå', '回到；恢复', 'to return (to a state or topic)', 'återgår', 'återgick', 'återgått', 'återgå', [
+    ['Vi återgår till arbetet.', '我们回到工作上。'],
+    ['Allt återgick till det vanliga.', '一切又回到平常。'],
+    ['Hon har återgått till jobbet.', '她已经回到工作岗位。'],
+    ['Återgå till ämnet.', '回到正题。'],
+  ]), c(
+    [
+      ['åter', '再；回'],
+      ['gå', '走'],
+    ],
+    '“走回去”，合起来就是回到、恢复。',
+  )),
+  b1(other('troligtvis', 'adv', '很可能；大概', 'probably / most likely', [
+    ['Hon kommer troligtvis sent.', '她很可能迟到。'],
+    ['Troligtvis regnar det i morgon.', '明天大概会下雨。'],
+    ['Det blir troligtvis dyrt.', '这很可能很贵。'],
+    ['Troligtvis har han redan ätit.', '他大概已经吃过了。'],
+  ]), c(
+    [
+      ['trolig', '很可能的'],
+      ['-t', '中性词尾'],
+      ['-vis', '以……的方式'],
+    ],
+    '“以很可能的方式”，就是很可能、大概。',
+  )),
+  b1(other('fult', 'adv', '难看地；不光彩地', 'uglily / unfairly', [
+    ['Huset ser fult ut.', '这房子看起来难看。'],
+    ['Han spelade fult.', '他踢得很脏／耍阴招。'],
+    ['Det var fult gjort.', '那样做不光彩。'],
+    ['Måla inte fult med flit.', '别故意画难看。'],
+  ]), c(
+    [
+      ['ful', '难看的；不光彩的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'ful 是“难看的”，fult 就是难看地，也指做事不光彩。',
+  )),
+  b1(noun('valv', 'ett', '拱顶；拱门', 'vault / arch', 'valvet', 'valv', 'valven', [
+    ['Kyrkan har ett högt valv.', '教堂有高高的拱顶。'],
+    ['Valvet är av sten.', '那个拱顶是石头的。'],
+    ['Två valv leder in till hallen.', '两道拱门通向大厅。'],
+    ['Valven målades blå.', '那些拱顶被涂成蓝色。'],
+  ])),
+  b1(other('ständigt', 'adv', '不断地；始终', 'constantly / continually', [
+    ['Det regnar ständigt.', '雨下个不停。'],
+    ['Hon klagar ständigt.', '她不断地抱怨。'],
+    ['Telefonen ringer ständigt.', '电话始终在响。'],
+    ['Vi måste ständigt öva.', '我们必须不断地练习。'],
+  ]), c(
+    [
+      ['ständig', '不断的；经常的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'ständig 是“不断的”，ständigt 就是不断地、始终。',
+  )),
+  b1(verb('förfölja', '追赶；迫害', 'to pursue / to persecute', 'förföljer', 'förföljde', 'förföljt', 'förfölj', [
+    ['Polisen förföljer tjuven.', '警察在追小偷。'],
+    ['De förföljde honom hela vägen.', '他们一路追着他。'],
+    ['Minnet har förföljt henne.', '那段记忆一直缠着她。'],
+    ['Förfölj inte barnen.', '别追着孩子们不放。'],
+  ]), c(
+    [
+      ['för-', '构词前缀'],
+      ['följa', '跟随'],
+    ],
+    '“紧跟着不放”，合起来就是追赶、迫害。',
+  )),
+  b1(noun('paradis', 'ett', '天堂；乐园', 'paradise', 'paradiset', 'paradis', 'paradisen', [
+    ['Ön kändes som ett paradis.', '这座岛感觉像乐园。'],
+    ['Paradiset nämns i texten.', '文本里提到天堂。'],
+    ['De sökte efter paradis på jorden.', '他们在人间寻找乐园。'],
+    ['Paradisen i resebroschyren är dyra.', '旅行手册里那些乐园很贵。'],
+  ])),
+  b1(adj('buren', '被抬着的；被带着的', 'carried / borne', 'buret', 'burna', [
+    ['Hon var buren av två män.', '她被两个人抬着。'],
+    ['Ett buret piano blockerade dörren.', '一架被抬着的钢琴堵住了门。'],
+    ['De burna lådorna ställdes i hallen.', '那些被抬着的箱子放在门厅。'],
+    ['Fanan är buren i täten.', '旗帜被举在最前面。'],
+  ]), c(
+    [
+      ['bära', '抬；带'],
+      ['-en', '过去分词'],
+    ],
+    'bära 的过去分词，就是被抬着的、被带着的。',
+  )),
+  b1(other('fysiskt', 'adv', '身体上；体力上', 'physically', [
+    ['Jobbet är fysiskt tungt.', '这工作体力上很重。'],
+    ['Hon mår fysiskt bra.', '她身体上感觉不错。'],
+    ['De är fysiskt trötta.', '他们体力上累了。'],
+    ['Det går inte fysiskt att lyfta det.', '体力上抬不动那个。'],
+  ]), c(
+    [
+      ['fysisk', '身体的；物理的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'fysisk 是“身体的”，fysiskt 就是身体上、体力上。',
+  )),
+  b1(other('brett', 'adv', '宽地；广泛地', 'widely / broadly', [
+    ['Vägen är brett asfalterad.', '这条路铺得很宽。'],
+    ['Hon log brett.', '她咧开嘴笑。'],
+    ['Nyheten spreds brett.', '消息传得很广。'],
+    ['Måla brett över ytan.', '在表面上宽宽地刷。'],
+  ]), c(
+    [
+      ['bred', '宽的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'bred 是“宽的”，brett 就是宽地、广泛地。',
+  )),
+  b1(noun('fästmö', 'en', '未婚妻', 'fiancée', 'fästmön', 'fästmör', 'fästmörna', [
+    ['Hon är hans fästmö.', '她是他的未婚妻。'],
+    ['Fästmön väntade i kyrkan.', '未婚妻在教堂等。'],
+    ['Två fästmör kom tillsammans.', '两位未婚妻一起来了。'],
+    ['Fästmörna bar vita klänningar.', '那些未婚妻穿着白裙。'],
+  ]), c(
+    [
+      ['fäst', '订下的（fästa 固定）'],
+      ['mö', '少女'],
+    ],
+    '“已经订下的少女”，就是未婚妻。',
+  )),
+  b1(noun('protest', 'en', '抗议', 'protest', 'protesten', 'protester', 'protesterna', [
+    ['De höll en protest på torget.', '他们在广场举行抗议。'],
+    ['Protesten växte snabbt.', '那场抗议很快扩大。'],
+    ['Flera protester ägde rum.', '发生了好几场抗议。'],
+    ['Protesterna tystnade mot kvällen.', '那些抗议到傍晚平息了。'],
+  ])),
+  b1(adj('lugnande', '使人安心的；镇静的', 'calming / soothing', 'lugnande', 'lugnande', [
+    ['Det var en lugnande nyhet.', '那是个让人安心的消息。'],
+    ['Ett lugnande medel hjälpte.', '一种镇静药帮了忙。'],
+    ['De lugnande orden nådde fram.', '那些安抚的话起了作用。'],
+    ['Rösten var lugnande.', '那声音让人安心。'],
+  ])),
+  b1(noun('öster', 'en', '东方；东面', 'east', 'östern', null, null, [
+    ['Solen går upp i öster.', '太阳从东方升起。'],
+    ['Östern vaknade tidigt.', '东方醒得很早。'],
+    ['Huset ligger mot öster.', '房子朝东。'],
+    ['Vinden kommer från öster.', '风从东面来。'],
+  ])),
+  b1(other('då och då', 'phrase', '偶尔；时不时', 'now and then / occasionally', [
+    ['Vi ses då och då.', '我们时不时见面。'],
+    ['Då och då ringer hon.', '她偶尔打电话。'],
+    ['Det snöar då och då i april.', '四月时不时会下雪。'],
+    ['Han hostar då och då.', '他偶尔咳嗽。'],
+  ]), c(
+    [
+      ['då', '那时'],
+      ['och', '和'],
+      ['då', '那时'],
+    ],
+    '“那时和那时”，合起来就是偶尔、时不时。',
+  )),
+  b1(adj('bruten', '折断的；中断的', 'broken', 'brutet', 'brutna', [
+    ['Armen är bruten.', '胳膊断了。'],
+    ['Ett brutet löfte sårar.', '一个被违背的承诺伤人。'],
+    ['De brutna grenarna låg på marken.', '那些折断的树枝在地上。'],
+    ['Linjen är bruten.', '这条线断了。'],
+  ]), c(
+    [
+      ['bryta', '折断；中断'],
+      ['-en', '过去分词'],
+    ],
+    'bryta 的过去分词，就是折断的、中断的。',
+  )),
+  b1(noun('trosa', 'en', '女式内裤', 'panties', 'trosan', 'trosor', 'trosorna', [
+    ['Hon köpte nya trosor.', '她买了新内裤。'],
+    ['Trosan torkar på strecket.', '那条内裤在晾衣绳上干。'],
+    ['Två trosor låg i lådan.', '抽屉里有两条内裤。'],
+    ['Trosorna ska tvättas.', '那些内裤要洗。'],
+  ])),
+  b1(noun('smäll', 'en', '一声巨响；一巴掌', 'bang / slap', 'smällen', 'smällar', 'smällarna', [
+    ['Det hördes en smäll i köket.', '厨房里传来一声巨响。'],
+    ['Smällen skrämde katten.', '那一声把猫吓到了。'],
+    ['Fyrverkeriet gav flera smällar.', '烟花响了好几下。'],
+    ['Smällarna ekade mellan husen.', '那些巨响在房子间回荡。'],
+  ])),
+  b1(adj('förtjust', '喜爱的；高兴的', 'delighted / fond (of)', 'förtjust', 'förtjusta', [
+    ['Jag är förtjust i kaffe.', '我很喜欢咖啡。'],
+    ['Ett förtjust skratt hördes.', '传来一阵开心的笑。'],
+    ['De förtjusta barnen hoppade.', '那些高兴的孩子在跳。'],
+    ['Hon blev förtjust över presenten.', '她对礼物很欢喜。'],
+  ]), c(
+    [
+      ['för-', '构词前缀'],
+      ['tjusa', '迷住'],
+    ],
+    '“被迷住的”，合起来就是喜爱的、高兴的。',
+  )),
+  b1(adj('slagen', '被打败的；被打过的', 'beaten / defeated', 'slaget', 'slagna', [
+    ['Han var slagen i finalen.', '他在决赛里被击败了。'],
+    ['Ett slaget lag gick hem.', '一支被打败的队伍回家了。'],
+    ['De slagna äggen vispades.', '那些打过的蛋在搅拌。'],
+    ['Hon kände sig slagen.', '她觉得自己被打败了。'],
+  ]), c(
+    [
+      ['slå', '打'],
+      ['-en', '过去分词'],
+    ],
+    'slå 的过去分词，就是被打败的、被打过的。',
+  )),
+  b1(verb('svettas', '出汗', 'to sweat', 'svettas', 'svettades', 'svettats', 'svettas', [
+    ['Jag svettas när jag springer.', '我跑步时出汗。'],
+    ['Han svettades under täcket.', '他在被子下出了汗。'],
+    ['Hon har svettats hela dagen.', '她出了一整天汗。'],
+    ['Svettas inte över småsaker.', '别为小事紧张得出汗。'],
+  ]), c(
+    [
+      ['svett', '汗'],
+      ['-as', '感觉动词词尾（自己感到）'],
+    ],
+    '“自己出汗”，合起来就是出汗。',
+  )),
+  b1(noun('terapi', 'en', '治疗；疗法', 'therapy', 'terapin', 'terapier', 'terapierna', [
+    ['Hon går i terapi.', '她在接受治疗／心理治疗。'],
+    ['Terapin hjälpte efter några veckor.', '几周后这种疗法起了作用。'],
+    ['Olika terapier testades.', '试过不同疗法。'],
+    ['Terapierna är kostsamma.', '那些疗法很贵。'],
+  ])),
+  b1(noun('aktie', 'en', '股票；股份', 'share / stock', 'aktien', 'aktier', 'aktierna', [
+    ['Han köpte en aktie i bolaget.', '他买了这家公司的一股。'],
+    ['Aktien steg i dag.', '这只股票今天涨了。'],
+    ['Hon äger flera aktier.', '她持有好几股。'],
+    ['Aktierna såldes i våras.', '那些股票春天卖掉了。'],
+  ])),
+  b1(verb('nöja sig', '满足；知足', 'to be content / to settle (for)', 'nöjer sig', 'nöjde sig', 'nöjt sig', 'nöj dig', [
+    ['Jag nöjer mig med kaffe.', '我有咖啡就满足了。'],
+    ['Hon nöjde sig inte med mindre.', '再少她就不满足。'],
+    ['De har nöjt sig med svaret.', '他们对这个答复已经满足。'],
+    ['Nöj dig med det du har.', '对你现有的知足吧。'],
+  ])),
+  b1(noun('chaufför', 'en', '司机（专职）', 'chauffeur / driver', 'chauffören', 'chaufförer', 'chaufförerna', [
+    ['Chauffören väntade vid bilen.', '司机在车旁等。'],
+    ['En chaufför körde oss till hotellet.', '一名司机把我们送到酒店。'],
+    ['Två chaufförer turas om.', '两名司机轮班。'],
+    ['Chaufförerna ska vila efter körningen.', '那些司机开完要休息。'],
+  ])),
+  b1(noun('kåk', 'en', '房子（俚）；局子（俚）', 'house (colloquial) / prison (slang)', 'kåken', 'kåkar', 'kåkarna', [
+    ['De köpte en ny kåk.', '他们买了栋新房子。'],
+    ['Kåken läcker i taket.', '那栋房子屋顶漏。'],
+    ['Han sitter på kåken.', '他在局子里蹲着。'],
+    ['Kåkarna längs gatan är gamla.', '沿街那些房子很旧。'],
+  ])),
+  b1(noun('uttalande', 'ett', '声明；表态', 'statement', 'uttalandet', 'uttalanden', 'uttalandena', [
+    ['Ministern gav ett uttalande.', '部长发表了一份声明。'],
+    ['Uttalandet kom sent i går.', '那份声明昨天很晚才出。'],
+    ['Flera uttalanden motsade varandra.', '好几份声明互相矛盾。'],
+    ['Uttalandena publicerades i tidningen.', '那些声明登在报上。'],
+  ]), c(
+    [
+      ['uttala', '说出；发音'],
+      ['-ande', '行为/结果名词后缀'],
+    ],
+    '“说出来的话”，就是声明、表态。',
+  )),
+  b1(other('allesammans', 'pron', '大家；统统', 'all of them / all together', [
+    ['Kom allesammans hit.', '大家都到这儿来。'],
+    ['Vi gick allesammans till kyrkan.', '我们大家一起去了教堂。'],
+    ['Barnen somnade allesammans.', '孩子们统统睡着了。'],
+    ['Allesammans skrattade.', '大家都笑了。'],
+  ]), c(
+    [
+      ['alle', '所有（旧复数）'],
+      ['sammans', '在一起'],
+    ],
+    '“所有人在一起”，就是大家、统统。',
+  )),
+  b1(noun('rike', 'ett', '王国；国度', 'kingdom / realm', 'riket', 'riken', 'rikena', [
+    ['Sverige är ett rike i norr.', '瑞典是北方的一个王国。'],
+    ['Riket styrdes av kungen.', '这个王国由国王统治。'],
+    ['Två riken slöt fred.', '两个王国讲和了。'],
+    ['Rikena vid havet handlade med varandra.', '海边那些国度互相做生意。'],
+  ])),
+  b1(verb('tugga', '咀嚼', 'to chew', 'tuggar', 'tuggade', 'tuggat', 'tugga', [
+    ['Han tuggar tuggummi.', '他在嚼口香糖。'],
+    ['Hon tuggade långsamt.', '她慢慢地嚼。'],
+    ['Maten är redan tuggad.', '食物已经嚼过了。'],
+    ['Tugga ordentligt.', '好好嚼。'],
+  ])),
+  b1(noun('lakan', 'ett', '床单', 'bedsheet', 'lakanet', 'lakan', 'lakanen', [
+    ['Lakanet är rent.', '床单是干净的。'],
+    ['Ett vitt lakan låg på sängen.', '床上铺着一条白床单。'],
+    ['Vi bytte lakan i går.', '我们昨天换了床单。'],
+    ['Lakanen torkar ute.', '那些床单在外面晾。'],
+  ])),
+  b1(other('offentligt', 'adv', '公开地', 'publicly', [
+    ['Hon talade offentligt om saken.', '她公开谈了这件事。'],
+    ['Beslutet meddelades offentligt.', '决定被公开宣布。'],
+    ['De grälade offentligt.', '他们当众吵了起来。'],
+    ['Säg det inte offentligt.', '别公开说这个。'],
+  ]), c(
+    [
+      ['offentlig', '公开的；公共的'],
+      ['-t', '中性/副词词尾'],
+    ],
+    'offentlig 是“公开的”，offentligt 就是公开地。',
+  )),
+  b1(noun('insats', 'en', '投入；赌注；行动', 'effort / stake / intervention', 'insatsen', 'insatser', 'insatserna', [
+    ['Hon gjorde en stor insats.', '她做了很大投入。'],
+    ['Insatsen i spelet var hög.', '这场游戏的赌注很高。'],
+    ['Polisen gjorde flera insatser.', '警察采取了好几次行动。'],
+    ['Insatserna räddade huset.', '那些行动保住了房子。'],
+  ]), c(
+    [
+      ['in', '进入'],
+      ['sats', '一笔投入（sätta 放）'],
+    ],
+    '“放进去的那一笔”，可以是投入、赌注，也可以是一次行动。',
+  )),
 ]

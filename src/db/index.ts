@@ -41,6 +41,34 @@ export class SvmemoDB extends Dexie {
       dailyStats: 'date',
       wordMarks: 'wordId, mastered, starred',
     })
+    this.version(3).stores({
+      words: 'id, lemma, cefr, pos, *tags',
+      decks: 'id, cefr',
+      deckWords: '++id, &[deckId+wordId], deckId, wordId',
+      cards: '++id, wordId, cardType, due, state, &[wordId+cardType]',
+      reviewLogs: '++id, cardId, wordId, reviewedAt',
+      settings: 'id',
+      dailyStats: 'date',
+      wordMarks: 'wordId, mastered, starred',
+      readings: 'id, openedAt, createdAt',
+      readingNotes: '++id, readingId, wordId, createdAt',
+    })
+    this.version(4)
+      .stores({
+        readings: null,
+        readingNotes: null,
+      })
+      .upgrade(async (transaction) => {
+        const row = await transaction.table('settings').get('default')
+        if (!row) {
+          return
+        }
+        const next = { ...row }
+        delete next.llmBaseUrl
+        delete next.llmApiKey
+        delete next.llmModel
+        await transaction.table('settings').put(next)
+      })
   }
 }
 

@@ -994,8 +994,21 @@ button.today-pill:disabled {
   overflow-y: auto;
 }
 
+.card-lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: inherit;
+  text-align: inherit;
+  gap: inherit;
+  width: 100%;
+  min-width: 0;
+}
+
 .flashcard.is-flipped .card-center {
   justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
 }
 
 .card-lemma {
@@ -1061,10 +1074,20 @@ button.today-pill:disabled {
   font-size: 14px;
 }
 
-.word-extras {
+.word-extras-forms,
+.word-extras-examples {
   width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+
+.word-extras-forms {
   margin-top: 12px;
   text-align: left;
+}
+
+.examples-label {
+  display: none;
 }
 
 .compound {
@@ -1145,6 +1168,7 @@ button.today-pill:disabled {
   padding: 0;
   display: grid;
   gap: 8px;
+  width: 100%;
 }
 
 .examples li {
@@ -1756,12 +1780,130 @@ button.today-pill:disabled {
   }
 
   .page-study {
-    width: min(640px, 100%);
-    padding: 28px 24px 40px;
+    width: min(1120px, calc(100% - 48px));
+    padding: 16px 24px 20px;
   }
 
   .page-study.is-due {
     width: min(840px, 100%);
+    max-height: none;
+  }
+
+  .page-study .card-stack::before,
+  .page-study .card-stack::after {
+    display: none;
+  }
+
+  .card-stack {
+    min-height: 0;
+  }
+
+  .flashcard {
+    width: 100%;
+    min-height: 0;
+    padding: 22px 28px 20px;
+    align-items: stretch;
+  }
+
+  .flashcard.is-flipped .card-center:has(.word-extras-examples) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: start;
+    column-gap: 0;
+    row-gap: 0;
+    text-align: left;
+    overflow: visible;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .flashcard.is-flipped .card-lead,
+  .flashcard.is-flipped .word-extras-examples {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    justify-self: stretch;
+    box-sizing: border-box;
+  }
+
+  .flashcard.is-flipped .card-lead {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding-right: 28px;
+  }
+
+  .flashcard.is-flipped .word-meta {
+    justify-content: flex-start;
+  }
+
+  .flashcard.is-flipped .word-extras-forms {
+    margin-top: 8px;
+  }
+
+  .flashcard.is-flipped .word-extras-examples {
+    margin-top: 0;
+    padding-left: 28px;
+    border-left: 1px solid var(--border);
+  }
+
+  .flashcard.is-flipped .examples-label {
+    display: block;
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  .flashcard.is-flipped .examples {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .flashcard.is-flipped .examples li {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    padding: 12px 14px;
+    box-sizing: border-box;
+  }
+
+  .flashcard.is-flipped .examples strong {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .flashcard.is-flipped .examples span {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .flashcard.is-flipped .compound,
+  .flashcard.is-flipped .inflect {
+    width: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+  }
+
+  .flashcard.is-flipped .inflect-row {
+    grid-template-columns: 6.5rem 1fr;
+  }
+
+  .flashcard.is-flipped .speak {
+    margin-top: 6px;
+  }
+
+  .flashcard.is-flipped .spell-slots,
+  .flashcard.is-flipped .hint-chips {
+    justify-content: flex-start;
   }
 
   .today-page {
@@ -1838,6 +1980,14 @@ button.today-pill:disabled {
   }
 
   .card-lemma {
-    font-size: clamp(44px, 5vw, 64px);
+    font-size: clamp(36px, 3.6vw, 52px);
+  }
+
+  .flashcard.is-flipped .card-lemma {
+    font-size: clamp(32px, 3.2vw, 44px);
+  }
+
+  .flashcard.is-flipped .card-gloss {
+    font-size: 22px;
   }
 }

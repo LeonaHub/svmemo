@@ -80,7 +80,7 @@ export async function importBackup(raw: unknown): Promise<void> {
     typeof raw !== 'object' ||
     raw === null ||
     !('version' in raw) ||
-    !((raw as SvmemoBackup).version === 1 || (raw as SvmemoBackup).version === 2)
+    ![1, 2, 3].includes((raw as SvmemoBackup).version)
   ) {
     throw new Error('备份文件格式不对')
   }

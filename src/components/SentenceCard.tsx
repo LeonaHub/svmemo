@@ -21,7 +21,7 @@ import { POS_LABEL } from '../lib/pos'
 import type { Pos } from '../types/word'
 import { CardMarks } from './CardMarks'
 import { SpeakButton } from './SpeakButton'
-import { WordExtras } from './WordExtras'
+import { WordExamples, WordForms } from './WordExtras'
 
 const LETTERS = ['å', 'ä', 'ö'] as const
 
@@ -238,6 +238,7 @@ export function SentenceCard({
             <CardMarks wordId={item.word.id} onMasteredChange={onMasteredChange} />
           </div>
           <div className="card-center">
+            <div className="card-lead">
             <p className="card-gloss">{item.example.zh}</p>
             <SpeakButton text={item.example.sv} label="听整句" />
 
@@ -255,7 +256,7 @@ export function SentenceCard({
                 <p className="result-label">{RESULT_LABEL[result.rating]}</p>
                 <SentenceReveal segments={item.segments} diffs={diffs} />
                 <p className="card-lemma sentence-answer">{answerNodes}</p>
-                <WordExtras word={item.word} />
+                <WordForms word={item.word} />
               </div>
             ) : (
               <form
@@ -318,6 +319,8 @@ export function SentenceCard({
                 </div>
               </form>
             )}
+            </div>
+            {result ? <WordExamples word={item.word} /> : null}
           </div>
         </article>
       </div>

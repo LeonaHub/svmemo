@@ -14,7 +14,7 @@ import { isExactSpelling } from '../lib/spelling-drill'
 import type { Word } from '../types/word'
 import { CardMarks } from './CardMarks'
 import { SpeakButton } from './SpeakButton'
-import { WordExtras } from './WordExtras'
+import { WordExamples, WordForms } from './WordExtras'
 
 const LETTERS = ['å', 'ä', 'ö'] as const
 
@@ -124,32 +124,33 @@ export function SpellingCard({
             <CardMarks wordId={word.id} onMasteredChange={onMasteredChange} />
           </div>
           <div className="card-center">
-            <p className="card-gloss">{word.glossZh}</p>
-            {word.glossEn ? <p className="card-en">{word.glossEn}</p> : null}
-            <SpeakButton text={word.lemma} label="听发音" autoPlay />
+            <div className="card-lead">
+              <p className="card-gloss">{word.glossZh}</p>
+              {word.glossEn ? <p className="card-en">{word.glossEn}</p> : null}
+              <SpeakButton text={word.lemma} label="听发音" autoPlay />
 
-            {result ? (
-              <div className="spelling-result">
-                <p className="result-label">{RESULT_LABEL[result.rating]}</p>
-                <p className="diff" aria-label="拼写对照">
-                  {result.marks.map((mark, index) => (
-                    <span
-                      key={`${mark.char}-${index}`}
-                      className={mark.ok ? 'diff-ok' : 'diff-bad'}
-                    >
-                      {mark.char}
-                    </span>
-                  ))}
-                </p>
-                <p className="card-lemma">{word.lemma}</p>
-                <WordExtras word={word} />
-              </div>
-            ) : (
-              <form
-                id="spelling-form"
-                className="spelling-form"
-                onSubmit={handleSubmit}
-              >
+              {result ? (
+                <div className="spelling-result">
+                  <p className="result-label">{RESULT_LABEL[result.rating]}</p>
+                  <p className="diff" aria-label="拼写对照">
+                    {result.marks.map((mark, index) => (
+                      <span
+                        key={`${mark.char}-${index}`}
+                        className={mark.ok ? 'diff-ok' : 'diff-bad'}
+                      >
+                        {mark.char}
+                      </span>
+                    ))}
+                  </p>
+                  <p className="card-lemma">{word.lemma}</p>
+                  <WordForms word={word} />
+                </div>
+              ) : (
+                <form
+                  id="spelling-form"
+                  className="spelling-form"
+                  onSubmit={handleSubmit}
+                >
                 <label className="sr-only" htmlFor="spelling-input">
                   瑞典语拼写，共 {letterCount} 个字母
                 </label>
@@ -210,6 +211,8 @@ export function SpellingCard({
                 </div>
               </form>
             )}
+            </div>
+            {result ? <WordExamples word={word} /> : null}
           </div>
         </article>
       </div>

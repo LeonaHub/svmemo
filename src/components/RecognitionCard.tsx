@@ -4,7 +4,7 @@ import type { Grade } from 'ts-fsrs'
 import type { Word } from '../types/word'
 import { CardMarks } from './CardMarks'
 import { SpeakButton } from './SpeakButton'
-import { WordExtras } from './WordExtras'
+import { WordExamples, WordForms } from './WordExtras'
 
 const GRADES = [
   { rating: Rating.Again, label: '忘记', className: 'grade-again' },
@@ -81,26 +81,29 @@ export function RecognitionCard({
             <CardMarks wordId={word.id} onMasteredChange={onMasteredChange} />
           </div>
           <div className="card-center">
-            <p className="card-lemma">{word.lemma}</p>
-            <SpeakButton text={word.lemma} autoPlay />
-            {flipped ? (
-              <>
-                <p className="card-gloss">{word.glossZh}</p>
-                {word.glossEn ? <p className="card-en">{word.glossEn}</p> : null}
-                {extras.length > 0 ? (
-                  <div className="word-meta">
-                    {extras.map((item) => (
-                      <span key={item} className="pill">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                ) : null}
-                <WordExtras word={word} />
-              </>
-            ) : (
-              <p className="tap-hint">先看一眼这个词，点卡片或回车看释义</p>
-            )}
+            <div className="card-lead">
+              <p className="card-lemma">{word.lemma}</p>
+              <SpeakButton text={word.lemma} autoPlay />
+              {flipped ? (
+                <>
+                  <p className="card-gloss">{word.glossZh}</p>
+                  {word.glossEn ? <p className="card-en">{word.glossEn}</p> : null}
+                  {extras.length > 0 ? (
+                    <div className="word-meta">
+                      {extras.map((item) => (
+                        <span key={item} className="pill">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+                  <WordForms word={word} />
+                </>
+              ) : (
+                <p className="tap-hint">先看一眼这个词，点卡片或回车看释义</p>
+              )}
+            </div>
+            {flipped ? <WordExamples word={word} /> : null}
           </div>
         </article>
       </div>
