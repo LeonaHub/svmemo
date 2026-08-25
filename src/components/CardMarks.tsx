@@ -1,17 +1,7 @@
-import { useEffect, type MouseEvent } from 'react'
+import { useEffect } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { emptyMark, getWordMark, setWordMark, toggleMastered, toggleStarred } from '../db/marks'
-
-export function releaseMarkButton(event: MouseEvent<HTMLButtonElement>) {
-  const button = event.currentTarget
-  button.blur()
-  const field = button
-    .closest('.flashcard')
-    ?.querySelector<HTMLInputElement | HTMLTextAreaElement>(
-      'input:not([type="hidden"]):not([disabled]), textarea:not([disabled])',
-    )
-  field?.focus()
-}
+import { StarButton } from './StarButton'
 
 type CardMarksProps = {
   wordId: string
@@ -52,19 +42,15 @@ export function CardMarks({ wordId, onMasteredChange }: CardMarksProps) {
 
   return (
     <div className="card-marks" onClick={(event) => event.stopPropagation()}>
-      <button
-        type="button"
-        className={current.starred ? 'mark-btn is-starred' : 'mark-btn'}
-        onClick={(event) => {
+      <StarButton
+        key={wordId}
+        starred={current.starred}
+        onToggle={() => {
           void toggleStarred(wordId)
-          releaseMarkButton(event)
         }}
-        aria-pressed={current.starred}
-        aria-label={current.starred ? '取消收藏' : '收藏到单词本'}
+        label={current.starred ? '取消收藏' : '收藏到单词本'}
         title={current.starred ? '已在单词本' : '收藏到单词本（Ctrl+S）'}
-      >
-        ★
-      </button>
+      />
       <button
         type="button"
         className={current.mastered ? 'mark-btn is-mastered' : 'mark-btn'}

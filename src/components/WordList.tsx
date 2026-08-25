@@ -7,7 +7,7 @@ import { a1Words } from '../data/a1'
 import { compoundSummary, formsSummary } from '../lib/inflection'
 import { POS_LABEL } from '../lib/pos'
 import type { Word } from '../types/word'
-import { releaseMarkButton } from './CardMarks'
+import { StarButton } from './StarButton'
 
 type WordFilter = 'all' | 'unenrolled' | 'plan' | 'starred' | 'mastered'
 
@@ -360,19 +360,14 @@ export function WordList() {
                 {extra ? <p className="forms">{extra}</p> : null}
               </div>
               <div className="word-actions">
-                <button
-                  type="button"
-                  className={isStarred ? 'mark-btn is-starred' : 'mark-btn'}
-                  onClick={(event) => {
-                    event.stopPropagation()
+                <StarButton
+                  starred={isStarred}
+                  onToggle={() => {
                     void toggleStarred(word.id)
-                    releaseMarkButton(event)
                   }}
-                  aria-label={isStarred ? '取消收藏' : '收藏到单词本'}
+                  label={isStarred ? '取消收藏' : '收藏到单词本'}
                   title={isStarred ? '已在单词本' : '收藏到单词本'}
-                >
-                  ★
-                </button>
+                />
                 <button
                   type="button"
                   className={isMastered ? 'mark-btn is-mastered' : 'mark-btn'}

@@ -3,7 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { listDueReviews, startDueSession, type DueReviewRow, type StudyItem } from '../db/study'
 import { toggleMastered, toggleStarred } from '../db/marks'
 import { POS_LABEL } from '../lib/pos'
-import { releaseMarkButton } from './CardMarks'
+import { StarButton } from './StarButton'
 
 type DueReviewPageProps = {
   onExit: () => void
@@ -25,18 +25,14 @@ function ReviewRow({ row }: { row: DueReviewRow }) {
         <p className="gloss">{row.word.glossZh}</p>
       </div>
       <div className="word-actions">
-        <button
-          type="button"
-          className={row.starred ? 'mark-btn is-starred' : 'mark-btn'}
-          onClick={(event) => {
+        <StarButton
+          starred={row.starred}
+          onToggle={() => {
             void toggleStarred(row.word.id)
-            releaseMarkButton(event)
           }}
-          aria-label={row.starred ? '取消收藏' : '收藏到单词本'}
+          label={row.starred ? '取消收藏' : '收藏到单词本'}
           title={row.starred ? '已在单词本' : '收藏到单词本'}
-        >
-          ★
-        </button>
+        />
         <button
           type="button"
           className="mark-btn"
