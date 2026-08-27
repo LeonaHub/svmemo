@@ -25,7 +25,7 @@ export function CardMarks({ wordId, onMasteredChange }: CardMarksProps) {
       const key = event.key.toLowerCase()
       if (key === 's') {
         event.preventDefault()
-        void setWordMark(wordId, { starred: true })
+        void toggleStarred(wordId)
         return
       }
       if (key !== 'm') {
@@ -49,7 +49,11 @@ export function CardMarks({ wordId, onMasteredChange }: CardMarksProps) {
           void toggleStarred(wordId)
         }}
         label={current.starred ? '取消收藏' : '收藏到单词本'}
-        title={current.starred ? '已在单词本' : '收藏到单词本（Ctrl+S）'}
+        title={
+          current.starred
+            ? '已在单词本（Ctrl+S 取消）'
+            : '收藏到单词本（Ctrl+S）'
+        }
       />
       <button
         type="button"

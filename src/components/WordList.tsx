@@ -1,4 +1,4 @@
-import { useMemo, useState, type MouseEvent } from 'react'
+import { useEffect, useMemo, useState, type MouseEvent } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../db'
 import { toggleMastered, toggleStarred } from '../db/marks'
@@ -8,6 +8,7 @@ import { compoundSummary, formsSummary } from '../lib/inflection'
 import { POS_LABEL } from '../lib/pos'
 import type { Word } from '../types/word'
 import { StarButton } from './StarButton'
+import { WordDetailSheet } from './WordExtras'
 
 type WordFilter = 'all' | 'unenrolled' | 'plan' | 'starred' | 'mastered'
 
@@ -71,6 +72,7 @@ export function WordList() {
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<WordFilter>('all')
   const [selected, setSelected] = useState<Set<string>>(new Set())
+  const [detailWord, setDetailWord] = useState<Word | null>(null)
   const [message, setMessage] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
 
@@ -148,12 +150,21 @@ export function WordList() {
     .map((word) => word.id)
   const selectedCount = [...selected].filter((id) => !enrolled.has(id)).length
 
-  function toggle(wordId: string) {
-    if (mastered.has(wordId)) {
+  useEffect(() => {
+    if (!detailWord) {
       return
     }
-    if (enrolled.has(wordId)) {
-      void removeFromPlan([wordId])
+    function onKey(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setDetailWord(null)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [detailWord])
+
+  function toggleSelect(wordId: string) {
+    if (mastered.has(wordId) || enrolled.has(wordId)) {
       return
     }
     setSelected((current) => {
@@ -221,6 +232,16 @@ export function WordList() {
     } finally {
       setBusy(false)
     }
+  }
+
+  function handlePickClick(event: MouseEvent, wordId: string) {
+    event.stopPropagation()
+    toggleSelect(wordId)
+  }
+
+  function handleOpenDetail(event: MouseEvent, word: Word) {
+    event.stopPropagation()
+    setDetailWord(word)
   }
 
   function handleRowAdd(event: MouseEvent, wordId: string) {
@@ -316,6 +337,7 @@ export function WordList() {
           const isStarred = starred.has(word.id)
           const isSelected = selected.has(word.id) && !isEnrolled && !isMastered
           const extra = inflected(word)
+          const canSelect = !isEnrolled && !isMastered
 
           return (
             <article
@@ -329,21 +351,46 @@ export function WordList() {
               ]
                 .filter(Boolean)
                 .join(' ')}
-              onClick={() => toggle(word.id)}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault()
-                  toggle(word.id)
-                }
-              }}
-              role="checkbox"
-              aria-checked={isEnrolled || isSelected}
-              tabIndex={0}
+              onClick={(event) => handleOpenDetail(event, word)}
             >
-              <span className="pick" aria-hidden="true">
-                {isMastered ? '✓' : isEnrolled ? '✓' : ''}
+              <span
+                className={canSelect ? 'pick is-pickable' : 'pick'}
+                role={canSelect ? 'checkbox' : undefined}
+                aria-checked={canSelect ? isSelected : undefined}
+                aria-hidden={!canSelect}
+                aria-label={canSelect ? `勾选 ${word.lemma}` : undefined}
+                onClick={
+                  canSelect
+                    ? (event) => handlePickClick(event, word.id)
+                    : undefined
+                }
+                onKeyDown={
+                  canSelect
+                    ? (event) => {
+                        if (event.key === 'Enter' || event.key === ' ') {
+                          event.preventDefault()
+                          event.stopPropagation()
+                          toggleSelect(word.id)
+                        }
+                      }
+                    : undefined
+                }
+                tabIndex={canSelect ? 0 : undefined}
+              >
+                {isMastered ? '✓' : isEnrolled ? '✓' : isSelected ? '✓' : ''}
               </span>
-              <div className="word-body">
+              <div
+                className="word-body"
+                role="button"
+                tabIndex={0}
+                aria-label={`查看 ${word.lemma} 的详情`}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault()
+                    setDetailWord(word)
+                  }
+                }}
+              >
                 <div className="word-row-top">
                   <span className="lemma">{word.lemma}</span>
                   <span className="pill">
@@ -404,6 +451,9 @@ export function WordList() {
           )
         })}
       </div>
+      {detailWord ? (
+        <WordDetailSheet word={detailWord} onClose={() => setDetailWord(null)} />
+      ) : null}
     </section>
   )
 }

@@ -18,7 +18,10 @@ import {
 } from '../lib/backup'
 
 type TodayPageProps = {
-  onStart: (items: StudyItem[]) => void
+  onStart: (
+    items: StudyItem[],
+    options?: { dropStarOnCorrect?: boolean },
+  ) => void
   onOpenDueList: () => void
   onStartSentences: (items: SentenceItem[]) => void
   onBrowseWords: () => void
@@ -124,7 +127,7 @@ export function TodayPage({
         setMessage('单词本还是空的。学习时点星星，或在词库里收藏难词。')
         return
       }
-      onStart(items)
+      onStart(items, { dropStarOnCorrect: true })
     } catch (error) {
       setMessage(error instanceof Error ? error.message : '无法开始收藏复习')
     } finally {
@@ -284,7 +287,7 @@ export function TodayPage({
               <p className="today-extra-title">难词放这里</p>
               <p className="today-extra-meta">
                 {canReviewStarred
-                  ? `收藏了 ${starredCount} 个，含已掌握的。想复习就点进来。`
+                  ? `收藏了 ${starredCount} 个，含已掌握的。从这里进去拼对了会移出。`
                   : '学习时点星星，难词会进这里。'}
               </p>
               <button

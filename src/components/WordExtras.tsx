@@ -1,5 +1,9 @@
+import { useEffect } from 'react'
 import { examplesOf, inflectionRows } from '../lib/inflection'
+import { POS_LABEL } from '../lib/pos'
+import { stopSpeaking } from '../lib/tts'
 import type { Word } from '../types/word'
+import { SpeakButton } from './SpeakButton'
 
 type WordExtrasProps = {
   word: Word
@@ -61,6 +65,65 @@ export function WordExamples({ word }: WordExtrasProps) {
           </li>
         ))}
       </ul>
+    </div>
+  )
+}
+
+type WordDetailSheetProps = {
+  word: Word
+  onClose: () => void
+}
+
+export function WordDetailSheet({ word, onClose }: WordDetailSheetProps) {
+  useEffect(() => {
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+      stopSpeaking()
+    }
+  }, [])
+
+  return (
+    <div
+      className="word-detail-backdrop"
+      onClick={onClose}
+      role="presentation"
+    >
+      <div
+        className="word-detail"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="word-detail-title"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="word-detail-top">
+          <p className="card-kicker">词条</p>
+          <button type="button" className="btn btn-ghost" onClick={onClose}>
+            关闭
+          </button>
+        </div>
+        <div className="word-detail-scroll">
+          <div className="word-detail-grid">
+            <div className="word-detail-lead">
+              <div className="word-detail-title-row">
+                <p className="card-lemma" id="word-detail-title">
+                  {word.lemma}
+                </p>
+                <SpeakButton text={word.lemma} />
+              </div>
+              <p className="card-gloss">{word.glossZh}</p>
+              {word.glossEn ? <p className="card-en">{word.glossEn}</p> : null}
+              <div className="word-meta">
+                {word.gender ? <span className="pill">{word.gender}</span> : null}
+                <span className="pill">{POS_LABEL[word.pos]}</span>
+              </div>
+              <WordForms word={word} />
+            </div>
+            <WordExamples word={word} />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

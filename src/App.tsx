@@ -13,7 +13,7 @@ import './App.css'
 type Tab = 'today' | 'sentences' | 'words'
 
 type Session =
-  | { type: 'words'; items: StudyItem[] }
+  | { type: 'words'; items: StudyItem[]; dropStarOnCorrect?: boolean }
   | { type: 'due-list' }
   | { type: 'sentences'; items: SentenceItem[] }
 
@@ -31,7 +31,11 @@ export default function App() {
   if (session?.type === 'words') {
     return (
       <div className="shell shell-study">
-        <StudySession items={session.items} onExit={() => setSession(null)} />
+        <StudySession
+          items={session.items}
+          dropStarOnCorrect={session.dropStarOnCorrect}
+          onExit={() => setSession(null)}
+        />
       </div>
     )
   }
@@ -97,7 +101,9 @@ export default function App() {
         {seedError ? <p className="error">{seedError}</p> : null}
         {tab === 'today' ? (
           <TodayPage
-            onStart={(items) => setSession({ type: 'words', items })}
+            onStart={(items, options) =>
+              setSession({ type: 'words', items, ...options })
+            }
             onOpenDueList={() => setSession({ type: 'due-list' })}
             onStartSentences={(items) => setSession({ type: 'sentences', items })}
             onBrowseWords={() => setTab('words')}

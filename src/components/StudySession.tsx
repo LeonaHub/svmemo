@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Grade } from 'ts-fsrs'
+import { setWordMark } from '../db/marks'
 import {
   markTodayComplete,
   shouldRequeue,
@@ -7,11 +8,13 @@ import {
   type StudyItem,
 } from '../db/study'
 import { itemKicker } from '../lib/queue'
+import { isExactSpelling } from '../lib/spelling-drill'
 import { RecognitionCard } from './RecognitionCard'
 import { SpellingCard } from './SpellingCard'
 
 type StudySessionProps = {
   items: StudyItem[]
+  dropStarOnCorrect?: boolean
   onExit: () => void
 }
 
@@ -79,7 +82,11 @@ function checkpointMessage(current: StudyItem, next: StudyItem): string | null {
   return null
 }
 
-export function StudySession({ items: initialItems, onExit }: StudySessionProps) {
+export function StudySession({
+  items: initialItems,
+  dropStarOnCorrect = false,
+  onExit,
+}: StudySessionProps) {
   const [items, setItems] = useState(initialItems)
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
@@ -177,11 +184,16 @@ export function StudySession({ items: initialItems, onExit }: StudySessionProps)
   }
 
   async function handleSpellingAnswer(rating: Grade) {
-    if (!item || committedRef.current.has(index)) {
+    if (!item) {
       return
     }
-    committedRef.current.add(index)
-    await submitReview(item.card, rating)
+    if (!committedRef.current.has(index)) {
+      committedRef.current.add(index)
+      await submitReview(item.card, rating)
+    }
+    if (dropStarOnCorrect && isExactSpelling(rating)) {
+      await setWordMark(item.word.id, { starred: false })
+    }
   }
 
   function handleSpellingContinue(passed: boolean) {
