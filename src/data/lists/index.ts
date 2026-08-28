@@ -18,6 +18,16 @@ import { list17 } from './list-17'
 import { list18 } from './list-18'
 import { list19 } from './list-19'
 import { list20 } from './list-20'
+import { list21 } from './list-21'
+import { list22 } from './list-22'
+import { list23 } from './list-23'
+import { list24 } from './list-24'
+import { list25 } from './list-25'
+import { list26 } from './list-26'
+import { list27 } from './list-27'
+import { list28 } from './list-28'
+import { list29 } from './list-29'
+import { list30 } from './list-30'
 import type { Word } from '../../types/word'
 
 export const frequencyLists: Word[] = [
@@ -41,4 +51,14 @@ export const frequencyLists: Word[] = [
   ...list18,
   ...list19,
   ...list20,
+  ...list21,
+  ...list22,
+  ...list23,
+  ...list24,
+  ...list25,
+  ...list26,
+  ...list27,
+  ...list28,
+  ...list29,
+  ...list30,
 ]
