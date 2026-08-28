@@ -19,8 +19,13 @@ export function SpeakButton({
     setHint(ttsHint(result))
   }
 
+  const allowAuto =
+    autoPlay &&
+    typeof window !== 'undefined' &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches
+
   useEffect(() => {
-    if (!autoPlay) {
+    if (!allowAuto) {
       return
     }
     let cancelled = false
@@ -33,7 +38,7 @@ export function SpeakButton({
       cancelled = true
       stopSpeaking()
     }
-  }, [autoPlay, text])
+  }, [allowAuto, text])
 
   function handleMouseDown(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault()

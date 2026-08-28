@@ -36,6 +36,25 @@ function todayLabel(now = new Date()): string {
   })
 }
 
+const HOME_HINT_KEY = 'svmemo.dismiss-home-hint'
+
+function shouldShowIosHomeHint(): boolean {
+  if (typeof window === 'undefined') {
+    return false
+  }
+  if (window.localStorage.getItem(HOME_HINT_KEY)) {
+    return false
+  }
+  const standalone =
+    window.matchMedia('(display-mode: standalone)').matches ||
+    ('standalone' in navigator &&
+      Boolean((navigator as Navigator & { standalone?: boolean }).standalone))
+  if (standalone) {
+    return false
+  }
+  return /iPhone|iPod/i.test(navigator.userAgent)
+}
+
 function useClock(intervalMs = 30_000): Date {
   const [now, setNow] = useState(() => new Date())
 
@@ -74,6 +93,7 @@ export function TodayPage({
   const overview = useLiveQuery(() => getTodayOverview(now), [now.getTime()])
   const fileInput = useRef<HTMLInputElement>(null)
   const [message, setMessage] = useState<string | null>(null)
+  const [showHomeHint, setShowHomeHint] = useState(shouldShowIosHomeHint)
   const [starting, setStarting] = useState<
     'today' | 'starred' | 'sentences' | null
   >(null)
@@ -209,6 +229,23 @@ export function TodayPage({
         </div>
         <p className="date-line">{todayLabel(now)}</p>
       </header>
+
+      {showHomeHint ? (
+        <div className="install-hint">
+          <p>
+            用 Safari 打开本页，点分享再选「添加到主屏幕」，之后可离线背词。电脑和手机进度不同步，出门前先备份。
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              window.localStorage.setItem(HOME_HINT_KEY, '1')
+              setShowHomeHint(false)
+            }}
+          >
+            知道了
+          </button>
+        </div>
+      ) : null}
 
       {!overview ? (
         <p className="hint">正在读取本地进度…</p>
