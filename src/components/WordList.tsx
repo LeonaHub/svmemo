@@ -6,6 +6,7 @@ import { enrollWords, unenrollWords } from '../db/study'
 import { a1Words } from '../data/a1'
 import { compoundSummary, formsSummary } from '../lib/inflection'
 import { POS_LABEL } from '../lib/pos'
+import { unlockSpeech } from '../lib/tts'
 import type { Word } from '../types/word'
 import { StarButton } from './StarButton'
 import { WordDetailSheet } from './WordExtras'
@@ -245,6 +246,7 @@ export function WordList() {
 
   function handleOpenDetail(event: MouseEvent, word: Word) {
     event.stopPropagation()
+    unlockSpeech()
     setDetailWord(word)
   }
 
@@ -391,6 +393,7 @@ export function WordList() {
                 onKeyDown={(event) => {
                   if (event.key === 'Enter' || event.key === ' ') {
                     event.preventDefault()
+                    unlockSpeech()
                     setDetailWord(word)
                   }
                 }}

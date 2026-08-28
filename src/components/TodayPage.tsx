@@ -8,6 +8,7 @@ import {
   type StudyItem,
 } from '../db/study'
 import type { SentenceItem } from '../lib/sentence-drill'
+import { unlockSpeech } from '../lib/tts'
 import { StudyCalendar } from './StudyCalendar'
 import {
   copyBackup,
@@ -114,6 +115,7 @@ export function TodayPage({
     }
     setStarting('today')
     setMessage(null)
+    unlockSpeech()
     try {
       const items = await startTodaySession(now)
       if (items.length === 0) {
@@ -141,6 +143,7 @@ export function TodayPage({
     }
     setStarting('starred')
     setMessage(null)
+    unlockSpeech()
     try {
       const items = await startStarredSession()
       if (items.length === 0) {
@@ -161,6 +164,7 @@ export function TodayPage({
     }
     setStarting('sentences')
     setMessage(null)
+    unlockSpeech()
     try {
       const items = await startSentenceSession('plan')
       if (items.length === 0) {

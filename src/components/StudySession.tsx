@@ -9,7 +9,7 @@ import {
 } from '../db/study'
 import { itemKicker } from '../lib/queue'
 import { isExactSpelling } from '../lib/spelling-drill'
-import { useSwipeNav } from '../lib/swipe'
+import { useSwipeNav, type SwipeNav } from '../lib/swipe'
 import { RecognitionCard } from './RecognitionCard'
 import { SpellingCard } from './SpellingCard'
 
@@ -42,7 +42,7 @@ function ActionScreen({
   message: string
   actionLabel: string
   onAction: () => void
-  nav?: ReturnType<typeof useSwipeNav>
+  nav?: SwipeNav
 }) {
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -57,7 +57,7 @@ function ActionScreen({
   }, [onAction])
 
   return (
-    <section className="page-study" {...nav}>
+    <section className="page-study" {...nav?.bind}>
       <div className="done">
         <div className="done-mark" aria-hidden="true">
           ✓
@@ -156,7 +156,36 @@ export function StudySession({
     }
   }
 
-  const swipeNav = useSwipeNav(goBack, goForward, !busy)
+  const swipeNav = useSwipeNav({
+    enabled: !busy,
+    decidePrev: () => {
+      if (finished || busy) {
+        return 'ignore'
+      }
+      if (checkpoint || index > 0) {
+        return 'commit'
+      }
+      return 'ignore'
+    },
+    decideNext: () => {
+      if (finished || checkpoint) {
+        return 'commit'
+      }
+      if (busy || !item) {
+        return 'ignore'
+      }
+      if (item.mode === 'recognition') {
+        if (!flipped) {
+          return 'nudge'
+        }
+        return item.kind === 'learn' ? 'commit' : 'ignore'
+      }
+      return spellOutcome ? 'commit' : 'ignore'
+    },
+    onNudgeNext: () => setFlipped(true),
+    onCommitPrev: goBack,
+    onCommitNext: goForward,
+  })
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -307,7 +336,7 @@ export function StudySession({
   }
 
   return (
-    <section className="page-study" {...swipeNav}>
+    <section className="page-study" {...swipeNav.bind}>
       <div className="study-bar">
         <button type="button" className="btn btn-ghost" onClick={onExit}>
           结束
@@ -318,6 +347,10 @@ export function StudySession({
         <p className="remain">还剩 {remaining}</p>
       </div>
 
+      <div
+        ref={swipeNav.layerRef}
+        className={['swipe-layer', swipeNav.enterClass].filter(Boolean).join(' ')}
+      >
       {item.mode === 'recognition' ? (
         <RecognitionCard
           key={`${item.card.id}-${index}`}
@@ -342,6 +375,7 @@ export function StudySession({
           onMasteredChange={handleMasteredChange}
         />
       )}
+      </div>
     </section>
   )
 }

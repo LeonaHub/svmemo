@@ -244,7 +244,7 @@ export function SentenceCard({
   return (
     <div className="study-stage">
       <div className="card-stack">
-        <article className={result ? 'flashcard is-flipped' : 'flashcard'}>
+        <article className={result ? 'flashcard is-flipped' : 'flashcard is-typing'}>
           <div className="card-top">
             <p className="card-kicker">{kicker ?? '例句'}</p>
             <CardMarks wordId={item.word.id} onMasteredChange={onMasteredChange} />

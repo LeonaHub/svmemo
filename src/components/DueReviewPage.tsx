@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { listDueReviews, startDueSession, type DueReviewRow, type StudyItem } from '../db/study'
+import { unlockSpeech } from '../lib/tts'
 import { toggleMastered, toggleStarred } from '../db/marks'
 import { POS_LABEL } from '../lib/pos'
 import { StarButton } from './StarButton'
@@ -63,6 +64,7 @@ export function DueReviewPage({ onExit, onStart }: DueReviewPageProps) {
     }
     setStarting(true)
     setMessage(null)
+    unlockSpeech()
     try {
       const items = await startDueSession()
       if (items.length === 0) {

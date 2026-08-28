@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { SentenceItem } from '../lib/sentence-drill'
 import { sentenceKicker } from '../lib/sentence-drill'
-import { useSwipeNav } from '../lib/swipe'
+import { useSwipeNav, type SwipeNav } from '../lib/swipe'
 import { SentenceCard } from './SentenceCard'
 
 type SentenceSessionProps = {
@@ -32,7 +32,7 @@ function ActionScreen({
   message: string
   actionLabel: string
   onAction: () => void
-  nav?: ReturnType<typeof useSwipeNav>
+  nav?: SwipeNav
 }) {
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -47,7 +47,7 @@ function ActionScreen({
   }, [onAction])
 
   return (
-    <section className="page-study" {...nav}>
+    <section className="page-study" {...nav?.bind}>
       <div className="done">
         <div className="done-mark" aria-hidden="true">
           ✓
@@ -134,7 +134,25 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
     }
   }
 
-  const swipeNav = useSwipeNav(goBack, goForward)
+  const swipeNav = useSwipeNav({
+    decidePrev: () => {
+      if (finished) {
+        return 'ignore'
+      }
+      if (checkpoint || index > 0) {
+        return 'commit'
+      }
+      return 'ignore'
+    },
+    decideNext: () => {
+      if (finished || checkpoint) {
+        return 'commit'
+      }
+      return spellOutcome ? 'commit' : 'ignore'
+    },
+    onCommitPrev: goBack,
+    onCommitNext: goForward,
+  })
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -203,7 +221,7 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
   }
 
   return (
-    <section className="page-study" {...swipeNav}>
+    <section className="page-study" {...swipeNav.bind}>
       <div className="study-bar">
         <button type="button" className="btn btn-ghost" onClick={onExit}>
           结束
@@ -214,6 +232,10 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
         <p className="remain">还剩 {remaining}</p>
       </div>
 
+      <div
+        ref={swipeNav.layerRef}
+        className={['swipe-layer', swipeNav.enterClass].filter(Boolean).join(' ')}
+      >
       <SentenceCard
         key={`${item.word.id}-${item.example.sv}-${index}-${attemptKey}`}
         item={item}
@@ -222,6 +244,7 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
         onContinue={handleContinue}
         onMasteredChange={handleMasteredChange}
       />
+      </div>
     </section>
   )
 }

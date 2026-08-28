@@ -83,10 +83,12 @@ export function WordDetailSheet({
   onPrev,
   onNext,
 }: WordDetailSheetProps) {
-  const swipeNav = useSwipeNav(
-    onPrev ?? (() => undefined),
-    onNext ?? (() => undefined),
-  )
+  const swipeNav = useSwipeNav({
+    decidePrev: () => (onPrev ? 'commit' : 'ignore'),
+    decideNext: () => (onNext ? 'commit' : 'ignore'),
+    onCommitPrev: () => onPrev?.(),
+    onCommitNext: () => onNext?.(),
+  })
 
   useEffect(() => {
     const previous = document.body.style.overflow
@@ -136,8 +138,12 @@ export function WordDetailSheet({
         aria-modal="true"
         aria-labelledby="word-detail-title"
         onClick={(event) => event.stopPropagation()}
-        {...swipeNav}
+        {...swipeNav.bind}
       >
+        <div
+          ref={swipeNav.layerRef}
+          className={['swipe-layer', swipeNav.enterClass].filter(Boolean).join(' ')}
+        >
         <div className="word-detail-top">
           <p className="card-kicker">词条</p>
           <button type="button" className="btn btn-ghost" onClick={onClose}>
@@ -151,7 +157,7 @@ export function WordDetailSheet({
                 <p className="card-lemma" id="word-detail-title">
                   {word.lemma}
                 </p>
-                <SpeakButton text={word.lemma} />
+                <SpeakButton text={word.lemma} autoPlay />
               </div>
               <p className="card-gloss">{word.glossZh}</p>
               {word.glossEn ? <p className="card-en">{word.glossEn}</p> : null}
@@ -163,6 +169,7 @@ export function WordDetailSheet({
             </div>
             <WordExamples word={word} />
           </div>
+        </div>
         </div>
       </div>
     </div>

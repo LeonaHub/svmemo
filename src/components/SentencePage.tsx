@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { getTodayOverview, startSentenceSession } from '../db/study'
+import { unlockSpeech } from '../lib/tts'
 import type { SentenceItem } from '../lib/sentence-drill'
 
 type SentencePageProps = {
@@ -23,6 +24,7 @@ export function SentencePage({ onStart, onBrowseWords }: SentencePageProps) {
     }
     setStarting(pool)
     setMessage(null)
+    unlockSpeech()
     try {
       const items = await startSentenceSession(pool)
       if (items.length === 0) {

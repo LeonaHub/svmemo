@@ -121,7 +121,7 @@ export function SpellingCard({
   return (
     <div className="study-stage">
       <div className="card-stack">
-        <article className={result ? 'flashcard is-flipped' : 'flashcard'}>
+        <article className={result ? 'flashcard is-flipped' : 'flashcard is-typing'}>
           <div className="card-top">
             <p className="card-kicker">{kicker ?? '拼写'}</p>
             <CardMarks wordId={word.id} onMasteredChange={onMasteredChange} />

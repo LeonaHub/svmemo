@@ -1,4 +1,7 @@
 :root {
+  --app-height: 100dvh;
+  --vv-top: 0px;
+  --keyboard-inset: 0px;
   --bg: #f4f1ec;
   --bg-study: #f4f1ec;
   --surface: #fffcf8;

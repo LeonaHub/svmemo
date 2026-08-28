@@ -2,8 +2,68 @@ export type SpeakResult =
   | { ok: true }
   | { ok: false; reason: 'unsupported' | 'no-swedish-voice' | 'aborted' }
 
-let currentAudio: HTMLAudioElement | null = null
+let sharedAudio: HTMLAudioElement | null = null
 let speakToken = 0
+let audioUnlocked = false
+let unlockStarted = false
+const unlockListeners = new Set<() => void>()
+
+const SILENT_WAV =
+  'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA'
+
+function ensureAudio(): HTMLAudioElement {
+  if (!sharedAudio) {
+    sharedAudio = new Audio()
+    sharedAudio.setAttribute('playsinline', 'true')
+    sharedAudio.preload = 'auto'
+  }
+  return sharedAudio
+}
+
+function markUnlocked() {
+  if (audioUnlocked) {
+    return
+  }
+  audioUnlocked = true
+  for (const listener of unlockListeners) {
+    listener()
+  }
+}
+
+export function isSpeechUnlocked(): boolean {
+  return audioUnlocked
+}
+
+export function onSpeechUnlock(listener: () => void): () => void {
+  unlockListeners.add(listener)
+  return () => {
+    unlockListeners.delete(listener)
+  }
+}
+
+/** 必须在用户点击里调用，之后手机才能自动朗读下一张 */
+export function unlockSpeech() {
+  if (typeof window === 'undefined' || unlockStarted) {
+    return
+  }
+  unlockStarted = true
+  const audio = ensureAudio()
+  audio.muted = true
+  audio.src = SILENT_WAV
+  void audio
+    .play()
+    .catch(() => false)
+    .finally(() => {
+      audio.muted = false
+      if (audio.src.startsWith('data:')) {
+        audio.pause()
+      }
+      markUnlocked()
+    })
+  if ('speechSynthesis' in window) {
+    wakeIosSpeech()
+  }
+}
 
 function isSwedishVoice(voice: SpeechSynthesisVoice): boolean {
   const lang = voice.lang.toLowerCase().replaceAll('_', '-')
@@ -203,12 +263,12 @@ function attachAudio(url: string, token: number): HTMLAudioElement | null {
   if (!isCurrent(token)) {
     return null
   }
-  currentAudio?.pause()
-  const audio = new Audio()
+  const audio = ensureAudio()
+  audio.pause()
+  audio.muted = false
   audio.setAttribute('playsinline', 'true')
   audio.preload = 'auto'
   audio.src = url
-  currentAudio = audio
   return audio
 }
 
@@ -253,8 +313,7 @@ function wakeIosSpeech() {
 
 export function stopSpeaking() {
   speakToken += 1
-  currentAudio?.pause()
-  currentAudio = null
+  sharedAudio?.pause()
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     window.speechSynthesis.cancel()
   }

@@ -1,5 +1,12 @@
 import { useEffect, useState, type MouseEvent, type PointerEvent } from 'react'
-import { speakSwedish, stopSpeaking, ttsHint, type SpeakResult } from '../lib/tts'
+import {
+  isSpeechUnlocked,
+  onSpeechUnlock,
+  speakSwedish,
+  stopSpeaking,
+  ttsHint,
+  type SpeakResult,
+} from '../lib/tts'
 
 type SpeakButtonProps = {
   text: string
@@ -15,31 +22,34 @@ export function SpeakButton({
   const [hint, setHint] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
 
-  const allowAuto =
-    autoPlay &&
-    typeof window !== 'undefined' &&
-    window.matchMedia('(hover: hover) and (pointer: fine)').matches
-
   useEffect(() => {
-    if (!allowAuto) {
+    if (!autoPlay) {
       return
     }
     let cancelled = false
-    void speakSwedish(text).then((result) => {
-      if (!cancelled) {
-        setHint(ttsHint(result))
+    function play() {
+      if (cancelled) {
+        return
       }
-    })
+      void speakSwedish(text).then((result) => {
+        if (!cancelled) {
+          setHint(ttsHint(result))
+        }
+      })
+    }
+    const off = onSpeechUnlock(play)
+    if (isSpeechUnlocked()) {
+      play()
+    }
     return () => {
       cancelled = true
+      off()
       stopSpeaking()
     }
-  }, [allowAuto, text])
+  }, [autoPlay, text])
 
   function handlePointerDown(event: PointerEvent<HTMLButtonElement>) {
     event.stopPropagation()
-    // 电脑上挡住默认聚焦，避免拼写时点喇叭抢走输入框；
-    // 手机上不能 preventDefault，否则 Safari 会取消这次点击的播放权限。
     if (event.pointerType === 'mouse') {
       event.preventDefault()
     }
@@ -49,7 +59,6 @@ export function SpeakButton({
     event.stopPropagation()
     setBusy(true)
     setHint(null)
-    // 必须在这次点击的调用栈里立刻开始 speakSwedish，中间不能先 await
     const pending: Promise<SpeakResult> = speakSwedish(text)
     void pending.then((result) => {
       setHint(ttsHint(result))
