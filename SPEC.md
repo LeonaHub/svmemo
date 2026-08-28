@@ -87,10 +87,10 @@
 
 ## 词库
 
-- 当前词表在 `src/data/custom-words.ts`（自选 B1）和 `src/data/lists/list-01.ts`–`list-30.ts`（词频第 1–30 组，#1–1500，CEFR A1）。`src/data/a1.ts` 合并后按编号排序。启动时 `seedIfEmpty()` **整表同步**词条（覆盖释义、变形、例句、构词、编号），学习进度留在 `cards` / `reviewLogs` / `wordMarks`
+- 当前词表在 `src/data/custom-words.ts`（自选 B1）和 `src/data/lists/list-01.ts`–`list-60.ts`（词频第 1–60 组，#1–3000，CEFR A1）。`src/data/a1.ts` 合并后按编号排序。启动时 `seedIfEmpty()` **整表同步**词条（覆盖释义、变形、例句、构词、编号），学习进度留在 `cards` / `reviewLogs` / `wordMarks`
 - 词库页先列出各组，点进一组才看词；组内可一键把未加入的词加入计划。第 10 组少一张：书里 `spela` 出现两次，只保留编号更前的那张。
-- 编号来自 MostUsedWords《Swedish Frequency Dictionary》本地对照，只存 lemma → 数字，不复制书中的英文释义。现有约 **641** 词里 640 个对上了号（`borrtorn` 书中没有，排在最后）
-- 现在约 **2082** 个词：前 30 组词频约 1499 个（A1）+ 自选约 583 个（B1，编号从 #1501 起，仍在「自选词」直到后面的组成立）。编号落在第 27–30 组的 58 个自选词已整张移入对应组。自选词条 CEFR 一律标成 B1。词频组是 A1
+- 编号来自 MostUsedWords《Swedish Frequency Dictionary》本地对照，只存 lemma → 数字，不复制书中的英文释义
+- 现在约 **2999** 个词：前 60 组词频 #1–3000（A1；第 10 组少一张重复的 `spela`）。`src/data/custom-words.ts` 目前是空的；以后加的自选词标 B1，编号落在已开放组的会整张移入对应组
 - 大约：名词 322、动词 140、形容词 91、副词 51、短语 24、代词 4、其他 7、感叹 2。名词 / 动词 / 形容词带变形，每词 3–4 条例句；不少词带 `compound` 构词
 - 词条从词表里消失时，对应卡片、复习日志和标记一并清掉（换 lemma 等于新词）
 - 主键是 `id`（`{lemma}__{pos}`，空格改成下划线），不是 lemma 本身（同一个写法可以是不同词性）
@@ -244,6 +244,6 @@ React 19 + TypeScript + Vite。Dexie + `dexie-react-hooks`。`ts-fsrs`。Zod 校
 
 ## 接下来（还没做）
 
-- 按编号继续补第 31 组起（先校对再入库）；自选词里编号落在已开放组的会进该组
+- 按编号继续补第 61 组起（先校对再入库）；自选词里编号落在已开放组的会进该组
 - 设置页：若要恢复每日上限，再接到 `planDailyQueue`
 - SVALex 只作以后选词参考，不当词书；它没有释义和例句，许可证 CC BY-NC-SA 4.0，用到时页面要署名

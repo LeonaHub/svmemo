@@ -415,20 +415,20 @@ export function WordList() {
               onClick={() => openGroup(row.id)}
             >
               <div className="word-body">
-                <div className="word-row-top">
-                  <span className="lemma">{row.title}</span>
-                  <span className="pill">
-                    {row.total} 词
-                    {row.inPlan > 0 ? ` · 计划 ${row.inPlan}` : ''}
-                  </span>
-                </div>
+                <span className="lemma">{row.title}</span>
                 <p className="list-index-meta">
                   {row.subtitle}
                   {row.leftover > 0 ? ` · 未加入 ${row.leftover}` : ''}
                 </p>
               </div>
-              <span className="list-chevron" aria-hidden="true">
-                ›
+              <span className="list-index-end">
+                <span className="pill">
+                  {row.total} 词
+                  {row.inPlan > 0 ? ` · 计划 ${row.inPlan}` : ''}
+                </span>
+                <span className="list-chevron" aria-hidden="true">
+                  ›
+                </span>
               </span>
             </button>
           ))}

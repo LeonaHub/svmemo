@@ -639,5 +639,4 @@ export const lemmaRank: Record<string, number> = {
   "högkvarter": 2700,
   "försörja": 2702,
   "ytterst": 2953,
-  "förstärka": 5976,
 }
