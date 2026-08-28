@@ -65,6 +65,8 @@ export const wordSchema = z.object({
   examples: z.array(exampleSchema).optional(),
   tags: z.array(z.string().min(1)).optional(),
   compound: compoundSchema.optional(),
+  /** MostUsedWords 词频编号 1–10100；书外自选词没有 */
+  rank: z.number().int().positive().optional(),
 })
 
 export const wordListSchema = z.array(wordSchema)

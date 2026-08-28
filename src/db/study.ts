@@ -253,9 +253,20 @@ export async function startTodaySession(now = new Date()): Promise<StudyItem[]> 
   const dueCards = saved
     .filter((card) => isDueReview(card, now))
     .sort((left, right) => asDate(left.due).getTime() - asDate(right.due).getTime())
-  const newPool = saved
-    .filter((card) => card.reps === 0)
-    .sort((left, right) => left.id - right.id)
+  const newPool = saved.filter((card) => card.reps === 0)
+  const catalog = await db.words.bulkGet(newPool.map((card) => card.wordId))
+  const rankByWordId = new Map(
+    catalog.flatMap((word) => (word ? [[word.id, word.rank ?? 50_000] as const] : [])),
+  )
+  newPool.sort((left, right) => {
+    const rankDelta =
+      (rankByWordId.get(left.wordId) ?? 50_000) -
+      (rankByWordId.get(right.wordId) ?? 50_000)
+    if (rankDelta !== 0) {
+      return rankDelta
+    }
+    return left.id - right.id
+  })
   const { newWordIds } = planDailyQueue(newPool.map((card) => card.wordId))
   const newCards = newPool.slice(0, newWordIds.length)
   return specsToItems(buildQuizletQueue(dueCards, newCards))

@@ -1877,6 +1877,11 @@ html.is-keyboard .page-study .study-dock {
   margin-bottom: 8px;
 }
 
+.word-back {
+  margin: 4px 0 2px;
+  padding-left: 0;
+}
+
 .search {
   width: 100%;
   margin: 12px 0 0;
@@ -1936,6 +1941,26 @@ html.is-keyboard .page-study .study-dock {
 .word-row.is-plain {
   grid-template-columns: 1fr auto;
   cursor: default;
+}
+
+.list-index-row {
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+}
+
+.list-index-meta {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.list-chevron {
+  font-size: 28px;
+  line-height: 1;
+  padding-right: 2px;
+  color: color-mix(in srgb, var(--text) 42%, transparent);
 }
 
 .word-row:last-child {
@@ -2299,6 +2324,10 @@ html.is-keyboard .page-study .study-dock {
 
   .word-row {
     grid-template-columns: auto 1fr;
+  }
+
+  .list-index-row {
+    grid-template-columns: 1fr auto;
   }
 
   .word-actions {

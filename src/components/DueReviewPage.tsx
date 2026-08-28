@@ -21,6 +21,7 @@ function ReviewRow({ row }: { row: DueReviewRow }) {
             {row.when}
             {row.word.gender ? ` · ${row.word.gender}` : ''}
             {` · ${POS_LABEL[row.word.pos]}`}
+            {row.word.rank ? ` · #${row.word.rank}` : ''}
           </span>
         </div>
         <p className="gloss">{row.word.glossZh}</p>

@@ -1,0 +1,331 @@
+import { adj, noun, other, verb } from '../builders'
+import { c, freq } from '../freq'
+import type { Word } from '../../types/word'
+
+/** Ranks 901–950. Primary POS is the high-frequency use, not every sense in the book. */
+export const list19: Word[] = [
+  freq(noun('nyckel', 'en', '钥匙；关键', 'key', 'nyckeln', 'nycklar', null, [
+    ['Har du en nyckel till dörren?', '你有这扇门的钥匙吗？'],
+    ['Nyckeln ligger i skålen.', '钥匙在碗里。'],
+    ['Hon har två nycklar i väskan.', '她包里有两把钥匙。'],
+    ['Ta med nyckeln i dag.', '今天把钥匙带上。'],
+  ]), 901),
+  freq(adj('vanlig', '普通的；常见的', 'ordinary / common', 'vanligt', 'vanliga', [
+    ['Det är en vanlig dag.', '这是普通的一天。'],
+    ['Ett vanligt rum räcker.', '一间普通房间就够了。'],
+    ['De vanliga bussarna går sen.', '那些平常的公交车会晚到。'],
+    ['Det är vanligt att vänta här.', '在这儿等很常见。'],
+  ]), 902),
+  freq(verb('skämta', '开玩笑', 'to joke', 'skämtar', 'skämtade', 'skämtat', 'skämta', [
+    ['Hon skämtar ofta på jobbet.', '她在工作中经常开玩笑。'],
+    ['Han skämtade med barnen.', '他跟孩子们开了玩笑。'],
+    ['Har du skämtat klart nu?', '你开完玩笑了吗？'],
+    ['Skämta inte om det.', '别拿这事开玩笑。'],
+  ]), 903),
+  freq(noun('tanke', 'en', '想法；念头', 'thought', 'tanken', 'tankar', null, [
+    ['Det är en bra tanke.', '这是个好想法。'],
+    ['Tanken kom sent.', '这个念头来得很晚。'],
+    ['Hon har många tankar om resan.', '她对这次旅行有很多想法。'],
+    ['Dela dina tankar med oss.', '跟我们说说你的想法。'],
+  ]), 904),
+  freq(noun('grupp', 'en', '小组；群体', 'group', 'gruppen', 'grupper', null, [
+    ['En grupp väntar utanför.', '有一组人在外面等。'],
+    ['Gruppen är liten.', '这个小组人不多。'],
+    ['Två grupper tävlar i dag.', '两组今天比赛。'],
+    ['Vi jobbar i grupp.', '我们分组工作。'],
+  ]), 905),
+  freq(adj('tråkigt', '无聊的；令人遗憾的', 'boring / unfortunate', 'tråkigt', 'tråkiga', [
+    ['Det är tråkigt att vänta.', '等着很无聊。'],
+    ['Vad tråkigt att du är sjuk.', '你生病了，真遗憾。'],
+    ['De tråkiga dagarna är över.', '那些无聊的日子结束了。'],
+    ['Tråkigt nog kom bussen sent.', '可惜公交车来晚了。'],
+  ]), 906),
+  freq(adj('gratis', '免费的', 'free (of charge)', 'gratis', 'gratis', [
+    ['Det är en gratis tidning.', '这是一份免费报纸。'],
+    ['Kaffet är gratis i dag.', '咖啡今天免费。'],
+    ['De gratis bussarna går till stan.', '那些免费公交车开进城里。'],
+    ['Barnen åker gratis.', '孩子们免费乘坐。'],
+  ]), 907),
+  freq(noun('boll', 'en', '球', 'ball', 'bollen', 'bollar', null, [
+    ['Kasta en boll till mig.', '把一个球扔给我。'],
+    ['Bollen är röd.', '这个球是红的。'],
+    ['Barnen har två bollar.', '孩子们有两个球。'],
+    ['Ta med bollen ut.', '把球带出去。'],
+  ]), 908),
+  freq(other('jämt', 'adv', '总是；一直', 'always / constantly', [
+    ['Han är jämt sen.', '他总是迟到。'],
+    ['Hon pratar jämt i telefon.', '她一直在打电话。'],
+    ['Det regnar jämt här.', '这里老是下雨。'],
+    ['Barnen är jämt hungriga.', '孩子们总是饿。'],
+  ]), 909),
+  freq(noun('match', 'en', '比赛', 'match / game', 'matchen', 'matcher', null, [
+    ['Vi såg en match i går.', '我们昨天看了一场比赛。'],
+    ['Matchen börjar snart.', '比赛马上开始。'],
+    ['De spelar två matcher i veckan.', '他们一周打两场比赛。'],
+    ['Vem vann matchen?', '谁赢了这场比赛？'],
+  ]), 910),
+  freq(noun('soldat', 'en', '士兵', 'soldier', 'soldaten', 'soldater', null, [
+    ['En soldat stod vid porten.', '一名士兵站在门口。'],
+    ['Soldaten kom hem i maj.', '那名士兵五月回了家。'],
+    ['Flera soldater väntade där.', '好几名士兵在那里等。'],
+    ['Hon är soldat nu.', '她现在是士兵。'],
+  ]), 911),
+  freq(verb('inse', '意识到；明白', 'to realize / to understand', 'inser', 'insåg', 'insett', 'inse', [
+    ['Jag inser felet nu.', '我现在意识到这个错了。'],
+    ['Hon insåg det för sent.', '她明白得太晚了。'],
+    ['Har du insett vad som hände?', '你明白发生了什么吗？'],
+    ['Inse att vi måste vänta.', '要明白我们得等。'],
+  ]), 912),
+  freq(adj('lik', '像的；相似的', 'like / alike', 'likt', 'lika', [
+    ['Hon är lik sin mamma.', '她长得像她妈妈。'],
+    ['Huset är likt det gamla.', '这房子像以前那栋。'],
+    ['De är lika som syskon.', '他们像兄弟姐妹一样相像。'],
+    ['Allt är sig likt här.', '这儿一切还是老样子。'],
+  ]), 913),
+  freq(noun('makt', 'en', '权力；势力', 'power', 'makten', 'makter', null, [
+    ['Hon har makt över beslutet.', '她对这项决定有权力。'],
+    ['Makten skiftade i höstas.', '权力去年秋天换了手。'],
+    ['Flera makter möttes där.', '几个势力在那里会面。'],
+    ['De sitter vid makten nu.', '他们现在掌权。'],
+  ]), 914),
+  freq(noun('styrka', 'en', '力量；强度；（军）部队', 'strength / force', 'styrkan', 'styrkor', null, [
+    ['Hon har stor styrka i armarna.', '她手臂很有力量。'],
+    ['Styrkan räckte inte.', '那股力量不够。'],
+    ['Flera styrkor stod redo.', '几支部队已准备好。'],
+    ['Han visade sin styrka.', '他展示了自己的力量。'],
+  ]), 915),
+  freq(other('an', 'adv', '（动词小品词）向前；来回', 'forth / on (verb particle)', [
+    ['Han går av och an i hallen.', '他在门厅里走来走去。'],
+    ['Ta dig an jobbet.', '把这工作接下来。'],
+    ['Det går an för mig.', '对我来说可以。'],
+    ['Gå inte av och an här.', '别在这儿走来走去。'],
+  ]), 916),
+  freq(verb('presentera', '介绍；展示', 'to introduce / to present', 'presenterar', 'presenterade', 'presenterat', 'presentera', [
+    ['Hon presenterar sin bror.', '她在介绍她哥哥／弟弟。'],
+    ['Han presenterade den nya boken.', '他介绍了那本新书。'],
+    ['Har du presenterat dig än?', '你介绍过自己了吗？'],
+    ['Presentera dig, tack.', '请介绍一下你自己。'],
+  ]), 917),
+  freq(verb('sköta', '照料；管理；负责', 'to look after / to manage', 'sköter', 'skötte', 'skött', 'sköt', [
+    ['Hon sköter barnen i dag.', '她今天照料孩子们。'],
+    ['Han skötte affärerna själv.', '他当时自己管生意。'],
+    ['Har du skött dig?', '你把自己照顾好了吗？'],
+    ['Sköt om dig.', '照顾好自己。'],
+  ]), 918),
+  freq(other('därför att', 'phrase', '因为', 'because', [
+    ['Jag stannar därför att det regnar.', '我留下是因为下雨。'],
+    ['Hon gick hem därför att hon var trött.', '她回家是因为累了。'],
+    ['Vi väntar därför att bussen är sen.', '我们等着是因为公交车晚了。'],
+    ['Hon sa nej därför att det var dyrt.', '她说不，是因为太贵了。'],
+  ]), 919, c(
+    [
+      ['därför', '所以'],
+      ['att', '（引导从句）'],
+    ],
+    '“所以”加上从句标记，合起来就是因为。',
+  )),
+  freq(verb('uppskatta', '欣赏；感激；估计', 'to appreciate / to estimate', 'uppskattar', 'uppskattade', 'uppskattat', 'uppskatta', [
+    ['Jag uppskattar din hjälp.', '我很感激你的帮助。'],
+    ['Hon uppskattade konserten.', '她当时很欣赏那场音乐会。'],
+    ['Har du uppskattat kostnaden?', '你估过费用了吗？'],
+    ['Uppskatta det du har.', '珍惜你现有的。'],
+  ]), 920),
+  freq(verb('missa', '错过；没打中', 'to miss', 'missar', 'missade', 'missat', 'missa', [
+    ['Jag missar alltid bussen.', '我总是赶不上公交车。'],
+    ['Hon missade tåget i går.', '她昨天没赶上火车。'],
+    ['Har du missat filmen?', '你错过那部电影了吗？'],
+    ['Missa inte mötet.', '别错过会议。'],
+  ]), 921),
+  freq(other('framme', 'adv', '到达；到了；（摆）在外面', 'there (arrived) / out (visible)', [
+    ['När är vi framme?', '我们什么时候到？'],
+    ['Böckerna ligger framme på bordet.', '书摊在桌子上。'],
+    ['Vi är framme nu.', '我们到了。'],
+    ['Håll nyckeln framme.', '把钥匙放在拿得到的地方。'],
+  ]), 922),
+  freq(adj('ordentlig', '认真的；像样的；规矩的', 'proper / thorough / orderly', 'ordentligt', 'ordentliga', [
+    ['Hon är en ordentlig elev.', '她是个认真的学生。'],
+    ['Vi behöver ett ordentligt svar.', '我们需要一个像样的答复。'],
+    ['De ordentliga skorna håller länge.', '那些规矩结实的鞋很耐穿。'],
+    ['Gör det ordentligt den här gången.', '这次好好做。'],
+  ]), 923),
+  freq(other('förmodligen', 'adv', '大概；很可能', 'probably / presumably', [
+    ['Hon kommer förmodligen sent.', '她大概会晚到。'],
+    ['Det är förmodligen sant.', '这很可能是真的。'],
+    ['Förmodligen regnar det i morgon.', '明天大概会下雨。'],
+    ['Han är förmodligen hemma nu.', '他现在很可能在家。'],
+  ]), 924),
+  freq(noun('sko', 'en', '鞋', 'shoe', 'skon', 'skor', null, [
+    ['Min sko är trasig.', '我的鞋破了。'],
+    ['Skon sitter bra.', '这只鞋很合脚。'],
+    ['Hon har nya skor.', '她有新鞋。'],
+    ['Ta av skorna i hallen.', '在门厅把鞋脱掉。'],
+  ]), 925),
+  freq(verb('möta', '遇见；面对', 'to meet / to face', 'möter', 'mötte', 'mött', 'möt', [
+    ['Jag möter dig vid stationen.', '我在车站接你。'],
+    ['Hon mötte honom i går.', '她昨天遇见了他。'],
+    ['Har du mött chefen än?', '你见过上司了吗？'],
+    ['Möt mig där klockan fem.', '五点在那儿见我。'],
+  ]), 926),
+  freq(noun('syssla', 'en', '事务；活儿；日常工作', 'chore / task / occupation', 'sysslan', 'sysslor', null, [
+    ['Det är en tråkig syssla.', '这是一件无聊的活儿。'],
+    ['Sysslan tar tid.', '这件事务很花时间。'],
+    ['De dagliga sysslorna väntar.', '那些日常活儿还等着。'],
+    ['Hon har många sysslor hemma.', '她在家有很多事要做。'],
+  ]), 927),
+  freq(noun('översättning', 'en', '翻译', 'translation', 'översättningen', 'översättningar', null, [
+    ['Det är en bra översättning.', '这是一篇好翻译。'],
+    ['Översättningen är klar.', '这篇翻译完成了。'],
+    ['Vi jämför två översättningar.', '我们在对比两篇译文。'],
+    ['Hon läser översättningen högt.', '她在朗读这篇译文。'],
+  ]), 928),
+  freq(adj('härlig', '美好的；宜人的', 'lovely / wonderful', 'härligt', 'härliga', [
+    ['Det är en härlig dag.', '真是美好的一天。'],
+    ['Ett härligt bad efter jobbet.', '下班后洗个痛快澡。'],
+    ['De härliga dagarna är här.', '那些美好的日子到了。'],
+    ['Maten är härlig.', '这饭真香。'],
+  ]), 929),
+  freq(noun('mästare', 'en', '大师；冠军', 'master / champion', 'mästaren', 'mästare', 'mästarna', [
+    ['Han är en mästare på schack.', '他是象棋大师。'],
+    ['Mästaren vann igen.', '那位冠军又赢了。'],
+    ['Flera mästare tävlade där.', '好几位大师在那里比赛。'],
+    ['Mästarna står på scenen.', '那些冠军站在台上。'],
+  ]), 930),
+  freq(noun('major', 'en', '少校', 'major (military rank)', 'majoren', 'majorer', null, [
+    ['Han är major i armén.', '他是陆军少校。'],
+    ['Majoren kommer i dag.', '那位少校今天来。'],
+    ['Två majorer satt vid bordet.', '两位少校坐在桌边。'],
+    ['Hon träffade en major.', '她遇见了一位少校。'],
+  ]), 931),
+  freq(noun('farfar', 'en', '爷爷（爸爸的爸爸）', 'grandfather (paternal)', 'farfadern', null, null, [
+    ['Min farfar bor i Umeå.', '我爷爷住在于默奥。'],
+    ['Farfadern kommer på besök.', '爷爷要来做客。'],
+    ['Farfar läser för barnet.', '爷爷在给孩子读书。'],
+    ['Jag ringer farfar i kväll.', '我今晚给爷爷打电话。'],
+  ]), 932, c(
+    [
+      ['far', '爸爸'],
+      ['far', '爸爸'],
+    ],
+    '爸爸的爸爸，就是爷爷。',
+  )),
+  freq(noun('kyss', 'en', '吻', 'kiss', 'kyssen', 'kyssar', null, [
+    ['Hon fick en kyss på kinden.', '她脸上被亲了一下。'],
+    ['Kyssen var kort.', '那个吻很短。'],
+    ['De utbytte kyssar vid dörren.', '他们在门口接了吻。'],
+    ['Ge henne en kyss.', '亲她一下。'],
+  ]), 933),
+  freq(verb('rida', '骑马', 'to ride (a horse)', 'rider', 'red', 'ridit', 'rid', [
+    ['Hon rider varje vecka.', '她每周骑马。'],
+    ['Han red i skogen i går.', '他昨天在森林里骑马。'],
+    ['Har du ridit förut?', '你以前骑过马吗？'],
+    ['Rid inte så fort.', '别骑那么快。'],
+  ]), 934),
+  freq(noun('spår', 'ett', '痕迹；轨道', 'trace / track', 'spåret', 'spår', 'spåren', [
+    ['Det finns ett spår i snön.', '雪地里有一道痕迹。'],
+    ['Spåret leder till huset.', '这条痕迹通向房子。'],
+    ['Tåget står på spår tre.', '火车停在三号轨道。'],
+    ['Spåren försvann fort.', '那些痕迹很快没了。'],
+  ]), 935),
+  freq(noun('gäng', 'ett', '一伙人；帮派', 'gang / group of friends', 'gänget', 'gäng', 'gängen', [
+    ['Ett gäng väntar utanför.', '一伙人在外面等。'],
+    ['Gänget går på bio.', '这伙人去看电影。'],
+    ['Flera gäng samlades i parken.', '好几伙人在公园里聚了。'],
+    ['Gängen möttes sent.', '那些帮派很晚才碰面。'],
+  ]), 936),
+  freq(noun('tand', 'en', '牙齿', 'tooth', 'tanden', 'tänder', null, [
+    ['Jag har ont i en tand.', '我有一颗牙疼。'],
+    ['Tanden gör ont.', '这颗牙疼。'],
+    ['Hon har vita tänder.', '她牙齿很白。'],
+    ['Borsta tänderna nu.', '现在去刷牙。'],
+  ]), 937),
+  freq(adj('tagen', '受触动的；筋疲力尽的', 'moved / worn out', 'taget', 'tagna', [
+    ['Hon såg tagen ut efter loppet.', '她跑完后看起来筋疲力尽。'],
+    ['Ett taget ansikte mötte oss.', '一张疲惫的脸对着我们。'],
+    ['De tagna gästerna satt tysta.', '那些受触动的客人坐着不说话。'],
+    ['Jag är helt tagen.', '我完全被打动了。'],
+  ]), 938),
+  freq(noun('lärare', 'en', '老师', 'teacher', 'läraren', 'lärare', 'lärarna', [
+    ['Hon är lärare i svenska.', '她是瑞典语老师。'],
+    ['Läraren kommer snart.', '老师马上到。'],
+    ['Två lärare arbetar här.', '两位老师在这里工作。'],
+    ['Lärarna sa nej.', '那些老师说了不。'],
+  ]), 939),
+  freq(noun('kusin', 'en', '堂／表兄弟姐妹', 'cousin', 'kusinen', 'kusiner', null, [
+    ['Min kusin bor i Malmö.', '我堂／表亲住在马尔默。'],
+    ['Kusinen kommer i kväll.', '那位堂／表亲今晚来。'],
+    ['Jag har tre kusiner.', '我有三个堂／表兄弟姐妹。'],
+    ['Hon träffade sin kusin i parken.', '她在公园见了堂／表亲。'],
+  ]), 940),
+  freq(other('farväl', 'intj', '再见；永别（较郑重）', 'goodbye / farewell', [
+    ['Farväl, min vän.', '再见了，我的朋友。'],
+    ['Vi sade farväl vid dörren.', '我们在门口道别了。'],
+    ['Hon vinkade farväl.', '她挥手道别。'],
+    ['Farväl då, och tack.', '那就再见了，谢谢。'],
+  ]), 941, c(
+    [
+      ['far', '走'],
+      ['väl', '好'],
+    ],
+    '字面是“走好”，用来较郑重地道别。',
+  )),
+  freq(adj('jäkla', '该死的；要命的（委婉）', 'darn / bloody (euphemism)', 'jäkla', 'jäkla', [
+    ['Vilken jäkla dag!', '这该死的一天！'],
+    ['Det är jäkla kallt ute.', '外面冷得要命。'],
+    ['En jäkla tur att du kom.', '你来了真是走运得要命。'],
+    ['Glöm den jäkla väskan.', '忘了那个该死的包吧。'],
+  ]), 942),
+  freq(other('varken...eller', 'phrase', '既不……也不', 'neither … nor', [
+    ['Hon dricker varken kaffe eller te.', '她既不喝咖啡也不喝茶。'],
+    ['Jag har varken tid eller pengar.', '我既没时间也没钱。'],
+    ['Han är varken arg eller ledsen.', '他既不生气也不难过。'],
+    ['Vi såg varken bussen eller tåget.', '我们既没看见公交车也没看见火车。'],
+  ]), 943, c(
+    [
+      ['varken', '都不'],
+      ['eller', '或者'],
+    ],
+    '两个否定选择并在一起，就是既不……也不。',
+  )),
+  freq(noun('tecken', 'ett', '信号；迹象；符号', 'sign / character', 'tecknet', 'tecken', 'tecknen', [
+    ['Det är ett tecken på vår.', '这是春天的迹象。'],
+    ['Tecknet betyder stopp.', '这个符号表示停下。'],
+    ['Han gav mig tre tecken.', '他给了我三个信号。'],
+    ['Tecknen på dörren är nya.', '门上那些符号是新的。'],
+  ]), 944),
+  freq(noun('taxi', 'en', '出租车', 'taxi', 'taxin', 'taxi', null, [
+    ['Vi tar en taxi dit.', '我们坐出租车去那儿。'],
+    ['Taxin väntar utanför.', '出租车在外面等。'],
+    ['Två taxi stod vid stationen.', '两辆出租车停在车站。'],
+    ['Ring en taxi, tack.', '请叫一辆出租车。'],
+  ]), 945),
+  freq(noun('hemlighet', 'en', '秘密', 'secret', 'hemligheten', 'hemligheter', null, [
+    ['Det är en hemlighet.', '这是一个秘密。'],
+    ['Hemligheten kom fram sent.', '这个秘密很晚才暴露。'],
+    ['Hon har flera hemligheter.', '她有好几个秘密。'],
+    ['Berätta inte hemligheten.', '别把这个秘密说出去。'],
+  ]), 946),
+  freq(other('rent', 'adv', '完全；简直', 'absolutely / quite', [
+    ['Det är rent otroligt.', '这简直难以置信。'],
+    ['Rent ut sagt: jag vet inte.', '直说吧：我不知道。'],
+    ['Hon sa rent av nej.', '她甚至直接说了不。'],
+    ['Det var rent tur att vi hann.', '我们赶上了，完全是运气。'],
+  ]), 947),
+  freq(other('sakta', 'adv', '慢慢地', 'slowly', [
+    ['Kör sakta här.', '这儿开慢点。'],
+    ['Hon gick sakta hem.', '她慢慢走回家。'],
+    ['Vi gick sakta genom parken.', '我们慢慢穿过公园。'],
+    ['Tala sakta, tack.', '请说慢一点。'],
+  ]), 948),
+  freq(noun('stycken', null, '个；件；若干', 'pieces / items (counting)', null, 'stycken', 'styckena', [
+    ['Tre stycken kakor, tack.', '请来三块饼干。'],
+    ['Hur många stycken vill du ha?', '你要多少个？'],
+    ['Hon köpte fem stycken.', '她买了五个。'],
+    ['Styckena ligger i lådan.', '那些个在抽屉里。'],
+  ]), 949),
+  freq(verb('hamna', '落到；落到（某处／某种处境）', 'to end up', 'hamnar', 'hamnade', 'hamnat', 'hamna', [
+    ['Nyckeln hamnar alltid i lådan.', '钥匙总是落到抽屉里。'],
+    ['Hon hamnade i Göteborg.', '她落到了哥德堡。'],
+    ['Har du hamnat rätt?', '你落到对的地方了吗？'],
+    ['Hamna inte efter.', '别落到后面。'],
+  ]), 950),
+]

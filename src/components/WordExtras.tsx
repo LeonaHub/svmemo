@@ -145,7 +145,9 @@ export function WordDetailSheet({
           className={['swipe-layer', swipeNav.enterClass].filter(Boolean).join(' ')}
         >
         <div className="word-detail-top">
-          <p className="card-kicker">词条</p>
+          <p className="card-kicker">
+            {word.rank ? `词条 · #${word.rank}` : '词条'}
+          </p>
           <button type="button" className="btn btn-ghost" onClick={onClose}>
             关闭
           </button>
