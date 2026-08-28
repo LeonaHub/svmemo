@@ -233,7 +233,7 @@
 
 - 进度只写 Dexie，不另做 Zustand/Redux
 - 改表结构必须升 `db.version` 并写 `upgrade`（当前 v4：去掉已废弃的 `readings` / `readingNotes`；v2 是 `wordMarks`）。`settings.recentMatchWordIds` 和 `dailyStats.matchedWordIds` 是对象上的旧字段，不升版本；缺省当 `[]`。
-- 备份 JSON（`BACKUP_VERSION = 2`，仍能导入 v1 / v3）含词库快照和进度；导入前确认，然后**整库覆盖**当前浏览器。导出文件名 `svmemo-backup-YYYY-MM-DD.json`。下次打开仍会用静态词表覆盖 `words`，卡片 / 日志 / 标记按现有词 id 保留
+- 备份 JSON（`BACKUP_VERSION = 2`，仍能导入 v1 / v3）含词库快照和进度；导入前确认，然后覆盖当前浏览器的**学习进度**（卡片 / 日志 / 标记 / 设置 / 日历），再用静态词表覆盖 `words`。旧备份里缺的新组不会把现有词库冲掉。导出文件名 `svmemo-backup-YYYY-MM-DD.json`
 - 算法是纯函数（队列、拼写比对、FSRS 封装）；组件 / Hook 只负责读写和翻下一张
 
 FSRS：`request_retention: 0.9`，`enable_fuzz`，`enable_short_term`，学习步 `1m` / `10m`，重学步 `10m`。

@@ -1,4 +1,5 @@
 import { db } from '../db'
+import { syncCatalog } from '../db/seed'
 import type {
   CardRecord,
   DailyStats,
@@ -90,9 +91,6 @@ export async function importBackup(raw: unknown): Promise<void> {
   await db.transaction(
     'rw',
     [
-      db.words,
-      db.decks,
-      db.deckWords,
       db.cards,
       db.reviewLogs,
       db.settings,
@@ -100,18 +98,12 @@ export async function importBackup(raw: unknown): Promise<void> {
       db.wordMarks,
     ],
     async () => {
-      await db.words.clear()
-      await db.decks.clear()
-      await db.deckWords.clear()
       await db.cards.clear()
       await db.reviewLogs.clear()
       await db.settings.clear()
       await db.dailyStats.clear()
       await db.wordMarks.clear()
 
-      await db.words.bulkAdd(backup.words)
-      await db.decks.bulkAdd(backup.decks)
-      await db.deckWords.bulkAdd(backup.deckWords)
       await db.cards.bulkAdd(
         backup.cards.map((card) => ({
           ...card,
@@ -147,4 +139,6 @@ export async function importBackup(raw: unknown): Promise<void> {
       }
     },
   )
+
+  await syncCatalog()
 }

@@ -195,11 +195,11 @@ export function TodayPage({
   }
 
   async function confirmAndImport(raw: unknown) {
-    if (!window.confirm('导入会覆盖这台浏览器里的学习进度，确定吗？')) {
+    if (!window.confirm('导入会覆盖这台浏览器里的学习进度，词库仍用当前版本。确定吗？')) {
       return
     }
     await importBackup(raw)
-    setMessage('备份已导入。')
+    setMessage('进度已导入。词库是当前版本，计划里的词还在。')
   }
 
   async function handleImport(file: File) {

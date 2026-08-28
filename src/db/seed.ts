@@ -18,7 +18,7 @@ export function seedIfEmpty(): Promise<SeedResult> {
   return inFlight
 }
 
-async function syncCatalog(): Promise<SeedResult> {
+export async function syncCatalog(): Promise<SeedResult> {
   const words = wordListSchema.parse(a1Words)
   const keepIds = new Set(words.map((word) => word.id))
 
