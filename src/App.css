@@ -27,7 +27,7 @@
 
 .today-page {
   display: grid;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -78,6 +78,65 @@
   padding: 22px 20px 20px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+}
+
+.calendar-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  cursor: pointer;
+  list-style: none;
+  color: inherit;
+}
+
+.calendar-summary::-webkit-details-marker {
+  display: none;
+}
+
+.calendar-summary > span {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.calendar-summary strong {
+  font-size: 16px;
+  color: var(--text-h);
+}
+
+.calendar-summary-meta {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.calendar-summary::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  margin-top: -4px;
+  border-right: 2px solid var(--text);
+  border-bottom: 2px solid var(--text);
+  transform: rotate(45deg);
+  opacity: 0.5;
+}
+
+.calendar-fold[open] .calendar-summary::after {
+  margin-top: 4px;
+  transform: rotate(-135deg);
+}
+
+.calendar-fold:not([open]) {
+  padding: 12px 16px;
+}
+
+.calendar-fold .calendar-head {
+  margin-top: 14px;
+  justify-content: flex-end;
 }
 
 .calendar-head {
@@ -268,17 +327,25 @@
 
 .today-hero {
   display: grid;
-  gap: 20px;
+  gap: 16px;
   background: var(--surface);
   border-radius: 20px;
-  padding: 28px 24px 24px;
+  padding: 22px 20px 18px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
 }
 
+.today-hero.is-empty {
+  gap: 14px;
+}
+
+.today-hero.is-empty .today-hero-copy {
+  gap: 8px;
+}
+
 .today-hero-copy {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
 }
 
@@ -297,7 +364,7 @@
 
 .today-count strong {
   display: block;
-  font-size: clamp(40px, 7vw, 52px);
+  font-size: clamp(36px, 9vw, 48px);
   line-height: 0.95;
   letter-spacing: -0.06em;
   color: var(--text-h);
@@ -409,26 +476,40 @@ button.today-pill:disabled {
   color: var(--text);
 }
 
+.today-empty-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+  color: var(--text-h);
+}
+
 .today-summary {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.today-summary.is-four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .today-summary li {
   display: grid;
-  gap: 6px;
-  padding: 16px 16px 14px;
-  border-radius: 16px;
+  gap: 4px;
+  padding: 12px 10px 10px;
+  border-radius: 14px;
   background: var(--surface);
   border: 1px solid var(--border);
+  text-align: center;
 }
 
 .today-summary strong {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.1;
@@ -436,9 +517,81 @@ button.today-pill:disabled {
 }
 
 .today-summary span {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text);
+}
+
+.today-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.today-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.today-action:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.today-action-copy {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.today-action-copy strong {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-h);
+}
+
+.today-action-copy span {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.today-action-go {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.today-action.is-idle {
+  box-shadow: none;
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.today-action.is-idle .today-action-go {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.today-action:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--brand) 28%, var(--border));
+}
+
+.today-action:active:not(:disabled) {
+  transform: scale(0.99);
 }
 
 .today-extras {
@@ -708,15 +861,30 @@ button.today-pill:disabled {
 }
 
 .today-tools {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
   gap: 10px;
 }
 
+.today-tools-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.today-tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.today-tools-grid .btn {
+  min-height: 44px;
+}
+
 .today-tools .hint {
-  flex: 1 1 100%;
-  margin: 0 0 2px;
+  margin: 0;
 }
 
 .btn-lg {
@@ -769,7 +937,7 @@ button.today-pill:disabled {
 .dock-nav {
   position: fixed;
   left: 50%;
-  bottom: calc(12px + env(safe-area-inset-bottom));
+  bottom: calc(16px + env(safe-area-inset-bottom));
   transform: translateX(-50%);
   width: min(400px, calc(100% - 24px));
   z-index: 6;
@@ -1983,12 +2151,41 @@ button.today-pill:disabled {
 }
 
 @media (max-width: 700px) {
+  .page {
+    padding: 16px 16px calc(156px + env(safe-area-inset-bottom));
+  }
+
+  .today-page {
+    gap: 14px;
+  }
+
+  .today-hero {
+    padding: 18px 16px 16px;
+    gap: 14px;
+  }
+
+  .today-empty-title {
+    font-size: 20px;
+  }
+
+  .today-count strong {
+    font-size: 36px;
+  }
+
   .grades {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .calendar-day {
-    min-height: 40px;
+    min-height: 32px;
+  }
+
+  .sentence-choice-count strong {
+    font-size: 28px;
+  }
+
+  .sentence-choice-meta {
+    min-height: 0;
   }
 
   .word-row {
@@ -2177,6 +2374,10 @@ button.today-pill:disabled {
     padding: 32px 32px 28px;
   }
 
+  .today-hero.is-empty {
+    align-items: start;
+  }
+
   .today-hero .btn-lg {
     width: auto;
     min-width: 200px;
@@ -2184,8 +2385,17 @@ button.today-pill:disabled {
   }
 
   .today-summary {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
+  }
+
+  .today-summary.is-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .today-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 
   .today-extras {

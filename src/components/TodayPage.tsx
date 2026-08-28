@@ -233,7 +233,7 @@ export function TodayPage({
       {showHomeHint ? (
         <div className="install-hint">
           <p>
-            用 Safari 打开本页，点分享再选「添加到主屏幕」，之后可离线背词。电脑和手机进度不同步，出门前先备份。
+            用 Safari 打开，点分享 → 添加到主屏幕，就能离线背。电脑和手机进度不同步。
           </p>
           <button
             type="button"
@@ -251,32 +251,38 @@ export function TodayPage({
         <p className="hint">正在读取本地进度…</p>
       ) : (
         <>
-          <article className="today-hero">
+          <article className={needsWords ? 'today-hero is-empty' : 'today-hero'}>
             <div className="today-hero-copy">
               <p className="today-kicker">今日待学</p>
-              <p className="today-count">
-                <strong>{remaining}</strong>
-              </p>
-              <div className="today-pills">
-                <button
-                  type="button"
-                  className="today-pill is-review"
-                  disabled={!canOpenDueList}
-                  onClick={handleOpenDueList}
-                  title={
-                    canOpenDueList
-                      ? '查看已学词：哪些到期，哪些还要等几天'
-                      : '还没有已学的词'
-                  }
-                >
-                  <strong>{overview.dueCount}</strong>
-                  到期复习
-                </button>
-                <span className="today-pill is-new">
-                  <strong>{overview.newCount}</strong>
-                  新词
-                </span>
-              </div>
+              {needsWords ? (
+                <h2 className="today-empty-title">先去词库勾几个词</h2>
+              ) : (
+                <p className="today-count">
+                  <strong>{remaining}</strong>
+                </p>
+              )}
+              {needsWords ? null : (
+                <div className="today-pills">
+                  <button
+                    type="button"
+                    className="today-pill is-review"
+                    disabled={!canOpenDueList}
+                    onClick={handleOpenDueList}
+                    title={
+                      canOpenDueList
+                        ? '查看已学词：哪些到期，哪些还要几天'
+                        : '还没有已学的词'
+                    }
+                  >
+                    <strong>{overview.dueCount}</strong>
+                    到期复习
+                  </button>
+                  <span className="today-pill is-new">
+                    <strong>{overview.newCount}</strong>
+                    新词
+                  </span>
+                </div>
+              )}
               <p className="today-hero-meta">{heroMeta}</p>
             </div>
             {needsWords ? (
@@ -297,7 +303,13 @@ export function TodayPage({
 
           {message ? <p className="today-flash">{message}</p> : null}
 
-          <ul className="today-summary">
+          <ul
+            className={
+              overview.masteredCount > 0
+                ? 'today-summary is-four'
+                : 'today-summary'
+            }
+          >
             <li>
               <strong>{overview.wordsToday}</strong>
               <span>今天已学</span>
@@ -318,49 +330,63 @@ export function TodayPage({
             </li>
           </ul>
 
-          <div className="today-extras">
-            <article className="today-extra is-starred">
-              <p className="today-extra-kicker">单词本</p>
-              <p className="today-extra-title">难词放这里</p>
-              <p className="today-extra-meta">
-                {canReviewStarred
-                  ? `收藏了 ${starredCount} 个，含已掌握的。从这里进去拼对了会移出。`
-                  : '学习时点星星，难词会进这里。'}
-              </p>
+          <div className="today-actions">
+            {canReviewStarred ? (
               <button
                 type="button"
-                className="btn"
-                disabled={!canReviewStarred || Boolean(starting)}
+                className="today-action"
+                disabled={Boolean(starting)}
                 onClick={() => void handleStarred()}
               >
-                {starting === 'starred'
-                  ? '准备中…'
-                  : canReviewStarred
-                    ? '复习收藏'
-                    : '还是空的'}
+                <span className="today-action-copy">
+                  <strong>单词本</strong>
+                  <span>拼对会移出 · {starredCount} 个</span>
+                </span>
+                <span className="today-action-go">
+                  {starting === 'starred' ? '…' : '复习'}
+                </span>
               </button>
-            </article>
-            <article className="today-extra">
-              <p className="today-extra-kicker">例句</p>
-              <p className="today-extra-title">把词写进句子</p>
-              <p className="today-extra-meta">
-                {sentenceCount > 0
-                  ? '看中文填空，不改复习间隔。每次仍按 7 句一组。'
-                  : '计划里的词带例句后，就可以在这里练。'}
-              </p>
+            ) : (
               <button
                 type="button"
-                className="btn"
-                disabled={sentenceCount === 0 || Boolean(starting)}
+                className="today-action is-idle"
+                onClick={onBrowseWords}
+              >
+                <span className="today-action-copy">
+                  <strong>单词本</strong>
+                  <span>学习时点星星，难词会进这里</span>
+                </span>
+                <span className="today-action-go">词库</span>
+              </button>
+            )}
+            {sentenceCount > 0 ? (
+              <button
+                type="button"
+                className="today-action"
+                disabled={Boolean(starting)}
                 onClick={() => void handleSentences()}
               >
-                {starting === 'sentences'
-                  ? '准备中…'
-                  : sentenceCount > 0
-                    ? '开始填空'
-                    : '还没有可练的句子'}
+                <span className="today-action-copy">
+                  <strong>例句填空</strong>
+                  <span>看中文写词 · 不改间隔</span>
+                </span>
+                <span className="today-action-go">
+                  {starting === 'sentences' ? '…' : '开始'}
+                </span>
               </button>
-            </article>
+            ) : (
+              <button
+                type="button"
+                className="today-action is-idle"
+                onClick={onBrowseSentences}
+              >
+                <span className="today-action-copy">
+                  <strong>例句填空</strong>
+                  <span>词进计划后，就可以在这里练句子</span>
+                </span>
+                <span className="today-action-go">看看</span>
+              </button>
+            )}
           </div>
         </>
       )}
@@ -368,33 +394,34 @@ export function TodayPage({
       <StudyCalendar />
 
       <div className="today-tools">
+        <p className="today-tools-label">这台设备的进度</p>
         {overview?.learnedCount === 0 ? (
           <p className="hint">
-            进度只存在当前浏览器。若昨天在 Cursor 预览里背过，请先复制或导出，再在这里导入。
+            进度只存在当前浏览器。若在电脑上背过，请先导出或复制，再在这里导入。
           </p>
         ) : null}
-        <button type="button" className="btn" onClick={onBrowseWords}>
-          去词库选词
-        </button>
-        <button type="button" className="btn" onClick={onBrowseSentences}>
-          去例句
-        </button>
-        <button type="button" className="btn btn-ghost" onClick={() => void handleCopy()}>
-          复制进度
-        </button>
-        <button type="button" className="btn btn-ghost" onClick={() => void handlePasteImport()}>
-          粘贴导入
-        </button>
-        <button type="button" className="btn btn-ghost" onClick={() => void handleExport()}>
-          导出备份
-        </button>
-        <button
-          type="button"
-          className="btn btn-ghost"
-          onClick={() => fileInput.current?.click()}
-        >
-          导入备份
-        </button>
+        <div className="today-tools-grid">
+          <button type="button" className="btn" onClick={() => void handleCopy()}>
+            复制进度
+          </button>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => void handlePasteImport()}
+          >
+            粘贴导入
+          </button>
+          <button type="button" className="btn" onClick={() => void handleExport()}>
+            导出备份
+          </button>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => fileInput.current?.click()}
+          >
+            导入备份
+          </button>
+        </div>
       </div>
 
       {message && !overview ? <p className="hint">{message}</p> : null}

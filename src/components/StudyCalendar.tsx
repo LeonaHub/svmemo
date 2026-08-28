@@ -27,6 +27,11 @@ export function StudyCalendar() {
   const today = localDateString()
   const [cursor, setCursor] = useState(() => new Date())
   const [selected, setSelected] = useState(today)
+  const [open, setOpen] = useState(
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(min-width: 700px)').matches,
+  )
   const byDate = useLiveQuery(() => loadDayDetails())
   const cells = useMemo(() => monthGrid(cursor), [cursor])
   const totals = useMemo(
@@ -38,16 +43,24 @@ export function StudyCalendar() {
   const hasCounts = detail.newCount + detail.reviewCount > 0
 
   return (
-    <section className="calendar-card" aria-label="学习日历">
-      <div className="calendar-head">
-        <div>
-          <h2>学习日历</h2>
-          <p>
+    <details
+      className="calendar-card calendar-fold"
+      open={open}
+      onToggle={(event) => setOpen(event.currentTarget.open)}
+      aria-label="学习日历"
+    >
+      <summary className="calendar-summary">
+        <span>
+          <strong>学习日历</strong>
+          <span className="calendar-summary-meta">
             {totals
               ? `本月新学 ${totals.newCount} · 复习 ${totals.reviewCount} · 打卡 ${totals.activeDays} 天`
               : '正在读取每日记录…'}
-          </p>
-        </div>
+          </span>
+        </span>
+      </summary>
+
+      <div className="calendar-head">
         <div className="calendar-nav">
           <button
             type="button"
@@ -179,6 +192,6 @@ export function StudyCalendar() {
           ) : null}
         </div>
       </div>
-    </section>
+    </details>
   )
 }
