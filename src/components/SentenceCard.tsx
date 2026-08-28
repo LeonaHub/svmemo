@@ -35,6 +35,7 @@ const RESULT_LABEL: Record<1 | 2 | 3 | 4, string> = {
 type SentenceCardProps = {
   item: SentenceItem
   kicker?: string
+  onReveal?: (exact: boolean) => void
   onContinue: (passed: boolean) => void
   onMasteredChange?: (mastered: boolean) => void
 }
@@ -151,6 +152,7 @@ function SpellBlank({
 export function SentenceCard({
   item,
   kicker,
+  onReveal,
   onContinue,
   onMasteredChange,
 }: SentenceCardProps) {
@@ -184,7 +186,15 @@ export function SentenceCard({
       return
     }
     function onKey(event: KeyboardEvent) {
-      if (event.key !== 'Enter' || event.repeat || event.isComposing) {
+      if (
+        (event.key !== 'Enter' && event.key !== 'ArrowRight') ||
+        event.repeat ||
+        event.isComposing ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey
+      ) {
         return
       }
       event.preventDefault()
@@ -216,10 +226,12 @@ export function SentenceCard({
     }
     submittedRef.current = true
     const assembled = assembleSpelling(answer, typed)
+    const rating = gradeSpelling(assembled, answer)
     setResult({
-      rating: gradeSpelling(assembled, answer),
+      rating,
       typed,
     })
+    onReveal?.(isExactSpelling(rating))
   }
 
   function handleSubmit(event: FormEvent) {
@@ -328,7 +340,8 @@ export function SentenceCard({
       <div className="study-dock">
         {result ? (
           <button type="button" className="btn btn-primary btn-lg" onClick={() => onContinue(exact)}>
-            {exact ? '下一句（回车）' : '再试一次（回车）'}
+            {exact ? '下一句' : '再试一次'}
+            <span className="shortcut-hint">（回车）</span>
           </button>
         ) : (
           <button

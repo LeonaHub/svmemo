@@ -9,6 +9,7 @@ import {
 } from '../db/study'
 import { itemKicker } from '../lib/queue'
 import { isExactSpelling } from '../lib/spelling-drill'
+import { useSwipeNav } from '../lib/swipe'
 import { RecognitionCard } from './RecognitionCard'
 import { SpellingCard } from './SpellingCard'
 
@@ -35,11 +36,13 @@ function ActionScreen({
   message,
   actionLabel,
   onAction,
+  nav,
 }: {
   title: string
   message: string
   actionLabel: string
   onAction: () => void
+  nav?: ReturnType<typeof useSwipeNav>
 }) {
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -54,7 +57,7 @@ function ActionScreen({
   }, [onAction])
 
   return (
-    <section className="page-study">
+    <section className="page-study" {...nav}>
       <div className="done">
         <div className="done-mark" aria-hidden="true">
           ✓
@@ -63,6 +66,7 @@ function ActionScreen({
         <p className="lede">{message}</p>
         <button type="button" className="btn btn-primary btn-lg" onClick={onAction}>
           {actionLabel}
+          <span className="shortcut-hint">（回车 / →）</span>
         </button>
       </div>
     </section>
@@ -95,6 +99,9 @@ export function StudySession({
   const [finished, setFinished] = useState(initialItems.length === 0)
   const [attemptKey, setAttemptKey] = useState(0)
   const [checkpoint, setCheckpoint] = useState<string | null>(null)
+  const [spellOutcome, setSpellOutcome] = useState<{ exact: boolean } | null>(
+    null,
+  )
   const committedRef = useRef(new Set<number>())
 
   const item = items[index]
@@ -104,6 +111,7 @@ export function StudySession({
   useEffect(() => {
     setAttemptKey(0)
     setFlipped(false)
+    setSpellOutcome(null)
   }, [index, item?.card.id])
 
   function goBack() {
@@ -121,6 +129,35 @@ export function StudySession({
     setIndex((current) => current - 1)
   }
 
+  function goForward() {
+    if (finished) {
+      onExit()
+      return
+    }
+    if (checkpoint) {
+      setCheckpoint(null)
+      return
+    }
+    if (busy || !item) {
+      return
+    }
+    if (item.mode === 'recognition') {
+      if (!flipped) {
+        setFlipped(true)
+        return
+      }
+      if (item.kind === 'learn') {
+        void advance(false)
+      }
+      return
+    }
+    if (spellOutcome) {
+      handleSpellingContinue(spellOutcome.exact)
+    }
+  }
+
+  const swipeNav = useSwipeNav(goBack, goForward, !busy)
+
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
       if (!isPlainKey(event, 'ArrowLeft')) {
@@ -131,7 +168,7 @@ export function StudySession({
     }
     window.addEventListener('keydown', onKey, true)
     return () => window.removeEventListener('keydown', onKey, true)
-  }, [busy, index, checkpoint, finished])
+  })
 
   async function commit(rating: Grade): Promise<boolean> {
     if (!item || busy) {
@@ -201,6 +238,7 @@ export function StudySession({
       void advance(false)
       return
     }
+    setSpellOutcome(null)
     setAttemptKey((current) => current + 1)
   }
 
@@ -245,8 +283,9 @@ export function StudySession({
       <ActionScreen
         title="今天先到这里"
         message="进度已经记在这台浏览器里。明天打开会先出现到期复习。"
-        actionLabel="回到今日（回车 / →）"
+        actionLabel="回到今日"
         onAction={onExit}
+        nav={swipeNav}
       />
     )
   }
@@ -256,8 +295,9 @@ export function StudySession({
       <ActionScreen
         title="这一组过完了"
         message={checkpoint}
-        actionLabel="继续（回车 / →）"
+        actionLabel="继续"
         onAction={() => setCheckpoint(null)}
+        nav={swipeNav}
       />
     )
   }
@@ -267,7 +307,7 @@ export function StudySession({
   }
 
   return (
-    <section className="page-study">
+    <section className="page-study" {...swipeNav}>
       <div className="study-bar">
         <button type="button" className="btn btn-ghost" onClick={onExit}>
           结束
@@ -297,6 +337,7 @@ export function StudySession({
           word={item.word}
           kicker={itemKicker(item)}
           onAnswer={handleSpellingAnswer}
+          onReveal={(exact) => setSpellOutcome({ exact })}
           onContinue={handleSpellingContinue}
           onMasteredChange={handleMasteredChange}
         />

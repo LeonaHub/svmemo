@@ -84,6 +84,30 @@ function isCurrent(token: number): boolean {
   return token === speakToken
 }
 
+function needsTapUnlock(): boolean {
+  if (typeof navigator === 'undefined') {
+    return false
+  }
+  if (/iPhone|iPod|iPad|Android/i.test(navigator.userAgent)) {
+    return true
+  }
+  return (
+    navigator.maxTouchPoints > 0 &&
+    window.matchMedia('(pointer: coarse)').matches
+  )
+}
+
+function isIos(): boolean {
+  return typeof navigator !== 'undefined' && /iPhone|iPod|iPad/i.test(navigator.userAgent)
+}
+
+function currentVoices(): SpeechSynthesisVoice[] {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+    return []
+  }
+  return window.speechSynthesis.getVoices()
+}
+
 export async function loadVoices(): Promise<SpeechSynthesisVoice[]> {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     return []
@@ -112,18 +136,21 @@ export async function loadVoices(): Promise<SpeechSynthesisVoice[]> {
 
 function speakWithSynthesis(
   text: string,
-  voice: SpeechSynthesisVoice,
+  voice: SpeechSynthesisVoice | undefined,
   token: number,
+  immediate: boolean,
 ): Promise<boolean> {
   return new Promise((resolve) => {
-    if (!isCurrent(token)) {
+    if (!isCurrent(token) || !('speechSynthesis' in window)) {
       resolve(false)
       return
     }
 
     const utterance = new SpeechSynthesisUtterance(text)
     utterance.lang = 'sv-SE'
-    utterance.voice = voice
+    if (voice) {
+      utterance.voice = voice
+    }
     utterance.rate = 0.88
 
     let settled = false
@@ -136,19 +163,31 @@ function speakWithSynthesis(
     }
 
     utterance.onerror = () => done(false)
+    utterance.onstart = () => done(true)
 
-    window.speechSynthesis.cancel()
-
-    // Chrome：cancel 后立刻 speak 常会把同一句排进去两次
-    window.setTimeout(() => {
+    const start = () => {
       if (!isCurrent(token)) {
         done(false)
         return
       }
       window.speechSynthesis.speak(utterance)
-      // 已经交给系统朗读就不要再走音频，否则会叠成两遍
-      done(true)
-    }, 60)
+      try {
+        window.speechSynthesis.resume()
+      } catch {
+        // iOS 上 resume 可能抛错，朗读仍可能已经进队列
+      }
+      if (immediate) {
+        done(true)
+      }
+    }
+
+    if (immediate) {
+      start()
+      return
+    }
+
+    // Chrome：cancel 后立刻 speak 常会把同一句排进去两次
+    window.setTimeout(start, 60)
   })
 }
 
@@ -160,24 +199,56 @@ function audioUrl(text: string, client: 'gtx' | 'tw-ob'): string {
   return `${host}?ie=UTF-8&client=${client}&tl=sv&q=${encodeURIComponent(text)}`
 }
 
-function playUrl(url: string, token: number): Promise<boolean> {
+function attachAudio(url: string, token: number): HTMLAudioElement | null {
   if (!isCurrent(token)) {
-    return Promise.resolve(false)
+    return null
   }
   currentAudio?.pause()
-  const audio = new Audio(url)
+  const audio = new Audio()
+  audio.setAttribute('playsinline', 'true')
+  audio.preload = 'auto'
+  audio.src = url
   currentAudio = audio
   return audio
-    .play()
-    .then(() => isCurrent(token))
-    .catch(() => false)
 }
 
-async function speakWithAudio(text: string, token: number): Promise<boolean> {
-  if (await playUrl(audioUrl(text, 'gtx'), token)) {
-    return true
+function playElement(audio: HTMLAudioElement, token: number): Promise<boolean> {
+  try {
+    return audio
+      .play()
+      .then(() => isCurrent(token))
+      .catch(() => false)
+  } catch {
+    return Promise.resolve(false)
   }
-  return playUrl(audioUrl(text, 'tw-ob'), token)
+}
+
+function speakWithAudio(text: string, token: number): Promise<boolean> {
+  const first = attachAudio(audioUrl(text, 'tw-ob'), token)
+  if (!first) {
+    return Promise.resolve(false)
+  }
+  return playElement(first, token).then((ok) => {
+    if (ok || !isCurrent(token)) {
+      return ok
+    }
+    const second = attachAudio(audioUrl(text, 'gtx'), token)
+    if (!second) {
+      return false
+    }
+    return playElement(second, token)
+  })
+}
+
+function wakeIosSpeech() {
+  if (!('speechSynthesis' in window)) {
+    return
+  }
+  const dummy = new SpeechSynthesisUtterance(' ')
+  dummy.volume = 0
+  dummy.rate = 1
+  dummy.lang = 'sv-SE'
+  window.speechSynthesis.speak(dummy)
 }
 
 export function stopSpeaking() {
@@ -201,19 +272,48 @@ export async function speakSwedish(text: string): Promise<SpeakResult> {
 
   stopSpeaking()
   const token = speakToken
+  const tapUnlock = needsTapUnlock()
+  const voices = currentVoices()
+  const osVoice = pickSwedishVoice(voices, true)
+  const voice = pickSwedishVoice(voices, false)
 
-  const voices =
-    'speechSynthesis' in window ? await loadVoices() : []
+  if (tapUnlock) {
+    const audioPromise = speakWithAudio(trimmed, token)
+    if ('speechSynthesis' in window) {
+      if (isIos()) {
+        wakeIosSpeech()
+      }
+      const chosen =
+        isLetterSpelled(trimmed) && osVoice ? osVoice : (osVoice ?? voice)
+      void speakWithSynthesis(trimmed, chosen, token, true)
+    }
+    if (await audioPromise) {
+      // 电脑/安卓：网络音频响了就停掉系统朗读，避免叠音。
+      // iPhone 静音拨杆会让网页音频没声，系统朗读仍可能出声，所以不要停。
+      if (!isIos() && isCurrent(token) && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel()
+      }
+      return { ok: true }
+    }
+    if (!isCurrent(token)) {
+      return { ok: false, reason: 'aborted' }
+    }
+    if ('speechSynthesis' in window) {
+      return { ok: true }
+    }
+    return { ok: false, reason: 'no-swedish-voice' }
+  }
+
+  const readyVoices = voices.length > 0 ? voices : await loadVoices()
   if (!isCurrent(token)) {
     return { ok: false, reason: 'aborted' }
   }
 
-  const osVoice = pickSwedishVoice(voices, true)
-  const voice = pickSwedishVoice(voices, false)
+  const desktopOs = pickSwedishVoice(readyVoices, true)
+  const desktopVoice = pickSwedishVoice(readyVoices, false)
 
-  // spy 这类词 Google 会拼字母；系统语音按原词读。绝不加 att/en/ett，也不改拼写
-  if (isLetterSpelled(trimmed) && osVoice) {
-    if (await speakWithSynthesis(trimmed, osVoice, token)) {
+  if (isLetterSpelled(trimmed) && desktopOs) {
+    if (await speakWithSynthesis(trimmed, desktopOs, token, false)) {
       return { ok: true }
     }
     if (!isCurrent(token)) {
@@ -221,8 +321,8 @@ export async function speakSwedish(text: string): Promise<SpeakResult> {
     }
   }
 
-  if (voice && voiceQuality(voice, false) >= 3) {
-    if (await speakWithSynthesis(trimmed, voice, token)) {
+  if (desktopVoice && voiceQuality(desktopVoice, false) >= 3) {
+    if (await speakWithSynthesis(trimmed, desktopVoice, token, false)) {
       return { ok: true }
     }
     if (!isCurrent(token)) {
@@ -237,7 +337,7 @@ export async function speakSwedish(text: string): Promise<SpeakResult> {
     return { ok: false, reason: 'aborted' }
   }
 
-  if (voice && (await speakWithSynthesis(trimmed, voice, token))) {
+  if (desktopVoice && (await speakWithSynthesis(trimmed, desktopVoice, token, false))) {
     return { ok: true }
   }
 
@@ -255,7 +355,10 @@ export function ttsHint(result: SpeakResult): string | null {
     return null
   }
   if (result.reason === 'unsupported') {
-    return '这个浏览器不支持朗读。换 Chrome 再试。'
+    return '这个浏览器不支持朗读。换 Safari 或 Chrome 再试。'
+  }
+  if (isIos()) {
+    return '现在读不出来。请联网，并打开手机侧面的铃声开关后再点一次。'
   }
   return '现在读不出来。请联网后重试，或换 Chrome。'
 }

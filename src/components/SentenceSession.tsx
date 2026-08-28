@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { SentenceItem } from '../lib/sentence-drill'
 import { sentenceKicker } from '../lib/sentence-drill'
+import { useSwipeNav } from '../lib/swipe'
 import { SentenceCard } from './SentenceCard'
 
 type SentenceSessionProps = {
@@ -8,20 +9,34 @@ type SentenceSessionProps = {
   onExit: () => void
 }
 
+function isPlainKey(event: KeyboardEvent, key: string): boolean {
+  return (
+    event.key === key &&
+    !event.repeat &&
+    !event.isComposing &&
+    !event.altKey &&
+    !event.ctrlKey &&
+    !event.metaKey &&
+    !event.shiftKey
+  )
+}
+
 function ActionScreen({
   title,
   message,
   actionLabel,
   onAction,
+  nav,
 }: {
   title: string
   message: string
   actionLabel: string
   onAction: () => void
+  nav?: ReturnType<typeof useSwipeNav>
 }) {
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (event.key !== 'Enter' || event.repeat || event.isComposing) {
+      if (!isPlainKey(event, 'Enter') && !isPlainKey(event, 'ArrowRight')) {
         return
       }
       event.preventDefault()
@@ -32,7 +47,7 @@ function ActionScreen({
   }, [onAction])
 
   return (
-    <section className="page-study">
+    <section className="page-study" {...nav}>
       <div className="done">
         <div className="done-mark" aria-hidden="true">
           ✓
@@ -41,6 +56,7 @@ function ActionScreen({
         <p className="lede">{message}</p>
         <button type="button" className="btn btn-primary btn-lg" onClick={onAction}>
           {actionLabel}
+          <span className="shortcut-hint">（回车）</span>
         </button>
       </div>
     </section>
@@ -53,6 +69,9 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
   const [finished, setFinished] = useState(initialItems.length === 0)
   const [attemptKey, setAttemptKey] = useState(0)
   const [checkpoint, setCheckpoint] = useState<string | null>(null)
+  const [spellOutcome, setSpellOutcome] = useState<{ exact: boolean } | null>(
+    null,
+  )
 
   const item = items[index]
   const remaining = Math.max(0, items.length - index)
@@ -60,7 +79,23 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
 
   useEffect(() => {
     setAttemptKey(0)
+    setSpellOutcome(null)
   }, [index, item?.example.sv, item?.word.id])
+
+  function goBack() {
+    if (finished) {
+      return
+    }
+    if (checkpoint) {
+      setCheckpoint(null)
+      setIndex((current) => Math.max(0, current - 1))
+      return
+    }
+    if (index <= 0) {
+      return
+    }
+    setIndex((current) => current - 1)
+  }
 
   function advance() {
     const nextIndex = index + 1
@@ -81,8 +116,37 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
       advance()
       return
     }
+    setSpellOutcome(null)
     setAttemptKey((current) => current + 1)
   }
+
+  function goForward() {
+    if (finished) {
+      onExit()
+      return
+    }
+    if (checkpoint) {
+      setCheckpoint(null)
+      return
+    }
+    if (spellOutcome) {
+      handleContinue(spellOutcome.exact)
+    }
+  }
+
+  const swipeNav = useSwipeNav(goBack, goForward)
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (!isPlainKey(event, 'ArrowLeft')) {
+        return
+      }
+      event.preventDefault()
+      goBack()
+    }
+    window.addEventListener('keydown', onKey, true)
+    return () => window.removeEventListener('keydown', onKey, true)
+  })
 
   function handleMasteredChange(mastered: boolean) {
     if (!mastered || !item) {
@@ -115,8 +179,9 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
       <ActionScreen
         title="例句先到这里"
         message="这只是加练，不会改单词的复习间隔。想接着练可以再点进来。"
-        actionLabel="返回（回车）"
+        actionLabel="返回"
         onAction={onExit}
+        nav={swipeNav}
       />
     )
   }
@@ -126,8 +191,9 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
       <ActionScreen
         title="这一组过完了"
         message={checkpoint}
-        actionLabel="继续（回车）"
+        actionLabel="继续"
         onAction={() => setCheckpoint(null)}
+        nav={swipeNav}
       />
     )
   }
@@ -137,7 +203,7 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
   }
 
   return (
-    <section className="page-study">
+    <section className="page-study" {...swipeNav}>
       <div className="study-bar">
         <button type="button" className="btn btn-ghost" onClick={onExit}>
           结束
@@ -152,6 +218,7 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
         key={`${item.word.id}-${item.example.sv}-${index}-${attemptKey}`}
         item={item}
         kicker={sentenceKicker(item)}
+        onReveal={(exact) => setSpellOutcome({ exact })}
         onContinue={handleContinue}
         onMasteredChange={handleMasteredChange}
       />

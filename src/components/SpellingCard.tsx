@@ -29,6 +29,7 @@ type SpellingCardProps = {
   word: Word
   kicker?: string
   onAnswer: (rating: Grade) => Promise<void>
+  onReveal?: (exact: boolean) => void
   onContinue: (passed: boolean) => void
   onMasteredChange?: (mastered: boolean) => void
 }
@@ -37,6 +38,7 @@ export function SpellingCard({
   word,
   kicker,
   onAnswer,
+  onReveal,
   onContinue,
   onMasteredChange,
 }: SpellingCardProps) {
@@ -105,6 +107,7 @@ export function SpellingCard({
       rating,
       marks: spellingDiff(assembled, word.lemma),
     })
+    onReveal?.(isExactSpelling(rating))
     await onAnswer(rating)
   }
 
@@ -220,7 +223,8 @@ export function SpellingCard({
       <div className="study-dock">
         {result ? (
           <button type="button" className="btn btn-primary btn-lg" onClick={() => onContinue(exact)}>
-            {exact ? '下一题（回车 / →）' : '再试一次（回车 / →）'}
+            {exact ? '下一题' : '再试一次'}
+            <span className="shortcut-hint">（回车 / →）</span>
           </button>
         ) : (
           <button

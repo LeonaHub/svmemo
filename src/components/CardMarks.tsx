@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { emptyMark, getWordMark, setWordMark, toggleMastered, toggleStarred } from '../db/marks'
+import { shortcutTitle } from '../lib/ui'
 import { StarButton } from './StarButton'
 
 type CardMarksProps = {
@@ -49,11 +50,10 @@ export function CardMarks({ wordId, onMasteredChange }: CardMarksProps) {
           void toggleStarred(wordId)
         }}
         label={current.starred ? '取消收藏' : '收藏到单词本'}
-        title={
-          current.starred
-            ? '已在单词本（Ctrl+S 取消）'
-            : '收藏到单词本（Ctrl+S）'
-        }
+        title={shortcutTitle(
+          current.starred ? '已在单词本' : '收藏到单词本',
+          'Ctrl+S',
+        )}
       />
       <button
         type="button"
@@ -65,7 +65,11 @@ export function CardMarks({ wordId, onMasteredChange }: CardMarksProps) {
         }}
         aria-pressed={current.mastered}
         aria-label={current.mastered ? '取消已掌握' : '标记为已掌握'}
-        title={current.mastered ? '已掌握，点此恢复学习' : '已掌握，不再学（Ctrl+M）'}
+        title={
+          current.mastered
+            ? '已掌握，点此恢复学习'
+            : shortcutTitle('已掌握，不再学', 'Ctrl+M')
+        }
       >
         掌握
       </button>

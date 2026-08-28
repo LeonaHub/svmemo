@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { examplesOf, inflectionRows } from '../lib/inflection'
 import { POS_LABEL } from '../lib/pos'
+import { useSwipeNav } from '../lib/swipe'
 import { stopSpeaking } from '../lib/tts'
 import type { Word } from '../types/word'
 import { SpeakButton } from './SpeakButton'
@@ -72,17 +73,56 @@ export function WordExamples({ word }: WordExtrasProps) {
 type WordDetailSheetProps = {
   word: Word
   onClose: () => void
+  onPrev?: () => void
+  onNext?: () => void
 }
 
-export function WordDetailSheet({ word, onClose }: WordDetailSheetProps) {
+export function WordDetailSheet({
+  word,
+  onClose,
+  onPrev,
+  onNext,
+}: WordDetailSheetProps) {
+  const swipeNav = useSwipeNav(
+    onPrev ?? (() => undefined),
+    onNext ?? (() => undefined),
+  )
+
   useEffect(() => {
     const previous = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     return () => {
       document.body.style.overflow = previous
-      stopSpeaking()
     }
   }, [])
+
+  useEffect(() => {
+    return () => stopSpeaking()
+  }, [word.id])
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.repeat || event.isComposing || event.altKey || event.ctrlKey || event.metaKey) {
+        return
+      }
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        onClose()
+        return
+      }
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault()
+        onPrev?.()
+        return
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault()
+        onNext?.()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose, onPrev, onNext])
 
   return (
     <div
@@ -96,6 +136,7 @@ export function WordDetailSheet({ word, onClose }: WordDetailSheetProps) {
         aria-modal="true"
         aria-labelledby="word-detail-title"
         onClick={(event) => event.stopPropagation()}
+        {...swipeNav}
       >
         <div className="word-detail-top">
           <p className="card-kicker">词条</p>

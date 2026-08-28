@@ -116,6 +116,10 @@ export function WordList() {
     })
   }, [words, query, enrolled, mastered, starred, filter])
 
+  const detailIndex = detailWord
+    ? filtered.findIndex((word) => word.id === detailWord.id)
+    : -1
+
   const filterCounts = useMemo(() => {
     const counts: Record<WordFilter, number> = {
       all: 0,
@@ -452,7 +456,20 @@ export function WordList() {
         })}
       </div>
       {detailWord ? (
-        <WordDetailSheet word={detailWord} onClose={() => setDetailWord(null)} />
+        <WordDetailSheet
+          word={detailWord}
+          onClose={() => setDetailWord(null)}
+          onPrev={
+            detailIndex > 0
+              ? () => setDetailWord(filtered[detailIndex - 1] ?? null)
+              : undefined
+          }
+          onNext={
+            detailIndex >= 0 && detailIndex < filtered.length - 1
+              ? () => setDetailWord(filtered[detailIndex + 1] ?? null)
+              : undefined
+          }
+        />
       ) : null}
     </section>
   )

@@ -100,7 +100,11 @@ export function RecognitionCard({
                   <WordForms word={word} />
                 </>
               ) : (
-                <p className="tap-hint">先看一眼这个词，点卡片或回车看释义</p>
+                <p className="tap-hint">
+                  先看一眼这个词，点卡片
+                  <span className="shortcut-hint">或回车</span>
+                  看释义
+                </p>
               )}
             </div>
             {flipped ? <WordExamples word={word} /> : null}
@@ -116,7 +120,8 @@ export function RecognitionCard({
             onClick={onFlip}
             disabled={busy}
           >
-            显示释义（回车 / →）
+            显示释义
+            <span className="shortcut-hint">（回车 / →）</span>
           </button>
         ) : preview ? (
           <button
@@ -125,7 +130,8 @@ export function RecognitionCard({
             onClick={() => onContinue?.()}
             disabled={busy}
           >
-            下一张（回车 / →）
+            下一张
+            <span className="shortcut-hint">（回车 / →）</span>
           </button>
         ) : (
           <div className="grades">

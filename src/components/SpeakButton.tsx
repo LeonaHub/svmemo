@@ -1,4 +1,4 @@
-import { useEffect, useState, type MouseEvent } from 'react'
+import { useEffect, useState, type MouseEvent, type PointerEvent } from 'react'
 import { speakSwedish, stopSpeaking, ttsHint, type SpeakResult } from '../lib/tts'
 
 type SpeakButtonProps = {
@@ -13,11 +13,7 @@ export function SpeakButton({
   autoPlay = false,
 }: SpeakButtonProps) {
   const [hint, setHint] = useState<string | null>(null)
-
-  async function play() {
-    const result: SpeakResult = await speakSwedish(text)
-    setHint(ttsHint(result))
-  }
+  const [busy, setBusy] = useState(false)
 
   const allowAuto =
     autoPlay &&
@@ -40,26 +36,36 @@ export function SpeakButton({
     }
   }, [allowAuto, text])
 
-  function handleMouseDown(event: MouseEvent<HTMLButtonElement>) {
-    event.preventDefault()
+  function handlePointerDown(event: PointerEvent<HTMLButtonElement>) {
     event.stopPropagation()
+    // 电脑上挡住默认聚焦，避免拼写时点喇叭抢走输入框；
+    // 手机上不能 preventDefault，否则 Safari 会取消这次点击的播放权限。
+    if (event.pointerType === 'mouse') {
+      event.preventDefault()
+    }
   }
 
-  async function handleClick(event: MouseEvent<HTMLButtonElement>) {
+  function handleClick(event: MouseEvent<HTMLButtonElement>) {
     event.stopPropagation()
-    const button = event.currentTarget
-    await play()
-    button.blur()
+    setBusy(true)
+    setHint(null)
+    // 必须在这次点击的调用栈里立刻开始 speakSwedish，中间不能先 await
+    const pending: Promise<SpeakResult> = speakSwedish(text)
+    void pending.then((result) => {
+      setHint(ttsHint(result))
+      setBusy(false)
+    })
   }
 
   return (
     <div className="speak">
       <button
         type="button"
-        className="icon-btn"
+        className={busy ? 'icon-btn is-speaking' : 'icon-btn'}
         aria-label={label}
-        onMouseDown={handleMouseDown}
-        onClick={(event) => void handleClick(event)}
+        aria-busy={busy}
+        onPointerDown={handlePointerDown}
+        onClick={handleClick}
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M11 5 6 9H3v6h3l5 4V5Z" />
