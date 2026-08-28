@@ -13,6 +13,7 @@ import { compoundSummary, formsSummary } from '../lib/inflection'
 import { POS_LABEL } from '../lib/pos'
 import { unlockSpeech } from '../lib/tts'
 import type { Word } from '../types/word'
+import { BrandLogo } from './BrandLogo'
 import { StarButton } from './StarButton'
 import { WordDetailSheet } from './WordExtras'
 
@@ -373,21 +374,15 @@ export function WordList() {
       <header className="word-head">
         <div>
           <div className="brand-row">
-            <div className="logo" aria-hidden="true">
-              S
-            </div>
-            <p className="brand-name">词库</p>
+            <BrandLogo />
+            <p className="brand-name">万词计划</p>
           </div>
           {openList !== null ? (
             <button type="button" className="btn btn-ghost word-back" onClick={closeList}>
               返回词表
             </button>
           ) : null}
-          <h1>
-            {openList === null
-              ? '我的词表'
-              : (openMeta?.title ?? '词表')}
-          </h1>
+          <h1>{openList === null ? '万词计划' : (openMeta?.title ?? '词表')}</h1>
           <p className="date-line">
             {!words
               ? '正在读取词库…'

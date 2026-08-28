@@ -33,13 +33,13 @@ export async function syncCatalog(): Promise<SeedResult> {
       if (!deck) {
         await db.decks.add({
           id: A1_CORE_DECK_ID,
-          name: '我的词表',
+          name: '万词计划',
           cefr: 'B1',
           description: '当前词表：你选定的单词，含变形和例句。',
         })
       } else {
         await db.decks.update(A1_CORE_DECK_ID, {
-          name: '我的词表',
+          name: '万词计划',
           cefr: 'B1',
           description: '当前词表：你选定的单词，含变形和例句。',
         })

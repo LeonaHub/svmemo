@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { getTodayOverview, startSentenceSession } from '../db/study'
 import { unlockSpeech } from '../lib/tts'
 import type { SentenceItem } from '../lib/sentence-drill'
+import { BrandLogo } from './BrandLogo'
 
 type SentencePageProps = {
   onStart: (items: SentenceItem[]) => void
@@ -47,9 +48,7 @@ export function SentencePage({ onStart, onBrowseWords }: SentencePageProps) {
     <section className="sentences-page">
       <header className="sentences-head">
         <div className="brand-row">
-          <div className="logo" aria-hidden="true">
-            S
-          </div>
+          <BrandLogo />
           <p className="brand-name">例句</p>
         </div>
         <h1>把词写进句子</h1>

@@ -9,6 +9,7 @@ import {
 } from '../db/study'
 import type { SentenceItem } from '../lib/sentence-drill'
 import { unlockSpeech } from '../lib/tts'
+import { BrandLogo } from './BrandLogo'
 import { StudyCalendar } from './StudyCalendar'
 import {
   copyBackup,
@@ -226,9 +227,7 @@ export function TodayPage({
     <section className="today-page">
       <header className="today-head">
         <div className="brand-row">
-          <div className="logo" aria-hidden="true">
-            S
-          </div>
+          <BrandLogo />
           <p className="brand-name">Svmemo</p>
         </div>
         <p className="date-line">{todayLabel(now)}</p>
