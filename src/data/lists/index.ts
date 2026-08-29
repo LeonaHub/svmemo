@@ -58,6 +58,36 @@ import { list57 } from './list-57'
 import { list58 } from './list-58'
 import { list59 } from './list-59'
 import { list60 } from './list-60'
+import { list61 } from './list-61'
+import { list62 } from './list-62'
+import { list63 } from './list-63'
+import { list64 } from './list-64'
+import { list65 } from './list-65'
+import { list66 } from './list-66'
+import { list67 } from './list-67'
+import { list68 } from './list-68'
+import { list69 } from './list-69'
+import { list70 } from './list-70'
+import { list71 } from './list-71'
+import { list72 } from './list-72'
+import { list73 } from './list-73'
+import { list74 } from './list-74'
+import { list75 } from './list-75'
+import { list76 } from './list-76'
+import { list77 } from './list-77'
+import { list78 } from './list-78'
+import { list79 } from './list-79'
+import { list80 } from './list-80'
+import { list81 } from './list-81'
+import { list82 } from './list-82'
+import { list83 } from './list-83'
+import { list84 } from './list-84'
+import { list85 } from './list-85'
+import { list86 } from './list-86'
+import { list87 } from './list-87'
+import { list88 } from './list-88'
+import { list89 } from './list-89'
+import { list90 } from './list-90'
 import type { Word } from '../../types/word'
 
 export const frequencyLists: Word[] = [
@@ -121,4 +151,34 @@ export const frequencyLists: Word[] = [
   ...list58,
   ...list59,
   ...list60,
+  ...list61,
+  ...list62,
+  ...list63,
+  ...list64,
+  ...list65,
+  ...list66,
+  ...list67,
+  ...list68,
+  ...list69,
+  ...list70,
+  ...list71,
+  ...list72,
+  ...list73,
+  ...list74,
+  ...list75,
+  ...list76,
+  ...list77,
+  ...list78,
+  ...list79,
+  ...list80,
+  ...list81,
+  ...list82,
+  ...list83,
+  ...list84,
+  ...list85,
+  ...list86,
+  ...list87,
+  ...list88,
+  ...list89,
+  ...list90,
 ]
