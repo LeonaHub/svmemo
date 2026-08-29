@@ -28,13 +28,13 @@ export const list21: Word[] = [
     ['De bestämda tiderna gäller.', '那些确定的时间有效。'],
     ['Var mer bestämd mot dem.', '对他们更坚决一点。'],
   ]), 1004),
-  freq(noun('gräns', 'en', '边界；界限', 'border / boundary', 'gränsen', 'gränser', null, [
+  freq(noun('gräns', 'en', '边界；界限', 'border / boundary', 'gränsen', 'gränser', 'gränserna', [
     ['Vi kör mot gränsen.', '我们朝边境开。'],
     ['Gränsen är stängd i natt.', '边境今晚关闭。'],
     ['Det finns klara gränser här.', '这里有明确的界限。'],
     ['Sätt en gräns för det.', '给这件事设个界限。'],
   ]), 1005),
-  freq(noun('buss', 'en', '公交车；大客车', 'bus / coach', 'bussen', 'bussar', null, [
+  freq(noun('buss', 'en', '公交车；大客车', 'bus / coach', 'bussen', 'bussar', 'bussarna', [
     ['Jag tar bussen till jobbet.', '我坐公交车上班。'],
     ['Bussen är sen i dag.', '公交车今天晚点。'],
     ['Två bussar stannar här.', '两辆公交车在这儿停。'],
@@ -82,7 +82,7 @@ export const list21: Word[] = [
     ['Vi körde flera mil i natt.', '我们夜里开了好几十公里。'],
     ['Milen längs kusten är vacker.', '沿海那十公里很好看。'],
   ]), 1013),
-  freq(noun('klass', 'en', '班；等级；阶层', 'class / form / grade', 'klassen', 'klasser', null, [
+  freq(noun('klass', 'en', '班；等级；阶层', 'class / form / grade', 'klassen', 'klasser', 'klasserna', [
     ['Hon går i min klass.', '她和我同班。'],
     ['Klassen är tyst i dag.', '班上今天很安静。'],
     ['Två klasser har prov.', '两个班有考试。'],
@@ -106,13 +106,13 @@ export const list21: Word[] = [
     ['Har ni diskuterat priset?', '你们讨论过价格吗？'],
     ['Diskutera det med chefen.', '跟上司商量这件事。'],
   ]), 1017),
-  freq(noun('ed', 'en', '誓言；诅咒（骂人话）', 'oath / curse', 'eden', 'eder', null, [
+  freq(noun('ed', 'en', '誓言；诅咒（骂人话）', 'oath / curse', 'eden', 'eder', 'ederna', [
     ['Han svor en ed i rätten.', '他在法庭上发了誓。'],
     ['Eden gäller fortfarande.', '这个誓言仍然有效。'],
     ['Hon släppte några eder.', '她骂了几句脏话。'],
     ['Håll eden du gav.', '信守你发过的誓。'],
   ]), 1018),
-  freq(noun('smärta', 'en', '疼痛；痛苦', 'pain / grief', 'smärtan', 'smärtor', null, [
+  freq(noun('smärta', 'en', '疼痛；痛苦', 'pain / grief', 'smärtan', 'smärtor', 'smärtorna', [
     ['Hon känner smärta i ryggen.', '她觉得背疼。'],
     ['Smärtan gick över fort.', '那阵疼痛很快过去了。'],
     ['Han har starka smärtor.', '他疼得很厉害。'],
@@ -161,7 +161,7 @@ export const list21: Word[] = [
     ['Han har sugit i sig allt socker.', '他把糖分都吸进去了。'],
     ['Sug inte på pennan.', '别吮笔。'],
   ]), 1025),
-  freq(noun('väska', 'en', '包；箱子', 'bag / case', 'väskan', 'väskor', null, [
+  freq(noun('väska', 'en', '包；箱子', 'bag / case', 'väskan', 'väskor', 'väskorna', [
     ['Packa väskan i kväll.', '今晚把包收拾好。'],
     ['Väskan är tung.', '这个包很重。'],
     ['Hon har två väskor med sig.', '她带了两个包。'],
@@ -197,7 +197,7 @@ export const list21: Word[] = [
     ['Hon fyller trettio i år.', '她今年满三十。'],
     ['Kommer du hit i år?', '你今年来这儿吗？'],
   ]), 1031, c([['i', '在'], ['år', '年']], '处在这一年里，合起来就是今年。')),
-  freq(noun('lista', 'en', '清单；名单', 'list', 'listan', 'listor', null, [
+  freq(noun('lista', 'en', '清单；名单', 'list', 'listan', 'listor', 'listorna', [
     ['Skriv en lista på maten.', '写一份食物清单。'],
     ['Listan är för lång.', '这份清单太长了。'],
     ['Hon har tre listor i väskan.', '她包里有三份清单。'],
@@ -233,7 +233,7 @@ export const list21: Word[] = [
     ['Vi har kopplat av i helgen.', '我们周末放松过了。'],
     ['Koppla ur sladden.', '把插头拔掉。'],
   ]), 1036),
-  freq(noun('hustru', 'en', '妻子', 'wife', 'hustrun', 'hustrur', null, [
+  freq(noun('hustru', 'en', '妻子', 'wife', 'hustrun', 'hustrur', 'hustrurna', [
     ['Hans hustru jobbar där.', '他的妻子在那儿工作。'],
     ['Hustrun väntar i bilen.', '妻子在车里等。'],
     ['De två hustrurna känner varandra.', '那两位妻子互相认识。'],
@@ -245,7 +245,7 @@ export const list21: Word[] = [
     ['Vi har enat oss om priset.', '我们已经就价格谈妥了。'],
     ['Ena er innan mötet.', '开会前先统一意见。'],
   ]), 1038),
-  freq(noun('semester', 'en', '假期；带薪年假', 'holiday / vacation', 'semestern', 'semestrar', null, [
+  freq(noun('semester', 'en', '假期；带薪年假', 'holiday / vacation', 'semestern', 'semestrar', 'semestrarna', [
     ['Vi tar semester i augusti.', '我们八月休假。'],
     ['Semestern blev för kort.', '这个假期太短了。'],
     ['De minns sina semestrar i Spanien.', '他们记得在西班牙度过的那些假期。'],
@@ -263,13 +263,13 @@ export const list21: Word[] = [
     ['Du har skrämt mig.', '你把我吓到了。'],
     ['Skräm inte fåglarna.', '别把鸟吓跑。'],
   ]), 1041),
-  freq(noun('strid', 'en', '战斗；争执', 'fight / conflict', 'striden', 'strider', null, [
+  freq(noun('strid', 'en', '战斗；争执', 'fight / conflict', 'striden', 'strider', 'striderna', [
     ['Striden varade i tre dagar.', '战斗持续了三天。'],
     ['Det blev strid om pengarna.', '为钱发生了争执。'],
     ['Flera strider bröt ut.', '爆发了好几场战斗。'],
     ['De gav upp striden.', '他们放弃了这场斗争。'],
   ]), 1042),
-  freq(noun('strand', 'en', '海滩；岸边', 'beach / shore', 'stranden', 'stränder', null, [
+  freq(noun('strand', 'en', '海滩；岸边', 'beach / shore', 'stranden', 'stränder', 'stränderna', [
     ['Vi går till stranden.', '我们去海滩。'],
     ['Stranden är tom i dag.', '今天海滩上空无一人。'],
     ['Sverige har många stränder.', '瑞典有很多海滩。'],
@@ -305,13 +305,13 @@ export const list21: Word[] = [
     ['Läget är sådär just nu.', '眼下情况一般。'],
     ['Ställ stolen sådär.', '把椅子那样放。'],
   ]), 1048),
-  freq(noun('spark', 'en', '一脚；踢；（口）解雇', 'kick / (få sparken) the sack', 'sparken', 'sparkar', null, [
+  freq(noun('spark', 'en', '一脚；踢；（口）解雇', 'kick / (få sparken) the sack', 'sparken', 'sparkar', 'sparkarna', [
     ['Hon gav bollen en spark.', '她朝球踢了一脚。'],
     ['Sparken träffade stolpen.', '这一脚踢中了柱子。'],
     ['Han fick två sparkar på smalbenet.', '他小腿上挨了两脚。'],
     ['Hon fick sparken i maj.', '她五月被解雇了。'],
   ]), 1049),
-  freq(noun('hora', 'en', '妓女；婊子（粗）', 'whore (vulgar)', 'horan', 'horor', null, [
+  freq(noun('hora', 'en', '妓女；婊子（粗）', 'whore (vulgar)', 'horan', 'horor', 'hororna', [
     ['Han skrek hora efter henne.', '他在她身后骂婊子。'],
     ['Horan i boken är ung.', '书里的那个妓女很年轻。'],
     ['Filmen handlar om två horor.', '这部电影讲两个妓女。'],

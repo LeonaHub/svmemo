@@ -22,7 +22,7 @@ export const list39: Word[] = [
     ],
     '“好好听一遍”，由动词 förhöra 变成名词，就是一次审讯。',
   )),
-  freq(noun('rörelse', 'en', '运动；动作；企业', 'motion / movement / business', 'rörelsen', 'rörelser', null, [
+  freq(noun('rörelse', 'en', '运动；动作；企业', 'motion / movement / business', 'rörelsen', 'rörelser', 'rörelserna', [
     ['Han gjorde en snabb rörelse.', '他做了一个很快的动作。'],
     ['Rörelsen i salen ökade.', '厅里的活动变多了。'],
     ['Gör tre rörelser till.', '再做三个动作。'],
@@ -58,7 +58,7 @@ export const list39: Word[] = [
     ['Vi har övat den här låten.', '我们练过这首歌。'],
     ['Öva mer före provet.', '考试前再多练练。'],
   ]), 1908),
-  freq(noun('bibel', 'en', '圣经', 'bible / the Bible', 'bibeln', 'biblar', null, [
+  freq(noun('bibel', 'en', '圣经', 'bible / the Bible', 'bibeln', 'biblar', 'biblarna', [
     ['Hon läser ur bibeln.', '她在读圣经。'],
     ['Bibeln ligger på bordet.', '圣经在桌子上。'],
     ['Det finns två biblar i rummet.', '房间里有两本圣经。'],
@@ -70,7 +70,7 @@ export const list39: Word[] = [
     ['Har ni identifierat väskan?', '你们认出那个包了吗？'],
     ['Identifiera dig vid dörren.', '在门口表明身份。'],
   ]), 1910),
-  freq(noun('jury', 'en', '陪审团；评委会', 'jury', 'juryn', 'juryer', null, [
+  freq(noun('jury', 'en', '陪审团；评委会', 'jury', 'juryn', 'juryer', 'juryerna', [
     ['Juryn lyssnar på vittnet.', '陪审团在听证人说话。'],
     ['En jury ska avgöra saken.', '一个陪审团将裁定这件事。'],
     ['Två juryer sitter i tävlingen.', '比赛里有两个评委会。'],
@@ -238,13 +238,13 @@ export const list39: Word[] = [
     ],
     '“判决的席位”，就是法院。',
   )),
-  freq(noun('utredning', 'en', '调查', 'inquiry / investigation', 'utredningen', 'utredningar', null, [
+  freq(noun('utredning', 'en', '调查', 'inquiry / investigation', 'utredningen', 'utredningar', 'utredningarna', [
     ['Polisen inledde en utredning.', '警察启动了一项调查。'],
     ['Utredningen tar tid.', '这项调查需要时间。'],
     ['Två utredningar pågår nu.', '现在有两项调查在进行。'],
     ['Vänta på utredningen.', '等这项调查吧。'],
   ]), 1932, c([['ut', '出'], ['redning', '理清']], '把事情理出来，合起来就是调查。')),
-  freq(noun('lastbil', 'en', '卡车', 'lorry / truck', 'lastbilen', 'lastbilar', null, [
+  freq(noun('lastbil', 'en', '卡车', 'lorry / truck', 'lastbilen', 'lastbilar', 'lastbilarna', [
     ['En lastbil stannade vid vägen.', '一辆卡车停在路边。'],
     ['Lastbilen är full med sand.', '这辆卡车装满了沙子。'],
     ['Två lastbilar körde förbi.', '两辆卡车开了过去。'],
@@ -256,7 +256,7 @@ export const list39: Word[] = [
     ['Vilken kanal tittar du på?', '你在看哪个频道？'],
     ['De använde diplomatiska kanaler.', '他们走了外交渠道。'],
   ]), 1934),
-  freq(noun('era', 'en', '时代；纪元', 'era', 'eran', 'eror', null, [
+  freq(noun('era', 'en', '时代；纪元', 'era', 'eran', 'eror', 'erorna', [
     ['En ny era börjar nu.', '一个新时代现在开始。'],
     ['Eran av tystnad är över.', '沉默的时代结束了。'],
     ['Boken skildrar flera eror.', '这本书描写了好几个时代。'],
@@ -274,7 +274,7 @@ export const list39: Word[] = [
     ],
     '“有钱的状态”，就是财富、财产。',
   )),
-  freq(noun('penis', 'en', '阴茎', 'penis', 'penisen', 'penisar', null, [
+  freq(noun('penis', 'en', '阴茎', 'penis', 'penisen', 'penisar', 'penisarna', [
     ['Penisen är ett könsorgan.', '阴茎是生殖器官。'],
     ['Läkaren undersökte penisen.', '医生检查了阴茎。'],
     ['Ordet penis är neutralt.', 'penis 这个词是中性的。'],
@@ -360,7 +360,7 @@ export const list39: Word[] = [
     ['Vi har blandat färgerna.', '我们已经把颜料调好了。'],
     ['Blanda sockret i degen.', '把糖拌进面团里。'],
   ]), 1947),
-  freq(noun('kunskap', 'en', '知识', 'knowledge', 'kunskapen', 'kunskaper', null, [
+  freq(noun('kunskap', 'en', '知识', 'knowledge', 'kunskapen', 'kunskaper', 'kunskaperna', [
     ['Hon har djup kunskap i ämnet.', '她在这个科目上知识很深。'],
     ['Kunskapen räcker inte än.', '这些知识还不够。'],
     ['Vi behöver mer kunskaper.', '我们需要更多知识。'],

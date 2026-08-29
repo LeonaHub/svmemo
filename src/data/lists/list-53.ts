@@ -100,7 +100,7 @@ export const list53: Word[] = [
     ],
     '“没有意识的”，就是昏迷的、不省人事的。',
   )),
-  freq(noun('hälsning', 'en', '问候；致意', 'greeting', 'hälsningen', 'hälsningar', null, [
+  freq(noun('hälsning', 'en', '问候；致意', 'greeting', 'hälsningen', 'hälsningar', 'hälsningarna', [
     ['Skicka en hälsning till mamma.', '向妈妈问个好。'],
     ['Hälsningen i mailet var kort.', '邮件里的问候很短。'],
     ['Vi fick flera hälsningar från klassen.', '我们收到班上好几句问候。'],
@@ -196,7 +196,7 @@ export const list53: Word[] = [
     ],
     '“换出去”，就是交换；换来的东西也可以指收获、收益。',
   )),
-  freq(noun('over', 'en', '一轮六球（板球）', 'over (cricket)', null, 'overs', null, [
+  freq(noun('over', 'en', '一轮六球（板球）', 'over (cricket)', null, 'overs', 'oversen', [
     ['Kastaren avslutade en over.', '投手投完了一轮六球。'],
     ['Efter over bytte de sida.', '这一轮结束后他们换了边。'],
     ['Matchen hade många overs.', '这场比赛有很多轮投球。'],
@@ -220,13 +220,13 @@ export const list53: Word[] = [
     ['Hon knäppte en bild.', '她按快门拍了一张。'],
     ['Han har knäppt byxorna.', '他把裤子扣好了。'],
   ]), 2625),
-  freq(noun('gitarr', 'en', '吉他', 'guitar', 'gitarren', 'gitarrer', null, [
+  freq(noun('gitarr', 'en', '吉他', 'guitar', 'gitarren', 'gitarrer', 'gitarrerna', [
     ['Han spelar gitarr i bandet.', '他在乐队里弹吉他。'],
     ['Gitarren saknar en sträng.', '这把吉他少了一根弦。'],
     ['Två gitarrer stod mot väggen.', '两把吉他靠在墙上。'],
     ['Stäm gitarren före konserten.', '演出前把吉他调好音。'],
   ]), 2626),
-  freq(noun('utmaning', 'en', '挑战', 'challenge', 'utmaningen', 'utmaningar', null, [
+  freq(noun('utmaning', 'en', '挑战', 'challenge', 'utmaningen', 'utmaningar', 'utmaningarna', [
     ['Det är en stor utmaning för laget.', '这对球队是个大挑战。'],
     ['Utmaningen lockade henne.', '这个挑战吸引了她。'],
     ['Jobbet ger nya utmaningar varje vecka.', '这工作每周都有新挑战。'],
@@ -268,7 +268,7 @@ export const list53: Word[] = [
     ['Hon jobbar på en resebyrå.', '她在一家旅行社工作。'],
     ['Byråerna stänger tidigt på fredag.', '那些事务所周五关门早。'],
   ]), 2631),
-  freq(noun('biff', 'en', '牛排；牛肉', 'steak / beef', 'biffen', 'biffar', null, [
+  freq(noun('biff', 'en', '牛排；牛肉', 'steak / beef', 'biffen', 'biffar', 'biffarna', [
     ['Vi äter biff med potatis.', '我们吃牛排配土豆。'],
     ['Biffen är stekt för hårt.', '这块牛排煎得太老。'],
     ['Kocken stekte tre biffar.', '厨师煎了三块牛排。'],
@@ -394,7 +394,7 @@ export const list53: Word[] = [
     ],
     'ovanlig 是“不寻常的”，ovanligt 就是不寻常地、格外。',
   )),
-  freq(noun('terrorist', 'en', '恐怖分子', 'terrorist', 'terroristen', 'terrorister', null, [
+  freq(noun('terrorist', 'en', '恐怖分子', 'terrorist', 'terroristen', 'terrorister', 'terroristerna', [
     ['En terrorist greps på flygplatsen.', '一名恐怖分子在机场被抓住。'],
     ['Terroristen fördes bort i handbojor.', '那个恐怖分子戴着手铐被带走。'],
     ['Polisen sökte tre terrorister.', '警察在找三名恐怖分子。'],

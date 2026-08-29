@@ -71,13 +71,13 @@ export const list57: Word[] = [
     ],
     'otäck 是“可怕的”，otäckt 就是可怕地、令人难受地。',
   )),
-  freq(noun('gymnasium', 'ett', '高中（瑞典）', 'upper secondary school', 'gymnasiet', 'gymnasier', null, [
+  freq(noun('gymnasium', 'ett', '高中（瑞典）', 'upper secondary school', 'gymnasiet', 'gymnasier', 'gymnasierna', [
     ['Hon går på gymnasium i stan.', '她在城里上高中。'],
     ['Gymnasiet ligger nära stationen.', '那所高中在车站附近。'],
     ['Två gymnasier delar idrottshall.', '两所高中共用体育馆。'],
     ['Efter gymnasiet ska han plugga vidare.', '高中毕业后他要继续读书。'],
   ]), 2809),
-  freq(noun('resurs', 'en', '资源；财力', 'resource', 'resursen', 'resurser', null, [
+  freq(noun('resurs', 'en', '资源；财力', 'resource', 'resursen', 'resurser', 'resurserna', [
     ['Tid är en viktig resurs.', '时间是一种重要资源。'],
     ['Resursen räcker inte till alla.', '这点资源不够分给所有人。'],
     ['Skolan behöver fler resurser.', '学校需要更多资源。'],
@@ -89,7 +89,7 @@ export const list57: Word[] = [
     ['Skogen ligger väster om vägen.', '树林在路的西面。'],
     ['Gå väster om kyrkan.', '从教堂西边走。'],
   ]), 2811),
-  freq(noun('uppfattning', 'en', '看法；理解；感觉', 'opinion / impression / perception', 'uppfattningen', 'uppfattningar', null, [
+  freq(noun('uppfattning', 'en', '看法；理解；感觉', 'opinion / impression / perception', 'uppfattningen', 'uppfattningar', 'uppfattningarna', [
     ['Jag har en annan uppfattning.', '我有不同的看法。'],
     ['Uppfattningen ändrades efter mötet.', '开完会看法变了。'],
     ['Vi har olika uppfattningar om saken.', '我们对这件事看法不同。'],
@@ -131,7 +131,7 @@ export const list57: Word[] = [
     ],
     '在房子外面，就是在户外。',
   )),
-  freq(noun('kommentar', 'en', '评论；解说', 'comment / commentary', 'kommentaren', 'kommentarer', null, [
+  freq(noun('kommentar', 'en', '评论；解说', 'comment / commentary', 'kommentaren', 'kommentarer', 'kommentarerna', [
     ['Han lämnade en kort kommentar.', '他留了一句简短评论。'],
     ['Kommentaren var onödig.', '那句评论没必要。'],
     ['Flera kommentarer dök upp snabbt.', '好几条评论很快冒了出来。'],
@@ -155,13 +155,13 @@ export const list57: Word[] = [
     ['Vi jobbar utan brådska i dag.', '我们今天不赶工。'],
     ['Låt brådskan vänta till i morgon.', '把这股忙乱留到明天。'],
   ]), 2820),
-  freq(noun('villa', 'en', '独立住宅；错觉', 'detached house / illusion', 'villan', 'villor', null, [
+  freq(noun('villa', 'en', '独立住宅；错觉', 'detached house / illusion', 'villan', 'villor', 'villorna', [
     ['De bor i en röd villa.', '他们住在一栋红房子里。'],
     ['Villan har en stor trädgård.', '那栋独立住宅有个大花园。'],
     ['Två villor ligger vid sjön.', '湖边有两栋独立住宅。'],
     ['De säljer villan i höst.', '他们秋天卖掉这栋独立住宅。'],
   ]), 2821),
-  freq(noun('säsong', 'en', '季节；旺季；赛季', 'season', 'säsongen', 'säsonger', null, [
+  freq(noun('säsong', 'en', '季节；旺季；赛季', 'season', 'säsongen', 'säsonger', 'säsongerna', [
     ['Jordgubbar har säsong nu.', '草莓现在正当季。'],
     ['Säsongen börjar i augusti.', '这个赛季八月开始。'],
     ['Butiken har två säsonger per år.', '这家店一年有两个旺季。'],
@@ -233,7 +233,7 @@ export const list57: Word[] = [
     ['Vad är status på ärendet?', '这件事目前状况如何？'],
     ['Hon fick status som expert.', '她获得了专家身份。'],
   ]), 2830),
-  freq(noun('stöld', 'en', '盗窃；偷窃', 'theft', 'stölden', 'stölder', null, [
+  freq(noun('stöld', 'en', '盗窃；偷窃', 'theft', 'stölden', 'stölder', 'stölderna', [
     ['Polisen utreder en stöld.', '警察在调查一起盗窃。'],
     ['Stölden skedde i natt.', '那起盗窃发生在夜里。'],
     ['Flera stölder har anmälts.', '已经报案了好几起偷窃。'],
@@ -270,7 +270,7 @@ export const list57: Word[] = [
     ],
     '在某事物的中间，就是在……中间、中旬。',
   )),
-  freq(noun('anteckning', 'en', '笔记；记录', 'note', 'anteckningen', 'anteckningar', null, [
+  freq(noun('anteckning', 'en', '笔记；记录', 'note', 'anteckningen', 'anteckningar', 'anteckningarna', [
     ['Hon gjorde en kort anteckning.', '她记了一小段笔记。'],
     ['Anteckningen låg i boken.', '那条记录夹在书里。'],
     ['Jag har tre anteckningar kvar.', '我还剩三条笔记。'],
@@ -306,7 +306,7 @@ export const list57: Word[] = [
     ['Lägg skalen i komposten.', '把那些果皮放进堆肥。'],
     ['Kräftorna lämnade skal på bordet.', '小龙虾在桌上留下了壳。'],
   ]), 2838),
-  freq(noun('ambassadör', 'en', '大使', 'ambassador', 'ambassadören', 'ambassadörer', null, [
+  freq(noun('ambassadör', 'en', '大使', 'ambassador', 'ambassadören', 'ambassadörer', 'ambassadörerna', [
     ['Hon är ambassadör i Oslo.', '她是驻奥斯陆大使。'],
     ['Ambassadören talade i radio.', '那位大使在电台讲话。'],
     ['Två ambassadörer möttes i dag.', '两位大使今天会面了。'],
@@ -343,7 +343,7 @@ export const list57: Word[] = [
     ],
     '在某地的附近，就是在……附近。',
   )),
-  freq(noun('täckmantel', 'en', '幌子；掩护', 'cover / front', 'täckmanteln', 'täckmantlar', null, [
+  freq(noun('täckmantel', 'en', '幌子；掩护', 'cover / front', 'täckmanteln', 'täckmantlar', 'täckmantlarna', [
     ['Företaget var en täckmantel.', '那家公司是个幌子。'],
     ['Täckmanteln räckte inte länge.', '这个掩护没撑多久。'],
     ['De använde två täckmantlar.', '他们用了两层幌子。'],
@@ -355,7 +355,7 @@ export const list57: Word[] = [
     ],
     '用来遮盖的外衣，合起来就是幌子、掩护。',
   )),
-  freq(noun('britt', 'en', '英国人', 'Briton', 'britten', 'britter', null, [
+  freq(noun('britt', 'en', '英国人', 'Briton', 'britten', 'britter', 'britterna', [
     ['Min granne är britt.', '我邻居是英国人。'],
     ['Britten pratade långsamt.', '那位英国人说得很慢。'],
     ['Flera britter bor i huset.', '这栋楼里住着好几位英国人。'],

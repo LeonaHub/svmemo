@@ -40,13 +40,13 @@ export const list60: Word[] = [
     ['De lämpliga kandidaterna kallas i morgon.', '那些合适的人选明天来面试。'],
     ['Hitta en lämplig plats vid fönstret.', '在窗边找个合适的位置。'],
   ]), 2955, c([['lämpa', '使适合'], ['-lig', '带有……性质的']], '带有适合性质的，就是合适的。')),
-  freq(noun('cirkel', 'en', '圆；圈子；学习小组', 'circle / study group', 'cirkeln', 'cirklar', null, [
+  freq(noun('cirkel', 'en', '圆；圈子；学习小组', 'circle / study group', 'cirkeln', 'cirklar', 'cirklarna', [
     ['Rita en cirkel i rutan.', '在格子里画一个圆。'],
     ['Cirkeln slöts efter tre år.', '这个圈子三年后合上了。'],
     ['Två cirklar överlappar varandra.', '两个圆互相重叠。'],
     ['Hon leder en cirkel på kvällen.', '她晚上带一个学习小组。'],
   ]), 2956),
-  freq(noun('betalning', 'en', '付款；报酬', 'payment', 'betalningen', 'betalningar', null, [
+  freq(noun('betalning', 'en', '付款；报酬', 'payment', 'betalningen', 'betalningar', 'betalningarna', [
     ['Kontant betalning går bra.', '现金付款可以。'],
     ['Betalningen kom in i går.', '那笔款昨天到了。'],
     ['Två betalningar saknas fortfarande.', '还有两笔付款没到。'],
@@ -58,7 +58,7 @@ export const list60: Word[] = [
     ['Han visade gott förstånd i krisen.', '他在危机中表现出很好的判断力。'],
     ['Lita på förståndet, inte bara på tur.', '靠理智，别只靠运气。'],
   ]), 2958, c([['förstå', '理解'], ['-nd', '名词词尾']], '理解的那种能力，合起来就是理智、理解力。')),
-  freq(noun('pannkaka', 'en', '薄煎饼', 'pancake', 'pannkakan', 'pannkakor', null, [
+  freq(noun('pannkaka', 'en', '薄煎饼', 'pancake', 'pannkakan', 'pannkakor', 'pannkakorna', [
     ['Hon stekte en pannkaka till barnet.', '她给孩子煎了一张薄饼。'],
     ['Pannkakan brändes i kanten.', '这张薄饼边上糊了。'],
     ['Vi åt pannkakor med sylt.', '我们配果酱吃了薄饼。'],
@@ -112,7 +112,7 @@ export const list60: Word[] = [
     ['Vi började karate i januari.', '我们一月开始练空手道。'],
     ['Lämna skorna utanför när ni tränar karate.', '练空手道时把鞋放在外面。'],
   ]), 2967),
-  freq(noun('räddning', 'en', '救援；拯救', 'rescue / salvation', 'räddningen', 'räddningar', null, [
+  freq(noun('räddning', 'en', '救援；拯救', 'rescue / salvation', 'räddningen', 'räddningar', 'räddningarna', [
     ['Båten blev deras räddning.', '那艘船成了他们的救星。'],
     ['Räddningen kom i sista stund.', '救援在最后一刻赶到。'],
     ['Två räddningar lyckades i stormen.', '风暴中两次救援成功了。'],
@@ -130,19 +130,19 @@ export const list60: Word[] = [
     ['De generösa värdarna dukade extra.', '那些大方的主人多摆了位子。'],
     ['Var generös mot de nya i gruppen.', '对组里的新人大方一点。'],
   ]), 2970),
-  freq(noun('bostad', 'en', '住所；住房', 'home / dwelling / housing', 'bostaden', 'bostäder', null, [
+  freq(noun('bostad', 'en', '住所；住房', 'home / dwelling / housing', 'bostaden', 'bostäder', 'bostäderna', [
     ['De sökte en bostad nära skolan.', '他们在找学校附近的住房。'],
     ['Bostaden ligger högt upp i huset.', '这套住所在楼的高处。'],
     ['Flera bostäder står tomma i kvarteret.', '街区里有几套住房空着。'],
     ['Visa bostaden för mäklaren.', '把这套房子给经纪人看。'],
   ]), 2971, c([['bo', '住'], ['stad', '地方']], '住的地方，合起来就是住所。')),
-  freq(noun('strumpa', 'en', '袜子；长袜', 'sock / stocking', 'strumpan', 'strumpor', null, [
+  freq(noun('strumpa', 'en', '袜子；长袜', 'sock / stocking', 'strumpan', 'strumpor', 'strumporna', [
     ['En strumpa har gått sönder.', '一只袜子破了。'],
     ['Strumpan torkar på elementet.', '那只袜子在暖气上晾着。'],
     ['Hon köpte tre par strumpor.', '她买了三双袜子。'],
     ['Stoppa strumpan innan du går ut.', '出门前把袜子补上。'],
   ]), 2972),
-  freq(noun('tunnelbana', 'en', '地铁', 'underground / subway', 'tunnelbanan', 'tunnelbanor', null, [
+  freq(noun('tunnelbana', 'en', '地铁', 'underground / subway', 'tunnelbanan', 'tunnelbanor', 'tunnelbanorna', [
     ['Vi tar tunnelbanan till jobbet.', '我们坐地铁上班。'],
     ['Tunnelbanan går var femte minut.', '地铁每五分钟一班。'],
     ['Två tunnelbanor möts vid T-Centralen.', '两条地铁在中央站交会。'],
@@ -185,7 +185,7 @@ export const list60: Word[] = [
     ['Han kom ikapp klassen på en vecka.', '他一周就赶上了全班。'],
     ['Spring ikapp henne innan hörnet.', '转角前追上她。'],
   ]), 2978, c([['i', '进入'], ['kapp', '较量；追上']], '进入同一进度去较量，合起来就是追上、赶上。')),
-  freq(noun('tass', 'en', '爪子；（口）手', 'paw', 'tassen', 'tassar', null, [
+  freq(noun('tass', 'en', '爪子；（口）手', 'paw', 'tassen', 'tassar', 'tassarna', [
     ['Hunden räckte fram en tass.', '狗伸出一只爪子。'],
     ['Tassen är sårig efter promenaden.', '这只爪子散步后破了。'],
     ['Katten har mjuka tassar.', '这只猫爪子很软。'],
@@ -222,7 +222,7 @@ export const list60: Word[] = [
     ['Två tandläkare delar mottagningen.', '两位牙医共用诊室。'],
     ['Tandläkarna har stängt i juli.', '那些牙医七月不开诊。'],
   ]), 2983, c([['tand', '牙'], ['läkare', '医生']], '看牙的医生，就是牙医。')),
-  freq(noun('åtgärd', 'en', '措施；行动', 'measure / action', 'åtgärden', 'åtgärder', null, [
+  freq(noun('åtgärd', 'en', '措施；行动', 'measure / action', 'åtgärden', 'åtgärder', 'åtgärderna', [
     ['En snabb åtgärd krävs nu.', '现在需要一项迅速措施。'],
     ['Åtgärden hjälpte redan första dagen.', '这项措施第一天就见效了。'],
     ['Flera åtgärder planeras i höst.', '秋天计划了好几项措施。'],
@@ -277,7 +277,7 @@ export const list60: Word[] = [
     ],
     '在某物的旁边，也可表示在正事之外还有别的。',
   )),
-  freq(noun('solnedgång', 'en', '日落', 'sunset', 'solnedgången', 'solnedgångar', null, [
+  freq(noun('solnedgång', 'en', '日落', 'sunset', 'solnedgången', 'solnedgångar', 'solnedgångarna', [
     ['Vi såg en vacker solnedgång från bryggan.', '我们从码头看了一场美丽的日落。'],
     ['Solnedgången färgade himlen röd.', '日落把天空染红了。'],
     ['Två solnedgångar räckte för hela rullen.', '两场日落就把整卷胶卷拍完了。'],
@@ -289,13 +289,13 @@ export const list60: Word[] = [
     ['Två rekord föll samma kväll.', '同一晚破了两项纪录。'],
     ['Rekorden noteras i protokollet.', '那些纪录记在记录里。'],
   ]), 2993),
-  freq(noun('bur', 'en', '笼子', 'cage', 'buren', 'burar', null, [
+  freq(noun('bur', 'en', '笼子', 'cage', 'buren', 'burar', 'burarna', [
     ['Fågeln sitter i en bur.', '鸟待在一只笼子里。'],
     ['Buren är för liten för katten.', '这只笼子对猫来说太小了。'],
     ['Två burar står i zoohörnan.', '动物园角落里放着两只笼子。'],
     ['Öppna buren försiktigt.', '小心打开笼子。'],
   ]), 2994),
-  freq(noun('ansökan', 'en', '申请', 'application', 'ansökan', 'ansökningar', null, [
+  freq(noun('ansökan', 'en', '申请', 'application', 'ansökan', 'ansökningar', 'ansökningarna', [
     ['Jag skickade in en ansökan i dag.', '我今天交了一份申请。'],
     ['Ansökan kom för sent till kansliet.', '这份申请送到办公室太晚了。'],
     ['Två ansökningar låg på chefens bord.', '主管桌上放着两份申请。'],
@@ -319,7 +319,7 @@ export const list60: Word[] = [
     ['Många termer kommer från latin.', '许多术语来自拉丁语。'],
     ['Översätt meningen till latin.', '把这句话译成拉丁语。'],
   ]), 2998),
-  freq(noun('anklagad', 'en', '被告；被指控者', 'the accused', null, 'anklagade', null, [
+  freq(noun('anklagad', 'en', '被告；被指控者', 'the accused', null, 'anklagade', 'anklagade', [
     ['En anklagad fördes in i salen.', '一名被告被带进法庭。'],
     ['Den anklagade tiger under förhöret.', '被告在讯问中保持沉默。'],
     ['Flera anklagade väntade i korridoren.', '好几名被指控者在走廊里等。'],

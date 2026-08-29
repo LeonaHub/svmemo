@@ -58,7 +58,7 @@ export const list05: Word[] = [
     ['Vi kom fram i tid.', '我们按时到了。'],
     ['Ta fram nyckeln.', '把钥匙拿出来。'],
   ]), 209),
-  freq(noun('fråga', 'en', '问题；事情', 'question / matter', 'frågan', 'frågor', null, [
+  freq(noun('fråga', 'en', '问题；事情', 'question / matter', 'frågan', 'frågor', 'frågorna', [
     ['Jag har en fråga.', '我有一个问题。'],
     ['Frågan är svår.', '这个问题很难。'],
     ['Hon ställde två frågor.', '她提了两个问题。'],
@@ -202,7 +202,7 @@ export const list05: Word[] = [
     ['Har du lyssnat på musiken?', '你听过那音乐了吗？'],
     ['Lyssna nu.', '现在听着。'],
   ]), 233),
-  freq(noun('son', 'en', '儿子', 'son', 'sonen', 'söner', null, [
+  freq(noun('son', 'en', '儿子', 'son', 'sonen', 'söner', 'sönerna', [
     ['Min son är fem år.', '我儿子五岁。'],
     ['Sonen sover.', '儿子在睡觉。'],
     ['De har två söner.', '他们有两个儿子。'],
@@ -220,7 +220,7 @@ export const list05: Word[] = [
     ['Det kostar tio dollar.', '这个要十美元。'],
     ['Dollarna ligger på bordet.', '那些美元在桌子上。'],
   ]), 236),
-  freq(noun('bil', 'en', '汽车', 'car', 'bilen', 'bilar', null, [
+  freq(noun('bil', 'en', '汽车', 'car', 'bilen', 'bilar', 'bilarna', [
     ['Jag har en bil.', '我有一辆汽车。'],
     ['Bilen är röd.', '那辆汽车是红色的。'],
     ['De har två bilar.', '他们有两辆汽车。'],

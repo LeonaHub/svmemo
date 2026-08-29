@@ -82,7 +82,7 @@ export const list37: Word[] = [
     ],
     '“就这样一点点地”，就是渐渐地、终于。',
   )),
-  freq(noun('storm', 'en', '风暴；（引申）强烈反应', 'storm', 'stormen', 'stormar', null, [
+  freq(noun('storm', 'en', '风暴；（引申）强烈反应', 'storm', 'stormen', 'stormar', 'stormarna', [
     ['En storm kommer inatt.', '今晚有风暴要来。'],
     ['Stormen rev ner trädet.', '风暴把那棵树刮倒了。'],
     ['Hösten har flera stormar.', '秋天有好几场风暴。'],
@@ -101,7 +101,7 @@ export const list37: Word[] = [
     ],
     '“在这个框架之内”，就是在……范围内。',
   )),
-  freq(noun('start', 'en', '开始；起点', 'start / beginning', 'starten', 'starter', null, [
+  freq(noun('start', 'en', '开始；起点', 'start / beginning', 'starten', 'starter', 'starterna', [
     ['Hon fick en bra start.', '她有一个好的开始。'],
     ['Starten gick klockan nio.', '九点开跑／开始了。'],
     ['Två starter ställdes in.', '两次起跑取消了。'],
@@ -167,7 +167,7 @@ export const list37: Word[] = [
     ],
     '“不忠实的”，就是不忠。',
   )),
-  freq(noun('katastrof', 'en', '灾难', 'disaster / catastrophe', 'katastrofen', 'katastrofer', null, [
+  freq(noun('katastrof', 'en', '灾难', 'disaster / catastrophe', 'katastrofen', 'katastrofer', 'katastroferna', [
     ['Det var en stor katastrof.', '那是一场大灾难。'],
     ['Katastrofen drabbade kusten.', '这场灾难袭击了海岸。'],
     ['Två katastrofer kom samma år.', '同一年发生了两场灾难。'],
@@ -191,7 +191,7 @@ export const list37: Word[] = [
     ],
     '“属于自己的东西”，就是财产、产业。',
   )),
-  freq(noun('marknad', 'en', '市场；集市', 'market', 'marknaden', 'marknader', null, [
+  freq(noun('marknad', 'en', '市场；集市', 'market', 'marknaden', 'marknader', 'marknaderna', [
     ['Vi går till marknaden på lördag.', '我们星期六去集市。'],
     ['Marknaden öppnar tidigt.', '集市开得很早。'],
     ['Det finns två marknader i stan.', '城里有两个市场。'],
@@ -270,7 +270,7 @@ export const list37: Word[] = [
     ['Han har kört flera bluffar.', '他玩过好几次唬人。'],
     ['Bluffarna funkade inte.', '那些唬人没用。'],
   ]), 1835),
-  freq(noun('teori', 'en', '理论', 'theory', 'teorin', 'teorier', null, [
+  freq(noun('teori', 'en', '理论', 'theory', 'teorin', 'teorier', 'teorierna', [
     ['Hon har en teori om det.', '她对此有一个理论。'],
     ['Teorin håller inte.', '这个理论站不住。'],
     ['Det finns flera teorier här.', '这儿有好几种理论。'],
@@ -306,7 +306,7 @@ export const list37: Word[] = [
     ['Har ni fokuserat på målet?', '你们把精力集中在目标上了吗？'],
     ['Fokusera nu, tack.', '现在请集中注意力。'],
   ]), 1840, c([['fokus', '焦点'], ['-era', '动词词尾']], '放到焦点上，合起来就是聚焦、集中。')),
-  freq(noun('insida', 'en', '内侧；里面', 'inside', 'insidan', 'insidor', null, [
+  freq(noun('insida', 'en', '内侧；里面', 'inside', 'insidan', 'insidor', 'insidorna', [
     ['Jackan har en mjuk insida.', '这件外套里面很软。'],
     ['Insidan av skåpet är mörk.', '柜子内侧是黑的。'],
     ['Båda insidorna är släta.', '两面内侧都很平滑。'],
@@ -354,7 +354,7 @@ export const list37: Word[] = [
     ['Vi har slitit hela dagen.', '我们干了一整天。'],
     ['Slit inte i tyget.', '别撕那块布。'],
   ]), 1847),
-  freq(noun('avdelning', 'en', '部门；病区', 'department / ward', 'avdelningen', 'avdelningar', null, [
+  freq(noun('avdelning', 'en', '部门；病区', 'department / ward', 'avdelningen', 'avdelningar', 'avdelningarna', [
     ['Hon jobbar på en avdelning här.', '她在这儿的一个部门工作。'],
     ['Avdelningen tar emot nya patienter.', '这个病区接收新病人。'],
     ['Sjukhuset har tre avdelningar.', '医院有三个病区。'],

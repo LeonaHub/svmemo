@@ -34,7 +34,7 @@ export const list09: Word[] = [
     ['Har du lärt dig det?', '你学会了吗？'],
     ['Lär dem att vänta.', '教他们学会等待。'],
   ]), 405),
-  freq(noun('grabb', 'en', '小伙子；男孩（口）', 'lad / boy (informal)', 'grabben', 'grabbar', null, [
+  freq(noun('grabb', 'en', '小伙子；男孩（口）', 'lad / boy (informal)', 'grabben', 'grabbar', 'grabbarna', [
     ['En grabb från skolan väntar.', '学校来的一个小伙子在等。'],
     ['Grabben sitter vid dörren.', '那小伙子坐在门口。'],
     ['Grabbarna spelar fotboll.', '那些小伙子在踢足球。'],
@@ -100,7 +100,7 @@ export const list09: Word[] = [
     ['De onda drömmarna kom tillbaka.', '那些噩梦又来了。'],
     ['Jag har ont i magen.', '我肚子疼。'],
   ]), 416),
-  freq(noun('kompis', 'en', '朋友；伙伴（口）', 'buddy / mate (informal)', 'kompisen', 'kompisar', null, [
+  freq(noun('kompis', 'en', '朋友；伙伴（口）', 'buddy / mate (informal)', 'kompisen', 'kompisar', 'kompisarna', [
     ['Hon är min kompis.', '她是我的朋友。'],
     ['Kompisen ringer senare.', '那个朋友稍后打电话。'],
     ['Vi är gamla kompisar.', '我们是老朋友。'],
@@ -112,7 +112,7 @@ export const list09: Word[] = [
     ['Bussen stoppade vid stationen.', '公交车在车站停了。'],
     ['De har stoppat projektet.', '他们已经叫停了这个项目。'],
   ]), 418),
-  freq(noun('plan', 'en', '计划；方案', 'plan', 'planen', 'planer', null, [
+  freq(noun('plan', 'en', '计划；方案', 'plan', 'planen', 'planer', 'planerna', [
     ['Vi har en plan.', '我们有一个计划。'],
     ['Planen ändrades i går.', '计划昨天改了。'],
     ['Hon har flera planer.', '她有好几个计划。'],
@@ -184,13 +184,13 @@ export const list09: Word[] = [
     ['Hon betalade fullt pris.', '她付了全价。'],
     ['Han var full i går.', '他昨天喝醉了。'],
   ]), 430),
-  freq(noun('sida', 'en', '边；面；页', 'side / page', 'sidan', 'sidor', null, [
+  freq(noun('sida', 'en', '边；面；页', 'side / page', 'sidan', 'sidor', 'sidorna', [
     ['Hon står vid min sida.', '她站在我身边。'],
     ['Läs sidan tre.', '读第三页。'],
     ['Boken har tvåhundra sidor.', '这本书有两百页。'],
     ['På andra sidan vägen är det tyst.', '路的另一边很安静。'],
   ]), 431),
-  freq(noun('herre', 'en', '先生；男人', 'gentleman / man', 'herrn', 'herrar', null, [
+  freq(noun('herre', 'en', '先生；男人', 'gentleman / man', 'herrn', 'herrar', 'herrarna', [
     ['En herre väntar där borta.', '有位先生在那边等。'],
     ['Herrn vid disken frågade.', '柜台那位先生问了。'],
     ['Flera herrar sitter där.', '几位先生坐在那里。'],
@@ -208,13 +208,13 @@ export const list09: Word[] = [
     ['Vi åt sent i går.', '我们昨天吃得很晚。'],
     ['Han ringer sent på kvällen.', '他晚上很晚才打电话。'],
   ]), 434),
-  freq(noun('månad', 'en', '月；月份', 'month', 'månaden', 'månader', null, [
+  freq(noun('månad', 'en', '月；月份', 'month', 'månaden', 'månader', 'månaderna', [
     ['Det tar en månad.', '这要一个月。'],
     ['Månaden gick fort.', '这个月过得很快。'],
     ['Tre månader senare kom svaret.', '三个月后回复来了。'],
     ['Vi ses nästa månad.', '我们下个月见。'],
   ]), 435),
-  freq(noun('käft', 'en', '嘴（口）；颌', 'mouth / jaw (informal)', 'käften', 'käftar', null, [
+  freq(noun('käft', 'en', '嘴（口）；颌', 'mouth / jaw (informal)', 'käften', 'käftar', 'käftarna', [
     ['Håll käften!', '闭嘴！'],
     ['Hon slog honom på käften.', '她打中了他的嘴。'],
     ['Käften gör ont när jag tuggar.', '我嚼东西时这张嘴疼。'],
@@ -238,7 +238,7 @@ export const list09: Word[] = [
     ['Jag förstår inte vadå.', '我不明白你说的是什么。'],
     ['Vadå, är du sen?', '什么，你迟到了？'],
   ]), 439),
-  freq(noun('pojke', 'en', '男孩', 'boy', 'pojken', 'pojkar', null, [
+  freq(noun('pojke', 'en', '男孩', 'boy', 'pojken', 'pojkar', 'pojkarna', [
     ['En pojke leker där.', '一个男孩在那边玩。'],
     ['Pojken läser en bok.', '那个男孩在看书。'],
     ['Pojkar och flickor springer.', '男孩和女孩在跑。'],
@@ -298,7 +298,7 @@ export const list09: Word[] = [
     ['De korta svaren räcker.', '那些简短的回答就够了。'],
     ['På kort tid lärde hon sig det.', '她在短时间内学会了。'],
   ]), 449),
-  freq(noun('tjej', 'en', '女孩；姑娘（口）', 'girl (informal)', 'tjejen', 'tjejer', null, [
+  freq(noun('tjej', 'en', '女孩；姑娘（口）', 'girl (informal)', 'tjejen', 'tjejer', 'tjejerna', [
     ['En tjej från klassen väntar.', '班上的一个女孩在等。'],
     ['Tjejen log.', '那个女孩笑了。'],
     ['Tjejerna sitter där.', '那些女孩坐在那儿。'],

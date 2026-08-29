@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 251–300. Closed-class words: primary POS is the high-frequency use, not every sense in the book. */
 export const list06: Word[] = [
-  freq(noun('minut', 'en', '分钟', 'minute', 'minuten', 'minuter', null, [
+  freq(noun('minut', 'en', '分钟', 'minute', 'minuten', 'minuter', 'minuterna', [
     ['Vänta en minut.', '等一分钟。'],
     ['Minuten gick fort.', '这一分钟过得很快。'],
     ['Det tar fem minuter.', '这要五分钟。'],
@@ -28,7 +28,7 @@ export const list06: Word[] = [
     ['Boken har legat där i en vecka.', '那本书在那儿放了一周。'],
     ['Ligg inte på golvet.', '别躺在地板上。'],
   ]), 254),
-  freq(noun('värld', 'en', '世界', 'world', 'världen', 'världar', null, [
+  freq(noun('värld', 'en', '世界', 'world', 'världen', 'världar', 'världarna', [
     ['Världen är stor.', '世界很大。'],
     ['Hon vill se världen.', '她想看看这个世界。'],
     ['Sverige är ett litet land i världen.', '瑞典在世界上是一个小国。'],
@@ -46,7 +46,7 @@ export const list06: Word[] = [
     ['Han lade ifrån sig telefonen.', '他把电话放下了。'],
     ['Jag har lagt brevet på bordet.', '我已经把信放在桌上了。'],
   ]), 257),
-  freq(noun('älskling', 'en', '亲爱的', 'darling / dear', 'älsklingen', 'älsklingar', null, [
+  freq(noun('älskling', 'en', '亲爱的', 'darling / dear', 'älsklingen', 'älsklingar', 'älsklingarna', [
     ['Hej älskling.', '嗨，亲爱的。'],
     ['Kom hit, älskling.', '过来，亲爱的。'],
     ['Älsklingen sover.', '宝贝在睡觉。'],
@@ -64,7 +64,7 @@ export const list06: Word[] = [
     ['Hon är fyra år.', '她四岁。'],
     ['Bussen tar fyra minuter.', '公交车要四分钟。'],
   ]), 260),
-  freq(noun('åker', 'en', '田地；农田', 'field / arable land', 'åkern', 'åkrar', null, [
+  freq(noun('åker', 'en', '田地；农田', 'field / arable land', 'åkern', 'åkrar', 'åkrarna', [
     ['Det är en stor åker bakom huset.', '房子后面有一大块田。'],
     ['Åkern är gul nu.', '那块田现在是黄的。'],
     ['De har två åkrar.', '他们有两块田。'],
@@ -76,7 +76,7 @@ export const list06: Word[] = [
     ['Det är en fast regel.', '这是一条固定的规则。'],
     ['De fasta tiderna passar mig.', '那些固定的时间适合我。'],
   ]), 262),
-  freq(noun('människa', 'en', '人', 'human being / person', 'människan', 'människor', null, [
+  freq(noun('människa', 'en', '人', 'human being / person', 'människan', 'människor', 'människorna', [
     ['Hon är en snäll människa.', '她是个好人。'],
     ['Människan behöver vatten.', '人需要水。'],
     ['Många människor bor här.', '许多人住在这里。'],
@@ -148,7 +148,7 @@ export const list06: Word[] = [
     ['Hon hjälper gärna till.', '她很乐意帮忙。'],
     ['Vi tar gärna bussen.', '我们乐意坐公交。'],
   ]), 274),
-  freq(noun('del', 'en', '部分', 'part', 'delen', 'delar', null, [
+  freq(noun('del', 'en', '部分', 'part', 'delen', 'delar', 'delarna', [
     ['En del av kakan är min.', '蛋糕的一部分是我的。'],
     ['Delen saknas.', '那一部分不见了。'],
     ['Hon läste tre delar.', '她读了三部分。'],
@@ -178,13 +178,13 @@ export const list06: Word[] = [
     ['De öppna butikerna är få.', '开着的那些店很少。'],
     ['Hon är öppen och snäll.', '她坦率又善良。'],
   ]), 279),
-  freq(noun('polis', 'en', '警察', 'police / police officer', 'polisen', 'poliser', null, [
+  freq(noun('polis', 'en', '警察', 'police / police officer', 'polisen', 'poliser', 'poliserna', [
     ['Ring polisen.', '打电话给警察。'],
     ['En polis står där.', '一名警察站在那里。'],
     ['Poliserna kom snabbt.', '那些警察来得很快。'],
     ['Hon jobbar som polis.', '她当警察。'],
   ]), 280),
-  freq(noun('tur', 'en', '运气；轮到；一趟', 'luck / turn / trip', 'turen', 'turer', null, [
+  freq(noun('tur', 'en', '运气；轮到；一趟', 'luck / turn / trip', 'turen', 'turer', 'turerna', [
     ['Vad tur!', '真幸运！'],
     ['Det är din tur.', '轮到你了。'],
     ['Hon har tur idag.', '她今天运气好。'],
@@ -220,7 +220,7 @@ export const list06: Word[] = [
     ['Hon hör illa.', '她听力不好。'],
     ['De behandlar henne illa.', '他们待她不好。'],
   ]), 286),
-  freq(noun('kvinna', 'en', '女人；妇女', 'woman', 'kvinnan', 'kvinnor', null, [
+  freq(noun('kvinna', 'en', '女人；妇女', 'woman', 'kvinnan', 'kvinnor', 'kvinnorna', [
     ['Hon är en ung kvinna.', '她是一位年轻女子。'],
     ['Kvinnan vid dörren väntar.', '门口那位女士在等。'],
     ['Två kvinnor sitter där.', '两位女士坐在那里。'],

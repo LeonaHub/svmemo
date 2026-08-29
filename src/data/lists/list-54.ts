@@ -138,7 +138,7 @@ export const list54: Word[] = [
     ],
     '被彻底弄无聊的，就是厌烦的、无聊透了的。',
   )),
-  freq(noun('nerv', 'en', '神经', 'nerve', 'nerven', 'nerver', null, [
+  freq(noun('nerv', 'en', '神经', 'nerve', 'nerven', 'nerver', 'nerverna', [
     ['En nerv i tanden gör ont.', '牙齿里一根神经在疼。'],
     ['Nerven läkte efter operationen.', '那根神经术后愈合了。'],
     ['Han har dåliga nerver före spelet.', '比赛前他神经很紧。'],
@@ -204,7 +204,7 @@ export const list54: Word[] = [
     ['Huvudet har snurrat hela dan.', '头转了一整天。'],
     ['Snurra inte så fort.', '别转那么快。'],
   ]), 2676),
-  freq(noun('upplevelse', 'en', '体验；经历', 'experience', 'upplevelsen', 'upplevelser', null, [
+  freq(noun('upplevelse', 'en', '体验；经历', 'experience', 'upplevelsen', 'upplevelser', 'upplevelserna', [
     ['Resan blev en stark upplevelse.', '这趟旅行成了一次强烈的体验。'],
     ['Upplevelsen satt kvar länge.', '那次经历很久都忘不掉。'],
     ['Hon har flera tunga upplevelser bakom sig.', '她背后有好几段沉重的经历。'],
@@ -294,7 +294,7 @@ export const list54: Word[] = [
     ['Blanda gin med tonic.', '把金酒和汤力水混在一起。'],
     ['Flaskan med gin stod i baren.', '那瓶金酒在吧台上。'],
   ]), 2688),
-  freq(noun('organisation', 'en', '组织；安排', 'organization', 'organisationen', 'organisationer', null, [
+  freq(noun('organisation', 'en', '组织；安排', 'organization', 'organisationen', 'organisationer', 'organisationerna', [
     ['Hon leder en stor organisation.', '她领导一个大组织。'],
     ['Organisationen brast inför flytten.', '搬家前安排出了岔子。'],
     ['Flera organisationer samlade kläder.', '好几个组织在募衣服。'],

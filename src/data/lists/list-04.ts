@@ -28,7 +28,7 @@ export const list04: Word[] = [
     ['Ungt folk gick på stan.', '年轻人上街了。'],
     ['Folken i norr talar samiska.', '北方那些民族说萨米语。'],
   ]), 154),
-  freq(noun('peng', 'en', '硬币（口）；钱（复数 pengar）', 'coin (informal) / money (plural)', 'pengen', 'pengar', null, [
+  freq(noun('peng', 'en', '硬币（口）；钱（复数 pengar）', 'coin (informal) / money (plural)', 'pengen', 'pengar', 'pengarna', [
     ['Har du pengar med dig?', '你身上带钱了吗？'],
     ['En peng föll på golvet.', '一枚硬币掉在地板上。'],
     ['Jag har inga pengar kvar.', '我没钱了。'],
@@ -124,13 +124,13 @@ export const list04: Word[] = [
     ['Hur länge har du stått här?', '你在这儿站了多久？'],
     ['Stå stilla.', '站着别动。'],
   ]), 170),
-  freq(noun('sak', 'en', '东西；事情', 'thing / matter', 'saken', 'saker', null, [
+  freq(noun('sak', 'en', '东西；事情', 'thing / matter', 'saken', 'saker', 'sakerna', [
     ['Vad är det för sak?', '这是什么东西？'],
     ['Saken är klar.', '事情清楚了。'],
     ['Hon köpte tre saker.', '她买了三样东西。'],
     ['Det är en annan sak.', '那是另一回事。'],
   ]), 171),
-  freq(noun('fara', 'en', '危险', 'danger / risk', 'faran', 'faror', null, [
+  freq(noun('fara', 'en', '危险', 'danger / risk', 'faran', 'faror', 'farorna', [
     ['Det är ingen fara.', '没有危险。／没事。'],
     ['Faran är inte över.', '危险还没过去。'],
     ['Det finns många faror i trafiken.', '路上有许多危险。'],
@@ -172,7 +172,7 @@ export const list04: Word[] = [
     ['Drick ur glaset.', '把杯子喝干。'],
     ['Dra ur sladden.', '把插头拔掉。'],
   ]), 178),
-  freq(noun('hand', 'en', '手', 'hand', 'handen', 'händer', null, [
+  freq(noun('hand', 'en', '手', 'hand', 'handen', 'händer', 'händerna', [
     ['Ge mig handen.', '把手给我。'],
     ['Hon tvättar händerna.', '她在洗手。'],
     ['Två händer räcker.', '两只手就够了。'],
@@ -184,7 +184,7 @@ export const list04: Word[] = [
     ['Vi har tre problem kvar.', '我们还剩三个问题。'],
     ['Problemen blev större.', '那些问题变大了。'],
   ]), 180),
-  freq(noun('morgon', 'en', '早晨；早上', 'morning', 'morgonen', 'morgnar', null, [
+  freq(noun('morgon', 'en', '早晨；早上', 'morning', 'morgonen', 'morgnar', 'morgnarna', [
     ['God morgon!', '早上好！'],
     ['På morgonen dricker jag kaffe.', '早上我喝咖啡。'],
     ['Kalla morgnar är vanliga här.', '这里早晨常常很冷。'],
@@ -196,13 +196,13 @@ export const list04: Word[] = [
     ['Kommer du ens?', '你到底来不来？'],
     ['Inte ens barnen visste.', '连孩子们都不知道。'],
   ]), 182),
-  freq(noun('väg', 'en', '路；道路；方法', 'road / way', 'vägen', 'vägar', null, [
+  freq(noun('väg', 'en', '路；道路；方法', 'road / way', 'vägen', 'vägar', 'vägarna', [
     ['Vilken väg tar vi?', '我们走哪条路？'],
     ['Vägen är stängd.', '这条路封了。'],
     ['Det finns två vägar dit.', '去那儿有两条路。'],
     ['Hon är på väg hem.', '她正在回家的路上。'],
   ]), 183),
-  freq(noun('vän', 'en', '朋友', 'friend', 'vännen', 'vänner', null, [
+  freq(noun('vän', 'en', '朋友', 'friend', 'vännen', 'vänner', 'vännerna', [
     ['Hon är min vän.', '她是我的朋友。'],
     ['Vännen kommer snart.', '那位朋友马上到。'],
     ['Jag har många vänner här.', '我在这里有很多朋友。'],
@@ -238,7 +238,7 @@ export const list04: Word[] = [
     ['Hon har samma jacka som jag.', '她的外套和我的一样。'],
     ['Det är samme man som i går.', '就是昨天那个男人。'],
   ]), 189),
-  freq(noun('kväll', 'en', '晚上；傍晚', 'evening', 'kvällen', 'kvällar', null, [
+  freq(noun('kväll', 'en', '晚上；傍晚', 'evening', 'kvällen', 'kvällar', 'kvällarna', [
     ['God kväll!', '晚上好！'],
     ['I kväll lagar vi mat.', '今晚我们做饭。'],
     ['På kvällen är det kallt.', '晚上很冷。'],
@@ -292,7 +292,7 @@ export const list04: Word[] = [
     ['De väldiga träden är gamla.', '那些大树很老了。'],
     ['Tack, det var väldigt snällt.', '谢谢，你真是太好了。'],
   ]), 197),
-  freq(noun('fru', 'en', '夫人；妻子', 'Mrs. / wife', 'frun', 'fruar', null, [
+  freq(noun('fru', 'en', '夫人；妻子', 'Mrs. / wife', 'frun', 'fruar', 'fruarna', [
     ['Fru Nilsson bor här.', 'Nilsson 夫人住在这里。'],
     ['Hans fru jobbar i stan.', '他妻子在城里工作。'],
     ['Frun i huset är inte hemma.', '家里的女主人不在。'],

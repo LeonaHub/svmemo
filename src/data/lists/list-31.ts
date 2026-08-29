@@ -40,7 +40,7 @@ export const list31: Word[] = [
     ['Staden har förändrat sig.', '这座城市已经变了。'],
     ['Förändra ingenting än.', '先什么都别改。'],
   ]), 1506, c([['för', '使／完全'], ['ändra', '改变']], '使完全改变，合起来就是改变、转变。')),
-  freq(noun('promenad', 'en', '散步', 'walk / stroll', 'promenaden', 'promenader', null, [
+  freq(noun('promenad', 'en', '散步', 'walk / stroll', 'promenaden', 'promenader', 'promenaderna', [
     ['Vi tar en promenad efter maten.', '我们饭后去散步。'],
     ['Promenaden tog en timme.', '这次散步花了一小时。'],
     ['Två promenader om dan räcker.', '一天两次散步就够了。'],
@@ -52,7 +52,7 @@ export const list31: Word[] = [
     ['Nyheten har väckt oro.', '这则新闻已经引起了不安。'],
     ['Väck mig inte!', '别叫醒我！'],
   ]), 1508),
-  freq(noun('spänn', 'ett', '克朗（口语，一块钱）', 'krona (colloquial, like "buck")', null, 'spänn', null, [
+  freq(noun('spänn', 'ett', '克朗（口语，一块钱）', 'krona (colloquial, like "buck")', null, 'spänn', 'spännen', [
     ['Det kostar tjugo spänn.', '这个要二十克朗。'],
     ['Har du ett spänn över?', '你还多一克朗吗？'],
     ['Jag har bara fem spänn kvar.', '我只剩五克朗了。'],
@@ -76,7 +76,7 @@ export const list31: Word[] = [
     ['Två paket kom i dag.', '今天来了两个包裹。'],
     ['Paketen ligger vid dörren.', '那些包裹在门口。'],
   ]), 1512),
-  freq(noun('pizza', 'en', '披萨', 'pizza', 'pizzan', 'pizzor', null, [
+  freq(noun('pizza', 'en', '披萨', 'pizza', 'pizzan', 'pizzor', 'pizzorna', [
     ['Vi äter pizza i kväll.', '我们今晚吃披萨。'],
     ['Pizzan är varm.', '这张披萨是热的。'],
     ['Två pizzor räcker.', '两张披萨就够了。'],
@@ -118,7 +118,7 @@ export const list31: Word[] = [
     ['Lådan har liten rymd.', '这盒子容积很小。'],
     ['Titta upp mot rymden.', '抬头看看太空。'],
   ]), 1518),
-  freq(noun('biljett', 'en', '票；车票', 'ticket', 'biljetten', 'biljetter', null, [
+  freq(noun('biljett', 'en', '票；车票', 'ticket', 'biljetten', 'biljetter', 'biljetterna', [
     ['Jag köpte en biljett.', '我买了一张票。'],
     ['Biljetten är dyr.', '这张票很贵。'],
     ['Två biljetter räcker.', '两张票就够了。'],
@@ -142,7 +142,7 @@ export const list31: Word[] = [
     ],
     '“直到这里（此刻）”，合起来就是迄今、到目前为止。',
   )),
-  freq(noun('hyra', 'en', '租金', 'rent', 'hyran', 'hyror', null, [
+  freq(noun('hyra', 'en', '租金', 'rent', 'hyran', 'hyror', 'hyrorna', [
     ['Hyran är hög i stan.', '城里租金很贵。'],
     ['Vi betalar hyran på måndag.', '我们星期一付租金。'],
     ['Två hyror kom samma vecka.', '同一周来了两笔租金。'],
@@ -160,7 +160,7 @@ export const list31: Word[] = [
     ],
     '“对某事采取行动”，合起来就是对待、治疗、处理。',
   )),
-  freq(noun('ambulans', 'en', '救护车', 'ambulance', 'ambulansen', 'ambulanser', null, [
+  freq(noun('ambulans', 'en', '救护车', 'ambulance', 'ambulansen', 'ambulanser', 'ambulanserna', [
     ['Ambulansen kommer snart.', '救护车马上到。'],
     ['En ambulans stannade utanför.', '一辆救护车停在外面。'],
     ['Två ambulanser körde förbi.', '两辆救护车开了过去。'],
@@ -172,7 +172,7 @@ export const list31: Word[] = [
     ['De strålande nyheterna kom i morse.', '那些大好消息今天早上来了。'],
     ['Hon ser strålande ut.', '她看起来容光焕发。'],
   ]), 1525),
-  freq(noun('amerikan', 'en', '美国人', 'American (person)', 'amerikanen', 'amerikaner', null, [
+  freq(noun('amerikan', 'en', '美国人', 'American (person)', 'amerikanen', 'amerikaner', 'amerikanerna', [
     ['En amerikan sitter där.', '一位美国人坐在那里。'],
     ['Amerikanen talar svenska.', '那位美国人说瑞典语。'],
     ['Två amerikaner väntar i hallen.', '两位美国人在门厅等。'],
@@ -196,7 +196,7 @@ export const list31: Word[] = [
     ['De har spårat paketet.', '他们已经追踪到那个包裹。'],
     ['Spåra samtalet, tack.', '请追踪这个电话。'],
   ]), 1528),
-  freq(noun('sjukdom', 'en', '疾病', 'disease / illness', 'sjukdomen', 'sjukdomar', null, [
+  freq(noun('sjukdom', 'en', '疾病', 'disease / illness', 'sjukdomen', 'sjukdomar', 'sjukdomarna', [
     ['Sjukdomen gick över fort.', '病好得很快。'],
     ['En sjukdom spreds i klassen.', '一种病在班上传播。'],
     ['Han har haft flera sjukdomar.', '他得过好几种病。'],
@@ -214,7 +214,7 @@ export const list31: Word[] = [
     ],
     '“属于人的”，合起来就是人的、有人性的。',
   )),
-  freq(noun('gård', 'en', '院子；农场', 'yard / farm', 'gården', 'gårdar', null, [
+  freq(noun('gård', 'en', '院子；农场', 'yard / farm', 'gården', 'gårdar', 'gårdarna', [
     ['Gården ligger bakom huset.', '院子在房子后面。'],
     ['De bor på en gård.', '他们住在一个农场。'],
     ['Två gårdar säljs i år.', '今年有两个农场在卖。'],
@@ -256,7 +256,7 @@ export const list31: Word[] = [
     ['Vi har fem sinnen.', '我们有五种感官。'],
     ['Sinnena skärps i mörkret.', '在黑暗里感官会变敏锐。'],
   ]), 1535),
-  freq(noun('förklaring', 'en', '解释；说明；声明', 'explanation / declaration', 'förklaringen', 'förklaringar', null, [
+  freq(noun('förklaring', 'en', '解释；说明；声明', 'explanation / declaration', 'förklaringen', 'förklaringar', 'förklaringarna', [
     ['Ge mig en förklaring.', '给我一个解释。'],
     ['Förklaringen var enkel.', '这个解释很简单。'],
     ['Hon har flera förklaringar.', '她有好几种解释。'],
@@ -268,7 +268,7 @@ export const list31: Word[] = [
     ['Hon sjunger sött för oss.', '她给我们唱得很甜美。'],
     ['Smaka inte så sött.', '别做得那么甜。'],
   ]), 1537),
-  freq(noun('uppgift', 'en', '任务；作业；资料', 'task / assignment / information', 'uppgiften', 'uppgifter', null, [
+  freq(noun('uppgift', 'en', '任务；作业；资料', 'task / assignment / information', 'uppgiften', 'uppgifter', 'uppgifterna', [
     ['Uppgiften är svår.', '这个任务很难。'],
     ['En uppgift till i dag.', '今天还有一项任务。'],
     ['Hon lämnade flera uppgifter.', '她提供了好几项资料。'],
@@ -280,7 +280,7 @@ export const list31: Word[] = [
     ['Han gör det likt ett proffs.', '他做得像个专业的。'],
     ['Gå inte likt en robot.', '别走得像机器人。'],
   ]), 1539),
-  freq(noun('önskan', 'en', '愿望；意愿', 'wish', 'önskan', 'önskningar', null, [
+  freq(noun('önskan', 'en', '愿望；意愿', 'wish', 'önskan', 'önskningar', 'önskningarna', [
     ['Hon har en önskan kvar.', '她还剩一个愿望。'],
     ['Önskan gick i uppfyllelse.', '那个愿望实现了。'],
     ['Barnen har många önskningar.', '孩子们有很多愿望。'],
@@ -298,7 +298,7 @@ export const list31: Word[] = [
     ],
     '“自己心里知道的那部分”，合起来就是良心。',
   )),
-  freq(noun('släkt', 'en', '亲戚；家族', 'relatives / family (lineage)', 'släkten', 'släkter', null, [
+  freq(noun('släkt', 'en', '亲戚；家族', 'relatives / family (lineage)', 'släkten', 'släkter', 'släkterna', [
     ['Hela släkten kommer till festen.', '全家族都来参加聚会。'],
     ['Släkten bor i norr.', '亲戚们住在北边。'],
     ['Två släkter möttes där.', '两个家族在那儿相遇。'],

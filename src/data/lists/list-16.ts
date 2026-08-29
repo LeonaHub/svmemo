@@ -34,13 +34,13 @@ export const list16: Word[] = [
     ['De stilla vattnen speglar himlen.', '平静的水面映着天空。'],
     ['Sitta stilla, tack.', '请坐着别动。'],
   ]), 755),
-  freq(noun('säng', 'en', '床', 'bed', 'sängen', 'sängar', null, [
+  freq(noun('säng', 'en', '床', 'bed', 'sängen', 'sängar', 'sängarna', [
     ['Hon ligger i sängen.', '她躺在床上。'],
     ['Sängen är bäddad.', '床铺好了。'],
     ['Vi har två sängar.', '我们有两张床。'],
     ['Gå och lägg dig i sängen.', '去上床睡觉。'],
   ]), 756),
-  freq(noun('själ', 'en', '灵魂；心灵', 'soul / spirit', 'själen', 'själar', null, [
+  freq(noun('själ', 'en', '灵魂；心灵', 'soul / spirit', 'själen', 'själar', 'själarna', [
     ['Kropp och själ hör ihop.', '身体和灵魂是连在一起的。'],
     ['Själen är trött idag.', '心灵今天很累。'],
     ['Inte en själ var där.', '那儿一个人都没有。'],
@@ -94,7 +94,7 @@ export const list16: Word[] = [
     ['Har du gissat svaret?', '你猜过答案了吗？'],
     ['Gissa vad jag har i väskan.', '猜猜我包里有什么。'],
   ]), 765),
-  freq(noun('kontakt', 'en', '联系；接触；插座', 'contact / socket', 'kontakten', 'kontakter', null, [
+  freq(noun('kontakt', 'en', '联系；接触；插座', 'contact / socket', 'kontakten', 'kontakter', 'kontakterna', [
     ['Hon har kontakt med skolan.', '她和学校有联系。'],
     ['Kontakten sitter på väggen.', '插座在墙上。'],
     ['Vi har goda kontakter där.', '我们在那儿有不错的人脉。'],
@@ -166,7 +166,7 @@ export const list16: Word[] = [
     ['Han har lånat cykeln.', '他借了那辆自行车。'],
     ['Låna inte för mycket pengar.', '别借太多钱。'],
   ]), 775),
-  freq(noun('bit', 'en', '一块；一段；一点', 'piece / bit / part', 'biten', 'bitar', null, [
+  freq(noun('bit', 'en', '一块；一段；一点', 'piece / bit / part', 'biten', 'bitar', 'bitarna', [
     ['Vill du ha en bit kaka?', '你要一块蛋糕吗？'],
     ['Biten är för stor.', '这一块太大了。'],
     ['Hon åt tre bitar.', '她吃了三块。'],
@@ -184,7 +184,7 @@ export const list16: Word[] = [
     ['De bättre skorna är dyra.', '那些更好的鞋很贵。'],
     ['Hon mår bättre nu.', '她现在好些了。'],
   ]), 778),
-  freq(noun('nick', 'en', '点头；头球', 'nod / header', 'nicken', 'nickar', null, [
+  freq(noun('nick', 'en', '点头；头球', 'nod / header', 'nicken', 'nickar', 'nickarna', [
     ['Han gav mig en nick.', '他向我点了一下头。'],
     ['Nicken betydde ja.', '那一下点头表示同意。'],
     ['Hon gjorde två nickar i matchen.', '她在比赛里打进两个头球。'],
@@ -250,7 +250,7 @@ export const list16: Word[] = [
     ],
     '像……一样，合起来就是如同、好像。',
   )),
-  freq(noun('ö', 'en', '岛', 'island', 'ön', 'öar', null, [
+  freq(noun('ö', 'en', '岛', 'island', 'ön', 'öar', 'öarna', [
     ['Vi åker till en ö.', '我们去一座岛。'],
     ['Ön är liten.', '那座岛很小。'],
     ['Det finns tre öar här.', '这里有三座岛。'],
@@ -286,7 +286,7 @@ export const list16: Word[] = [
     ['Hon jobbar inom två områden.', '她在两个领域工作。'],
     ['Områdena är olika stora.', '那些地区大小不一。'],
   ]), 792),
-  freq(noun('båt', 'en', '船', 'boat / ship', 'båten', 'båtar', null, [
+  freq(noun('båt', 'en', '船', 'boat / ship', 'båten', 'båtar', 'båtarna', [
     ['Vi tar båten till ön.', '我们坐船去岛上。'],
     ['Båten är gammal.', '那艘船很旧。'],
     ['Två båtar ligger i hamnen.', '两艘船停在港口。'],
@@ -340,7 +340,7 @@ export const list16: Word[] = [
     ],
     '字面是“没有地方”，合起来就是哪儿也不、无处。',
   )),
-  freq(noun('känsla', 'en', '感觉；感情', 'feeling', 'känslan', 'känslor', null, [
+  freq(noun('känsla', 'en', '感觉；感情', 'feeling', 'känslan', 'känslor', 'känslorna', [
     ['Jag har en känsla av att det regnar.', '我感觉要下雨。'],
     ['Känslan var skön.', '那种感觉很舒服。'],
     ['Hon visar sina känslor.', '她表露自己的感情。'],

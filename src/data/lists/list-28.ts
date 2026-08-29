@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 1351–1400. Primary POS is the high-frequency use, not every sense in the book. */
 export const list28: Word[] = [
-  freq(noun('operation', 'en', '手术；行动', 'operation (surgery / action)', 'operationen', 'operationer', null, [
+  freq(noun('operation', 'en', '手术；行动', 'operation (surgery / action)', 'operationen', 'operationer', 'operationerna', [
     ['Hon ska på operation i morgon.', '她明天要做手术。'],
     ['Operationen gick bra.', '手术很顺利。'],
     ['Två operationer väntar i veckan.', '这周还有两台手术。'],
@@ -144,7 +144,7 @@ export const list28: Word[] = [
     ['Har du drömt om det förut?', '你以前梦到过这个吗？'],
     ['Dröm inte för länge.', '别幻想太久。'],
   ]), 1367),
-  freq(noun('möjlighet', 'en', '可能性；机会', 'possibility / opportunity', 'möjligheten', 'möjligheter', null, [
+  freq(noun('möjlighet', 'en', '可能性；机会', 'possibility / opportunity', 'möjligheten', 'möjligheter', 'möjligheterna', [
     ['Det finns en möjlighet till mer tid.', '有可能再多给点时间。'],
     ['Möjligheten försvann fort.', '那个机会很快没了。'],
     ['Hon har flera möjligheter.', '她有好几个机会。'],
@@ -168,7 +168,7 @@ export const list28: Word[] = [
     ['Ät långsamt, tack.', '请慢慢吃。'],
     ['Långsamt blev det bättre.', '慢慢地好起来了。'],
   ]), 1371),
-  freq(noun('press', 'en', '报刊；压力；压机', 'press / strain', 'pressen', 'pressar', null, [
+  freq(noun('press', 'en', '报刊；压力；压机', 'press / strain', 'pressen', 'pressar', 'pressarna', [
     ['Jag läste det i pressen.', '我在报上读到这个。'],
     ['Pressen väntar utanför.', '记者们在外面等。'],
     ['Hon är under hård press.', '她压力很大。'],
@@ -222,7 +222,7 @@ export const list28: Word[] = [
     ['Skicka filen via mejl.', '用邮件把文件发过来。'],
     ['Kontakta oss via ombud.', '通过代理人联系我们。'],
   ]), 1380),
-  freq(noun('lukt', 'en', '气味；嗅觉', 'smell / odour', 'lukten', 'lukter', null, [
+  freq(noun('lukt', 'en', '气味；嗅觉', 'smell / odour', 'lukten', 'lukter', 'lukterna', [
     ['Det är en konstig lukt här.', '这儿有股奇怪的气味。'],
     ['Lukten av kaffe vaknade jag av.', '咖啡的气味把我熏醒了。'],
     ['Olika lukter blandas i köket.', '厨房里各种气味混在一起。'],
@@ -264,7 +264,7 @@ export const list28: Word[] = [
     ['Ron i skogen är skön.', '森林里的宁静很舒服。'],
     ['Här finns ingen ro.', '这里不得安宁。'],
   ]), 1387),
-  freq(noun('smak', 'en', '味道；品味', 'taste / flavour', 'smaken', 'smaker', null, [
+  freq(noun('smak', 'en', '味道；品味', 'taste / flavour', 'smaken', 'smaker', 'smakerna', [
     ['Soppan har en god smak.', '这汤味道很好。'],
     ['Smaken av kanel känns igen.', '能认出肉桂的味道。'],
     ['De har olika smaker.', '他们品味不同。'],
@@ -282,19 +282,19 @@ export const list28: Word[] = [
     ['Har du besökt staden förr?', '你以前来过这座城吗？'],
     ['Besök läkaren i veckan.', '这周去看医生。'],
   ]), 1390, c([['be-', '做成动作'], ['söka', '寻找']], '去找到某人，合起来就是拜访、参观。')),
-  freq(noun('signal', 'en', '信号', 'signal', 'signalen', 'signaler', null, [
+  freq(noun('signal', 'en', '信号', 'signal', 'signalen', 'signaler', 'signalerna', [
     ['Ge en signal när du är klar.', '你好了就给个信号。'],
     ['Signalen var röd.', '信号是红的。'],
     ['Nya signaler kom från chefen.', '上司传来新的信号。'],
     ['Vänta på signalen.', '等这个信号。'],
   ]), 1391),
-  freq(noun('favorit', 'en', '最喜欢的人／物；热门', 'favourite', 'favoriten', 'favoriter', null, [
+  freq(noun('favorit', 'en', '最喜欢的人／物；热门', 'favourite', 'favoriten', 'favoriter', 'favoriterna', [
     ['Hon är lärarens favorit.', '她是老师最喜欢的学生。'],
     ['Favoriten vann loppet.', '热门赢了那场比赛。'],
     ['Jag har två favoriter i klassen.', '班上我有两个最喜欢的。'],
     ['Ta din favorit med dig.', '带上你最喜欢的那个。'],
   ]), 1392),
-  freq(noun('åsikt', 'en', '看法；意见', 'opinion / view', 'åsikten', 'åsikter', null, [
+  freq(noun('åsikt', 'en', '看法；意见', 'opinion / view', 'åsikten', 'åsikter', 'åsikterna', [
     ['Vad är din åsikt om det?', '你对此有什么看法？'],
     ['Åsikten delas inte av alla.', '这个意见不是所有人都同意。'],
     ['Vi har olika åsikter.', '我们看法不同。'],
@@ -330,13 +330,13 @@ export const list28: Word[] = [
     ['Har ni rapporterat olyckan?', '你们报告这起事故了吗？'],
     ['Rapportera till chefen direkt.', '马上向领导报告。'],
   ]), 1398),
-  freq(noun('tjuv', 'en', '小偷', 'thief', 'tjuven', 'tjuvar', null, [
+  freq(noun('tjuv', 'en', '小偷', 'thief', 'tjuven', 'tjuvar', 'tjuvarna', [
     ['En tjuv tog cykeln.', '一个小偷把自行车偷了。'],
     ['Tjuven greps i parken.', '那个小偷在公园被抓住了。'],
     ['Två tjuvar sprang mot dörren.', '两个小偷朝门跑去。'],
     ['Håll tjuven!', '抓住那个小偷！'],
   ]), 1399),
-  freq(noun('dator', 'en', '电脑', 'computer', 'datorn', 'datorer', null, [
+  freq(noun('dator', 'en', '电脑', 'computer', 'datorn', 'datorer', 'datorerna', [
     ['Min dator är långsam.', '我的电脑很慢。'],
     ['Datorn startar inte.', '这台电脑开不了机。'],
     ['Vi har tre datorer hemma.', '我们家里有三台电脑。'],

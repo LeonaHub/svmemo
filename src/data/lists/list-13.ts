@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 601–650. Primary POS is the high-frequency use, not every sense in the book. */
 export const list13: Word[] = [
-  freq(noun('kung', 'en', '国王', 'king', 'kungen', 'kungar', null, [
+  freq(noun('kung', 'en', '国王', 'king', 'kungen', 'kungar', 'kungarna', [
     ['En kung bor i slottet.', '一位国王住在城堡里。'],
     ['Kungen kommer i dag.', '国王今天来。'],
     ['Flera kungar har styrt här.', '好几位国王在这里统治过。'],
@@ -16,7 +16,7 @@ export const list13: Word[] = [
     ['Har du passat bussen?', '你赶上公交车了吗？'],
     ['Passa bollen till mig.', '把球传给我。'],
   ]), 602),
-  freq(noun('farbror', 'en', '叔叔；伯伯；（口）对成年男子的称呼', 'uncle (paternal) / (informal) sir', 'farbrodern', 'farbröder', null, [
+  freq(noun('farbror', 'en', '叔叔；伯伯；（口）对成年男子的称呼', 'uncle (paternal) / (informal) sir', 'farbrodern', 'farbröder', 'farbröderna', [
     ['Min farbror bor i Umeå.', '我叔叔／伯伯住在于默奥。'],
     ['Farbrodern kom på besök.', '那位叔叔来做客了。'],
     ['Jag har två farbröder.', '我有两位叔叔／伯伯。'],
@@ -258,7 +258,7 @@ export const list13: Word[] = [
     ['Hon har ljugit för oss.', '她对我们撒过谎。'],
     ['Ljug inte för mig.', '别对我撒谎。'],
   ]), 634),
-  freq(noun('medlemsstat', 'en', '成员国', 'member state', 'medlemsstaten', 'medlemsstater', null, [
+  freq(noun('medlemsstat', 'en', '成员国', 'member state', 'medlemsstaten', 'medlemsstater', 'medlemsstaterna', [
     ['Sverige är en medlemsstat.', '瑞典是一个成员国。'],
     ['Medlemsstaten röstade ja.', '那个成员国投了赞成票。'],
     ['EU har många medlemsstater.', '欧盟有许多成员国。'],
@@ -282,7 +282,7 @@ export const list13: Word[] = [
     ['Har du skojat med henne?', '你跟她开玩笑了吗？'],
     ['Skoja inte om det.', '别拿这事开玩笑。'],
   ]), 637),
-  freq(noun('fängelse', 'ett', '监狱；徒刑', 'prison / imprisonment', 'fängelset', 'fängelser', null, [
+  freq(noun('fängelse', 'ett', '监狱；徒刑', 'prison / imprisonment', 'fängelset', 'fängelser', 'fängelserna', [
     ['Han sitter i fängelse.', '他在坐牢。'],
     ['Fängelset ligger utanför stan.', '监狱在城外。'],
     ['Det finns flera fängelser här.', '这里有好几座监狱。'],
@@ -300,13 +300,13 @@ export const list13: Word[] = [
     ['De starka vindarna släppte inte.', '那些强风一直没停。'],
     ['Osten är stark.', '这奶酪味道很冲。'],
   ]), 640),
-  freq(noun('raring', 'en', '亲爱的；宝贝', 'darling', 'raringen', 'raringar', null, [
+  freq(noun('raring', 'en', '亲爱的；宝贝', 'darling', 'raringen', 'raringar', 'raringarna', [
     ['Hej, raring.', '嗨，亲爱的。'],
     ['Raringen sover redan.', '宝贝已经睡了。'],
     ['Kom hit, mina raringar.', '过来，我的宝贝们。'],
     ['Du är en raring.', '你真是个宝贝。'],
   ]), 641),
-  freq(noun('affär', 'en', '商店；生意；事情', 'shop / business / affair', 'affären', 'affärer', null, [
+  freq(noun('affär', 'en', '商店；生意；事情', 'shop / business / affair', 'affären', 'affärer', 'affärerna', [
     ['Jag går till affären.', '我去商店。'],
     ['Affären stänger klockan sju.', '商店七点关门。'],
     ['Hon har två affärer i stan.', '她在城里有两家店。'],
@@ -324,13 +324,13 @@ export const list13: Word[] = [
     ['Lagen har skyddat skogen.', '法律已经保护了这片森林。'],
     ['Skydda dig mot kylan.', '保护自己别受冻。'],
   ]), 644),
-  freq(noun('bok', 'en', '书', 'book', 'boken', 'böcker', null, [
+  freq(noun('bok', 'en', '书', 'book', 'boken', 'böcker', 'böckerna', [
     ['Jag läser en bok.', '我在读一本书。'],
     ['Boken är ny.', '这本书是新的。'],
     ['Hon har tre böcker.', '她有三本书。'],
     ['Lägg boken där.', '把书放那儿。'],
   ]), 645),
-  freq(noun('advokat', 'en', '律师', 'lawyer', 'advokaten', 'advokater', null, [
+  freq(noun('advokat', 'en', '律师', 'lawyer', 'advokaten', 'advokater', 'advokaterna', [
     ['Jag behöver en advokat.', '我需要一位律师。'],
     ['Advokaten ringer i morgon.', '律师明天打电话。'],
     ['Två advokater väntar där.', '两位律师在那里等。'],

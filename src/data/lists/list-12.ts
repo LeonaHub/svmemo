@@ -94,7 +94,7 @@ export const list12: Word[] = [
     ['Han har brukat jorden länge.', '他耕这地已经很久了。'],
     ['Bruka jorden väl.', '好好耕种这片地。'],
   ]), 565),
-  freq(noun('person', 'en', '人；个人', 'person', 'personen', 'personer', null, [
+  freq(noun('person', 'en', '人；个人', 'person', 'personen', 'personer', 'personerna', [
     ['En person väntar där.', '有一个人在那里等。'],
     ['Personen heter Anna.', '那个人叫 Anna。'],
     ['Tio personer sitter här.', '十个人坐在这里。'],
@@ -106,7 +106,7 @@ export const list12: Word[] = [
     ['Kan vi tänka annorlunda?', '我们能换个想法吗？'],
     ['Annorlunda sagt: vänta.', '换句话说：等一等。'],
   ]), 567),
-  freq(noun('dam', 'en', '女士；王后（牌／棋）', 'lady / queen (cards, chess)', 'damen', 'damer', null, [
+  freq(noun('dam', 'en', '女士；王后（牌／棋）', 'lady / queen (cards, chess)', 'damen', 'damer', 'damerna', [
     ['En äldre dam sitter där.', '一位年长的女士坐在那里。'],
     ['Damen vid dörren väntar.', '门口那位女士在等。'],
     ['Mina damer och herrar, välkomna.', '女士们先生们，欢迎。'],
@@ -124,7 +124,7 @@ export const list12: Word[] = [
     ['De tvungna gästerna satt kvar.', '那些不得不留下的客人还坐着。'],
     ['Hon var tvungen att vänta.', '她当时不得不等。'],
   ]), 570),
-  freq(noun('grund', 'en', '基础；原因', 'foundation / reason', 'grunden', 'grunder', null, [
+  freq(noun('grund', 'en', '基础；原因', 'foundation / reason', 'grunden', 'grunder', 'grunderna', [
     ['Grunden är fast.', '地基很稳。'],
     ['Vi stannar på grund av regnet.', '因为下雨我们就留下了。'],
     ['Det finns goda grunder för det.', '这件事有充分的理由。'],
@@ -136,7 +136,7 @@ export const list12: Word[] = [
     ['Han har sökt till skolan.', '他已经申请了那所学校。'],
     ['Sök hjälp om du behöver.', '需要的话就去求助。'],
   ]), 572),
-  freq(noun('aning', 'en', '一点；概念', 'a bit / idea / inkling', 'aningen', 'aningar', null, [
+  freq(noun('aning', 'en', '一点；概念', 'a bit / idea / inkling', 'aningen', 'aningar', 'aningarna', [
     ['Jag är en aning trött.', '我有一点点累。'],
     ['Aningen peppar räcker.', '一点点胡椒就够了。'],
     ['Jag har ingen aning.', '我一点概念都没有。'],
@@ -154,7 +154,7 @@ export const list12: Word[] = [
     ['Enligt lagen får du inte det.', '根据法律你不能那样。'],
     ['Svara enligt sanningen.', '按实情回答。'],
   ]), 575),
-  freq(noun('eld', 'en', '火；开火', 'fire / gunfire', 'elden', 'eldar', null, [
+  freq(noun('eld', 'en', '火；开火', 'fire / gunfire', 'elden', 'eldar', 'eldarna', [
     ['Elden är varm.', '火很热。'],
     ['Pappret fattade eld.', '纸着火了。'],
     ['De tände flera eldar.', '他们点了好几堆火。'],
@@ -178,13 +178,13 @@ export const list12: Word[] = [
     ['Början av boken är bra.', '这本书的开头很好。'],
     ['Vi är bara i början.', '我们才刚刚开始。'],
   ]), 579),
-  freq(noun('chef', 'en', '上司；领导', 'boss / head / director', 'chefen', 'chefer', null, [
+  freq(noun('chef', 'en', '上司；领导', 'boss / head / director', 'chefen', 'chefer', 'cheferna', [
     ['Min chef är snäll.', '我的上司人很好。'],
     ['Chefen kommer klockan nio.', '上司九点来。'],
     ['Två chefer väntar där.', '两位领导在那里等。'],
     ['Prata med chefen först.', '先跟上司谈。'],
   ]), 580),
-  freq(noun('fred', 'en', '和平；安宁', 'peace', 'freden', 'freder', null, [
+  freq(noun('fred', 'en', '和平；安宁', 'peace', 'freden', 'freder', 'frederna', [
     ['Vi vill ha fred.', '我们想要和平。'],
     ['Freden kom sent.', '和平来得很晚。'],
     ['Låt mig sitta i fred.', '让我清静地坐着。'],
@@ -196,13 +196,13 @@ export const list12: Word[] = [
     ['Vi har inte råd att resa.', '我们没钱去旅行。'],
     ['Hon gav honom flera råd.', '她给了他好几条建议。'],
   ]), 582),
-  freq(noun('general', 'en', '将军', 'general (military rank)', 'generalen', 'generaler', null, [
+  freq(noun('general', 'en', '将军', 'general (military rank)', 'generalen', 'generaler', 'generalerna', [
     ['En general kom till lägret.', '一位将军来到营地。'],
     ['Generalen talade till soldaterna.', '将军对士兵讲话。'],
     ['Två generaler sitter där.', '两位将军坐在那里。'],
     ['De väntar på generalen.', '他们在等那位将军。'],
   ]), 583),
-  freq(noun('sekund', 'en', '秒；片刻', 'second / moment', 'sekunden', 'sekunder', null, [
+  freq(noun('sekund', 'en', '秒；片刻', 'second / moment', 'sekunden', 'sekunder', 'sekunderna', [
     ['Vänta en sekund.', '等一秒钟。'],
     ['Sekunden gick fort.', '这一秒过得很快。'],
     ['Det tog tre sekunder.', '这花了三秒。'],
@@ -256,7 +256,7 @@ export const list12: Word[] = [
     ['Sväng till höger där.', '在那儿向右拐。'],
     ['Han skriver med höger.', '他用右手写字。'],
   ]), 592),
-  freq(noun('kropp', 'en', '身体；躯体', 'body', 'kroppen', 'kroppar', null, [
+  freq(noun('kropp', 'en', '身体；躯体', 'body', 'kroppen', 'kroppar', 'kropparna', [
     ['Kroppen är trött.', '身体累了。'],
     ['Hon har en stark kropp.', '她身体很结实。'],
     ['Idrottarna har starka kroppar.', '那些运动员身体很结实。'],
@@ -274,7 +274,7 @@ export const list12: Word[] = [
     ['Vill du ha öl?', '你想喝啤酒吗？'],
     ['Hon dricker inte öl.', '她不喝啤酒。'],
   ]), 595),
-  freq(noun('skada', 'en', '伤害；损坏；可惜', 'injury / damage / pity', 'skadan', 'skador', null, [
+  freq(noun('skada', 'en', '伤害；损坏；可惜', 'injury / damage / pity', 'skadan', 'skador', 'skadorna', [
     ['Hon har en skada i knät.', '她膝盖受了伤。'],
     ['Skadan läkte fort.', '伤好得很快。'],
     ['Bilen fick flera skador.', '车有好几处损坏。'],

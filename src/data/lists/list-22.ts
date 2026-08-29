@@ -40,13 +40,13 @@ export const list22: Word[] = [
     ['Staden har många nöjen.', '这座城市有许多娱乐。'],
     ['Nöjena kostar pengar.', '那些娱乐要花钱。'],
   ]), 1056),
-  freq(noun('skillnad', 'en', '差别；不同', 'difference', 'skillnaden', 'skillnader', null, [
+  freq(noun('skillnad', 'en', '差别；不同', 'difference', 'skillnaden', 'skillnader', 'skillnaderna', [
     ['Det är stor skillnad i pris.', '价格差很大。'],
     ['Skillnaden är tydlig.', '这个差别很明显。'],
     ['Det finns flera skillnader.', '有好几处不同。'],
     ['Till skillnad från honom kom hon i tid.', '和他不同，她准时到了。'],
   ]), 1057),
-  freq(noun('tidning', 'en', '报纸；杂志', 'newspaper / magazine', 'tidningen', 'tidningar', null, [
+  freq(noun('tidning', 'en', '报纸；杂志', 'newspaper / magazine', 'tidningen', 'tidningar', 'tidningarna', [
     ['Jag köper tidningen på morgonen.', '我早上买报纸。'],
     ['Tidningen ligger på bordet.', '报纸在桌子上。'],
     ['Hon läser tre tidningar.', '她看三份报纸。'],
@@ -70,7 +70,7 @@ export const list22: Word[] = [
     ['De har dykt upp sent.', '他们很晚才出现。'],
     ['Dyk inte där, det är grunt.', '别在那儿跳水，水浅。'],
   ]), 1061),
-  freq(noun('kamera', 'en', '相机；摄像机', 'camera', 'kameran', 'kameror', null, [
+  freq(noun('kamera', 'en', '相机；摄像机', 'camera', 'kameran', 'kameror', 'kamerorna', [
     ['Hon tar fram kameran.', '她拿出相机。'],
     ['Kameran är ny.', '这台相机是新的。'],
     ['Två kameror står i rummet.', '房间里有两台摄像机。'],
@@ -82,7 +82,7 @@ export const list22: Word[] = [
     ['Tre bröllop infaller i juni.', '六月有三场婚礼。'],
     ['Bröllopen i byn är stora.', '村里那些婚礼很盛大。'],
   ]), 1063),
-  freq(noun('is', 'en', '冰', 'ice', 'isen', 'isar', null, [
+  freq(noun('is', 'en', '冰', 'ice', 'isen', 'isar', 'isarna', [
     ['Det är is på sjön.', '湖上有冰。'],
     ['Isen bär inte än.', '冰还承受不住。'],
     ['Stora isar driver i norr.', '北边有大块冰在漂。'],
@@ -148,7 +148,7 @@ export const list22: Word[] = [
     ['Vi köpte tolv ägg.', '我们买了十二个蛋。'],
     ['Äggen ligger i kylen.', '那些蛋在冰箱里。'],
   ]), 1074),
-  freq(noun('professor', 'en', '教授', 'professor', 'professorn', 'professorer', null, [
+  freq(noun('professor', 'en', '教授', 'professor', 'professorn', 'professorer', 'professorerna', [
     ['Hon är professor i historia.', '她是历史学教授。'],
     ['Professorn kommer klockan tio.', '教授十点来。'],
     ['Två professorer sitter där.', '两位教授坐在那里。'],
@@ -160,7 +160,7 @@ export const list22: Word[] = [
     ['De har återvänt till jobbet.', '他们已经回到工作岗位。'],
     ['Återvänd hit i morgon.', '明天回到这儿来。'],
   ]), 1076, c([['åter', '再／回'], ['vända', '转']], '转回去，合起来就是返回。')),
-  freq(noun('regering', 'en', '政府；执政', 'government / reign', 'regeringen', 'regeringar', null, [
+  freq(noun('regering', 'en', '政府；执政', 'government / reign', 'regeringen', 'regeringar', 'regeringarna', [
     ['Regeringen möts i dag.', '政府今天开会。'],
     ['En ny regering bildas.', '一个新政府正在组成。'],
     ['Flera regeringar har försökt.', '好几届政府都试过。'],
@@ -184,7 +184,7 @@ export const list22: Word[] = [
     ['Hon hade bråttom i morse.', '她早上很匆忙。'],
     ['Ha inte så bråttom.', '别这么急。'],
   ]), 1080),
-  freq(noun('present', 'en', '礼物', 'present / gift', 'presenten', 'presenter', null, [
+  freq(noun('present', 'en', '礼物', 'present / gift', 'presenten', 'presenter', 'presenterna', [
     ['Jag köper en present till min bror.', '我给弟弟买一份礼物。'],
     ['Presenten ligger i lådan.', '礼物在抽屉里。'],
     ['Barnen fick flera presenter.', '孩子们收到好几份礼物。'],
@@ -214,13 +214,13 @@ export const list22: Word[] = [
     ['Fåglarna sitter på skären.', '鸟停在那些礁石上。'],
     ['Båten gick på ett skär.', '船撞上了一块礁石。'],
   ]), 1085),
-  freq(noun('toalett', 'en', '厕所；卫生间', 'toilet / WC', 'toaletten', 'toaletter', null, [
+  freq(noun('toalett', 'en', '厕所；卫生间', 'toilet / WC', 'toaletten', 'toaletter', 'toaletterna', [
     ['Var är toaletten?', '厕所在哪儿？'],
     ['Toaletten är upptagen.', '厕所有人。'],
     ['Det finns två toaletter här.', '这儿有两个厕所。'],
     ['Vänta utanför toaletten.', '在厕所外面等。'],
   ]), 1086),
-  freq(noun('lek', 'en', '游戏；玩耍', 'play / game', 'leken', 'lekar', null, [
+  freq(noun('lek', 'en', '游戏；玩耍', 'play / game', 'leken', 'lekar', 'lekarna', [
     ['Barnens lek pågår ute.', '孩子们的游戏在外面进行。'],
     ['Leken blev för vild.', '这游戏玩得太野了。'],
     ['De hittar på nya lekar.', '他们在发明新游戏。'],
@@ -250,7 +250,7 @@ export const list22: Word[] = [
     ['Hon har tvingats sluta.', '她被迫停了下来。'],
     ['Tvinga inte fram svaret.', '别硬逼着要答案。'],
   ]), 1091),
-  freq(noun('helg', 'en', '周末；假期', 'weekend / holiday', 'helgen', 'helger', null, [
+  freq(noun('helg', 'en', '周末；假期', 'weekend / holiday', 'helgen', 'helger', 'helgerna', [
     ['Vi ses i helgen.', '我们周末见。'],
     ['Helgen blev kort.', '这个周末很短。'],
     ['Två helger i rad är hon borta.', '连续两个周末她都不在。'],
@@ -268,13 +268,13 @@ export const list22: Word[] = [
     ['Hon har många minnen från byn.', '她对村子有许多回忆。'],
     ['Minnena gör henne glad.', '那些回忆让她高兴。'],
   ]), 1094),
-  freq(noun('by', 'en', '村子；阵风', 'village / gust', 'byn', 'byar', null, [
+  freq(noun('by', 'en', '村子；阵风', 'village / gust', 'byn', 'byar', 'byarna', [
     ['Hon kommer från en liten by.', '她来自一个小村子。'],
     ['Byn ligger vid sjön.', '村子在湖边。'],
     ['Flera byar saknar buss.', '好几个村子没有公交车。'],
     ['En kall by kom från havet.', '一阵冷风从海上刮来。'],
   ]), 1095),
-  freq(noun('drog', 'en', '毒品；药物', 'drug', 'drogen', 'droger', null, [
+  freq(noun('drog', 'en', '毒品；药物', 'drug', 'drogen', 'droger', 'drogerna', [
     ['Polisen hittade en drog i väskan.', '警察在包里发现了一种毒品。'],
     ['Drogen är farlig.', '这种毒品很危险。'],
     ['Han slutade med droger.', '他戒了毒。'],

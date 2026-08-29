@@ -76,13 +76,13 @@ export const list15: Word[] = [
     ],
     '前缀 jätte- 加强语气，合起来就是非常好。',
   )),
-  freq(noun('pistol', 'en', '手枪', 'pistol', 'pistolen', 'pistoler', null, [
+  freq(noun('pistol', 'en', '手枪', 'pistol', 'pistolen', 'pistoler', 'pistolerna', [
     ['Han har en pistol.', '他有一把手枪。'],
     ['Pistolen ligger i lådan.', '那把手枪在抽屉里。'],
     ['Två pistoler fanns där.', '那里有两把手枪。'],
     ['Lägg undan pistolen.', '把手枪收起来。'],
   ]), 712),
-  freq(noun('flickvän', 'en', '女朋友', 'girlfriend', 'flickvännen', 'flickvänner', null, [
+  freq(noun('flickvän', 'en', '女朋友', 'girlfriend', 'flickvännen', 'flickvänner', 'flickvännerna', [
     ['Hon är min flickvän.', '她是我的女朋友。'],
     ['Flickvännen väntar utanför.', '女朋友在外面等。'],
     ['Han har haft två flickvänner.', '他有过两个女朋友。'],
@@ -136,7 +136,7 @@ export const list15: Word[] = [
     ],
     '字面是“进行着”，合起来就是正在进行。',
   )),
-  freq(noun('överste', 'en', '上校', 'colonel', 'översten', 'överstar', null, [
+  freq(noun('överste', 'en', '上校', 'colonel', 'översten', 'överstar', 'överstarna', [
     ['Översten kom till mötet.', '上校来开会了。'],
     ['Hon är överste nu.', '她现在是上校。'],
     ['Två överstar satt där.', '两位上校坐在那里。'],
@@ -148,7 +148,7 @@ export const list15: Word[] = [
     ['Han har lovat det länge.', '他答应这件事已经很久了。'],
     ['Lova inte för mycket.', '别许太多诺。'],
   ]), 720),
-  freq(noun('skål', 'en', '碗；（祝酒）干杯', 'bowl / cheers', 'skålen', 'skålar', null, [
+  freq(noun('skål', 'en', '碗；（祝酒）干杯', 'bowl / cheers', 'skålen', 'skålar', 'skålarna', [
     ['Ställ skålen på bordet.', '把碗放到桌上。'],
     ['Skålen är tom.', '碗是空的。'],
     ['Vi har tre skålar.', '我们有三只碗。'],
@@ -184,7 +184,7 @@ export const list15: Word[] = [
     ['Vi är fullt överens.', '我们完全同意。'],
     ['Ta det på fullt allvar.', '把这事当真。'],
   ]), 725),
-  freq(noun('text', 'en', '文本；歌词', 'text / lyrics', 'texten', 'texter', null, [
+  freq(noun('text', 'en', '文本；歌词', 'text / lyrics', 'texten', 'texter', 'texterna', [
     ['Jag läser en text.', '我在读一篇文本。'],
     ['Texten är lätt.', '这篇文本不难。'],
     ['Två texter till i dag.', '今天还有两篇文本。'],
@@ -208,7 +208,7 @@ export const list15: Word[] = [
     ],
     '字面是“被占去的”，合起来就是被占用的、忙碌的。',
   )),
-  freq(noun('jul', 'en', '圣诞节', 'Christmas', 'julen', 'jular', null, [
+  freq(noun('jul', 'en', '圣诞节', 'Christmas', 'julen', 'jular', 'jularna', [
     ['God jul!', '圣诞快乐！'],
     ['Julen kommer snart.', '圣诞节快到了。'],
     ['Vi har firat många jular här.', '我们在这儿过过好多个圣诞节。'],
@@ -226,7 +226,7 @@ export const list15: Word[] = [
     ['Det har lett till problem.', '这已经引出了问题。'],
     ['Led honom hit.', '带他到这儿来。'],
   ]), 731),
-  freq(noun('lunch', 'en', '午饭', 'lunch', 'lunchen', 'luncher', null, [
+  freq(noun('lunch', 'en', '午饭', 'lunch', 'lunchen', 'luncher', 'luncherna', [
     ['Vi äter lunch vid tolv.', '我们十二点吃午饭。'],
     ['Lunchen var god.', '午饭很好吃。'],
     ['Tre luncher i veckan räcker.', '一周三顿午饭就够了。'],
@@ -244,13 +244,13 @@ export const list15: Word[] = [
     ['Hon har tusen frågor.', '她有一千个问题。'],
     ['Vi är nästan tusen personer.', '我们快有一千人了。'],
   ]), 734),
-  freq(noun('anledning', 'en', '原因；理由', 'reason / cause', 'anledningen', 'anledningar', null, [
+  freq(noun('anledning', 'en', '原因；理由', 'reason / cause', 'anledningen', 'anledningar', 'anledningarna', [
     ['Av vilken anledning kom du?', '你因为什么原因来的？'],
     ['Anledningen är enkel.', '原因很简单。'],
     ['Hon hade flera anledningar.', '她有好几个理由。'],
     ['Det finns ingen anledning att stanna.', '没有理由留下。'],
   ]), 735),
-  freq(noun('president', 'en', '总统', 'president', 'presidenten', 'presidenter', null, [
+  freq(noun('president', 'en', '总统', 'president', 'presidenten', 'presidenter', 'presidenterna', [
     ['Presidenten talar i kväll.', '总统今晚讲话。'],
     ['En ny president valdes.', '选出了一位新总统。'],
     ['Flera presidenter har bott där.', '好几位总统在那儿住过。'],
@@ -358,7 +358,7 @@ export const list15: Word[] = [
     ],
     '向着前方，就是向前。',
   )),
-  freq(noun('information', 'en', '信息；问讯处', 'information / information counter', 'informationen', 'informationer', null, [
+  freq(noun('information', 'en', '信息；问讯处', 'information / information counter', 'informationen', 'informationer', 'informationerna', [
     ['Jag behöver mer information.', '我需要更多信息。'],
     ['Informationen kom sent.', '那条信息来得很晚。'],
     ['Be om mer information.', '再要一些信息。'],

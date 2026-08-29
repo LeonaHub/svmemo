@@ -4,13 +4,13 @@ import type { Word } from '../../types/word'
 
 /** Ranks 851–900. Primary POS is the high-frequency use, not every sense in the book. */
 export const list18: Word[] = [
-  freq(noun('grej', 'en', '东西；玩意儿（口）；（复）随身物品', 'thing (informal) / (plural) stuff', 'grejen', 'grejer', null, [
+  freq(noun('grej', 'en', '东西；玩意儿（口）；（复）随身物品', 'thing (informal) / (plural) stuff', 'grejen', 'grejer', 'grejerna', [
     ['Vad är det för en grej?', '这是个什么东西？'],
     ['Grejen ligger i väskan.', '那玩意儿在包里。'],
     ['Ta dina grejer och gå.', '带上你的东西走。'],
     ['Jag glömde en grej hemma.', '我有一件东西忘在家里了。'],
   ]), 851),
-  freq(noun('karl', 'en', '男人；汉子', 'man / fellow', 'karlen', 'karlar', null, [
+  freq(noun('karl', 'en', '男人；汉子', 'man / fellow', 'karlen', 'karlar', 'karlarna', [
     ['En karl väntar vid dörren.', '一个男人在门口等。'],
     ['Karlen bar väskorna själv.', '那个汉子自己拎了那些包。'],
     ['Två karlar hjälpte oss.', '两个男人帮了我们。'],
@@ -82,13 +82,13 @@ export const list18: Word[] = [
     ['Bredvid affären ligger ett kafé.', '商店旁边有一家咖啡馆。'],
     ['Ställ väskan bredvid dörren.', '把包放在门旁边。'],
   ]), 863, c([['bred', '宽的'], ['vid', '在']], '在宽的一侧，合起来就是在旁边。')),
-  freq(noun('överraskning', 'en', '意外；惊喜', 'surprise', 'överraskningen', 'överraskningar', null, [
+  freq(noun('överraskning', 'en', '意外；惊喜', 'surprise', 'överraskningen', 'överraskningar', 'överraskningarna', [
     ['Det blev en trevlig överraskning.', '这成了一个愉快的惊喜。'],
     ['Överraskningen kom sent.', '这个意外来得很晚。'],
     ['Hon har planerat flera överraskningar.', '她计划了好几个惊喜。'],
     ['Jag har en överraskning till dig.', '我有一个惊喜给你。'],
   ]), 864),
-  freq(noun('armé', 'en', '陆军；军队', 'army', 'armén', 'arméer', null, [
+  freq(noun('armé', 'en', '陆军；军队', 'army', 'armén', 'arméer', 'arméerna', [
     ['Han tjänade i armén.', '他在陆军服过役。'],
     ['Armén flyttade norrut.', '军队向北移动了。'],
     ['Två arméer möttes där.', '两支军队在那里相遇。'],
@@ -118,7 +118,7 @@ export const list18: Word[] = [
     ['Har du fångat något?', '你捕获到什么了吗？'],
     ['Fånga bollen!', '接住球！'],
   ]), 869),
-  freq(noun('sergeant', 'en', '中士', 'sergeant', 'sergeanten', 'sergeanter', null, [
+  freq(noun('sergeant', 'en', '中士', 'sergeant', 'sergeanten', 'sergeanter', 'sergeanterna', [
     ['En sergeant står vid porten.', '一名中士站在门口。'],
     ['Sergeanten gav en order.', '那名中士下了一道命令。'],
     ['Två sergeanter kom in.', '两名中士走了进来。'],
@@ -130,13 +130,13 @@ export const list18: Word[] = [
     ['Visa nåd mot honom.', '对他开恩吧。'],
     ['Det var Guds nåd.', '那是上帝的恩典。'],
   ]), 871),
-  freq(noun('hälft', 'en', '一半', 'half', 'hälften', 'hälfter', null, [
+  freq(noun('hälft', 'en', '一半', 'half', 'hälften', 'hälfter', 'hälfterna', [
     ['Ta den ena hälften.', '拿走其中一半。'],
     ['Hälften är redan klar.', '一半已经好了。'],
     ['Dela kakan i två hälfter.', '把蛋糕分成两半。'],
     ['Bara hälften kom i tid.', '只有一半人准时到了。'],
   ]), 872),
-  freq(noun('broder', 'en', '兄弟（较正式）', 'brother (formal)', 'brodern', 'bröder', null, [
+  freq(noun('broder', 'en', '兄弟（较正式）', 'brother (formal)', 'brodern', 'bröder', 'bröderna', [
     ['Han är min broder.', '他是我的兄弟。'],
     ['Brodern bor i Umeå.', '那位兄弟住在于默奥。'],
     ['Hon har två bröder.', '她有两个兄弟。'],
@@ -208,7 +208,7 @@ export const list18: Word[] = [
     ['Polisen utreder två brott.', '警察在调查两起犯罪。'],
     ['Brotten chockade stan.', '那些罪行震惊了全城。'],
   ]), 884),
-  freq(noun('hjälte', 'en', '英雄；（作品中的）主人公', 'hero', 'hjälten', 'hjältar', null, [
+  freq(noun('hjälte', 'en', '英雄；（作品中的）主人公', 'hero', 'hjälten', 'hjältar', 'hjältarna', [
     ['Hon är en hjälte för oss.', '对我们来说她是英雄。'],
     ['Hjälten räddade barnet.', '那位英雄救了那个孩子。'],
     ['Boken har tre hjältar.', '这本书有三个主人公。'],
@@ -226,7 +226,7 @@ export const list18: Word[] = [
     ['Två skepp möttes till havs.', '两艘船在海上相遇。'],
     ['Skeppen seglar norrut.', '那些船向北航行。'],
   ]), 887),
-  freq(noun('make', 'en', '丈夫', 'husband', 'maken', 'makar', null, [
+  freq(noun('make', 'en', '丈夫', 'husband', 'maken', 'makar', 'makarna', [
     ['Hennes make jobbar i stan.', '她丈夫在城里工作。'],
     ['Maken väntar i bilen.', '那位丈夫在车里等。'],
     ['Äldre makar bor här.', '年长的夫妻住在这里。'],
@@ -238,13 +238,13 @@ export const list18: Word[] = [
     ['Det var häftigt att se.', '那看起来真棒。'],
     ['Han svängde häftigt åt vänster.', '他猛地向左拐。'],
   ]), 889),
-  freq(noun('vin', 'ett', '葡萄酒；酒', 'wine', 'vinet', 'viner', null, [
+  freq(noun('vin', 'ett', '葡萄酒；酒', 'wine', 'vinet', 'viner', 'vinerna', [
     ['Vill du ha rött eller vitt vin?', '你要红葡萄酒还是白葡萄酒？'],
     ['Vinet är sött.', '这酒是甜的。'],
     ['De köpte två viner.', '他们买了两瓶葡萄酒。'],
     ['Rött vin passar till maten.', '红葡萄酒配这饭菜合适。'],
   ]), 890),
-  freq(noun('ordning', 'en', '秩序；条理；顺序', 'order', 'ordningen', 'ordningar', null, [
+  freq(noun('ordning', 'en', '秩序；条理；顺序', 'order', 'ordningen', 'ordningar', 'ordningarna', [
     ['Håll ordning i rummet.', '把房间整理好。'],
     ['Ordningen var bra i klassen.', '班里秩序很好。'],
     ['Det finns flera ordningar här.', '这里有好几套办法。'],
@@ -268,19 +268,19 @@ export const list18: Word[] = [
     ['De har tre svin.', '他们有三头猪。'],
     ['Svinen äter där ute.', '那些猪在外面吃。'],
   ]), 894),
-  freq(noun('löjtnant', 'en', '中尉', 'lieutenant', 'löjtnanten', 'löjtnanter', null, [
+  freq(noun('löjtnant', 'en', '中尉', 'lieutenant', 'löjtnanten', 'löjtnanter', 'löjtnanterna', [
     ['Han är löjtnant nu.', '他现在是中尉。'],
     ['Löjtnanten kom in i rummet.', '那位中尉走进了房间。'],
     ['Två löjtnanter väntade utanför.', '两名中尉在外面等。'],
     ['Fråga löjtnanten om tiden.', '去问中尉几点了。'],
   ]), 895),
-  freq(noun('frukost', 'en', '早餐', 'breakfast', 'frukosten', 'frukostar', null, [
+  freq(noun('frukost', 'en', '早餐', 'breakfast', 'frukosten', 'frukostar', 'frukostarna', [
     ['Vi äter frukost klockan sju.', '我们七点吃早餐。'],
     ['Frukosten är klar.', '早餐好了。'],
     ['Vi åt två frukostar på resan.', '我们在路上吃了两顿早餐。'],
     ['Vad vill du ha till frukost?', '早餐你想吃什么？'],
   ]), 896),
-  freq(noun('bak', 'en', '屁股；臀部', 'bottom / backside', 'baken', 'bakar', null, [
+  freq(noun('bak', 'en', '屁股；臀部', 'bottom / backside', 'baken', 'bakar', 'bakarna', [
     ['Jag landade på baken.', '我一屁股坐到了地上。'],
     ['Baken gör ont efter cykelturen.', '骑完车屁股疼。'],
     ['Hon föll på baken.', '她一屁股摔了下去。'],

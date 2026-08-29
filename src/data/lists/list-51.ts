@@ -34,7 +34,7 @@ export const list51: Word[] = [
     ],
     'bära 的过去分词，就是被抬着的、被带着的。',
   )),
-  freq(noun('student', 'en', '大学生；高中毕业生', 'student / secondary-school graduate', 'studenten', 'studenter', null, [
+  freq(noun('student', 'en', '大学生；高中毕业生', 'student / secondary-school graduate', 'studenten', 'studenter', 'studenterna', [
     ['Hon är student i Uppsala.', '她是乌普萨拉的大学生。'],
     ['Studenten lånade tre böcker.', '那个学生借了三本书。'],
     ['Många studenter cyklar till campus.', '很多大学生骑车去校园。'],
@@ -192,7 +192,7 @@ export const list51: Word[] = [
     ],
     '“自己出汗”，合起来就是出汗。',
   )),
-  freq(noun('parti', 'ett', '政党；一段；一局', 'party / section / game', 'partiet', 'partier', null, [
+  freq(noun('parti', 'ett', '政党；一段；一局', 'party / section / game', 'partiet', 'partier', 'partierna', [
     ['Ett nytt parti kom in i riksdagen.', '一个新政党进入了议会。'],
     ['Partiet samlas på söndag.', '这个政党星期天开会。'],
     ['De borgerliga partierna röstade nej.', '那些非社会主义政党投了反对票。'],
@@ -204,7 +204,7 @@ export const list51: Word[] = [
     ['Hon äger flera aktier.', '她持有好几股。'],
     ['Aktierna såldes i våras.', '那些股票春天卖掉了。'],
   ]), 2523),
-  freq(noun('kompani', 'ett', '连（军队）；公司（较旧）', 'company (military) / company (older)', 'kompaniet', 'kompanier', null, [
+  freq(noun('kompani', 'ett', '连（军队）；公司（较旧）', 'company (military) / company (older)', 'kompaniet', 'kompanier', 'kompanierna', [
     ['Ett kompani marscherade förbi.', '一个连队列队走过。'],
     ['Kompaniet vilade vid vägen.', '这个连在路边休息。'],
     ['Två kompanier övade i skogen.', '两个连在树林里演习。'],
@@ -228,7 +228,7 @@ export const list51: Word[] = [
     ['Två chaufförer turas om.', '两名司机轮班。'],
     ['Chaufförerna ska vila efter körningen.', '那些司机开完要休息。'],
   ]), 2527),
-  freq(noun('potatis', 'en', '土豆', 'potato', 'potatisen', 'potatisar', null, [
+  freq(noun('potatis', 'en', '土豆', 'potato', 'potatisen', 'potatisar', 'potatisarna', [
     ['Vi äter potatis i kväll.', '我们今晚吃土豆。'],
     ['Potatisen är kokt.', '这个土豆煮好了。'],
     ['Tre potatisar låg i kastrullen.', '锅里放着三个土豆。'],
@@ -240,7 +240,7 @@ export const list51: Word[] = [
     ['Han sitter på kåken.', '他在局子里蹲着。'],
     ['Kåkarna längs gatan är gamla.', '沿街那些房子很旧。'],
   ]), 2529),
-  freq(noun('potta', 'en', '便盆；夜壶（口）', 'potty / chamber pot', 'pottan', 'pottor', null, [
+  freq(noun('potta', 'en', '便盆；夜壶（口）', 'potty / chamber pot', 'pottan', 'pottor', 'pottorna', [
     ['Barnet sitter på pottan.', '孩子坐在便盆上。'],
     ['Pottan står under sängen.', '便盆在床底下。'],
     ['Två pottor torkade i badrummet.', '浴室里晾着两个便盆。'],
@@ -276,7 +276,7 @@ export const list51: Word[] = [
     ],
     '“所有人在一起”，就是大家、统统。',
   )),
-  freq(noun('karaktär', 'en', '性格；特点', 'character / characteristic', 'karaktären', 'karaktärer', null, [
+  freq(noun('karaktär', 'en', '性格；特点', 'character / characteristic', 'karaktären', 'karaktärer', 'karaktärerna', [
     ['Hon har en stark karaktär.', '她性格很强。'],
     ['Karaktären i boken är trovärdig.', '书里这个人物很可信。'],
     ['Filmen har flera karaktärer.', '这部电影有好几个人物。'],
@@ -288,7 +288,7 @@ export const list51: Word[] = [
     ['Praktiskt taget alla kom.', '几乎所有人都来了。'],
     ['Vi löste det praktiskt på plats.', '我们当场实际解决了。'],
   ]), 2535, c([['praktisk', '实际的'], ['-t', '副词词尾']], '由“实际的”变成副词，就是实际地；也用于“几乎”。')),
-  freq(noun('cirkus', 'en', '马戏团；乱糟糟', 'circus', 'cirkusen', 'cirkusar', null, [
+  freq(noun('cirkus', 'en', '马戏团；乱糟糟', 'circus', 'cirkusen', 'cirkusar', 'cirkusarna', [
     ['Barnen gick på cirkus.', '孩子们去看了马戏。'],
     ['Cirkusen stannade en vecka i stan.', '马戏团在城里停了一周。'],
     ['Två cirkusar turnerade i somras.', '去年夏天有两个马戏团在巡演。'],
@@ -360,7 +360,7 @@ export const list51: Word[] = [
     ['Bilen har dumpats i skogen.', '那辆车被扔在森林里了。'],
     ['Dumpa inte priserna så.', '别这样把价格砸下去。'],
   ]), 2545),
-  freq(noun('singel', 'en', '单打；单曲；单身', 'singles (match) / single (record) / single person', 'singeln', 'singlar', null, [
+  freq(noun('singel', 'en', '单打；单曲；单身', 'singles (match) / single (record) / single person', 'singeln', 'singlar', 'singlarna', [
     ['De spelade singel i tennis.', '他们打了网球单打。'],
     ['Singeln släpptes i maj.', '这张单曲五月发行。'],
     ['Två singlar låg på listan.', '榜上有两首单曲。'],

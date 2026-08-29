@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 2051–2100. Primary POS is the high-frequency use, not every sense in the book. */
 export const list42: Word[] = [
-  freq(noun('intervju', 'en', '采访；访谈', 'interview', 'intervjun', 'intervjuer', null, [
+  freq(noun('intervju', 'en', '采访；访谈', 'interview', 'intervjun', 'intervjuer', 'intervjuerna', [
     ['En intervju sänds i kväll.', '今晚会播出一段采访。'],
     ['Intervjun tog tjugo minuter.', '这次访谈花了二十分钟。'],
     ['Två intervjuer väntar i morgon.', '明天还有两场采访。'],
@@ -58,7 +58,7 @@ export const list42: Word[] = [
     ['Han har vägt sig varje morgon.', '他每天早上都称过体重。'],
     ['Väg potatisen innan du kokar.', '煮之前把土豆称一下。'],
   ]), 2058),
-  freq(noun('morsa', 'en', '妈妈（口）', 'mum / mom (informal)', 'morsan', 'morsor', null, [
+  freq(noun('morsa', 'en', '妈妈（口）', 'mum / mom (informal)', 'morsan', 'morsor', 'morsorna', [
     ['Min morsa ringer varje kväll.', '我妈每天晚上打电话。'],
     ['Morsan väntar i bilen.', '我妈在车里等。'],
     ['De två morsorna skrattade i köket.', '那两位妈妈在厨房里笑。'],
@@ -88,7 +88,7 @@ export const list42: Word[] = [
     ],
     '由“害怕”这个动作变成名词，就是恐惧。',
   )),
-  freq(noun('saga', 'en', '童话；传说', 'fairy tale / story', 'sagan', 'sagor', null, [
+  freq(noun('saga', 'en', '童话；传说', 'fairy tale / story', 'sagan', 'sagor', 'sagorna', [
     ['En saga om trollen lästes högt.', '有人把一篇关于巨魔的童话大声读了出来。'],
     ['Sagan slutar lyckligt.', '这个故事结局很圆满。'],
     ['Hon kan tre sagor utantill.', '她能背三篇童话。'],
@@ -160,7 +160,7 @@ export const list42: Word[] = [
     ['Till sist tystnade rummet.', '房间终于安静了。'],
     ['Vi gick hem till sist.', '我们最后回家了。'],
   ]), 2069, c([['till', '到'], ['sist', '最后']], '到最后那一步，合起来就是终于、最后。')),
-  freq(noun('anställd', 'en', '雇员；受雇者', 'employee', null, 'anställda', null, [
+  freq(noun('anställd', 'en', '雇员；受雇者', 'employee', null, 'anställda', 'anställda', [
     ['En anställd öppnade luckan.', '一名雇员打开了窗口。'],
     ['Vi behöver fler anställda till sommaren.', '夏天我们还需要更多雇员。'],
     ['De anställda fikar klockan tio.', '那些雇员十点喝咖啡。'],
@@ -172,13 +172,13 @@ export const list42: Word[] = [
     ['Två halvår bildar ett läsår.', '两个半年构成一个学年。'],
     ['Halvåren i statistiken skiljer sig.', '统计里那两个半年不一样。'],
   ]), 2071, c([['halv', '一半的'], ['år', '年']], '一半的年，合起来就是半年。')),
-  freq(noun('yta', 'en', '表面；面积', 'surface / area', 'ytan', 'ytor', null, [
+  freq(noun('yta', 'en', '表面；面积', 'surface / area', 'ytan', 'ytor', 'ytorna', [
     ['Bordet har en slät yta.', '这张桌子有光滑的表面。'],
     ['Ytan på sjön var spegelblank.', '湖面平得像镜子。'],
     ['Mät två ytor innan ni målar.', '刷漆前先量两块面积。'],
     ['Torka ytan efter maten.', '吃完把表面擦干净。'],
   ]), 2072),
-  freq(noun('robot', 'en', '机器人；导弹', 'robot / guided missile', 'roboten', 'robotar', null, [
+  freq(noun('robot', 'en', '机器人；导弹', 'robot / guided missile', 'roboten', 'robotar', 'robotarna', [
     ['En robot dammsuger hallen.', '一台机器人在门厅吸尘。'],
     ['Roboten stannade vid tröskeln.', '这台机器人在门槛边停了。'],
     ['Två robotar jobbar i lagret.', '两台机器人在仓库干活。'],
@@ -202,7 +202,7 @@ export const list42: Word[] = [
     ['Byxorna är redan sydda.', '裤子已经缝好了。'],
     ['Sy knappen fast.', '把扣子缝牢。'],
   ]), 2075),
-  freq(noun('video', 'en', '录像；录像机', 'video', 'videon', 'videor', null, [
+  freq(noun('video', 'en', '录像；录像机', 'video', 'videon', 'videor', 'videorna', [
     ['En video ligger i lådan.', '抽屉里有一盘录像。'],
     ['Videon är slut efter tio.', '这盘录像十点后放完。'],
     ['Hon har tre videor i hyllan.', '她架子上有三盘录像。'],
@@ -323,7 +323,7 @@ export const list42: Word[] = [
     ['De har skyllt ifrån sig.', '他们把责任推掉了。'],
     ['Skyll inte på mig.', '别怪我。'],
   ]), 2089),
-  freq(noun('axel', 'en', '肩膀；车轴', 'shoulder / axle', 'axeln', 'axlar', null, [
+  freq(noun('axel', 'en', '肩膀；车轴', 'shoulder / axle', 'axeln', 'axlar', 'axlarna', [
     ['Hon bar väskan över axeln.', '她把包挎在肩上。'],
     ['Axeln gör ont efter träningen.', '训练之后这只肩膀疼。'],
     ['Båda axlarna är stela i dag.', '今天两只肩膀都发僵。'],
@@ -372,7 +372,7 @@ export const list42: Word[] = [
     ],
     'sorglig 是“令人悲伤的”，sorgligt 就是令人难过地、可惜。',
   )),
-  freq(noun('betydelse', 'en', '意思；意义；重要性', 'meaning / importance', 'betydelsen', 'betydelser', null, [
+  freq(noun('betydelse', 'en', '意思；意义；重要性', 'meaning / importance', 'betydelsen', 'betydelser', 'betydelserna', [
     ['Ordet har en annan betydelse här.', '这个词在这儿是另一个意思。'],
     ['Betydelsen blev klar efteråt.', '那个意思后来才清楚。'],
     ['Två betydelser krockar i meningen.', '这个句子里两个意思撞在一起。'],

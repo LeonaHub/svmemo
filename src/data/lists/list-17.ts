@@ -46,7 +46,7 @@ export const list17: Word[] = [
     ['Han kom sent och var dessutom trött.', '他来晚了，而且还很累。'],
     ['Dessutom måste vi vänta.', '此外我们还得等。'],
   ]), 807, c([['dess', '其；那'], ['utom', '在外']], '在那之外，合起来就是此外、而且。')),
-  freq(noun('himmel', 'en', '天空；天堂', 'sky / heaven', 'himlen', 'himlar', null, [
+  freq(noun('himmel', 'en', '天空；天堂', 'sky / heaven', 'himlen', 'himlar', 'himlarna', [
     ['Himlen är klar i dag.', '今天天空晴朗。'],
     ['En blå himmel väntar.', '将是蓝天。'],
     ['Stjärnorna lyser på himlen.', '星星在天上发光。'],
@@ -94,31 +94,31 @@ export const list17: Word[] = [
     ['Det hände i samband med festen.', '那是在聚会期间发生的。'],
     ['Polisen kom i samband med olyckan.', '警察是因为那起事故来的。'],
   ]), 815, c([['i', '在'], ['samband', '关联'], ['med', '和']], '处在与某事的关联中，合起来就是与……有关。')),
-  freq(noun('häst', 'en', '马', 'horse', 'hästen', 'hästar', null, [
+  freq(noun('häst', 'en', '马', 'horse', 'hästen', 'hästar', 'hästarna', [
     ['Hon har en häst.', '她有一匹马。'],
     ['Hästen står i stallet.', '那匹马在马厩里。'],
     ['Två hästar sprang förbi.', '两匹马跑了过去。'],
     ['Vi red på häst i går.', '我们昨天骑马了。'],
   ]), 816),
-  freq(noun('röst', 'en', '嗓音；选票', 'voice / vote', 'rösten', 'röster', null, [
+  freq(noun('röst', 'en', '嗓音；选票', 'voice / vote', 'rösten', 'röster', 'rösterna', [
     ['Hon har en fin röst.', '她嗓音很好。'],
     ['Rösten hördes långt.', '那声音传得很远。'],
     ['Vi räknade tre röster.', '我们点了三张票。'],
     ['Han höjde rösten.', '他提高了嗓门。'],
   ]), 817),
-  freq(noun('skog', 'en', '森林；树林', 'forest / woods', 'skogen', 'skogar', null, [
+  freq(noun('skog', 'en', '森林；树林', 'forest / woods', 'skogen', 'skogar', 'skogarna', [
     ['Vi går i skogen.', '我们在森林里走。'],
     ['En stor skog ligger där.', '那儿有一片大森林。'],
     ['De gick genom tre skogar.', '他们穿过了三片森林。'],
     ['Skogen är tät här.', '这里的林子很密。'],
   ]), 818),
-  freq(noun('rygg', 'en', '背；背面', 'back', 'ryggen', 'ryggar', null, [
+  freq(noun('rygg', 'en', '背；背面', 'back', 'ryggen', 'ryggar', 'ryggarna', [
     ['Min rygg gör ont.', '我背疼。'],
     ['Ryggen är stel i dag.', '背今天很僵。'],
     ['De har starka ryggar.', '他们的背很结实。'],
     ['Hon bar barnet på ryggen.', '她把孩子背在背上。'],
   ]), 819),
-  freq(noun('bild', 'en', '图片；照片；画面', 'picture / image', 'bilden', 'bilder', null, [
+  freq(noun('bild', 'en', '图片；照片；画面', 'picture / image', 'bilden', 'bilder', 'bilderna', [
     ['Ta en bild av huset.', '给这栋房子拍张照。'],
     ['Bilden är suddig.', '这张照片模糊。'],
     ['Hon visade tre bilder.', '她出示了三张图。'],
@@ -136,19 +136,19 @@ export const list17: Word[] = [
     ['De har öppnat butiken.', '他们已经开了店。'],
     ['Öppna väskan.', '打开包。'],
   ]), 822),
-  freq(noun('partner', 'en', '搭档；伴侣', 'partner', 'partnern', 'partners', null, [
+  freq(noun('partner', 'en', '搭档；伴侣', 'partner', 'partnern', 'partners', 'partnerna', [
     ['Hon är min partner på jobbet.', '她是我工作上的搭档。'],
     ['Partnern väntar utanför.', '那位搭档在外面等。'],
     ['De är partners i firman.', '他们是公司里的合伙人。'],
     ['Han sökte en ny partner.', '他在找新伴侣。'],
   ]), 823),
-  freq(noun('flod', 'en', '河；潮水；洪水', 'river / tide / flood', 'floden', 'floder', null, [
+  freq(noun('flod', 'en', '河；潮水；洪水', 'river / tide / flood', 'floden', 'floder', 'floderna', [
     ['Floden är bred här.', '这条河在这里很宽。'],
     ['En lång flod rinner mot havet.', '一条长河流向大海。'],
     ['Två floder möts där.', '两条河在那儿汇合。'],
     ['Efter floden stod vattnet kvar.', '涨水过后水还积着。'],
   ]), 824),
-  freq(noun('kyrka', 'en', '教堂；教会', 'church', 'kyrkan', 'kyrkor', null, [
+  freq(noun('kyrka', 'en', '教堂；教会', 'church', 'kyrkan', 'kyrkor', 'kyrkorna', [
     ['Vi går till kyrkan.', '我们去教堂。'],
     ['En gammal kyrka står på kullen.', '一座老教堂立在小山上。'],
     ['Byarna har tre kyrkor.', '那些村子有三座教堂。'],
@@ -178,7 +178,7 @@ export const list17: Word[] = [
     ['Vi har endast en nyckel.', '我们只有一把钥匙。'],
     ['Det gäller endast i dag.', '这只适用于今天。'],
   ]), 829),
-  freq(noun('lägenhet', 'en', '公寓', 'apartment / flat', 'lägenheten', 'lägenheter', null, [
+  freq(noun('lägenhet', 'en', '公寓', 'apartment / flat', 'lägenheten', 'lägenheter', 'lägenheterna', [
     ['Hon hyr en lägenhet i stan.', '她在城里租了一套公寓。'],
     ['Lägenheten är liten men fin.', '这套公寓虽小但很好。'],
     ['Två lägenheter står tomma.', '两套公寓空着。'],
@@ -202,19 +202,19 @@ export const list17: Word[] = [
     ['Hon mår inte speciellt bra.', '她感觉不是特别好。'],
     ['Alla kom, speciellt barnen.', '大家都来了，尤其是孩子们。'],
   ]), 833),
-  freq(noun('mening', 'en', '意见；意思；意图；句子', 'opinion / meaning / intention / sentence', 'meningen', 'meningar', null, [
+  freq(noun('mening', 'en', '意见；意思；意图；句子', 'opinion / meaning / intention / sentence', 'meningen', 'meningar', 'meningarna', [
     ['Enligt min mening bör vi vänta.', '依我看我们应该等。'],
     ['Meningen gick inte fram.', '那句话的意思没传达出去。'],
     ['Hon skrev tre meningar.', '她写了三个句子。'],
     ['Det var inte min mening att störa.', '我不是有意打扰。'],
   ]), 834),
-  freq(noun('sol', 'en', '太阳；阳光', 'sun', 'solen', 'solar', null, [
+  freq(noun('sol', 'en', '太阳；阳光', 'sun', 'solen', 'solar', 'solarna', [
     ['Solen värmer redan.', '太阳已经开始暖和了。'],
     ['En blek sol syntes bakom molnen.', '云后面露出一轮淡淡的太阳。'],
     ['Vi satt i solen länge.', '我们在太阳底下坐了很久。'],
     ['Solen går ner sent.', '太阳落得晚。'],
   ]), 835),
-  freq(noun('sort', 'en', '种类；品种', 'kind / sort / type', 'sorten', 'sorter', null, [
+  freq(noun('sort', 'en', '种类；品种', 'kind / sort / type', 'sorten', 'sorter', 'sorterna', [
     ['Vilken sort vill du ha?', '你要哪一种？'],
     ['Sorten är söt och röd.', '这个品种又甜又红。'],
     ['De säljer flera sorter.', '他们卖好几个品种。'],
@@ -244,7 +244,7 @@ export const list17: Word[] = [
     ['Ingen frös ihjäl.', '没有人冻死。'],
     ['Spring inte ihjäl dig.', '别跑死了。'],
   ]), 840),
-  freq(noun('unge', 'en', '小孩（口）；幼崽', 'kid (informal) / young (of an animal)', 'ungen', 'ungar', null, [
+  freq(noun('unge', 'en', '小孩（口）；幼崽', 'kid (informal) / young (of an animal)', 'ungen', 'ungar', 'ungarna', [
     ['Unge, kom hit!', '孩子，过来！'],
     ['Ungen sover redan.', '这孩子已经睡了。'],
     ['Katten har tre ungar.', '那只猫有三只幼崽。'],
@@ -286,13 +286,13 @@ export const list17: Word[] = [
     ['Rummet har två fönster.', '这个房间有两扇窗。'],
     ['Fönstren vetter mot gatan.', '那些窗户朝向街道。'],
   ]), 847),
-  freq(noun('kontroll', 'en', '控制；检查', 'control / check', 'kontrollen', 'kontroller', null, [
+  freq(noun('kontroll', 'en', '控制；检查', 'control / check', 'kontrollen', 'kontroller', 'kontrollerna', [
     ['Hon har kontroll över läget.', '她控制着局面。'],
     ['Kontrollen vid dörren var snabb.', '门口的检查很快。'],
     ['De gjorde tre kontroller.', '他们做了三次检查。'],
     ['Situationen är under kontroll.', '局势在掌控之中。'],
   ]), 848),
-  freq(noun('olycka', 'en', '事故；不幸', 'accident / misfortune', 'olyckan', 'olyckor', null, [
+  freq(noun('olycka', 'en', '事故；不幸', 'accident / misfortune', 'olyckan', 'olyckor', 'olyckorna', [
     ['En olycka hände på vägen.', '路上出了一起事故。'],
     ['Olyckan var allvarlig.', '那起事故很严重。'],
     ['Två olyckor skedde i natt.', '夜里发生了两起事故。'],

@@ -10,13 +10,13 @@ export const list03: Word[] = [
     ['Vi flyttade hit i maj.', '我们五月搬到了这里。'],
     ['Kan du komma hit en stund?', '你能过来一会儿吗？'],
   ]), 101),
-  freq(noun('pappa', 'en', '爸爸', 'dad / father', 'pappan', 'pappor', null, [
+  freq(noun('pappa', 'en', '爸爸', 'dad / father', 'pappan', 'pappor', 'papporna', [
     ['Min pappa lagar mat.', '我爸爸做饭。'],
     ['Pappan väntar vid dörren.', '那位爸爸在门口等。'],
     ['Två pappor sitter där.', '两位爸爸坐在那里。'],
     ['Jag ringer pappa senare.', '我稍后给爸爸打电话。'],
   ]), 102),
-  freq(noun('mamma', 'en', '妈妈', 'mum / mother', 'mamman', 'mammor', null, [
+  freq(noun('mamma', 'en', '妈妈', 'mum / mother', 'mamman', 'mammor', 'mammorna', [
     ['Min mamma är hemma.', '我妈妈在家。'],
     ['Mamman läser en bok.', '那位妈妈在看书。'],
     ['Mammorna väntar utanför.', '那些妈妈在外面等。'],
@@ -106,7 +106,7 @@ export const list03: Word[] = [
     ['Har du tittat på bilden?', '你看过那张照片了吗？'],
     ['Titta här!', '看这里！'],
   ]), 117),
-  freq(noun('dag', 'en', '天；日子', 'day', 'dagen', 'dagar', null, [
+  freq(noun('dag', 'en', '天；日子', 'day', 'dagen', 'dagar', 'dagarna', [
     ['Vilken dag är det idag?', '今天是星期几？'],
     ['Dagen gick fort.', '这一天过得很快。'],
     ['Vi ses om tre dagar.', '我们三天后见。'],
@@ -190,7 +190,7 @@ export const list03: Word[] = [
     ['De döda löven ligger på marken.', '那些枯叶在地上。'],
     ['Fågeln är död.', '那只鸟死了。'],
   ]), 131),
-  freq(noun('tid', 'en', '时间', 'time', 'tiden', 'tider', null, [
+  freq(noun('tid', 'en', '时间', 'time', 'tiden', 'tider', 'tiderna', [
     ['Har du tid i morgon?', '你明天有时间吗？'],
     ['Tiden går fort.', '时间过得很快。'],
     ['På den tiden bodde vi här.', '那时候我们住在这里。'],
@@ -232,7 +232,7 @@ export const list03: Word[] = [
     ['De glömde sina nycklar.', '他们忘了自己的钥匙。'],
     ['Hon gick sin väg.', '她走了自己的路。'],
   ]), 138),
-  freq(noun('gång', 'en', '次；回', 'time / occasion', 'gången', 'gånger', null, [
+  freq(noun('gång', 'en', '次；回', 'time / occasion', 'gången', 'gånger', 'gångerna', [
     ['En gång till, tack.', '请再来一次。'],
     ['Första gången var jag nervös.', '第一次我很紧张。'],
     ['Hon har varit här tre gånger.', '她来过这里三次。'],
@@ -250,7 +250,7 @@ export const list03: Word[] = [
     ['Har du hört nyheten?', '你听到那个消息了吗？'],
     ['Hör efter vad hon säger.', '听清楚她说什么。'],
   ]), 141),
-  freq(noun('gud', 'en', '神；上帝', 'god / God', 'guden', 'gudar', null, [
+  freq(noun('gud', 'en', '神；上帝', 'god / God', 'guden', 'gudar', 'gudarna', [
     ['Tror du på Gud?', '你信上帝吗？'],
     ['Guden i sagan är vis.', '故事里的那位神很智慧。'],
     ['De gamla gudarna finns i boken.', '那些古老的神在书里。'],
@@ -292,7 +292,7 @@ export const list03: Word[] = [
     ['Hon ger hjälp varje dag.', '她每天都提供帮助。'],
     ['Kan jag få hjälp?', '我能得到帮助吗？'],
   ]), 148),
-  freq(verb('hända', '发生', 'to happen', 'händer', 'hände', 'hänt', null, [
+  freq(verb('hända', '发生', 'to happen', 'händer', 'hände', 'hänt', 'hänten', [
     ['Vad händer?', '发生了什么？'],
     ['Det hände i går kväll.', '那是昨晚发生的。'],
     ['Vad har hänt med cykeln?', '自行车怎么了？'],

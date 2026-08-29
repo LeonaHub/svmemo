@@ -65,7 +65,7 @@ export const list35: Word[] = [
     ['De vilda blommorna växer här.', '那些野花长在这儿。'],
     ['Stormen var vild i natt.', '夜里风暴很狂。'],
   ]), 1707),
-  freq(noun('granne', 'en', '邻居', 'neighbour', 'grannen', 'grannar', null, [
+  freq(noun('granne', 'en', '邻居', 'neighbour', 'grannen', 'grannar', 'grannarna', [
     ['Min granne hälsar alltid.', '我的邻居总是打招呼。'],
     ['Grannen lånar socker ibland.', '那位邻居有时来借糖。'],
     ['Vi har tre grannar i huset.', '这栋房子里我们有三个邻居。'],
@@ -126,7 +126,7 @@ export const list35: Word[] = [
     ['De falska nycklarna passade inte.', '那些假钥匙对不上。'],
     ['Var inte falsk mot vänner.', '别对朋友口是心非。'],
   ]), 1715),
-  freq(noun('fantasi', 'en', '想象；想象力；幻想', 'imagination / fantasy', 'fantasien', 'fantasier', null, [
+  freq(noun('fantasi', 'en', '想象；想象力；幻想', 'imagination / fantasy', 'fantasien', 'fantasier', 'fantasierna', [
     ['Barnet har en stark fantasi.', '这孩子想象力很强。'],
     ['Fantasien tar slut ibland.', '想象力有时会用尽。'],
     ['Hon har många fantasier om resan.', '她对这趟旅行有很多幻想。'],
@@ -180,7 +180,7 @@ export const list35: Word[] = [
     ['De spanska gästerna kommer i kväll.', '那些西班牙客人今晚来。'],
     ['Maten är spansk.', '这是西班牙菜。'],
   ]), 1723),
-  freq(noun('medlem', 'en', '成员；会员', 'member', 'medlemmen', 'medlemmar', null, [
+  freq(noun('medlem', 'en', '成员；会员', 'member', 'medlemmen', 'medlemmar', 'medlemmarna', [
     ['Hon är medlem i klubben.', '她是俱乐部会员。'],
     ['Medlemmen betalar i dag.', '这位会员今天缴费。'],
     ['Två medlemmar saknas.', '缺了两名成员。'],
@@ -229,13 +229,13 @@ export const list35: Word[] = [
     ['Vi köpte två beten i affären.', '我们在店里买了两个诱饵。'],
     ['Betena låg i burken.', '那些诱饵在罐子里。'],
   ]), 1729),
-  freq(noun('sorg', 'en', '悲伤；哀痛', 'sorrow / grief', 'sorgen', 'sorger', null, [
+  freq(noun('sorg', 'en', '悲伤；哀痛', 'sorrow / grief', 'sorgen', 'sorger', 'sorgerna', [
     ['Hon bar på en tung sorg.', '她心里压着一份沉重的悲伤。'],
     ['Sorgen kom efter beskedet.', '消息传来后哀痛袭来。'],
     ['Alla har sina sorger.', '人人都有自己的悲伤。'],
     ['Dela sorgen med oss.', '和我们分担这份哀痛。'],
   ]), 1730),
-  freq(noun('detalj', 'en', '细节；零件', 'detail / part', 'detaljen', 'detaljer', null, [
+  freq(noun('detalj', 'en', '细节；零件', 'detail / part', 'detaljen', 'detaljer', 'detaljerna', [
     ['En detalj saknas i planen.', '计划里缺一个细节。'],
     ['Detaljen är viktig.', '这个细节很重要。'],
     ['Hon minns alla detaljer.', '她记得所有细节。'],
@@ -259,7 +259,7 @@ export const list35: Word[] = [
     ['De försvunna nycklarna låg i lådan.', '那些失踪的钥匙在抽屉里。'],
     ['Katten är försvunnen igen.', '猫又失踪了。'],
   ]), 1733, c([['för', '离开'], ['svunnen', '已消失的']], '已经离开并消失的，合起来就是失踪的。')),
-  freq(noun('moster', 'en', '姨妈；舅妈（母系）', 'maternal aunt', 'mostern', 'mostrar', null, [
+  freq(noun('moster', 'en', '姨妈；舅妈（母系）', 'maternal aunt', 'mostern', 'mostrar', 'mostrarna', [
     ['Min moster bor i Malmö.', '我姨妈住在马尔默。'],
     ['Mostern kommer på söndag.', '姨妈星期天来。'],
     ['Jag har två mostrar.', '我有两位姨妈。'],
@@ -277,13 +277,13 @@ export const list35: Word[] = [
     ['De djupa skogarna är mörka.', '那些深林很暗。'],
     ['Vattnet är djupt här.', '这儿的水很深。'],
   ]), 1735),
-  freq(noun('kontanter', null, '现金', 'cash', null, 'kontanter', null, [
+  freq(noun('kontanter', null, '现金', 'cash', 'kontanterna', 'kontanter', 'kontanterna', [
     ['Har du kontanter på dig?', '你身上有现金吗？'],
     ['Vi tar bara kontanter här.', '我们这儿只收现金。'],
     ['Hon betalade med kontanter.', '她用现金付的。'],
     ['Ta ut kontanter i automaten.', '在取款机取现金。'],
   ]), 1736),
-  freq(noun('soffa', 'en', '沙发', 'sofa / couch', 'soffan', 'soffor', null, [
+  freq(noun('soffa', 'en', '沙发', 'sofa / couch', 'soffan', 'soffor', 'sofforna', [
     ['Katten sover i soffan.', '猫在沙发上睡。'],
     ['Soffan är för kort för honom.', '这张沙发对他来说太短。'],
     ['Vi köpte två soffor i går.', '我们昨天买了两张沙发。'],
@@ -373,7 +373,7 @@ export const list35: Word[] = [
     ['Antalet har ökat snabbt.', '人数已经快速增加。'],
     ['Öka volymen lite.', '把音量调高一点。'],
   ]), 1749),
-  freq(noun('expert', 'en', '专家', 'expert', 'experten', 'experter', null, [
+  freq(noun('expert', 'en', '专家', 'expert', 'experten', 'experter', 'experterna', [
     ['Hon är expert på växter.', '她是植物专家。'],
     ['Experten svarade kort.', '那位专家回答得很短。'],
     ['Två experter kom till mötet.', '两位专家来开会了。'],

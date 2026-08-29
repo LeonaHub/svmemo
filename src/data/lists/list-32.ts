@@ -82,7 +82,7 @@ export const list32: Word[] = [
     ['Två kar står i källaren.', '地下室放着两个大盆。'],
     ['Karen måste tömmas.', '那些盆得倒空。'],
   ]), 1561),
-  freq(noun('patient', 'en', '病人；患者', 'patient', 'patienten', 'patienter', null, [
+  freq(noun('patient', 'en', '病人；患者', 'patient', 'patienten', 'patienter', 'patienterna', [
     ['En patient väntar där.', '一位病人在那儿等。'],
     ['Patienten sover nu.', '病人现在在睡觉。'],
     ['Två patienter kom i dag.', '今天来了两位病人。'],
@@ -94,7 +94,7 @@ export const list32: Word[] = [
     ['Köp godis till festen.', '给聚会买点糖。'],
     ['Hon tar inte godis i veckan.', '她工作日不吃糖。'],
   ]), 1563),
-  freq(noun('nivå', 'en', '水平；层级；高度', 'level', 'nivån', 'nivåer', null, [
+  freq(noun('nivå', 'en', '水平；层级；高度', 'level', 'nivån', 'nivåer', 'nivåerna', [
     ['Nivån på vattnet steg.', '水位涨了。'],
     ['Vi pratar på samma nivå.', '我们在同一层次上谈。'],
     ['Två nivåer finns i huset.', '房子里有两层。'],
@@ -160,13 +160,13 @@ export const list32: Word[] = [
     ['Jag vill inte ha mer trubbel.', '我不要再有麻烦了。'],
     ['Håll dig undan från trubbel.', '离麻烦远一点。'],
   ]), 1573),
-  freq(noun('kod', 'en', '密码；代码；暗号', 'code', 'koden', 'koder', null, [
+  freq(noun('kod', 'en', '密码；代码；暗号', 'code', 'koden', 'koder', 'koderna', [
     ['Jag glömde koden.', '我忘了密码。'],
     ['Koden till dörren är 1234.', '门的密码是1234。'],
     ['Hon har flera koder.', '她有好几个密码。'],
     ['Skriv koden här.', '把密码写在这儿。'],
   ]), 1574),
-  freq(noun('check', 'en', '支票', 'cheque / check', 'checken', 'checkar', null, [
+  freq(noun('check', 'en', '支票', 'cheque / check', 'checken', 'checkar', 'checkarna', [
     ['Hon betalade med check.', '她用支票付了款。'],
     ['Checken är ogiltig.', '这张支票无效。'],
     ['Två checkar låg i kuvertet.', '信封里有两张支票。'],
@@ -222,7 +222,7 @@ export const list32: Word[] = [
     ['Gå nu, ty tiden är knapp.', '现在走吧，因为时间紧。'],
     ['Ty natten föll, tände vi ljus.', '因为夜幕降临，我们点了灯。'],
   ]), 1581),
-  freq(noun('torsdag', 'en', '星期四', 'Thursday', 'torsdagen', 'torsdagar', null, [
+  freq(noun('torsdag', 'en', '星期四', 'Thursday', 'torsdagen', 'torsdagar', 'torsdagarna', [
     ['Vi ses på torsdag.', '我们星期四见。'],
     ['Torsdagen blev solig.', '这个星期四出了太阳。'],
     ['Hon jobbar tre torsdagar i rad.', '她连续三个星期四上班。'],
@@ -270,7 +270,7 @@ export const list32: Word[] = [
     ['Har ni prövat receptet?', '你们试过这个食谱了吗？'],
     ['Pröva själv först.', '先自己试一试。'],
   ]), 1589),
-  freq(noun('vagn', 'en', '车子；车厢；手推车', 'wagon / carriage / cart', 'vagnen', 'vagnar', null, [
+  freq(noun('vagn', 'en', '车子；车厢；手推车', 'wagon / carriage / cart', 'vagnen', 'vagnar', 'vagnarna', [
     ['En vagn står vid dörren.', '门口停着一辆车。'],
     ['Vagnen är full med mat.', '这辆车装满了食物。'],
     ['Två vagnar rullade förbi.', '两辆车滚了过去。'],
@@ -318,7 +318,7 @@ export const list32: Word[] = [
     ['Två flygplan väntar på banan.', '两架飞机在跑道上等。'],
     ['Flygplanen står stilla i natt.', '那些飞机夜里停着。'],
   ]), 1597, c([['flyg', '飞行'], ['plan', '机器／平面']], '用来飞行的机器，合起来就是飞机。')),
-  freq(noun('kollega', 'en', '同事', 'colleague', 'kollegan', 'kollegor', null, [
+  freq(noun('kollega', 'en', '同事', 'colleague', 'kollegan', 'kollegor', 'kollegorna', [
     ['Min kollega kommer snart.', '我的同事马上到。'],
     ['Kollegan sitter där borta.', '那位同事坐在那边。'],
     ['Två kollegor väntar i rummet.', '两位同事在房间里等。'],

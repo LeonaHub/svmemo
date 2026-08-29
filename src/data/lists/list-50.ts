@@ -10,7 +10,7 @@ export const list50: Word[] = [
     ['Lönerna betalas i december.', '工资在十二月发。'],
     ['Spara till december, så räcker det.', '存到十二月就够了。'],
   ]), 2451),
-  freq(noun('måltid', 'en', '一餐；进餐时间', 'meal', 'måltiden', 'måltider', null, [
+  freq(noun('måltid', 'en', '一餐；进餐时间', 'meal', 'måltiden', 'måltider', 'måltiderna', [
     ['Vi äter tre måltider om dagen.', '我们一天吃三餐。'],
     ['Måltiden varade en timme.', '这一餐持续了一个小时。'],
     ['Efter måltiden gick hon ut.', '吃完饭她出去了。'],
@@ -192,7 +192,7 @@ export const list50: Word[] = [
     ],
     '“再过来”，合起来就是回来、再谈。',
   )),
-  freq(noun('stuga', 'en', '小屋；小木屋', 'cottage / cabin', 'stugan', 'stugor', null, [
+  freq(noun('stuga', 'en', '小屋；小木屋', 'cottage / cabin', 'stugan', 'stugor', 'stugorna', [
     ['Vi hyr en stuga vid sjön.', '我们在湖边租了一间小屋。'],
     ['Stugan är röd med vita knutar.', '那间小屋是红墙白角。'],
     ['Två stugor står tomma i vinter.', '两间小屋冬天空着。'],
@@ -264,7 +264,7 @@ export const list50: Word[] = [
     ['De kontanta köpen minskar.', '那些现金购买在减少。'],
     ['Har du kontant på dig?', '你身上有现金吗？'],
   ]), 2479),
-  freq(noun('feber', 'en', '发烧；热度', 'fever', 'febern', 'febrar', null, [
+  freq(noun('feber', 'en', '发烧；热度', 'fever', 'febern', 'febrar', 'febrarna', [
     ['Barnet har feber i dag.', '孩子今天发烧。'],
     ['Febern gick ner i natt.', '烧夜里退了。'],
     ['Hon har haft flera febrar i år.', '她今年发过几次烧。'],
@@ -300,7 +300,7 @@ export const list50: Word[] = [
     ['Ett nytt center öppnar i vår.', '一个新中心春天开业。'],
     ['Gå till centret efter jobbet.', '下班后去中心。'],
   ]), 2485),
-  freq(noun('dagbok', 'en', '日记', 'diary', 'dagboken', 'dagböcker', null, [
+  freq(noun('dagbok', 'en', '日记', 'diary', 'dagboken', 'dagböcker', 'dagböckerna', [
     ['Hon skriver dagbok varje kväll.', '她每天晚上写日记。'],
     ['Dagboken ligger i lådan.', '日记本在抽屉里。'],
     ['Två dagböcker fanns i kartongen.', '纸箱里有两本日记。'],

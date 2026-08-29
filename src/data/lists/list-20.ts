@@ -4,19 +4,19 @@ import type { Word } from '../../types/word'
 
 /** Ranks 951–1000. Primary POS is the high-frequency use, not every sense in the book. */
 export const list20: Word[] = [
-  freq(noun('orsak', 'en', '原因；缘故', 'cause / reason', 'orsaken', 'orsaker', null, [
+  freq(noun('orsak', 'en', '原因；缘故', 'cause / reason', 'orsaken', 'orsaker', 'orsakerna', [
     ['Vi vet inte orsaken än.', '我们还不知道原因。'],
     ['Orsaken är enkel.', '原因很简单。'],
     ['Det finns flera orsaker.', '有好几个原因。'],
     ['Ingen orsak!', '不客气！'],
   ]), 951),
-  freq(noun('skalle', 'en', '脑袋（口）；颅骨', 'head (informal) / skull', 'skallen', 'skallar', null, [
+  freq(noun('skalle', 'en', '脑袋（口）；颅骨', 'head (informal) / skull', 'skallen', 'skallar', 'skallarna', [
     ['Han slog skallen i dörren.', '他把脑袋撞到门上了。'],
     ['Skallen gör ont.', '这脑袋疼。'],
     ['De har hårda skallar.', '他们脑瓜很硬。'],
     ['Använd skallen!', '动动脑子！'],
   ]), 952),
-  freq(noun('titt', 'en', '一眼；一瞥；短访', 'glance / peek / short visit', 'titten', 'tittar', null, [
+  freq(noun('titt', 'en', '一眼；一瞥；短访', 'glance / peek / short visit', 'titten', 'tittar', 'tittarna', [
     ['Ta en titt på det här.', '看一眼这个。'],
     ['Titten varade bara en sekund.', '那一瞥只持续了一秒。'],
     ['Hon kastade två tittar bakåt.', '她往后瞥了两眼。'],
@@ -112,7 +112,7 @@ export const list20: Word[] = [
     ['Hon har hundra frågor.', '她有一百个问题。'],
     ['Vänta hundra dagar till.', '再等一百天。'],
   ]), 968),
-  freq(noun('bank', 'en', '银行', 'bank', 'banken', 'banker', null, [
+  freq(noun('bank', 'en', '银行', 'bank', 'banken', 'banker', 'bankerna', [
     ['Jag går till banken.', '我去银行。'],
     ['Banken stänger klockan tre.', '银行三点关门。'],
     ['Det finns två banker i stan.', '城里有两家银行。'],
@@ -142,7 +142,7 @@ export const list20: Word[] = [
     ['Hon tar ansvar för barnet.', '她对这孩子负责。'],
     ['Ta på dig ansvaret.', '把责任担起来。'],
   ]), 972),
-  freq(noun('regel', 'en', '规则；规定', 'rule', 'regeln', 'regler', null, [
+  freq(noun('regel', 'en', '规则；规定', 'rule', 'regeln', 'regler', 'reglerna', [
     ['Det är en viktig regel.', '这是一条重要规则。'],
     ['Regeln gäller alla.', '这条规则对所有人适用。'],
     ['Följ reglerna här.', '遵守这里的规定。'],
@@ -160,7 +160,7 @@ export const list20: Word[] = [
     ['Trycken i rummen är olika.', '那些房间里的压力不同。'],
     ['Boken finns redan i tryck.', '这本书已经印出来了。'],
   ]), 975),
-  freq(noun('kraft', 'en', '力量；力气；效力', 'strength / power / force', 'kraften', 'krafter', null, [
+  freq(noun('kraft', 'en', '力量；力气；效力', 'strength / power / force', 'kraften', 'krafter', 'krafterna', [
     ['Hon har inte kraft i dag.', '她今天没有力气。'],
     ['Kraften räcker inte.', '这股力量不够。'],
     ['De samlade alla krafter.', '他们使出了全部力气。'],
@@ -202,7 +202,7 @@ export const list20: Word[] = [
     ['Tre träd föll i stormen.', '三棵树在风暴中倒了。'],
     ['Träden blommar nu.', '那些树现在开花了。'],
   ]), 982),
-  freq(noun('fot', 'en', '脚；底部', 'foot', 'foten', 'fötter', null, [
+  freq(noun('fot', 'en', '脚；底部', 'foot', 'foten', 'fötter', 'fötterna', [
     ['Hon bröt foten.', '她把脚摔折了。'],
     ['Foten gör ont.', '这只脚疼。'],
     ['Han har kalla fötter.', '他脚冷。'],
@@ -238,19 +238,19 @@ export const list20: Word[] = [
     ['Vill du ha kött eller fisk?', '你要肉还是鱼？'],
     ['Kött och potatis, tack.', '肉和土豆，谢谢。'],
   ]), 988),
-  freq(noun('hjärna', 'en', '大脑；头脑', 'brain', 'hjärnan', 'hjärnor', null, [
+  freq(noun('hjärna', 'en', '大脑；头脑', 'brain', 'hjärnan', 'hjärnor', 'hjärnorna', [
     ['Du måste använda hjärnan.', '你得动脑子。'],
     ['Hjärnan behöver vila.', '大脑需要休息。'],
     ['De är skarpa hjärnor.', '他们是聪明人。'],
     ['Tänk med hjärnan.', '用脑子想。'],
   ]), 989),
-  freq(noun('mun', 'en', '嘴；口', 'mouth', 'munnen', 'munnar', null, [
+  freq(noun('mun', 'en', '嘴；口', 'mouth', 'munnen', 'munnar', 'munnarna', [
     ['Öppna munnen, tack.', '请张开嘴。'],
     ['Munnen är torr.', '嘴里发干。'],
     ['De har stora munnar.', '他们嘴巴很大。'],
     ['Håll mun!', '闭嘴！'],
   ]), 990),
-  freq(noun('fisk', 'en', '鱼', 'fish', 'fisken', 'fiskar', null, [
+  freq(noun('fisk', 'en', '鱼', 'fish', 'fisken', 'fiskar', 'fiskarna', [
     ['Vi äter fisk i dag.', '我们今天吃鱼。'],
     ['Fisken är färsk.', '这条鱼很新鲜。'],
     ['Tre fiskar simmar där.', '三条鱼在那儿游。'],
@@ -292,7 +292,7 @@ export const list20: Word[] = [
     ['Två kök finns i huset.', '房子里有两个厨房。'],
     ['Hon gillar det franska köket.', '她喜欢法国菜。'],
   ]), 997),
-  freq(noun('vägg', 'en', '墙；墙壁', 'wall', 'väggen', 'väggar', null, [
+  freq(noun('vägg', 'en', '墙；墙壁', 'wall', 'väggen', 'väggar', 'väggarna', [
     ['Tavlan hänger på väggen.', '画挂在墙上。'],
     ['Väggen är vit.', '这面墙是白的。'],
     ['Husets väggar är tjocka.', '这房子的墙很厚。'],

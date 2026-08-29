@@ -125,7 +125,7 @@ export const list47: Word[] = [
     ],
     '“给机动车走的路”，就是高速公路。',
   )),
-  freq(noun('gas', 'en', '气体；煤气；油门', 'gas / accelerator', 'gasen', 'gaser', null, [
+  freq(noun('gas', 'en', '气体；煤气；油门', 'gas / accelerator', 'gasen', 'gaser', 'gaserna', [
     ['Spisen går på gas.', '炉子用煤气。'],
     ['Gasen luktade starkt i köket.', '厨房里煤气味很重。'],
     ['Flera gaser blandas i röret.', '好几种气体在管子里混合。'],
@@ -143,7 +143,7 @@ export const list47: Word[] = [
     ],
     '“来拜访的人”，就是访客、参观者。',
   )),
-  freq(noun('påse', 'en', '袋子', 'bag', 'påsen', 'påsar', null, [
+  freq(noun('påse', 'en', '袋子', 'bag', 'påsen', 'påsar', 'påsarna', [
     ['Hon bar en påse med äpplen.', '她提着一袋苹果。'],
     ['Påsen gick sönder i kassan.', '袋子在收银台破了。'],
     ['Två påsar räcker till maten.', '两个袋子够装这些食物。'],
@@ -288,7 +288,7 @@ export const list47: Word[] = [
     ['De politiska debatterna blev långa.', '那些政治辩论拖得很长。'],
     ['Håll frågan politisk, inte personlig.', '把问题放在政治上，别对人。'],
   ]), 2334),
-  freq(noun('instruktion', 'en', '说明；指示', 'instruction / directions', 'instruktionen', 'instruktioner', null, [
+  freq(noun('instruktion', 'en', '说明；指示', 'instruction / directions', 'instruktionen', 'instruktioner', 'instruktionerna', [
     ['Läs instruktionen före start.', '开始前先读说明。'],
     ['Instruktionen var otydlig.', '那份说明写得不清楚。'],
     ['Följ instruktionerna noga.', '仔细按那些指示做。'],
@@ -318,7 +318,7 @@ export const list47: Word[] = [
     ],
     '由“原因”变成动词，就是造成、引起。',
   )),
-  freq(noun('siffra', 'en', '数字；数目', 'figure / numeral / digit', 'siffran', 'siffror', null, [
+  freq(noun('siffra', 'en', '数字；数目', 'figure / numeral / digit', 'siffran', 'siffror', 'siffrorna', [
     ['Skriv siffran i rutan.', '把这个数字写进框里。'],
     ['Siffran är för hög.', '这个数目太高了。'],
     ['Hon läste upp tre siffror.', '她念了三个数字。'],
@@ -348,13 +348,13 @@ export const list47: Word[] = [
     ],
     '“只属于某一时机的”，就是临时的、暂时的。',
   )),
-  freq(noun('frukt', 'en', '水果；果实', 'fruit', 'frukten', 'frukter', null, [
+  freq(noun('frukt', 'en', '水果；果实', 'fruit', 'frukten', 'frukter', 'frukterna', [
     ['Vi köper frukt på torget.', '我们在市场上买水果。'],
     ['Frukten är mogen nu.', '这水果现在熟了。'],
     ['Hon packade tre frukter i påsen.', '她往袋子里装了三个水果。'],
     ['Ät frukten före middagen.', '晚饭前把水果吃了。'],
   ]), 2342),
-  freq(noun('front', 'en', '正面；前线', 'front', 'fronten', 'fronter', null, [
+  freq(noun('front', 'en', '正面；前线', 'front', 'fronten', 'fronter', 'fronterna', [
     ['Huset har en röd front.', '这房子正面是红的。'],
     ['Fronten mot vägen är nymålad.', '朝路的那面刚刷过。'],
     ['Två fronter öppnades i norr.', '北边开辟了两条战线。'],

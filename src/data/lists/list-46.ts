@@ -22,7 +22,7 @@ export const list46: Word[] = [
     ['Två sikten gick sönder.', '两个瞄准器坏了。'],
     ['Siktena justerades före jakten.', '打猎前那些瞄准器调过了。'],
   ]), 2253),
-  freq(noun('teknik', 'en', '技术；技巧', 'technology / technique', 'tekniken', 'tekniker', null, [
+  freq(noun('teknik', 'en', '技术；技巧', 'technology / technique', 'tekniken', 'tekniker', 'teknikerna', [
     ['Tekniken i branschen går framåt.', '这行业的技术在进步。'],
     ['Det krävs en viss teknik att öppna låset.', '开这锁需要一点技巧。'],
     ['Hon lär ut tre tekniker.', '她教三种技法。'],
@@ -34,7 +34,7 @@ export const list46: Word[] = [
     ['Mer och mer folk kommer hit.', '越来越多的人来这儿。'],
     ['Jobbet tar mer och mer tid.', '这工作越来越花时间。'],
   ]), 2255, c([['mer', '更多'], ['och', '和'], ['mer', '更多']], '一次又一次地更多，合起来就是越来越。')),
-  freq(noun('reaktion', 'en', '反应', 'reaction', 'reaktionen', 'reaktioner', null, [
+  freq(noun('reaktion', 'en', '反应', 'reaction', 'reaktionen', 'reaktioner', 'reaktionerna', [
     ['Hans reaktion kom sent.', '他的反应来得晚。'],
     ['Reaktionen på nyheten var blandad.', '对这消息的反应好坏都有。'],
     ['Olika reaktioner hördes i rummet.', '房间里能听到不同的反应。'],
@@ -52,7 +52,7 @@ export const list46: Word[] = [
     ['Soldaterna övade på fälten.', '士兵在那些场地上训练。'],
     ['Hon är känd inom sitt fält.', '她在自己的领域很有名。'],
   ]), 2258),
-  freq(noun('behandling', 'en', '治疗；处理', 'treatment / handling', 'behandlingen', 'behandlingar', null, [
+  freq(noun('behandling', 'en', '治疗；处理', 'treatment / handling', 'behandlingen', 'behandlingar', 'behandlingarna', [
     ['Behandlingen tar sex veckor.', '这个疗程要六周。'],
     ['Hon fick en ny behandling.', '她接受了一种新治疗。'],
     ['Två behandlingar bokades in.', '预约了两次治疗。'],
@@ -94,7 +94,7 @@ export const list46: Word[] = [
     ],
     '“朝对方扑过去”，合起来就是进攻、袭击。',
   )),
-  freq(noun('pasta', 'en', '意大利面；糊状物', 'pasta / paste', 'pastan', 'pastor', null, [
+  freq(noun('pasta', 'en', '意大利面；糊状物', 'pasta / paste', 'pastan', 'pastor', 'pastorna', [
     ['Vi äter pasta i kväll.', '我们今晚吃意面。'],
     ['Pastan kokar över.', '意面要溢出来了。'],
     ['Olika pastor tar olika tid att koka.', '不同的意面煮的时间不同。'],
@@ -179,7 +179,7 @@ export const list46: Word[] = [
     ['Han fyller år i augusti.', '他八月过生日。'],
     ['Spara ledigheten till augusti.', '把假留到八月。'],
   ]), 2273),
-  freq(noun('butik', 'en', '商店', 'shop / store', 'butiken', 'butiker', null, [
+  freq(noun('butik', 'en', '商店', 'shop / store', 'butiken', 'butiker', 'butikerna', [
     ['En ny butik öppnar vid torget.', '广场边一家新店要开张。'],
     ['Butiken stänger klockan sju.', '这家店七点关门。'],
     ['Två butiker ligger på samma gata.', '同一条街上有两家店。'],
@@ -299,7 +299,7 @@ export const list46: Word[] = [
     ['Doften har retat aptiten.', '香味把胃口吊起来了。'],
     ['Reta inte katten.', '别惹那只猫。'],
   ]), 2289),
-  freq(noun('ko', 'en', '母牛', 'cow', 'kon', 'kor', null, [
+  freq(noun('ko', 'en', '母牛', 'cow', 'kon', 'kor', 'korna', [
     ['Kon står i ladugården.', '那头牛在牲口棚里。'],
     ['En ko betar vid staketet.', '一头牛在篱笆边吃草。'],
     ['Tre kor gick över vägen.', '三头牛走过马路。'],
@@ -335,7 +335,7 @@ export const list46: Word[] = [
     ],
     '“用话说过去”，合起来就是说服。',
   )),
-  freq(noun('utsikt', 'en', '景色；前景', 'view / prospect', 'utsikten', 'utsikter', null, [
+  freq(noun('utsikt', 'en', '景色；前景', 'view / prospect', 'utsikten', 'utsikter', 'utsikterna', [
     ['Rummet har utsikt mot sjön.', '房间能看见湖。'],
     ['Utsikten från taket är vid.', '从屋顶看出去视野很开阔。'],
     ['Goda utsikter finns för jobbet.', '这工作前景不错。'],

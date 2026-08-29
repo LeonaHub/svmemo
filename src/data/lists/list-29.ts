@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 1401–1450. Primary POS is the high-frequency use, not every sense in the book. */
 export const list29: Word[] = [
-  freq(noun('tomt', 'en', '地块；宅基地', 'plot / site', 'tomten', 'tomter', null, [
+  freq(noun('tomt', 'en', '地块；宅基地', 'plot / site', 'tomten', 'tomter', 'tomterna', [
     ['De köpte en tomt vid sjön.', '他们买了湖边一块地。'],
     ['Tomten är stor nog.', '这块地够大。'],
     ['Två tomter ligger tomma.', '两块地空着。'],
@@ -16,7 +16,7 @@ export const list29: Word[] = [
     ['Har ni hanterat det än?', '你们处理这件事了吗？'],
     ['Hantera nyckeln försiktigt.', '小心拿这把钥匙。'],
   ]), 1402),
-  freq(noun('klubb', 'en', '俱乐部', 'club', 'klubben', 'klubbar', null, [
+  freq(noun('klubb', 'en', '俱乐部', 'club', 'klubben', 'klubbar', 'klubbarna', [
     ['Hon är med i en klubb.', '她参加了一个俱乐部。'],
     ['Klubben möts på måndag.', '俱乐部星期一开会。'],
     ['Det finns två klubbar i stan.', '城里有两个俱乐部。'],
@@ -47,13 +47,13 @@ export const list29: Word[] = [
     ['Vi ger dem vårt stöd.', '我们给他们支持。'],
     ['De två stöden är för korta.', '那两个支架太短了。'],
   ]), 1406),
-  freq(noun('webbplats', 'en', '网站', 'website', 'webbplatsen', 'webbplatser', null, [
+  freq(noun('webbplats', 'en', '网站', 'website', 'webbplatsen', 'webbplatser', 'webbplatserna', [
     ['Vi har en ny webbplats.', '我们有一个新网站。'],
     ['Webbplatsen ligger nere.', '网站挂了。'],
     ['Hon jämför tre webbplatser.', '她在比较三个网站。'],
     ['Öppna webbplatsen i datorn.', '在电脑上打开这个网站。'],
   ]), 1407, c([['webb', '网络'], ['plats', '地方']], '网上的地方，合起来就是网站。')),
-  freq(noun('glass', 'en', '冰淇淋', 'ice cream', 'glassen', 'glassar', null, [
+  freq(noun('glass', 'en', '冰淇淋', 'ice cream', 'glassen', 'glassar', 'glassarna', [
     ['Ett barn äter glass.', '一个孩子在吃冰淇淋。'],
     ['Glassen smälter i solen.', '冰淇淋在太阳下化了。'],
     ['Vi köpte två glassar.', '我们买了两个冰淇淋。'],
@@ -65,7 +65,7 @@ export const list29: Word[] = [
     ['De andra har gått hem.', '其他人已经回家了。'],
     ['Andra dagen var bättre.', '第二天更好了。'],
   ]), 1409),
-  freq(noun('låda', 'en', '盒子；抽屉', 'box / drawer', 'lådan', 'lådor', null, [
+  freq(noun('låda', 'en', '盒子；抽屉', 'box / drawer', 'lådan', 'lådor', 'lådorna', [
     ['Nyckeln ligger i en låda.', '钥匙在一个盒子里。'],
     ['Lådan går inte att öppna.', '这个抽屉打不开。'],
     ['Hon har tre lådor i byrån.', '她柜子里有三个抽屉。'],
@@ -125,7 +125,7 @@ export const list29: Word[] = [
     ['Gå till posten efter jobbet.', '下班后去邮局。'],
     ['Vi väntar på posten.', '我们在等邮件。'],
   ]), 1418),
-  freq(noun('planet', 'en', '行星', 'planet', 'planeten', 'planeter', null, [
+  freq(noun('planet', 'en', '行星', 'planet', 'planeten', 'planeter', 'planeterna', [
     ['Jorden är en planet.', '地球是一颗行星。'],
     ['Planeten är kall där ute.', '那颗行星在外面很冷。'],
     ['Det finns åtta planeter.', '有八颗行星。'],
@@ -155,7 +155,7 @@ export const list29: Word[] = [
     ['Det har rykt här hela dan.', '这里冒了一整天烟。'],
     ['Huvudet ryker av alla frågor.', '问题太多，脑子都冒烟了。'],
   ]), 1423),
-  freq(noun('paus', 'en', '休息；暂停', 'pause / break', 'pausen', 'pauser', null, [
+  freq(noun('paus', 'en', '休息；暂停', 'pause / break', 'pausen', 'pauser', 'pauserna', [
     ['Vi tar en paus nu.', '我们现在休息一下。'],
     ['Pausen varar i tio minuter.', '这段休息持续十分钟。'],
     ['Det blir två pauser i pjäsen.', '戏里有两次中场休息。'],
@@ -167,7 +167,7 @@ export const list29: Word[] = [
     ['Ordet är vulgärt, använd det sällan.', '这个词很粗俗，少用。'],
     ['De skrattade åt röven på byxorna.', '他们笑裤子后面那一块。'],
   ], ['vulgar']), 1425),
-  freq(noun('stat', 'en', '国家；政府', 'state / government', 'staten', 'stater', null, [
+  freq(noun('stat', 'en', '国家；政府', 'state / government', 'staten', 'stater', 'staterna', [
     ['Staten betalar för skolan.', '国家给学校出钱。'],
     ['Det är en liten stat i norr.', '那是北方一个小国家。'],
     ['Flera stater skrev på avtalet.', '好几个国家签了协议。'],
@@ -179,7 +179,7 @@ export const list29: Word[] = [
     ['Det finns flera öknar i Afrika.', '非洲有好几片沙漠。'],
     ['Öknarna är torra.', '那些沙漠很干燥。'],
   ]), 1427),
-  freq(noun('kostym', 'en', '西装；戏服', 'suit / costume', 'kostymen', 'kostymer', null, [
+  freq(noun('kostym', 'en', '西装；戏服', 'suit / costume', 'kostymen', 'kostymer', 'kostymerna', [
     ['Han har en svart kostym.', '他有一套黑西装。'],
     ['Kostymen sitter bra.', '这套西装很合身。'],
     ['Skådespelarna byter kostymer.', '演员们在换衣服。'],
@@ -233,7 +233,7 @@ export const list29: Word[] = [
     ['Laget har elva spelare.', '这支队伍有十一名选手。'],
     ['Spelarna vilar nu.', '那些选手现在在休息。'],
   ]), 1436, c([['spela', '玩／比赛'], ['-are', '……的人']], '参加比赛或游戏的人，合起来就是选手、玩家。')),
-  freq(noun('erfarenhet', 'en', '经验；经历', 'experience', 'erfarenheten', 'erfarenheter', null, [
+  freq(noun('erfarenhet', 'en', '经验；经历', 'experience', 'erfarenheten', 'erfarenheter', 'erfarenheterna', [
     ['Hon har lång erfarenhet.', '她经验很丰富。'],
     ['Erfarenheten hjälpte oss.', '这次经历帮了我们。'],
     ['Vi delar våra erfarenheter.', '我们分享各自的经验。'],
@@ -269,7 +269,7 @@ export const list29: Word[] = [
     ['De imponerande resultaten kom sent.', '那些出色的结果来得很晚。'],
     ['Hon är imponerande lugn.', '她出奇地冷静。'],
   ]), 1441),
-  freq(noun('byxa', 'en', '裤子', 'trousers / pants', 'byxan', 'byxor', null, [
+  freq(noun('byxa', 'en', '裤子', 'trousers / pants', 'byxan', 'byxor', 'byxorna', [
     ['Byxan är för lång.', '这条裤子太长。'],
     ['Hon köpte nya byxor.', '她买了新裤子。'],
     ['Mina byxor är blå.', '我的裤子是蓝色的。'],
@@ -281,13 +281,13 @@ export const list29: Word[] = [
     ['I sagan vinner djävulen aldrig.', '故事里魔鬼从来赢不了。'],
     ['Ropa inte på djävulen.', '别把魔鬼招来。'],
   ]), 1443),
-  freq(noun('klient', 'en', '客户；委托人', 'client', 'klienten', 'klienter', null, [
+  freq(noun('klient', 'en', '客户；委托人', 'client', 'klienten', 'klienter', 'klienterna', [
     ['Advokaten ringer sin klient.', '律师在给委托人打电话。'],
     ['Klienten väntar i rummet.', '客户在房间里等。'],
     ['Hon har tre klienter i dag.', '她今天有三个客户。'],
     ['Hjälp klienten först.', '先帮这位客户。'],
   ]), 1444),
-  freq(noun('fotboll', 'en', '足球；足球运动', 'football / soccer', 'fotbollen', 'fotbollar', null, [
+  freq(noun('fotboll', 'en', '足球；足球运动', 'football / soccer', 'fotbollen', 'fotbollar', 'fotbollarna', [
     ['Barnen sparkar fotboll.', '孩子们在踢足球。'],
     ['Fotbollen är ny.', '这个足球是新的。'],
     ['Vi har två fotbollar i lådan.', '盒子里有两个足球。'],

@@ -64,13 +64,13 @@ export const list58: Word[] = [
     ],
     '戴在脖子上的带子，就是项链、项圈。',
   )),
-  freq(noun('frisyr', 'en', '发型', 'hairstyle', 'frisyren', 'frisyrer', null, [
+  freq(noun('frisyr', 'en', '发型', 'hairstyle', 'frisyren', 'frisyrer', 'frisyrerna', [
     ['Hon har en ny frisyr.', '她换了新发型。'],
     ['Frisyren passar hennes ansikte.', '这个发型适合她的脸。'],
     ['Två frisyrer fanns i tidningen.', '杂志上有两种发型。'],
     ['Byt frisyr till festen.', '换个发型去参加聚会。'],
   ]), 2857),
-  freq(noun('undergång', 'en', '灭亡；没落；地下通道', 'downfall / ruin / underpass', 'undergången', 'undergångar', null, [
+  freq(noun('undergång', 'en', '灭亡；没落；地下通道', 'downfall / ruin / underpass', 'undergången', 'undergångar', 'undergångarna', [
     ['Romanen skildrar rikets undergång.', '这部小说写的是帝国的灭亡。'],
     ['Undergången kom långsamt.', '这场没落来得很慢。'],
     ['Två undergångar leder under spåren.', '有两条地下通道通到铁轨下面。'],
@@ -106,7 +106,7 @@ export const list58: Word[] = [
     ['De mogna tomaterna ska ätas först.', '那些熟番茄要先吃。'],
     ['Är du mogen för jobbet?', '你对这份工作准备好了吗？'],
   ]), 2861),
-  freq(noun('studio', 'en', '录音室；工作室', 'studio', 'studion', 'studior', null, [
+  freq(noun('studio', 'en', '录音室；工作室', 'studio', 'studion', 'studior', 'studiorna', [
     ['Bandet spelar in i en studio.', '乐队在一间录音室录音。'],
     ['Studion är bokad till kvällen.', '那间录音室订到晚上。'],
     ['Två studior ligger i källaren.', '地下室有两间工作室。'],
@@ -149,19 +149,19 @@ export const list58: Word[] = [
     ],
     '好好地为别人做事，合起来就是慈善。',
   )),
-  freq(noun('gruva', 'en', '矿；矿山', 'mine', 'gruvan', 'gruvor', null, [
+  freq(noun('gruva', 'en', '矿；矿山', 'mine', 'gruvan', 'gruvor', 'gruvorna', [
     ['Pappa jobbade i en gruva.', '爸爸在一座矿里干活。'],
     ['Gruvan stängdes för tre år sen.', '那座矿三年前关了。'],
     ['Två gruvor ligger utanför byn.', '村外有两座矿。'],
     ['Gå inte in i gruvan ensam.', '别独自进矿井。'],
   ]), 2867),
-  freq(noun('guide', 'en', '导游；指南', 'guide', 'guiden', 'guider', null, [
+  freq(noun('guide', 'en', '导游；指南', 'guide', 'guiden', 'guider', 'guiderna', [
     ['Vi följde en guide i stan.', '我们在城里跟着一位导游。'],
     ['Guiden visade kyrkan först.', '导游先带看了教堂。'],
     ['Två guider väntar vid bussen.', '两位导游在公交车边等。'],
     ['Fråga guiden om biljetterna.', '向导游问问票的事。'],
   ]), 2868),
-  freq(noun('nöt', 'en', '坚果；笨蛋（口）', 'nut / (informal) fool', 'nöten', 'nötter', null, [
+  freq(noun('nöt', 'en', '坚果；笨蛋（口）', 'nut / (informal) fool', 'nöten', 'nötter', 'nötterna', [
     ['Hon knäckte en nöt vid bordet.', '她在桌边敲开一颗坚果。'],
     ['Nöten var för hård.', '这颗坚果太硬了。'],
     ['Skålen är full av nötter.', '碗里装满了坚果。'],
@@ -179,7 +179,7 @@ export const list58: Word[] = [
     ],
     '可以相信会发生的，合起来就是很可能的。',
   )),
-  freq(noun('princip', 'en', '原则', 'principle', 'principen', 'principer', null, [
+  freq(noun('princip', 'en', '原则', 'principle', 'principen', 'principer', 'principerna', [
     ['Det är en viktig princip här.', '这是这里的一条重要原则。'],
     ['Principen gäller alla lika.', '这条原则对所有人一视同仁。'],
     ['Vi har tre principer på jobbet.', '我们工作上有三条原则。'],
@@ -209,7 +209,7 @@ export const list58: Word[] = [
     ],
     '来自英格兰的男人，就是英国男人、英格兰人。',
   )),
-  freq(noun('doft', 'en', '香味；气味', 'scent / fragrance', 'doften', 'dofter', null, [
+  freq(noun('doft', 'en', '香味；气味', 'scent / fragrance', 'doften', 'dofter', 'dofterna', [
     ['Det kom en doft från ugnen.', '烤箱里飘来一股香味。'],
     ['Doften fyllde hela köket.', '这香味充满了整个厨房。'],
     ['Två dofter blandades i luften.', '空气里混着两种气味。'],
@@ -221,7 +221,7 @@ export const list58: Word[] = [
     ['Vi har bildat en grupp i klassen.', '我们在班上组成了一个小组。'],
     ['Bilda en kö vid dörren.', '在门口排成一队。'],
   ]), 2875),
-  freq(noun('hobby', 'en', '爱好；业余活动', 'hobby', 'hobbyn', 'hobbyer', null, [
+  freq(noun('hobby', 'en', '爱好；业余活动', 'hobby', 'hobbyn', 'hobbyer', 'hobbyerna', [
     ['Fotografering är hennes hobby.', '摄影是她的爱好。'],
     ['Hobbyn tar hela söndagen.', '这个爱好占掉整个星期天。'],
     ['Han har tre hobbyer samtidigt.', '他同时有三个爱好。'],
@@ -257,7 +257,7 @@ export const list58: Word[] = [
     ],
     '额外拉进来的一份，合起来就是补助、贡献。',
   )),
-  freq(noun('filt', 'en', '毯子；毛毡', 'blanket / felt', 'filten', 'filtar', null, [
+  freq(noun('filt', 'en', '毯子；毛毡', 'blanket / felt', 'filten', 'filtar', 'filtarna', [
     ['Hon svepte in sig i en filt.', '她用一条毯子裹住自己。'],
     ['Filten är varm och mjuk.', '这条毯子又暖又软。'],
     ['Två filtar ligger i soffan.', '沙发上放着两条毯子。'],
@@ -281,13 +281,13 @@ export const list58: Word[] = [
     ],
     '有过敏的，就是过敏的。',
   )),
-  freq(noun('bonde', 'en', '农民；兵（棋）', 'farmer / (chess) pawn', 'bonden', 'bönder', null, [
+  freq(noun('bonde', 'en', '农民；兵（棋）', 'farmer / (chess) pawn', 'bonden', 'bönder', 'bönderna', [
     ['Min farfar var bonde.', '我爷爷是农民。'],
     ['Bonden körde traktorn i dag.', '那位农民今天开了拖拉机。'],
     ['Flera bönder säljer på torget.', '好几位农民在广场上卖东西。'],
     ['Flytta bonden två steg fram.', '把那个兵往前走两步。'],
   ]), 2883),
-  freq(noun('försäkring', 'en', '保险', 'insurance', 'försäkringen', 'försäkringar', null, [
+  freq(noun('försäkring', 'en', '保险', 'insurance', 'försäkringen', 'försäkringar', 'försäkringarna', [
     ['Vi tecknade en ny försäkring.', '我们签了一份新保险。'],
     ['Försäkringen täcker cykeln.', '这份保险保自行车。'],
     ['Hon har tre försäkringar samtidigt.', '她同时有三份保险。'],
@@ -330,13 +330,13 @@ export const list58: Word[] = [
     ['Två helgon nämns i texten.', '课文里提到两位圣徒。'],
     ['Helgonen firas i november.', '那些圣徒在十一月纪念。'],
   ]), 2887),
-  freq(noun('metall', 'en', '金属', 'metal', 'metallen', 'metaller', null, [
+  freq(noun('metall', 'en', '金属', 'metal', 'metallen', 'metaller', 'metallerna', [
     ['Skeden är av metall.', '这勺子是金属的。'],
     ['Metallen känns kall i handen.', '这金属拿在手里是凉的。'],
     ['Två metaller blandas i legeringen.', '合金里混了两种金属。'],
     ['Samla metallen i den gröna tunnan.', '把金属放到绿色桶里。'],
   ]), 2888),
-  freq(noun('julklapp', 'en', '圣诞礼物', 'Christmas present', 'julklappen', 'julklappar', null, [
+  freq(noun('julklapp', 'en', '圣诞礼物', 'Christmas present', 'julklappen', 'julklappar', 'julklapparna', [
     ['Barnet fick en stor julklapp.', '孩子收到一份很大的圣诞礼物。'],
     ['Julklappen låg under granen.', '那份圣诞礼物在圣诞树下。'],
     ['Vi köpte tre julklappar i dag.', '我们今天买了三份圣诞礼物。'],
@@ -348,7 +348,7 @@ export const list58: Word[] = [
     ],
     '圣诞节送出的那份礼物，就是圣诞礼物。',
   )),
-  freq(noun('mysterium', 'ett', '谜；神秘之事', 'mystery', 'mysteriet', 'mysterier', null, [
+  freq(noun('mysterium', 'ett', '谜；神秘之事', 'mystery', 'mysteriet', 'mysterier', 'mysterierna', [
     ['Det är ett mysterium för oss.', '对我们来说这是个谜。'],
     ['Mysteriet löstes efter tre år.', '这个谜三年后解开了。'],
     ['Boken rymmer flera mysterier.', '这本书里有好几个谜。'],
@@ -366,19 +366,19 @@ export const list58: Word[] = [
     ['Det kostar tretton kronor.', '这个要十三克朗。'],
     ['Tretton personer väntar.', '十三个人在等。'],
   ]), 2892),
-  freq(noun('krok', 'en', '钩；挂钩；弯路', 'hook / crook / bend', 'kroken', 'krokar', null, [
+  freq(noun('krok', 'en', '钩；挂钩；弯路', 'hook / crook / bend', 'kroken', 'krokar', 'krokarna', [
     ['Häng jackan på kroken.', '把外套挂在挂钩上。'],
     ['Kroken sitter löst i väggen.', '墙上那个钩松了。'],
     ['Två krokar saknas i hallen.', '门厅里少了两个挂钩。'],
     ['Stigen gör en krok vid sjön.', '小径在湖边拐了一个弯。'],
   ]), 2893),
-  freq(noun('juice', 'en', '果汁', 'juice', 'juicen', 'juicer', null, [
+  freq(noun('juice', 'en', '果汁', 'juice', 'juicen', 'juicer', 'juicerna', [
     ['Vill du ha juice till frukost?', '早餐想喝果汁吗？'],
     ['Juicen är kall ur kylen.', '这果汁刚从冰箱拿出来是凉的。'],
     ['Vi köpte tre juicer i affären.', '我们在店里买了三瓶果汁。'],
     ['Häll upp juicen i glasen.', '把果汁倒进杯子里。'],
   ]), 2894),
-  freq(noun('symbol', 'en', '象征；符号', 'symbol', 'symbolen', 'symboler', null, [
+  freq(noun('symbol', 'en', '象征；符号', 'symbol', 'symbolen', 'symboler', 'symbolerna', [
     ['Duvan är en symbol för fred.', '鸽子是和平的象征。'],
     ['Symbolen på dörren betyder toalett.', '门上那个符号表示厕所。'],
     ['Två symboler saknas i tabellen.', '表里少了两个符号。'],
@@ -408,7 +408,7 @@ export const list58: Word[] = [
     ],
     '已经被盖上的，合起来就是被盖住的、有顶的。',
   )),
-  freq(noun('titel', 'en', '头衔；书名；片名', 'title', 'titeln', 'titlar', null, [
+  freq(noun('titel', 'en', '头衔；书名；片名', 'title', 'titeln', 'titlar', 'titlarna', [
     ['Hon har titeln doktor.', '她有博士头衔。'],
     ['Titeln på boken är kort.', '这本书的书名很短。'],
     ['Två titlar kom ut i höst.', '今秋出了两个书名／片名。'],

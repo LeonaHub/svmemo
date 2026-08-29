@@ -10,7 +10,7 @@ export const list10: Word[] = [
     ['Vi har skjutit på mötet.', '我们已经把会议推迟了。'],
     ['Skjut inte!', '别开枪！'],
   ]), 451),
-  freq(noun('vecka', 'en', '周；星期', 'week', 'veckan', 'veckor', null, [
+  freq(noun('vecka', 'en', '周；星期', 'week', 'veckan', 'veckor', 'veckorna', [
     ['Förra veckan var jag sjuk.', '上周我病了。'],
     ['Veckan gick fort.', '这一周过得很快。'],
     ['Vi ses om två veckor.', '我们两周后见。'],
@@ -22,7 +22,7 @@ export const list10: Word[] = [
     ['Har biljetten gällt länge?', '这张票有效很久了吗？'],
     ['Det gäller att skynda sig.', '关键是要抓紧。'],
   ]), 453),
-  freq(noun('sanning', 'en', '真相；真话', 'truth', 'sanningen', 'sanningar', null, [
+  freq(noun('sanning', 'en', '真相；真话', 'truth', 'sanningen', 'sanningar', 'sanningarna', [
     ['Jag vill ha sanningen.', '我想知道真相。'],
     ['Sanningen kom fram sent.', '真相很晚才出来。'],
     ['Hon tål inte hårda sanningar.', '她受不了刺耳的真话。'],
@@ -34,7 +34,7 @@ export const list10: Word[] = [
     ['Har du nått målet?', '你达到目标了吗？'],
     ['Nå boken där uppe.', '去够上面那本书。'],
   ]), 455),
-  freq(noun('roll', 'en', '角色；作用', 'role / part', 'rollen', 'roller', null, [
+  freq(noun('roll', 'en', '角色；作用', 'role / part', 'rollen', 'roller', 'rollerna', [
     ['Hon spelar en roll i pjäsen.', '她在这部戏里演一个角色。'],
     ['Rollen är svår.', '这个角色很难。'],
     ['De har olika roller på jobbet.', '他们在工作中角色不同。'],
@@ -58,7 +58,7 @@ export const list10: Word[] = [
     ['Hon har stora ögon.', '她眼睛很大。'],
     ['Stäng ögonen.', '闭上眼睛。'],
   ]), 459),
-  freq(noun('förälder', 'en', '父亲或母亲；家长', 'parent', 'föräldern', 'föräldrar', null, [
+  freq(noun('förälder', 'en', '父亲或母亲；家长', 'parent', 'föräldern', 'föräldrar', 'föräldrarna', [
     ['En förälder väntar där.', '有一位家长在那里等。'],
     ['Föräldern kom sent.', '那位家长来晚了。'],
     ['Mina föräldrar bor här.', '我父母住在这里。'],
@@ -76,13 +76,13 @@ export const list10: Word[] = [
     ['Har du litat på honom länge?', '你信任他很久了吗？'],
     ['Lita på henne.', '相信她。'],
   ]), 462),
-  freq(noun('rest', 'en', '剩余；剩下的部分', 'rest / remainder', 'resten', 'rester', null, [
+  freq(noun('rest', 'en', '剩余；剩下的部分', 'rest / remainder', 'resten', 'rester', 'resterna', [
     ['Ta resten av kakan.', '把剩下的蛋糕拿走。'],
     ['Resten av året är jag här.', '今年剩下的时间我都在这儿。'],
     ['Det låg rester på bordet.', '桌上有些剩的。'],
     ['För resten ringer jag senare.', '另外，我稍后打电话。'],
   ]), 463),
-  freq(noun('hjärta', 'ett', '心；心脏', 'heart', 'hjärtat', 'hjärtan', null, [
+  freq(noun('hjärta', 'ett', '心；心脏', 'heart', 'hjärtat', 'hjärtan', 'hjärtana', [
     ['Hon har ett gott hjärta.', '她心地善良。'],
     ['Hjärtat slår fort.', '心跳得很快。'],
     ['Det fanns två hjärtan på kortet.', '卡片上有两颗心。'],
@@ -202,7 +202,7 @@ export const list10: Word[] = [
     ['Jag har lagt brevet i lådan.', '我已经把信放进信箱了。'],
     ['Lägg den här.', '把它放这儿。'],
   ]), 484),
-  freq(noun('ursäkt', 'en', '道歉；借口', 'apology / excuse', 'ursäkten', 'ursäkter', null, [
+  freq(noun('ursäkt', 'en', '道歉；借口', 'apology / excuse', 'ursäkten', 'ursäkter', 'ursäkterna', [
     ['Jag ber om ursäkt.', '我向你道歉。'],
     ['Ursäkten kom sent.', '那句道歉来得很晚。'],
     ['Hon hade flera ursäkter.', '她有好几个借口。'],
@@ -232,7 +232,7 @@ export const list10: Word[] = [
     ['Inom partiet är de eniga.', '党内他们意见一致。'],
     ['Svara inom tre dagar.', '三天内答复。'],
   ]), 489),
-  freq(noun('miljon', 'en', '百万', 'million', 'miljonen', 'miljoner', null, [
+  freq(noun('miljon', 'en', '百万', 'million', 'miljonen', 'miljoner', 'miljonerna', [
     ['Det kostar en miljon.', '这个要一百万。'],
     ['Miljonen räcker inte.', '这一百万不够。'],
     ['Flera miljoner bor där.', '好几百万人住在那里。'],
@@ -250,7 +250,7 @@ export const list10: Word[] = [
     ['Hon är tyvärr sjuk.', '可惜她生病了。'],
     ['Tyvärr, jag har inte tid.', '抱歉，我没时间。'],
   ]), 492),
-  freq(noun('land', 'ett', '国家；乡下；陆地', 'country / countryside / land', 'landet', 'länder', null, [
+  freq(noun('land', 'ett', '国家；乡下；陆地', 'country / countryside / land', 'landet', 'länder', 'länderna', [
     ['Sverige är ett land.', '瑞典是一个国家。'],
     ['Landet är stort.', '这个国家很大。'],
     ['De har besökt flera länder.', '他们去过好几个国家。'],
@@ -274,13 +274,13 @@ export const list10: Word[] = [
     ['De skyldiga stannade kvar.', '那些有罪的人留下了。'],
     ['Skolan är skyldig att svara.', '学校有义务答复。'],
   ]), 496),
-  freq(noun('typ', 'en', '类型；种类；（口）大概', 'type / kind / (informal) like', 'typen', 'typer', null, [
+  freq(noun('typ', 'en', '类型；种类；（口）大概', 'type / kind / (informal) like', 'typen', 'typer', 'typerna', [
     ['Det är en ny typ av telefon.', '这是一种新型电话。'],
     ['Typen är vanlig här.', '这种类型在这里很常见。'],
     ['Det finns flera typer.', '有好几种类型。'],
     ['Det tar typ en timme.', '大概要一个小时。'],
   ]), 497),
-  freq(noun('jävel', 'en', '混蛋；王八蛋（粗）', 'bastard / bugger (vulgar)', 'jäveln', 'jävlar', null, [
+  freq(noun('jävel', 'en', '混蛋；王八蛋（粗）', 'bastard / bugger (vulgar)', 'jäveln', 'jävlar', 'jävlarna', [
     ['Den jäveln tog cykeln.', '那个混蛋把自行车拿走了。'],
     ['Jäveln ljög igen.', '那个混蛋又撒谎了。'],
     ['Vilka jävlar!', '真是些混蛋！'],
@@ -292,7 +292,7 @@ export const list10: Word[] = [
     ['De arga rösterna hördes ute.', '外面听见那些愤怒的声音。'],
     ['Varför blev du arg?', '你为什么生气了？'],
   ]), 499),
-  freq(noun('massa', 'en', '大量；一堆（口）；群众', 'lots / mass / crowd', 'massan', 'massor', null, [
+  freq(noun('massa', 'en', '大量；一堆（口）；群众', 'lots / mass / crowd', 'massan', 'massor', 'massorna', [
     ['Det var en massa folk.', '有好多人。'],
     ['Massan väntade utanför.', '人群在外面等。'],
     ['Hon har massor av böcker.', '她有好多书。'],

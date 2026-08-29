@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 901–950. Primary POS is the high-frequency use, not every sense in the book. */
 export const list19: Word[] = [
-  freq(noun('nyckel', 'en', '钥匙；关键', 'key', 'nyckeln', 'nycklar', null, [
+  freq(noun('nyckel', 'en', '钥匙；关键', 'key', 'nyckeln', 'nycklar', 'nycklarna', [
     ['Har du en nyckel till dörren?', '你有这扇门的钥匙吗？'],
     ['Nyckeln ligger i skålen.', '钥匙在碗里。'],
     ['Hon har två nycklar i väskan.', '她包里有两把钥匙。'],
@@ -22,13 +22,13 @@ export const list19: Word[] = [
     ['Har du skämtat klart nu?', '你开完玩笑了吗？'],
     ['Skämta inte om det.', '别拿这事开玩笑。'],
   ]), 903),
-  freq(noun('tanke', 'en', '想法；念头', 'thought', 'tanken', 'tankar', null, [
+  freq(noun('tanke', 'en', '想法；念头', 'thought', 'tanken', 'tankar', 'tankarna', [
     ['Det är en bra tanke.', '这是个好想法。'],
     ['Tanken kom sent.', '这个念头来得很晚。'],
     ['Hon har många tankar om resan.', '她对这次旅行有很多想法。'],
     ['Dela dina tankar med oss.', '跟我们说说你的想法。'],
   ]), 904),
-  freq(noun('grupp', 'en', '小组；群体', 'group', 'gruppen', 'grupper', null, [
+  freq(noun('grupp', 'en', '小组；群体', 'group', 'gruppen', 'grupper', 'grupperna', [
     ['En grupp väntar utanför.', '有一组人在外面等。'],
     ['Gruppen är liten.', '这个小组人不多。'],
     ['Två grupper tävlar i dag.', '两组今天比赛。'],
@@ -46,7 +46,7 @@ export const list19: Word[] = [
     ['De gratis bussarna går till stan.', '那些免费公交车开进城里。'],
     ['Barnen åker gratis.', '孩子们免费乘坐。'],
   ]), 907),
-  freq(noun('boll', 'en', '球', 'ball', 'bollen', 'bollar', null, [
+  freq(noun('boll', 'en', '球', 'ball', 'bollen', 'bollar', 'bollarna', [
     ['Kasta en boll till mig.', '把一个球扔给我。'],
     ['Bollen är röd.', '这个球是红的。'],
     ['Barnen har två bollar.', '孩子们有两个球。'],
@@ -58,13 +58,13 @@ export const list19: Word[] = [
     ['Det regnar jämt här.', '这里老是下雨。'],
     ['Barnen är jämt hungriga.', '孩子们总是饿。'],
   ]), 909),
-  freq(noun('match', 'en', '比赛', 'match / game', 'matchen', 'matcher', null, [
+  freq(noun('match', 'en', '比赛', 'match / game', 'matchen', 'matcher', 'matcherna', [
     ['Vi såg en match i går.', '我们昨天看了一场比赛。'],
     ['Matchen börjar snart.', '比赛马上开始。'],
     ['De spelar två matcher i veckan.', '他们一周打两场比赛。'],
     ['Vem vann matchen?', '谁赢了这场比赛？'],
   ]), 910),
-  freq(noun('soldat', 'en', '士兵', 'soldier', 'soldaten', 'soldater', null, [
+  freq(noun('soldat', 'en', '士兵', 'soldier', 'soldaten', 'soldater', 'soldaterna', [
     ['En soldat stod vid porten.', '一名士兵站在门口。'],
     ['Soldaten kom hem i maj.', '那名士兵五月回了家。'],
     ['Flera soldater väntade där.', '好几名士兵在那里等。'],
@@ -82,13 +82,13 @@ export const list19: Word[] = [
     ['De är lika som syskon.', '他们像兄弟姐妹一样相像。'],
     ['Allt är sig likt här.', '这儿一切还是老样子。'],
   ]), 913),
-  freq(noun('makt', 'en', '权力；势力', 'power', 'makten', 'makter', null, [
+  freq(noun('makt', 'en', '权力；势力', 'power', 'makten', 'makter', 'makterna', [
     ['Hon har makt över beslutet.', '她对这项决定有权力。'],
     ['Makten skiftade i höstas.', '权力去年秋天换了手。'],
     ['Flera makter möttes där.', '几个势力在那里会面。'],
     ['De sitter vid makten nu.', '他们现在掌权。'],
   ]), 914),
-  freq(noun('styrka', 'en', '力量；强度；（军）部队', 'strength / force', 'styrkan', 'styrkor', null, [
+  freq(noun('styrka', 'en', '力量；强度；（军）部队', 'strength / force', 'styrkan', 'styrkor', 'styrkorna', [
     ['Hon har stor styrka i armarna.', '她手臂很有力量。'],
     ['Styrkan räckte inte.', '那股力量不够。'],
     ['Flera styrkor stod redo.', '几支部队已准备好。'],
@@ -154,7 +154,7 @@ export const list19: Word[] = [
     ['Förmodligen regnar det i morgon.', '明天大概会下雨。'],
     ['Han är förmodligen hemma nu.', '他现在很可能在家。'],
   ]), 924),
-  freq(noun('sko', 'en', '鞋', 'shoe', 'skon', 'skor', null, [
+  freq(noun('sko', 'en', '鞋', 'shoe', 'skon', 'skor', 'skorna', [
     ['Min sko är trasig.', '我的鞋破了。'],
     ['Skon sitter bra.', '这只鞋很合脚。'],
     ['Hon har nya skor.', '她有新鞋。'],
@@ -166,13 +166,13 @@ export const list19: Word[] = [
     ['Har du mött chefen än?', '你见过上司了吗？'],
     ['Möt mig där klockan fem.', '五点在那儿见我。'],
   ]), 926),
-  freq(noun('syssla', 'en', '事务；活儿；日常工作', 'chore / task / occupation', 'sysslan', 'sysslor', null, [
+  freq(noun('syssla', 'en', '事务；活儿；日常工作', 'chore / task / occupation', 'sysslan', 'sysslor', 'sysslorna', [
     ['Det är en tråkig syssla.', '这是一件无聊的活儿。'],
     ['Sysslan tar tid.', '这件事务很花时间。'],
     ['De dagliga sysslorna väntar.', '那些日常活儿还等着。'],
     ['Hon har många sysslor hemma.', '她在家有很多事要做。'],
   ]), 927),
-  freq(noun('översättning', 'en', '翻译', 'translation', 'översättningen', 'översättningar', null, [
+  freq(noun('översättning', 'en', '翻译', 'translation', 'översättningen', 'översättningar', 'översättningarna', [
     ['Det är en bra översättning.', '这是一篇好翻译。'],
     ['Översättningen är klar.', '这篇翻译完成了。'],
     ['Vi jämför två översättningar.', '我们在对比两篇译文。'],
@@ -190,7 +190,7 @@ export const list19: Word[] = [
     ['Flera mästare tävlade där.', '好几位大师在那里比赛。'],
     ['Mästarna står på scenen.', '那些冠军站在台上。'],
   ]), 930),
-  freq(noun('major', 'en', '少校', 'major (military rank)', 'majoren', 'majorer', null, [
+  freq(noun('major', 'en', '少校', 'major (military rank)', 'majoren', 'majorer', 'majorerna', [
     ['Han är major i armén.', '他是陆军少校。'],
     ['Majoren kommer i dag.', '那位少校今天来。'],
     ['Två majorer satt vid bordet.', '两位少校坐在桌边。'],
@@ -208,7 +208,7 @@ export const list19: Word[] = [
     ],
     '爸爸的爸爸，就是爷爷。',
   )),
-  freq(noun('kyss', 'en', '吻', 'kiss', 'kyssen', 'kyssar', null, [
+  freq(noun('kyss', 'en', '吻', 'kiss', 'kyssen', 'kyssar', 'kyssarna', [
     ['Hon fick en kyss på kinden.', '她脸上被亲了一下。'],
     ['Kyssen var kort.', '那个吻很短。'],
     ['De utbytte kyssar vid dörren.', '他们在门口接了吻。'],
@@ -232,7 +232,7 @@ export const list19: Word[] = [
     ['Flera gäng samlades i parken.', '好几伙人在公园里聚了。'],
     ['Gängen möttes sent.', '那些帮派很晚才碰面。'],
   ]), 936),
-  freq(noun('tand', 'en', '牙齿', 'tooth', 'tanden', 'tänder', null, [
+  freq(noun('tand', 'en', '牙齿', 'tooth', 'tanden', 'tänder', 'tänderna', [
     ['Jag har ont i en tand.', '我有一颗牙疼。'],
     ['Tanden gör ont.', '这颗牙疼。'],
     ['Hon har vita tänder.', '她牙齿很白。'],
@@ -250,7 +250,7 @@ export const list19: Word[] = [
     ['Två lärare arbetar här.', '两位老师在这里工作。'],
     ['Lärarna sa nej.', '那些老师说了不。'],
   ]), 939),
-  freq(noun('kusin', 'en', '堂／表兄弟姐妹', 'cousin', 'kusinen', 'kusiner', null, [
+  freq(noun('kusin', 'en', '堂／表兄弟姐妹', 'cousin', 'kusinen', 'kusiner', 'kusinerna', [
     ['Min kusin bor i Malmö.', '我堂／表亲住在马尔默。'],
     ['Kusinen kommer i kväll.', '那位堂／表亲今晚来。'],
     ['Jag har tre kusiner.', '我有三个堂／表兄弟姐妹。'],
@@ -292,13 +292,13 @@ export const list19: Word[] = [
     ['Han gav mig tre tecken.', '他给了我三个信号。'],
     ['Tecknen på dörren är nya.', '门上那些符号是新的。'],
   ]), 944),
-  freq(noun('taxi', 'en', '出租车', 'taxi', 'taxin', 'taxi', null, [
+  freq(noun('taxi', 'en', '出租车', 'taxi', 'taxin', 'taxi', 'taxina', [
     ['Vi tar en taxi dit.', '我们坐出租车去那儿。'],
     ['Taxin väntar utanför.', '出租车在外面等。'],
     ['Två taxi stod vid stationen.', '两辆出租车停在车站。'],
     ['Ring en taxi, tack.', '请叫一辆出租车。'],
   ]), 945),
-  freq(noun('hemlighet', 'en', '秘密', 'secret', 'hemligheten', 'hemligheter', null, [
+  freq(noun('hemlighet', 'en', '秘密', 'secret', 'hemligheten', 'hemligheter', 'hemligheterna', [
     ['Det är en hemlighet.', '这是一个秘密。'],
     ['Hemligheten kom fram sent.', '这个秘密很晚才暴露。'],
     ['Hon har flera hemligheter.', '她有好几个秘密。'],

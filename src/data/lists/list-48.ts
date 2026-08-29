@@ -40,7 +40,7 @@ export const list48: Word[] = [
     ['Tystnad har rått i rummet.', '房间里一直很安静。'],
     ['Råd honom att vänta.', '劝他等一等。'],
   ]), 2356),
-  freq(noun('VD', 'en', '首席执行官；总经理', 'CEO / managing director', 'VD:n', 'VD:ar', null, [
+  freq(noun('VD', 'en', '首席执行官；总经理', 'CEO / managing director', 'VD:n', 'VD:ar', 'VD:arna', [
     ['En ny VD börjar i maj.', '一位新总经理五月上任。'],
     ['VD:n presenterade rapporten.', '首席执行官介绍了报告。'],
     ['Flera VD:ar möttes i stan.', '好几位总经理在城里见面。'],
@@ -76,7 +76,7 @@ export const list48: Word[] = [
     ],
     '“没被抓住、到不了手”，合起来就是缺少、欠缺。',
   )),
-  freq(noun('identitet', 'en', '身份；同一性', 'identity', 'identiteten', 'identiteter', null, [
+  freq(noun('identitet', 'en', '身份；同一性', 'identity', 'identiteten', 'identiteter', 'identiteterna', [
     ['Polisen fastställde identiteten.', '警察确认了身份。'],
     ['Identiteten var fortfarande okänd.', '身份当时还不清楚。'],
     ['Två identiteter blandades ihop.', '两个身份被搞混了。'],
@@ -100,7 +100,7 @@ export const list48: Word[] = [
     ['De passande orden kom sent.', '那些得体的话来晚了。'],
     ['Välj något passande till festen.', '给聚会选件合适的。'],
   ]), 2363),
-  freq(noun('diamant', 'en', '钻石', 'diamond', 'diamanten', 'diamanter', null, [
+  freq(noun('diamant', 'en', '钻石', 'diamond', 'diamanten', 'diamanter', 'diamanterna', [
     ['Ringen har en diamant.', '戒指上有一颗钻石。'],
     ['Diamanten glänste i ljuset.', '那颗钻石在光里发亮。'],
     ['Hon äger två diamanter.', '她有两颗钻石。'],
@@ -184,7 +184,7 @@ export const list48: Word[] = [
     ],
     '“压进去留下的痕迹”，合起来就是印象。',
   )),
-  freq(noun('matta', 'en', '地毯', 'carpet / rug', 'mattan', 'mattor', null, [
+  freq(noun('matta', 'en', '地毯', 'carpet / rug', 'mattan', 'mattor', 'mattorna', [
     ['En matta ligger i hallen.', '门厅里铺着一块地毯。'],
     ['Mattan är smutsig.', '这块地毯脏了。'],
     ['Två mattor torkar ute.', '两块地毯在外面晾。'],
@@ -202,13 +202,13 @@ export const list48: Word[] = [
     ],
     'enorm 是“巨大的”，enormt 就是极其、巨大地。',
   )),
-  freq(noun('reporter', 'en', '记者', 'reporter', 'reportern', 'reportrar', null, [
+  freq(noun('reporter', 'en', '记者', 'reporter', 'reportern', 'reportrar', 'reportrarna', [
     ['En reporter väntar vid dörren.', '一名记者在门口等。'],
     ['Reportern ställde tre frågor.', '那位记者问了三个问题。'],
     ['Två reportrar filmade mötet.', '两名记者拍了会议。'],
     ['Tala med reportern efteråt.', '过后再跟记者说。'],
   ]), 2378),
-  freq(noun('bransch', 'en', '行业；业界', 'industry / trade', 'branschen', 'branscher', null, [
+  freq(noun('bransch', 'en', '行业；业界', 'industry / trade', 'branschen', 'branscher', 'branscherna', [
     ['Hon jobbar i branschen sedan länge.', '她在这个行业干很久了。'],
     ['Branschen har det tufft i år.', '这个行业今年不好过。'],
     ['Två branscher slås ihop.', '两个行业要合并。'],

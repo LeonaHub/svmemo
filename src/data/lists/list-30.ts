@@ -10,7 +10,7 @@ export const list30: Word[] = [
     ['Kaffet är starkt som vanligt.', '咖啡跟平常一样浓。'],
     ['Gör det som vanligt.', '照平常那样做。'],
   ]), 1451, c([['som', '像'], ['vanligt', '平常']], '像平常那样，合起来就是照常。')),
-  freq(noun('konst', 'en', '艺术；本事', 'art / skill', 'konsten', 'konster', null, [
+  freq(noun('konst', 'en', '艺术；本事', 'art / skill', 'konsten', 'konster', 'konsterna', [
     ['Hon gillar konst.', '她喜欢艺术。'],
     ['Konsten hänger på väggen.', '那幅艺术品挂在墙上。'],
     ['Han visar sina konster.', '他在展示自己的本事。'],
@@ -59,7 +59,7 @@ export const list30: Word[] = [
     ['Kalla inte henne as.', '别骂她畜牲。'],
     ['Ett as låg vid vägen.', '路边有一具动物尸体。'],
   ]), 1458),
-  freq(noun('kund', 'en', '顾客；客户', 'customer', 'kunden', 'kunder', null, [
+  freq(noun('kund', 'en', '顾客；客户', 'customer', 'kunden', 'kunder', 'kunderna', [
     ['En kund väntar vid kassan.', '一位顾客在收银台等。'],
     ['Kunden går nu.', '这位顾客要走了。'],
     ['Två kunder frågar om priset.', '两位顾客在问价格。'],
@@ -150,7 +150,7 @@ export const list30: Word[] = [
     ['Matchen hade två förlorare.', '这场比赛有两个输家。'],
     ['Förlorarna skakade hand ändå.', '那些输家还是握了手。'],
   ]), 1470, c([['förlora', '输掉'], ['-are', '……的人']], '输掉的人，合起来就是失败者、输家。')),
-  freq(noun('sommar', 'en', '夏天', 'summer', 'sommaren', 'somrar', null, [
+  freq(noun('sommar', 'en', '夏天', 'summer', 'sommaren', 'somrar', 'somrarna', [
     ['Vi reser i sommar.', '我们夏天去旅行。'],
     ['Sommaren är varm i år.', '今年夏天很热。'],
     ['På somrarna bor hon vid havet.', '每到夏天她住在海边。'],
@@ -180,7 +180,7 @@ export const list30: Word[] = [
     ],
     '“值得注意的”，现在多表示奇怪、奇特。',
   )),
-  freq(noun('japan', 'en', '日本人', 'Japanese person', 'japanen', 'japaner', null, [
+  freq(noun('japan', 'en', '日本人', 'Japanese person', 'japanen', 'japaner', 'japanerna', [
     ['En japan sitter där.', '一位日本人坐在那里。'],
     ['Japanen talar svenska.', '那位日本人说瑞典语。'],
     ['Två japaner väntar i hallen.', '两位日本人在门厅等。'],
@@ -192,7 +192,7 @@ export const list30: Word[] = [
     ['Hon fyller år i mars.', '她三月过生日。'],
     ['Boka resan till mars.', '把旅行订在三月。'],
   ]), 1476),
-  freq(noun('fågel', 'en', '鸟', 'bird', 'fågeln', 'fåglar', null, [
+  freq(noun('fågel', 'en', '鸟', 'bird', 'fågeln', 'fåglar', 'fåglarna', [
     ['En fågel sitter på taket.', '一只鸟停在屋顶上。'],
     ['Fågeln sjunger tidigt.', '这只鸟唱得早。'],
     ['Tre fåglar flyger förbi.', '三只鸟飞过。'],
@@ -222,7 +222,7 @@ export const list30: Word[] = [
     ['Laget har tre segrar i rad.', '这支队伍连胜三场。'],
     ['Segerna kom sent i matchen.', '那些胜利来得很晚。'],
   ]), 1481),
-  freq(noun('kommissarie', 'en', '督察；警官', 'superintendent / commissioner', 'kommissarien', 'kommissarier', null, [
+  freq(noun('kommissarie', 'en', '督察；警官', 'superintendent / commissioner', 'kommissarien', 'kommissarier', 'kommissarierna', [
     ['En kommissarie väntar utanför.', '一位督察在外面等。'],
     ['Kommissarien kommer klockan nio.', '督察九点来。'],
     ['Två kommissarier sitter där.', '两位督察坐在那里。'],
@@ -241,7 +241,7 @@ export const list30: Word[] = [
     ],
     '“年的数目”，合起来就是许多年。',
   )),
-  freq(noun('risk', 'en', '风险；危险', 'risk', 'risken', 'risker', null, [
+  freq(noun('risk', 'en', '风险；危险', 'risk', 'risken', 'risker', 'riskerna', [
     ['Det är en risk att gå dit.', '去那儿有风险。'],
     ['Risken är liten.', '风险很小。'],
     ['Hon tar inga risker.', '她不冒险。'],
@@ -283,7 +283,7 @@ export const list30: Word[] = [
     ],
     '由“血”变成动词，就是流血。',
   )),
-  freq(noun('punkt', 'en', '句号；点；要点', 'full stop / point', 'punkten', 'punkter', null, [
+  freq(noun('punkt', 'en', '句号；点；要点', 'full stop / point', 'punkten', 'punkter', 'punkterna', [
     ['Sätt en punkt här.', '在这儿打个句号。'],
     ['Punkten saknas i meningen.', '句子里缺句号。'],
     ['Vi tar nästa punkt nu.', '我们现在谈下一点。'],
@@ -338,7 +338,7 @@ export const list30: Word[] = [
     ],
     'kraftig 是“有力的”，kraftigt 就是猛烈地、大幅度地。',
   )),
-  freq(noun('utrustning', 'en', '装备；设备', 'equipment', 'utrustningen', 'utrustningar', null, [
+  freq(noun('utrustning', 'en', '装备；设备', 'equipment', 'utrustningen', 'utrustningar', 'utrustningarna', [
     ['Vi behöver ny utrustning.', '我们需要新装备。'],
     ['Utrustningen är dyr.', '这套装备很贵。'],
     ['De har två utrustningar i förrådet.', '仓库里有两套装备。'],
@@ -356,7 +356,7 @@ export const list30: Word[] = [
     ],
     '“揭掉面纱”，合起来就是揭露、揭穿。',
   )),
-  freq(noun('examen', 'en', '学位；毕业考试', 'degree / examination', 'examen', 'examina', null, [
+  freq(noun('examen', 'en', '学位；毕业考试', 'degree / examination', 'examen', 'examina', 'examina', [
     ['Hon tar examen i juni.', '她六月毕业。'],
     ['Examen gick bra.', '毕业考试顺利。'],
     ['Han har två examina.', '他有两个学位。'],

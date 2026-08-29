@@ -70,7 +70,7 @@ export const list11: Word[] = [
     ['Är kaffet tillräckligt varmt?', '咖啡够热吗？'],
     ['Det räcker, det är tillräckligt.', '够了，已经足够了。'],
   ]), 511),
-  freq(noun('synd', 'en', '罪过；可惜', 'sin / pity', 'synden', 'synder', null, [
+  freq(noun('synd', 'en', '罪过；可惜', 'sin / pity', 'synden', 'synder', 'synderna', [
     ['Det är synd att du inte kan komma.', '你来不了，真可惜。'],
     ['Synden är glömd.', '那件罪过已经被忘掉了。'],
     ['Det finns många synder.', '罪过有很多。'],
@@ -82,7 +82,7 @@ export const list11: Word[] = [
     ['Hon har åtta böcker.', '她有八本书。'],
     ['Bussen tar åtta minuter.', '公交车要八分钟。'],
   ]), 513),
-  freq(noun('topp', 'en', '顶；顶部；无袖上衣', 'top / peak / sleeveless top', 'toppen', 'toppar', null, [
+  freq(noun('topp', 'en', '顶；顶部；无袖上衣', 'top / peak / sleeveless top', 'toppen', 'toppar', 'topparna', [
     ['Vi gick till en topp i fjällen.', '我们去了山里的一座顶峰。'],
     ['Toppen är täckt av snö.', '山顶被雪盖住了。'],
     ['Hon har tre toppar i lådan.', '她抽屉里有三件背心。'],
@@ -136,7 +136,7 @@ export const list11: Word[] = [
     ['Få igång datorn, tack.', '把电脑打开，谢谢。'],
     ['Arbetet är igång igen.', '工作又运转起来了。'],
   ]), 522, c([['i', '在'], ['gång', '走动']], '进入走动，合起来就是开动、运转起来。')),
-  freq(noun('tjänst', 'en', '职位；服务；帮忙', 'post / service / favour', 'tjänsten', 'tjänster', null, [
+  freq(noun('tjänst', 'en', '职位；服务；帮忙', 'post / service / favour', 'tjänsten', 'tjänster', 'tjänsterna', [
     ['Hon har en tjänst på skolan.', '她在学校有一个职位。'],
     ['Tjänsten är ledig.', '这个职位空着。'],
     ['Kan du göra mig en tjänst?', '你能帮我一个忙吗？'],
@@ -154,19 +154,19 @@ export const list11: Word[] = [
     ['Har du druckit kaffe?', '你喝过咖啡了吗？'],
     ['Drick inte så fort.', '别喝那么快。'],
   ]), 525),
-  freq(noun('historia', 'en', '历史；故事', 'history / story', 'historien', 'historier', null, [
+  freq(noun('historia', 'en', '历史；故事', 'history / story', 'historien', 'historier', 'historierna', [
     ['Vi läser historia i skolan.', '我们在学校学历史。'],
     ['Historien är lång.', '这段历史很长。'],
     ['Han berättade tre historier.', '他讲了三个故事。'],
     ['Sveriges historia är intressant.', '瑞典的历史很有意思。'],
   ]), 526),
-  freq(noun('middag', 'en', '中午；正餐', 'noon / dinner', 'middagen', 'middagar', null, [
+  freq(noun('middag', 'en', '中午；正餐', 'noon / dinner', 'middagen', 'middagar', 'middagarna', [
     ['Vi äter middag klockan sex.', '我们六点吃正餐。'],
     ['Middagen är klar.', '饭做好了。'],
     ['De har tre middagar i veckan hemma.', '他们一周在家吃三次正餐。'],
     ['Klockan är tolv, det är middag.', '十二点了，是中午。'],
   ]), 527),
-  freq(noun('fart', 'en', '速度', 'speed / pace', 'farten', 'farter', null, [
+  freq(noun('fart', 'en', '速度', 'speed / pace', 'farten', 'farter', 'farterna', [
     ['Bilen kör i hög fart.', '车开得很快。'],
     ['Farten är för hög här.', '这儿速度太快了。'],
     ['De kör i olika farter.', '他们以不同的速度开车。'],
@@ -178,7 +178,7 @@ export const list11: Word[] = [
     ['Absolut, jag kommer.', '当然，我来。'],
     ['Hon sa absolut nej.', '她绝对说了不。'],
   ]), 529),
-  freq(noun('stund', 'en', '一会儿；片刻', 'while / moment', 'stunden', 'stunder', null, [
+  freq(noun('stund', 'en', '一会儿；片刻', 'while / moment', 'stunden', 'stunder', 'stunderna', [
     ['Vänta en stund.', '等一会儿。'],
     ['Stunden gick fort.', '这一会儿过得很快。'],
     ['Vi hade tre korta stunder tillsammans.', '我们一起待过三个短片刻。'],
@@ -214,13 +214,13 @@ export const list11: Word[] = [
     ['Har ni fortsatt med kursen?', '你们还在继续上那个课吗？'],
     ['Fortsätt rakt fram.', '继续一直往前。'],
   ]), 535),
-  freq(noun('jord', 'en', '地球；土地；土壤', 'earth / soil / land', 'jorden', 'jordar', null, [
+  freq(noun('jord', 'en', '地球；土地；土壤', 'earth / soil / land', 'jorden', 'jordar', 'jordarna', [
     ['Jorden är rund.', '地球是圆的。'],
     ['Hon gräver i jorden.', '她在挖土。'],
     ['Här finns olika jordar.', '这里有不同的土壤。'],
     ['Vi bor på jorden.', '我们住在地球上。'],
   ]), 536),
-  freq(noun('resa', 'en', '旅行；旅程', 'trip / journey', 'resan', 'resor', null, [
+  freq(noun('resa', 'en', '旅行；旅程', 'trip / journey', 'resan', 'resor', 'resorna', [
     ['Vi gör en resa till Göteborg.', '我们去哥德堡旅行。'],
     ['Resan tog tre timmar.', '这趟旅程花了三个小时。'],
     ['Hon har gjort många resor.', '她做过很多次旅行。'],
@@ -280,13 +280,13 @@ export const list11: Word[] = [
     ['Har ni snackat med henne?', '你们跟她聊过了吗？'],
     ['Snacka inte så högt.', '别聊那么大声。'],
   ]), 546),
-  freq(noun('hund', 'en', '狗', 'dog', 'hunden', 'hundar', null, [
+  freq(noun('hund', 'en', '狗', 'dog', 'hunden', 'hundar', 'hundarna', [
     ['Hon har en hund.', '她有一条狗。'],
     ['Hunden väntar vid dörren.', '那条狗在门口等。'],
     ['Två hundar leker ute.', '两条狗在外面玩。'],
     ['Gå ut med hunden.', '带狗出去。'],
   ]), 547),
-  freq(noun('doktor', 'en', '医生；博士', 'doctor / physician', 'doktorn', 'doktorer', null, [
+  freq(noun('doktor', 'en', '医生；博士', 'doctor / physician', 'doktorn', 'doktorer', 'doktorerna', [
     ['Jag går till doktorn i morgon.', '我明天去看医生。'],
     ['Doktorn sa att jag ska vila.', '医生说我该休息。'],
     ['Två doktorer arbetar här.', '两位医生在这里工作。'],

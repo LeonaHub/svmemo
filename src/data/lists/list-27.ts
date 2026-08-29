@@ -28,13 +28,13 @@ export const list27: Word[] = [
     ['Har ni planerat lunchen?', '你们把午饭安排好了吗？'],
     ['Planera dagen i förväg.', '提前把一天安排好。'],
   ]), 1304),
-  freq(noun('karta', 'en', '地图', 'map', 'kartan', 'kartor', null, [
+  freq(noun('karta', 'en', '地图', 'map', 'kartan', 'kartor', 'kartorna', [
     ['Har du en karta över stan?', '你有这城市的地图吗？'],
     ['Kartan är gammal.', '这张地图旧了。'],
     ['Vi köpte två kartor.', '我们买了两张地图。'],
     ['Visa vägen på kartan.', '在地图上指出路。'],
   ]), 1305),
-  freq(noun('kyckling', 'en', '小鸡；鸡肉', 'chicken', 'kycklingen', 'kycklingar', null, [
+  freq(noun('kyckling', 'en', '小鸡；鸡肉', 'chicken', 'kycklingen', 'kycklingar', 'kycklingarna', [
     ['Vi äter kyckling i kväll.', '我们今晚吃鸡肉。'],
     ['Kycklingen är färdig.', '鸡肉熟了。'],
     ['Tre kycklingar går på gården.', '三只小鸡在院子里走。'],
@@ -46,7 +46,7 @@ export const list27: Word[] = [
     ['Smakar det likadant?', '味道一样吗？'],
     ['Gör likadant nästa gång.', '下次同样做。'],
   ]), 1307),
-  freq(noun('halvtimme', 'en', '半小时', 'half-hour / half an hour', 'halvtimmen', 'halvtimmar', null, [
+  freq(noun('halvtimme', 'en', '半小时', 'half-hour / half an hour', 'halvtimmen', 'halvtimmar', 'halvtimmarna', [
     ['Vänta en halvtimme till.', '再等半小时。'],
     ['Halvtimmen gick fort.', '这半小时过得很快。'],
     ['Det tog två halvtimmar.', '这花了两个半小时。'],
@@ -64,13 +64,13 @@ export const list27: Word[] = [
     ['Det blir troligen fullt.', '大概会满座。'],
     ['Troligen stannar vi hemma.', '我们很可能留在家里。'],
   ]), 1310),
-  freq(noun('bomb', 'en', '炸弹；轰动消息', 'bomb / bombshell', 'bomben', 'bomber', null, [
+  freq(noun('bomb', 'en', '炸弹；轰动消息', 'bomb / bombshell', 'bomben', 'bomber', 'bomberna', [
     ['Polisen hittade en bomb.', '警察发现了一枚炸弹。'],
     ['Bomben var oskadliggjord.', '那枚炸弹已被拆除。'],
     ['Två bomber exploderade.', '两枚炸弹爆炸了。'],
     ['Nyheten var en bomb.', '这条消息像颗炸弹。'],
   ]), 1311),
-  freq(noun('skuld', 'en', '债；罪责', 'debt / guilt / blame', 'skulden', 'skulder', null, [
+  freq(noun('skuld', 'en', '债；罪责', 'debt / guilt / blame', 'skulden', 'skulder', 'skulderna', [
     ['Han har en skuld till banken.', '他欠银行一笔债。'],
     ['Skulden är inte din.', '这不是你的责任。'],
     ['Vi betalade alla skulder.', '我们把所有的债都还了。'],
@@ -82,7 +82,7 @@ export const list27: Word[] = [
     ['Hon greps av panik.', '她突然慌了。'],
     ['Håll huvudet kallt, ingen panik.', '保持冷静，别慌。'],
   ]), 1313),
-  freq(noun('måne', 'en', '月亮；卫星', 'moon', 'månen', 'månar', null, [
+  freq(noun('måne', 'en', '月亮；卫星', 'moon', 'månen', 'månar', 'månarna', [
     ['Månen lyser i natt.', '今晚月亮很亮。'],
     ['Vi ser en full måne.', '我们看见一轮满月。'],
     ['Jupiter har många månar.', '木星有很多卫星。'],
@@ -101,7 +101,7 @@ export const list27: Word[] = [
     ],
     '字面是“配得上恐惧的”，合起来就是可怕、糟透。',
   )),
-  freq(noun('gubbe', 'en', '老头；家伙（口）', 'old man / fellow', 'gubben', 'gubbar', null, [
+  freq(noun('gubbe', 'en', '老头；家伙（口）', 'old man / fellow', 'gubben', 'gubbar', 'gubbarna', [
     ['En gammal gubbe sitter där.', '一位老头坐在那里。'],
     ['Gubben vinkar till oss.', '那老头在跟我们招手。'],
     ['Två gubbar spelar schack.', '两个老头在下棋。'],
@@ -113,7 +113,7 @@ export const list27: Word[] = [
     ['Har du förlåtit mig?', '你原谅我了吗？'],
     ['Förlåt mig, tack.', '请原谅我。'],
   ]), 1317, c([['för', '离开／去掉'], ['låta', '让']], '让过错离开，合起来就是原谅。')),
-  freq(noun('park', 'en', '公园；（车辆）车队', 'park / fleet', 'parken', 'parker', null, [
+  freq(noun('park', 'en', '公园；（车辆）车队', 'park / fleet', 'parken', 'parker', 'parkerna', [
     ['Vi går i parken.', '我们在公园里走。'],
     ['Parken stänger klockan nio.', '公园九点关门。'],
     ['Staden har tre parker.', '这座城市有三个公园。'],
@@ -149,13 +149,13 @@ export const list27: Word[] = [
     ['De nakna sanningarna sved.', '那些赤裸的真相很扎人。'],
     ['Han stod naken i duschen.', '他光着身子站在淋浴下。'],
   ]), 1323),
-  freq(noun('mardröm', 'en', '噩梦', 'nightmare', 'mardrömmen', 'mardrömmar', null, [
+  freq(noun('mardröm', 'en', '噩梦', 'nightmare', 'mardrömmen', 'mardrömmar', 'mardrömmarna', [
     ['Jag hade en mardröm i natt.', '我夜里做了个噩梦。'],
     ['Mardrömmen vaknade jag ur.', '我从那场噩梦里醒来。'],
     ['Hon har mardrömmar ofta.', '她常常做噩梦。'],
     ['Berätta inte mardrömmen nu.', '现在别讲那场噩梦。'],
   ]), 1324, c([['mar', '梦魇'], ['dröm', '梦']], '梦魇做的梦，合起来就是噩梦。')),
-  freq(noun('geni', 'ett', '天才', 'genius', 'geniet', 'genier', null, [
+  freq(noun('geni', 'ett', '天才', 'genius', 'geniet', 'genier', 'genierna', [
     ['Hon är ett geni på piano.', '她是钢琴天才。'],
     ['Geniet löste uppgiften fort.', '那个天才很快解出了题。'],
     ['Få genier föds varje sekel.', '每个世纪很少出几个天才。'],
@@ -173,7 +173,7 @@ export const list27: Word[] = [
     ['Barnet väger sju pund.', '这孩子有七磅重。'],
     ['Hur många pund är det?', '这是多少英镑／磅？'],
   ]), 1327),
-  freq(noun('assistent', 'en', '助手；助理', 'assistant', 'assistenten', 'assistenter', null, [
+  freq(noun('assistent', 'en', '助手；助理', 'assistant', 'assistenten', 'assistenter', 'assistenterna', [
     ['Hon är assistent på kontoret.', '她是办公室助理。'],
     ['Assistenten tar emot samtal.', '助理在接电话。'],
     ['Två assistenter hjälper läkaren.', '两位助手在帮医生。'],
@@ -185,7 +185,7 @@ export const list27: Word[] = [
     ['Huset har två källare.', '这房子有两个地下室。'],
     ['Källarna måste torkas ut.', '那些地下室得弄干。'],
   ]), 1329),
-  freq(noun('koll', 'en', '盯着；检查（口）', 'check (informal)', 'kollen', 'kollar', null, [
+  freq(noun('koll', 'en', '盯着；检查（口）', 'check (informal)', 'kollen', 'kollar', 'kollarna', [
     ['Har du koll på tiden?', '你盯着时间了吗？'],
     ['Kollen tog bara en minut.', '这次检查只花了一分钟。'],
     ['Gör två kollar till.', '再检查两遍。'],
@@ -239,7 +239,7 @@ export const list27: Word[] = [
     ['De ytterliga åsikterna skrämmer.', '那些极端的观点吓人。'],
     ['Det är ytterligt viktigt.', '这极其重要。'],
   ]), 1337),
-  freq(noun('hatt', 'en', '帽子', 'hat', 'hatten', 'hattar', null, [
+  freq(noun('hatt', 'en', '帽子', 'hat', 'hatten', 'hattar', 'hattarna', [
     ['Hon har en röd hatt.', '她有一顶红帽子。'],
     ['Hatten sitter snett.', '帽子戴歪了。'],
     ['Två hattar hänger där.', '两顶帽子挂在那儿。'],
@@ -269,7 +269,7 @@ export const list27: Word[] = [
     ['Jag tror inte på mirakel.', '我不相信奇迹。'],
     ['Miraklen uteblev.', '奇迹没有出现。'],
   ]), 1342),
-  freq(noun('ängel', 'en', '天使；好心人', 'angel', 'ängeln', 'änglar', null, [
+  freq(noun('ängel', 'en', '天使；好心人', 'angel', 'ängeln', 'änglar', 'änglarna', [
     ['Barnet sover som en ängel.', '孩子睡得像天使。'],
     ['Ängeln på tavlan har vingar.', '画上的天使有翅膀。'],
     ['Tack, du är en ängel!', '谢谢，你真是个好人！'],
@@ -281,7 +281,7 @@ export const list27: Word[] = [
     ['Det kostar tjugo kronor.', '这个要二十克朗。'],
     ['Tjugo personer väntar.', '二十个人在等。'],
   ]), 1344),
-  freq(noun('rad', 'en', '一排；一行；一系列', 'row / line / series', 'raden', 'rader', null, [
+  freq(noun('rad', 'en', '一排；一行；一系列', 'row / line / series', 'raden', 'rader', 'raderna', [
     ['Vi sitter på första raden.', '我们坐在第一排。'],
     ['Raden är full.', '这一排坐满了。'],
     ['Skriv några rader till henne.', '给她写几行字。'],
@@ -293,7 +293,7 @@ export const list27: Word[] = [
     ['Har du tränat i dag?', '你今天练过了吗？'],
     ['Träna benen i morgon.', '明天练腿。'],
   ]), 1346),
-  freq(noun('dans', 'en', '舞蹈；舞会', 'dance', 'dansen', 'danser', null, [
+  freq(noun('dans', 'en', '舞蹈；舞会', 'dance', 'dansen', 'danser', 'danserna', [
     ['Hon gillar dans.', '她喜欢舞蹈。'],
     ['Dansen börjar klockan nio.', '舞会九点开始。'],
     ['De lärde sig tre danser.', '他们学了三种舞。'],
@@ -311,7 +311,7 @@ export const list27: Word[] = [
     ['I slutet vände matchen.', '最后比赛翻盘了。'],
     ['Spara det till i slutet.', '把那个留到最后。'],
   ]), 1349, c([['i', '在'], ['slutet', '结尾']], '在那个结尾处，合起来就是在最后。')),
-  freq(noun('lön', 'en', '工资；薪水', 'wages / salary', 'lönen', 'löner', null, [
+  freq(noun('lön', 'en', '工资；薪水', 'wages / salary', 'lönen', 'löner', 'lönerna', [
     ['Vad har du i lön?', '你工资多少？'],
     ['Lönen kommer på fredag.', '工资星期五到。'],
     ['Lönerna höjs i år.', '今年那些工资会涨。'],

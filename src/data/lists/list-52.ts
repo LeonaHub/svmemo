@@ -136,7 +136,7 @@ export const list52: Word[] = [
     ['Soor grymtade ute på gården.', '母猪们在院子里哼哼。'],
     ['Soorna gick lösa i hagen.', '那些母猪在围场里散着。'],
   ]), 2566),
-  freq(noun('version', 'en', '版本', 'version', 'versionen', 'versioner', null, [
+  freq(noun('version', 'en', '版本', 'version', 'versionen', 'versioner', 'versionerna', [
     ['Appen släpptes i en ny version.', '这个应用出了新版本。'],
     ['Versionen på papperet är kortare.', '纸上的这个版本更短。'],
     ['Vi jämförde tre versioner av texten.', '我们比较了这段文字的三个版本。'],
@@ -202,7 +202,7 @@ export const list52: Word[] = [
     ],
     '“往上带起来”，可以是盖起来、演出来，也可以是把自己表现出来。',
   )),
-  freq(noun('personlighet', 'en', '个性；人物', 'personality', 'personligheten', 'personligheter', null, [
+  freq(noun('personlighet', 'en', '个性；人物', 'personality', 'personligheten', 'personligheter', 'personligheterna', [
     ['Hon har en stark personlighet.', '她个性很强。'],
     ['Personligheten skiner igenom i texten.', '个性从文字里透出来。'],
     ['Flera kända personligheter kom.', '好几位知名人物来了。'],
@@ -239,7 +239,7 @@ export const list52: Word[] = [
     ],
     '“从头到整个来看”，否定句里就是根本、压根儿。也常写成一个词 överhuvudtaget。',
   )),
-  freq(noun('explosion', 'en', '爆炸', 'explosion', 'explosionen', 'explosioner', null, [
+  freq(noun('explosion', 'en', '爆炸', 'explosion', 'explosionen', 'explosioner', 'explosionerna', [
     ['En explosion hördes i hamnen.', '港口传来一声爆炸。'],
     ['Explosionen krossade fönstren.', '那次爆炸把窗户震碎了。'],
     ['Två explosioner följde tätt.', '两声爆炸紧接着响起。'],
@@ -251,7 +251,7 @@ export const list52: Word[] = [
     ['Vi har slut på smör.', '我们黄油没了。'],
     ['Köp smör till middagen.', '买点黄油做晚饭。'],
   ]), 2580),
-  freq(noun('detektiv', 'en', '侦探', 'detective', 'detektiven', 'detektiver', null, [
+  freq(noun('detektiv', 'en', '侦探', 'detective', 'detektiven', 'detektiver', 'detektiverna', [
     ['En detektiv väntade utanför.', '一名侦探在外面等。'],
     ['Detektiven följde spåren.', '那位侦探顺着痕迹走。'],
     ['Två detektiver granskade rummet.', '两名侦探检查了房间。'],

@@ -94,7 +94,7 @@ export const list36: Word[] = [
     ],
     '“像奇迹一样的”，不是“下面的”，合起来就是奇怪、古怪。',
   )),
-  freq(noun('tävling', 'en', '比赛；竞赛', 'competition / contest', 'tävlingen', 'tävlingar', null, [
+  freq(noun('tävling', 'en', '比赛；竞赛', 'competition / contest', 'tävlingen', 'tävlingar', 'tävlingarna', [
     ['Hon vinner tävlingen i år.', '她今年赢得这场比赛。'],
     ['Tävlingen börjar klockan nio.', '比赛九点开始。'],
     ['Det finns tre tävlingar i maj.', '五月有三场竞赛。'],
@@ -203,7 +203,7 @@ export const list36: Word[] = [
     ['Har ni mötts förr?', '你们以前碰过面吗？'],
     ['Mötas kan vi i morgon.', '我们明天可以碰面。'],
   ]), 1777, c([['möta', '遇见'], ['-s', '互相']], '彼此遇见，合起来就是相遇、碰面。')),
-  freq(noun('läxa', 'en', '作业；教训', 'homework / lesson', 'läxan', 'läxor', null, [
+  freq(noun('läxa', 'en', '作业；教训', 'homework / lesson', 'läxan', 'läxor', 'läxorna', [
     ['Hon gör läxan vid bordet.', '她在桌边做作业。'],
     ['Läxan är svår i dag.', '今天的作业很难。'],
     ['Vi har tre läxor i veckan.', '我们一周有三次作业。'],
@@ -228,7 +228,7 @@ export const list36: Word[] = [
     ],
     '“处在与……的关系里”，就是相对于、相比。',
   )),
-  freq(noun('jakt', 'en', '打猎；追捕', 'hunt / chase', 'jakten', 'jakter', null, [
+  freq(noun('jakt', 'en', '打猎；追捕', 'hunt / chase', 'jakten', 'jakter', 'jakterna', [
     ['De är ute på jakt.', '他们出去打猎了。'],
     ['Jakten på tjuven fortsätter.', '对小偷的追捕还在继续。'],
     ['Det finns två jakter i höst.', '今年秋天有两场打猎。'],
@@ -258,25 +258,25 @@ export const list36: Word[] = [
     ['Hon fyller år i juni.', '她六月过生日。'],
     ['Boka resan till juni.', '把旅行订在六月。'],
   ]), 1785),
-  freq(noun('finger', 'ett', '手指', 'finger', 'fingret', 'fingrar', null, [
+  freq(noun('finger', 'ett', '手指', 'finger', 'fingret', 'fingrar', 'fingrarna', [
     ['Hon bröt ett finger.', '她折了一根手指。'],
     ['Fingret gör ont.', '这根手指疼。'],
     ['Han har kalla fingrar.', '他手指冷。'],
     ['Rör inte med fingret.', '别用手指碰。'],
   ]), 1786),
-  freq(noun('väst', 'en', '背心；马甲', 'waistcoat / vest', 'västen', 'västar', null, [
+  freq(noun('väst', 'en', '背心；马甲', 'waistcoat / vest', 'västen', 'västar', 'västarna', [
     ['Han har en grå väst på sig.', '他穿着一件灰色马甲。'],
     ['Västen är för tajt.', '这件背心太紧。'],
     ['Två västar hänger i garderoben.', '衣柜里挂着两件马甲。'],
     ['Ta på västen, det är kallt.', '穿上背心，天气冷。'],
   ]), 1787),
-  freq(noun('stol', 'en', '椅子', 'chair', 'stolen', 'stolar', null, [
+  freq(noun('stol', 'en', '椅子', 'chair', 'stolen', 'stolar', 'stolarna', [
     ['Sitt på stolen där.', '坐那边那把椅子。'],
     ['Stolen är trasig.', '这把椅子坏了。'],
     ['Vi behöver fyra stolar till.', '我们还需要四把椅子。'],
     ['Flytta stolen närmare.', '把椅子挪近一点。'],
   ]), 1788),
-  freq(noun('olja', 'en', '油', 'oil', 'oljan', 'oljor', null, [
+  freq(noun('olja', 'en', '油', 'oil', 'oljan', 'oljor', 'oljorna', [
     ['Bilen behöver mer olja.', '这车需要再加点油。'],
     ['Oljan är slut i lampan.', '灯里的油用完了。'],
     ['Vi har tre oljor i köket.', '厨房里有三种油。'],
@@ -294,13 +294,13 @@ export const list36: Word[] = [
     ],
     '“把事情做出去”，就是执行、完成。',
   )),
-  freq(noun('pilot', 'en', '飞行员', 'pilot', 'piloten', 'piloter', null, [
+  freq(noun('pilot', 'en', '飞行员', 'pilot', 'piloten', 'piloter', 'piloterna', [
     ['En pilot hälsade i dörren.', '一位飞行员在门口打招呼。'],
     ['Piloten landade mjukt.', '那位飞行员降落得很轻。'],
     ['Två piloter sitter i cockpit.', '两名飞行员坐在驾驶舱。'],
     ['Fråga piloten om tiden.', '问问飞行员几点到。'],
   ]), 1791),
-  freq(noun('attack', 'en', '攻击；发作', 'attack', 'attacken', 'attacker', null, [
+  freq(noun('attack', 'en', '攻击；发作', 'attack', 'attacken', 'attacker', 'attackerna', [
     ['De gick till attack vid gryningen.', '他们黎明时发动攻击。'],
     ['Attacken kom från vänster.', '攻击从左边来。'],
     ['Han har haft två attacker i år.', '他今年发作过两次。'],
@@ -312,7 +312,7 @@ export const list36: Word[] = [
     ['Hon har skrivit flera verk.', '她写过好几部作品。'],
     ['Verken står i hyllan.', '那些作品在书架上。'],
   ]), 1793),
-  freq(noun('berättelse', 'en', '故事；叙述', 'story / narrative', 'berättelsen', 'berättelser', null, [
+  freq(noun('berättelse', 'en', '故事；叙述', 'story / narrative', 'berättelsen', 'berättelser', 'berättelserna', [
     ['Hon läser en berättelse för barnet.', '她给孩子读一个故事。'],
     ['Berättelsen är kort.', '这个故事很短。'],
     ['Han har skrivit tre berättelser.', '他写了三个故事。'],

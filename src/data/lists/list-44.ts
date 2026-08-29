@@ -46,7 +46,7 @@ export const list44: Word[] = [
     ['Såklart det regnar i dag.', '今天当然下雨。'],
     ['Säg såklart om du vill.', '想说当然就说。'],
   ]), 2157, c([['så', '如此'], ['klart', '清楚；当然']], '如此清楚，合起来就是当然。')),
-  freq(noun('fördel', 'en', '好处；优势', 'advantage / benefit', 'fördelen', 'fördelar', null, [
+  freq(noun('fördel', 'en', '好处；优势', 'advantage / benefit', 'fördelen', 'fördelar', 'fördelarna', [
     ['Det är en stor fördel.', '这是一个很大的优势。'],
     ['Fördelen med tåget är tiden.', '坐火车的好处是省时间。'],
     ['Planen har flera fördelar.', '这个计划有好几处好处。'],
@@ -82,7 +82,7 @@ export const list44: Word[] = [
     ['De intelligenta frågorna hjälpte.', '那些聪明的问题帮了忙。'],
     ['Var intelligent nu.', '现在动动脑子。'],
   ]), 2163),
-  freq(noun('korridor', 'en', '走廊', 'corridor', 'korridoren', 'korridorer', null, [
+  freq(noun('korridor', 'en', '走廊', 'corridor', 'korridoren', 'korridorer', 'korridorerna', [
     ['Rummet ligger längst ner i korridoren.', '房间在走廊尽头。'],
     ['Korridoren är smal.', '这条走廊很窄。'],
     ['Skolan har tre korridorer.', '学校有三条走廊。'],
@@ -94,7 +94,7 @@ export const list44: Word[] = [
     ['Byxorna har tre fickor.', '这条裤子有三个口袋。'],
     ['Fickorna var fulla med godis.', '那些口袋里装满了糖。'],
   ]), 2165),
-  freq(noun('story', 'en', '故事；剧情', 'story / plot', 'storyn', 'storyer', null, [
+  freq(noun('story', 'en', '故事；剧情', 'story / plot', 'storyn', 'storyer', 'storyerna', [
     ['Filmen har en bra story.', '这部电影剧情很好。'],
     ['Storyn är enkel.', '这个故事很简单。'],
     ['Hon skrev två storyer.', '她写了两个故事。'],
@@ -112,7 +112,7 @@ export const list44: Word[] = [
     ],
     '“抽出来放在一边的”，合起来就是例外。',
   )),
-  freq(noun('journalist', 'en', '记者', 'journalist', 'journalisten', 'journalister', null, [
+  freq(noun('journalist', 'en', '记者', 'journalist', 'journalisten', 'journalister', 'journalisterna', [
     ['Hon är journalist på tidningen.', '她是报社记者。'],
     ['Journalisten ställde tre frågor.', '记者问了三个问题。'],
     ['Två journalister väntade ute.', '两名记者在外面等。'],
@@ -130,7 +130,7 @@ export const list44: Word[] = [
     ['Gamla murar står kvar.', '那些老墙还在。'],
     ['Murarna rasade i stormen.', '那些墙在风暴里塌了。'],
   ]), 2170),
-  freq(noun('cykel', 'en', '自行车', 'bicycle', 'cykeln', 'cyklar', null, [
+  freq(noun('cykel', 'en', '自行车', 'bicycle', 'cykeln', 'cyklar', 'cyklarna', [
     ['Jag tar cykeln till jobbet.', '我骑自行车去上班。'],
     ['Cykeln är låst.', '这辆自行车锁着。'],
     ['De har tre cyklar.', '他们有三辆自行车。'],
@@ -166,7 +166,7 @@ export const list44: Word[] = [
     ['Läs sid. 3–5 till i morgon.', '读到第3到5页，明天之前。'],
     ['Källan finns på sid. 20.', '出处在第20页。'],
   ]), 2175),
-  freq(noun('indian', 'en', '美洲原住民', 'Native American / American Indian', 'indianen', 'indianer', null, [
+  freq(noun('indian', 'en', '美洲原住民', 'Native American / American Indian', 'indianen', 'indianer', 'indianerna', [
     ['Museet visar indianers historia.', '博物馆展示美洲原住民的历史。'],
     ['Indianen i filmen rider.', '电影里的原住民在骑马。'],
     ['Flera indianer bor i området.', '该地区住着不少美洲原住民。'],
@@ -202,7 +202,7 @@ export const list44: Word[] = [
     ['Har det regnat här?', '这儿下过雨吗？'],
     ['Låt det bara regna.', '让它下吧。'],
   ]), 2180),
-  freq(noun('leksak', 'en', '玩具', 'toy', 'leksaken', 'leksaker', null, [
+  freq(noun('leksak', 'en', '玩具', 'toy', 'leksaken', 'leksaker', 'leksakerna', [
     ['Barnet fick en ny leksak.', '孩子得到了一个新玩具。'],
     ['Leksaken ligger under soffan.', '玩具在沙发下面。'],
     ['Rummet är fullt av leksaker.', '房间里全是玩具。'],
@@ -214,7 +214,7 @@ export const list44: Word[] = [
     ['Programmet har sänts i repris.', '这个节目已经重播过了。'],
     ['Sänd meddelandet nu.', '现在把消息发出去。'],
   ]), 2182),
-  freq(noun('dusch', 'en', '淋浴；花洒', 'shower / showerhead', 'duschen', 'duschar', null, [
+  freq(noun('dusch', 'en', '淋浴；花洒', 'shower / showerhead', 'duschen', 'duschar', 'duscharna', [
     ['Jag tar en dusch nu.', '我现在去冲个澡。'],
     ['Duschen är trasig.', '这个花洒坏了。'],
     ['Lägenheten har två duschar.', '公寓有两个淋浴。'],
@@ -311,13 +311,13 @@ export const list44: Word[] = [
     ],
     '“单独站在那里、没有同类”，合起来就是杰出、出色。',
   )),
-  freq(noun('förändring', 'en', '变化；改变', 'change', 'förändringen', 'förändringar', null, [
+  freq(noun('förändring', 'en', '变化；改变', 'change', 'förändringen', 'förändringar', 'förändringarna', [
     ['Det behövs en förändring.', '需要一次改变。'],
     ['Förändringen kom snabbt.', '这次变化来得很快。'],
     ['Staden har sett stora förändringar.', '这座城市经历了很大变化。'],
     ['Räds inte förändringen.', '别害怕这次改变。'],
   ]), 2195, c([['förändra', '改变'], ['-ing', '行为／结果']], '改变这一行为的结果，合起来就是变化。')),
-  freq(noun('jätte', 'en', '巨人', 'giant', 'jätten', 'jättar', null, [
+  freq(noun('jätte', 'en', '巨人', 'giant', 'jätten', 'jättar', 'jättarna', [
     ['Sagan handlar om en jätte.', '这个故事讲一个巨人。'],
     ['Jätten bodde i berget.', '巨人住在山里。'],
     ['Två jättar stred i boken.', '书里两个巨人在打斗。'],
@@ -341,7 +341,7 @@ export const list44: Word[] = [
     ],
     '“用这一点”，合起来就是特此、以此。',
   )),
-  freq(noun('ungdom', 'en', '青春；年轻人', 'youth / young person', 'ungdomen', 'ungdomar', null, [
+  freq(noun('ungdom', 'en', '青春；年轻人', 'youth / young person', 'ungdomen', 'ungdomar', 'ungdomarna', [
     ['I ungdomen reste hon mycket.', '她年轻时经常旅行。'],
     ['Ungdomen i området spelar fotboll.', '这一带的年轻人在踢足球。'],
     ['Flera ungdomar väntade vid hållplatsen.', '好几个年轻人在车站等。'],

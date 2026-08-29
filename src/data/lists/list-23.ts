@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 1101–1150. Primary POS is the high-frequency use, not every sense in the book. */
 export const list23: Word[] = [
-  freq(noun('medicin', 'en', '药；医学', 'medicine / medication', 'medicinen', 'mediciner', null, [
+  freq(noun('medicin', 'en', '药；医学', 'medicine / medication', 'medicinen', 'mediciner', 'medicinerna', [
     ['Hon tar medicin varje morgon.', '她每天早上吃药。'],
     ['Medicinen smakar beskt.', '这药味道很苦。'],
     ['Läkaren skrev ut två mediciner.', '医生开了两种药。'],
@@ -16,7 +16,7 @@ export const list23: Word[] = [
     ['Hur många procent vill du ha?', '你想要百分之多少？'],
     ['Procenten är låg i år.', '今年这个百分比很低。'],
   ]), 1102),
-  freq(noun('gumma', 'en', '老太太；老太婆', 'old woman', 'gumman', 'gummor', null, [
+  freq(noun('gumma', 'en', '老太太；老太婆', 'old woman', 'gumman', 'gummor', 'gummorna', [
     ['En gumma sitter på bänken.', '一位老太太坐在长椅上。'],
     ['Gumman matar fåglarna.', '那位老太太在喂鸟。'],
     ['Två gummor väntar på bussen.', '两位老太太在等公交车。'],
@@ -28,19 +28,19 @@ export const list23: Word[] = [
     ['Har du rökt i dag?', '你今天抽过烟了吗？'],
     ['Rök inte inne.', '别在室内抽烟。'],
   ]), 1104),
-  freq(noun('kopp', 'en', '杯子；一杯', 'cup', 'koppen', 'koppar', null, [
+  freq(noun('kopp', 'en', '杯子；一杯', 'cup', 'koppen', 'koppar', 'kopparna', [
     ['En kopp te, tack.', '请来一杯茶。'],
     ['Koppen är fortfarande varm.', '这杯子还是热的。'],
     ['Vi har bara tre koppar kvar.', '我们只剩三个杯子了。'],
     ['Ställ koppen i diskhon.', '把杯子放到洗碗槽里。'],
   ]), 1105),
-  freq(noun('kuk', 'en', '鸡巴；阴茎（粗）', 'cock / penis (vulgar)', 'kuken', 'kukar', null, [
+  freq(noun('kuk', 'en', '鸡巴；阴茎（粗）', 'cock / penis (vulgar)', 'kuken', 'kukar', 'kukarna', [
     ['Han skrek kuk i bussen.', '他在公交车上喊了那句脏话。'],
     ['Kuken är ett fult ord.', '这是个粗俗的词。'],
     ['Barnen ritade kukar på väggen.', '孩子们在墙上画了那些东西。'],
     ['Säg inte kuk här.', '别在这儿说这个词。'],
   ]), 1106),
-  freq(noun('form', 'en', '形状；形式；状态；模子', 'form / shape / mould', 'formen', 'former', null, [
+  freq(noun('form', 'en', '形状；形式；状态；模子', 'form / shape / mould', 'formen', 'former', 'formerna', [
     ['Cirkeln har en rund form.', '这个圆是圆形的。'],
     ['Formen på huset är udda.', '这房子的形状很怪。'],
     ['Det finns flera former att välja.', '有好几种形式可选。'],
@@ -52,13 +52,13 @@ export const list23: Word[] = [
     ['De farliga hundarna är inne.', '那些危险的狗在屋里。'],
     ['Det är farligt att springa här.', '在这儿跑很危险。'],
   ]), 1108),
-  freq(noun('stil', 'en', '风格；字体；品味', 'style / manner / writing', 'stilen', 'stilar', null, [
+  freq(noun('stil', 'en', '风格；字体；品味', 'style / manner / writing', 'stilen', 'stilar', 'stilarna', [
     ['Hon har en egen stil.', '她有自己的风格。'],
     ['Stilen i brevet är enkel.', '这封信的文风很简单。'],
     ['Det finns många stilar i år.', '今年有很多种风格。'],
     ['Han skriver med tydlig stil.', '他写字字体清楚。'],
   ]), 1109),
-  freq(noun('hals', 'en', '脖子；咽喉', 'neck / throat', 'halsen', 'halsar', null, [
+  freq(noun('hals', 'en', '脖子；咽喉', 'neck / throat', 'halsen', 'halsar', 'halsarna', [
     ['Hon har en lång hals.', '她脖子很长。'],
     ['Halsen är torr i dag.', '这嗓子今天发干。'],
     ['De har långa halsar.', '他们脖子很长。'],
@@ -88,7 +88,7 @@ export const list23: Word[] = [
     ['Jag har nytta av appen varje dag.', '我每天都用得上这个应用。'],
     ['Kartan är till nytta på resan.', '这地图在路上有用。'],
   ]), 1114),
-  freq(noun('gåva', 'en', '礼物；天赋', 'gift / present', 'gåvan', 'gåvor', null, [
+  freq(noun('gåva', 'en', '礼物；天赋', 'gift / present', 'gåvan', 'gåvor', 'gåvorna', [
     ['Det är en fin gåva.', '这是一份精美的礼物。'],
     ['Gåvan låg på bordet.', '礼物在桌子上。'],
     ['Vi köpte två gåvor till henne.', '我们给她买了两份礼物。'],
@@ -124,7 +124,7 @@ export const list23: Word[] = [
     ['Han har gråtit färdigt nu.', '他已经哭完了。'],
     ['Gråt inte över det.', '别为那件事哭。'],
   ]), 1120),
-  freq(noun('fiende', 'en', '敌人', 'enemy / foe', 'fienden', 'fiender', null, [
+  freq(noun('fiende', 'en', '敌人', 'enemy / foe', 'fienden', 'fiender', 'fienderna', [
     ['Han såg en fiende där.', '他在那儿看见一个敌人。'],
     ['Fienden backade i natt.', '敌人夜里后退了。'],
     ['De har många fiender där.', '他们在那儿有很多敌人。'],
@@ -160,13 +160,13 @@ export const list23: Word[] = [
     ['Ju fler vi är, desto roligare.', '我们人越多越好玩。'],
     ['Ju tystare rummet är, desto bättre sover jag.', '房间越安静我睡得越好。'],
   ]), 1126),
-  freq(noun('arm', 'en', '胳膊；手臂', 'arm', 'armen', 'armar', null, [
+  freq(noun('arm', 'en', '胳膊；手臂', 'arm', 'armen', 'armar', 'armarna', [
     ['Hon bröt armen i går.', '她昨天把胳膊摔折了。'],
     ['Armen gör ont nu.', '这胳膊现在疼。'],
     ['Han har långa armar.', '他胳膊很长。'],
     ['Ta barnet i armen.', '把孩子抱在胳膊上。'],
   ]), 1127),
-  freq(noun('snut', 'en', '警察（口）', 'cop (informal)', 'snuten', 'snutar', null, [
+  freq(noun('snut', 'en', '警察（口）', 'cop (informal)', 'snuten', 'snutar', 'snutarna', [
     ['En snut står vid dörren.', '一个警察站在门口。'],
     ['Snuten kom sent.', '那警察来晚了。'],
     ['Två snutar väntar utanför.', '两个警察在外面等。'],
@@ -184,7 +184,7 @@ export const list23: Word[] = [
     ['Har du tvättat golvet än?', '你洗过地板了吗？'],
     ['Tvätta händerna före maten.', '吃饭前洗手。'],
   ]), 1130),
-  freq(noun('karriär', 'en', '事业；职业生涯', 'career', 'karriären', 'karriärer', null, [
+  freq(noun('karriär', 'en', '事业；职业生涯', 'career', 'karriären', 'karriärer', 'karriärerna', [
     ['Hon gör karriär på banken.', '她在银行发展事业。'],
     ['Karriären tog fart sent.', '这事业起步晚。'],
     ['De har olika karriärer.', '他们的职业道路不同。'],
@@ -202,7 +202,7 @@ export const list23: Word[] = [
     ['Du får komma oavsett tid.', '不论什么时候你都可以来。'],
     ['Oavsett priset köper vi den.', '不管价钱多少我们都买。'],
   ]), 1133, c([['o-', '不、未'], ['avsett', '被考虑的']], '不加考虑，合起来就是不论、不管。')),
-  freq(noun('blomma', 'en', '花', 'flower / blossom', 'blomman', 'blommor', null, [
+  freq(noun('blomma', 'en', '花', 'flower / blossom', 'blomman', 'blommor', 'blommorna', [
     ['Det står en blomma i vasen.', '花瓶里有一朵花。'],
     ['Blomman öppnade sig i sol.', '这朵花在太阳下开了。'],
     ['Hon köpte tre blommor.', '她买了三朵花。'],
@@ -232,7 +232,7 @@ export const list23: Word[] = [
     ['Han beter sig löjligt på jobbet.', '他在工作上表现得很可笑。'],
     ['Inte så löjligt, tack.', '别那么荒唐，谢谢。'],
   ]), 1138),
-  freq(noun('show', 'en', '演出；表演', 'show / performance', 'showen', 'shower', null, [
+  freq(noun('show', 'en', '演出；表演', 'show / performance', 'showen', 'shower', 'showerna', [
     ['Vi såg en show i går.', '我们昨天看了一场演出。'],
     ['Showen börjar klockan åtta.', '演出八点开始。'],
     ['Två shower går samma kväll.', '同一晚有两场演出。'],
@@ -244,7 +244,7 @@ export const list23: Word[] = [
     ['Har du kontrollerat dörren?', '你检查过门了吗？'],
     ['Kontrollera mejlen före mötet.', '开会前检查一下邮件。'],
   ]), 1140),
-  freq(noun('födelsedag', 'en', '生日', 'birthday', 'födelsedagen', 'födelsedagar', null, [
+  freq(noun('födelsedag', 'en', '生日', 'birthday', 'födelsedagen', 'födelsedagar', 'födelsedagarna', [
     ['I dag är det min födelsedag.', '今天是我的生日。'],
     ['Födelsedagen firar vi hemma.', '生日我们在家过。'],
     ['Två födelsedagar infaller i maj.', '五月有两个生日。'],
@@ -274,19 +274,19 @@ export const list23: Word[] = [
     ['Två berg ligger bakom sjön.', '湖后面有两座山。'],
     ['Bergen är vita av snö.', '那些山被雪盖白了。'],
   ]), 1145),
-  freq(noun('fredag', 'en', '星期五', 'Friday', 'fredagen', 'fredagar', null, [
+  freq(noun('fredag', 'en', '星期五', 'Friday', 'fredagen', 'fredagar', 'fredagarna', [
     ['I morgon är det fredag.', '明天是星期五。'],
     ['Fredagen blev lång på jobbet.', '这个星期五上班过得很长。'],
     ['Vi ses på fredagar.', '我们星期五见面。'],
     ['Hon är ledig på fredag.', '她星期五休息。'],
   ]), 1146),
-  freq(noun('sten', 'en', '石头', 'stone / rock', 'stenen', 'stenar', null, [
+  freq(noun('sten', 'en', '石头', 'stone / rock', 'stenen', 'stenar', 'stenarna', [
     ['Det ligger en sten på vägen.', '路上有一块石头。'],
     ['Stenen är tung att lyfta.', '这块石头很重，抬不动。'],
     ['Barnen kastade små stenar i vattnet.', '孩子们往水里扔小石头。'],
     ['Lyft undan stenen, tack.', '请把这块石头挪开。'],
   ]), 1147),
-  freq(noun('position', 'en', '位置；地位', 'position', 'positionen', 'positioner', null, [
+  freq(noun('position', 'en', '位置；地位', 'position', 'positionen', 'positioner', 'positionerna', [
     ['Fartyget angav sin position.', '船报了自己的位置。'],
     ['Positionen i laget är ny.', '队里这个位置是新的。'],
     ['Hon har haft flera positioner på jobbet.', '她在工作上担任过好几个职位。'],

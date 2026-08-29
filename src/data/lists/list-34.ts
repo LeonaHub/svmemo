@@ -83,7 +83,7 @@ export const list34: Word[] = [
     ],
     'allmänhet 是“普遍的情况”，加上 i 就是一般来说。',
   )),
-  freq(noun('farsa', 'en', '爸（口）', 'dad / old man (informal)', 'farsan', 'farsor', null, [
+  freq(noun('farsa', 'en', '爸（口）', 'dad / old man (informal)', 'farsan', 'farsor', 'farsorna', [
     ['Min farsa jobbar sent.', '我爸下班很晚。'],
     ['Farsan väntar i bilen.', '老爸在车里等。'],
     ['Två farsor stod vid planen.', '两位老爸站在球场边。'],
@@ -95,7 +95,7 @@ export const list34: Word[] = [
     ['Det första tåget har gått.', '第一班火车已经开了。'],
     ['De första gästerna kom tidigt.', '第一批客人来得很早。'],
   ]), 1662),
-  freq(noun('motor', 'en', '发动机；马达', 'engine / motor', 'motorn', 'motorer', null, [
+  freq(noun('motor', 'en', '发动机；马达', 'engine / motor', 'motorn', 'motorer', 'motorerna', [
     ['Bilen har en ny motor.', '这车有一台新发动机。'],
     ['Motorn startade direkt.', '发动机马上就着了。'],
     ['Två motorer gick varma.', '两台发动机发烫了。'],
@@ -125,7 +125,7 @@ export const list34: Word[] = [
     ['Hon tog tre prov på labbet.', '她在实验室取了三份样本。'],
     ['Proven rättas i veckan.', '那些测验这周批改。'],
   ]), 1667),
-  freq(noun('evighet', 'en', '永恒；极长时间', 'eternity', 'evigheten', 'evigheter', null, [
+  freq(noun('evighet', 'en', '永恒；极长时间', 'eternity', 'evigheten', 'evigheter', 'evigheterna', [
     ['Det kändes som en evighet.', '感觉像过了很久很久。'],
     ['Evigheten skrämde honom inte.', '永恒并不让他害怕。'],
     ['Hon kan prata i evigheter.', '她能说上老半天。'],
@@ -137,7 +137,7 @@ export const list34: Word[] = [
     ['Två gossar sprang förbi.', '两个男孩跑过去了。'],
     ['Gossarna skrattade högt.', '那些男孩大声笑。'],
   ]), 1669),
-  freq(noun('penna', 'en', '笔', 'pen', 'pennan', 'pennor', null, [
+  freq(noun('penna', 'en', '笔', 'pen', 'pennan', 'pennor', 'pennorna', [
     ['Kan jag låna en penna?', '我能借一支笔吗？'],
     ['Pennan är slut.', '这支笔没水了。'],
     ['Hon har tre pennor i väskan.', '她包里有三支笔。'],
@@ -173,13 +173,13 @@ export const list34: Word[] = [
     ],
     '“不正常的心智”，合起来就是疯狂、荒唐。',
   )),
-  freq(noun('grav', 'en', '坟墓；墓穴', 'grave', 'graven', 'gravar', null, [
+  freq(noun('grav', 'en', '坟墓；墓穴', 'grave', 'graven', 'gravar', 'gravarna', [
     ['De stod vid en grav.', '他们站在一座坟墓旁。'],
     ['Graven var täckt med blommor.', '这座墓上铺满了花。'],
     ['Två gravar ligger sida vid sida.', '两座墓并排着。'],
     ['Lägg blommorna på graven.', '把花放在这座墓上。'],
   ]), 1675),
-  freq(noun('träning', 'en', '训练；锻炼', 'training / practice', 'träningen', 'träningar', null, [
+  freq(noun('träning', 'en', '训练；锻炼', 'training / practice', 'träningen', 'träningar', 'träningarna', [
     ['Hon har träning efter skolan.', '她放学后有训练。'],
     ['Träningen varade en timme.', '这次训练持续了一小时。'],
     ['Två träningar i veckan räcker.', '一周两次训练就够了。'],
@@ -191,7 +191,7 @@ export const list34: Word[] = [
     ['Problemet dök åter upp.', '问题再次出现。'],
     ['Kom åter hit.', '回到这里来。'],
   ]), 1677),
-  freq(noun('inspektör', 'en', '督察；检查员', 'inspector', 'inspektören', 'inspektörer', null, [
+  freq(noun('inspektör', 'en', '督察；检查员', 'inspector', 'inspektören', 'inspektörer', 'inspektörerna', [
     ['En inspektör kommer i morgon.', '一位检查员明天来。'],
     ['Inspektören tittade i pärmen.', '督察看了文件夹。'],
     ['Två inspektörer gick genom hallen.', '两位检查员穿过大厅。'],
@@ -215,7 +215,7 @@ export const list34: Word[] = [
     ['Hon höll tillbaka gråten.', '她忍住了哭。'],
     ['Det hördes gråt bakom dörren.', '门后传来哭声。'],
   ]), 1681),
-  freq(noun('skatt', 'en', '税；财宝', 'tax / treasure', 'skatten', 'skatter', null, [
+  freq(noun('skatt', 'en', '税；财宝', 'tax / treasure', 'skatten', 'skatter', 'skatterna', [
     ['Vad betalar du i skatt?', '你交多少税？'],
     ['Skatten höjs i år.', '今年税额上调。'],
     ['Nya skatter träder i kraft.', '新的税种要生效。'],
@@ -227,7 +227,7 @@ export const list34: Word[] = [
     ['Det är en skam att ljuga så.', '这样撒谎是一种耻辱。'],
     ['Känn ingen skam för det.', '别为这件事感到羞愧。'],
   ]), 1683),
-  freq(noun('nolla', 'en', '零；无足轻重的人', 'zero / nought / nobody', 'nollan', 'nollor', null, [
+  freq(noun('nolla', 'en', '零；无足轻重的人', 'zero / nought / nobody', 'nollan', 'nollor', 'nollorna', [
     ['Skriv en nolla efter trean.', '在三后面写一个零。'],
     ['Nollan saknas i rutan.', '格子里少了那个零。'],
     ['Det står två nollor i talet.', '这个数里有两个零。'],
@@ -245,7 +245,7 @@ export const list34: Word[] = [
     ['Hon sover gott här.', '她在这儿睡得很好。'],
     ['Sov gott i natt.', '今晚睡个好觉。'],
   ]), 1686),
-  freq(noun('björn', 'en', '熊', 'bear', 'björnen', 'björnar', null, [
+  freq(noun('björn', 'en', '熊', 'bear', 'björnen', 'björnar', 'björnarna', [
     ['En björn gick över vägen.', '一头熊走过马路。'],
     ['Björnen sover på vintern.', '这头熊冬天睡觉。'],
     ['Två björnar syntes vid ån.', '两头熊出现在河边。'],
@@ -257,13 +257,13 @@ export const list34: Word[] = [
     ['Hon har varit med om flera äventyr.', '她经历过好几次冒险。'],
     ['Äventyren i boken är korta.', '书里那些冒险很短。'],
   ]), 1688),
-  freq(noun('lösning', 'en', '解决办法；溶液', 'solution', 'lösningen', 'lösningar', null, [
+  freq(noun('lösning', 'en', '解决办法；溶液', 'solution', 'lösningen', 'lösningar', 'lösningarna', [
     ['Vi behöver en enkel lösning.', '我们需要一个简单的办法。'],
     ['Lösningen kom sent.', '这个解决办法来得很晚。'],
     ['De testade tre lösningar.', '他们试了三种办法。'],
     ['Blanda lösningen försiktigt.', '小心地把溶液混匀。'],
   ]), 1689, c([['lösa', '解决／溶解'], ['-ning', '行为、结果']], '解决或溶解的结果，合起来就是办法、溶液。')),
-  freq(noun('cigarett', 'en', '香烟', 'cigarette', 'cigaretten', 'cigaretter', null, [
+  freq(noun('cigarett', 'en', '香烟', 'cigarette', 'cigaretten', 'cigaretter', 'cigaretterna', [
     ['Han tände en cigarett ute.', '他在外面点了一支烟。'],
     ['Cigaretten slocknade i vinden.', '这支烟被风吹灭了。'],
     ['Två cigaretter låg i askkoppen.', '烟灰缸里有两支烟。'],
@@ -281,7 +281,7 @@ export const list34: Word[] = [
     ['Fyll på bensin före resan.', '出发前加好油。'],
     ['Det luktar bensin här.', '这儿有汽油味。'],
   ]), 1692),
-  freq(noun('oliv', 'en', '橄榄', 'olive', 'oliven', 'oliver', null, [
+  freq(noun('oliv', 'en', '橄榄', 'olive', 'oliven', 'oliver', 'oliverna', [
     ['Hon tar en oliv till osten.', '她就着奶酪吃一颗橄榄。'],
     ['Oliven är salt.', '这颗橄榄很咸。'],
     ['Skålen har svarta oliver.', '碗里有黑色橄榄。'],
@@ -293,13 +293,13 @@ export const list34: Word[] = [
     ['Vi har glott för länge.', '我们盯得太久了。'],
     ['Glo inte så.', '别那样盯着看。'],
   ]), 1694),
-  freq(noun('vikt', 'en', '重量；砝码；重要性', 'weight', 'vikten', 'vikter', null, [
+  freq(noun('vikt', 'en', '重量；砝码；重要性', 'weight', 'vikten', 'vikter', 'vikterna', [
     ['Vad är vikten på paketet?', '这个包裹多重？'],
     ['Vikten har ökat i vinter.', '这个冬天体重增加了。'],
     ['Hon lyfter tunga vikter.', '她在举很重的哑铃。'],
     ['Skriv vikten på lappen.', '把重量写在纸条上。'],
   ]), 1695),
-  freq(noun('tillgång', 'en', '供给；资源；使用权', 'access / supply / asset', 'tillgången', 'tillgångar', null, [
+  freq(noun('tillgång', 'en', '供给；资源；使用权', 'access / supply / asset', 'tillgången', 'tillgångar', 'tillgångarna', [
     ['Det är god tillgång på vatten.', '水的供给很充足。'],
     ['Tillgången till rummet är begränsad.', '进入这个房间的权限有限。'],
     ['Företaget har stora tillgångar.', '这家公司有大量资产。'],

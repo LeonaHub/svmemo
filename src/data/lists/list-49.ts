@@ -10,7 +10,7 @@ export const list49: Word[] = [
     ['De kungliga slotten är öppna.', '那些王室城堡开放参观。'],
     ['Hon bar en kunglig krona.', '她戴着一顶皇家王冠。'],
   ]), 2401, c([['kung', '国王'], ['-lig', '带这种性质的']], '跟国王有关的，就是王室的、皇家的。')),
-  freq(noun('undersökning', 'en', '调查；检查；体检', 'investigation / examination', 'undersökningen', 'undersökningar', null, [
+  freq(noun('undersökning', 'en', '调查；检查；体检', 'investigation / examination', 'undersökningen', 'undersökningar', 'undersökningarna', [
     ['Läkaren gör en undersökning.', '医生在做检查。'],
     ['Undersökningen tar en timme.', '这次检查要一个小时。'],
     ['Två undersökningar visade samma sak.', '两次调查结果一样。'],
@@ -113,7 +113,7 @@ export const list49: Word[] = [
     ['Östra sidan av sjön är grund.', '湖的东岸很浅。'],
     ['Tåget går mot östra stationen.', '火车开往东站。'],
   ]), 2412),
-  freq(noun('släkting', 'en', '亲戚', 'relative', 'släktingen', 'släktingar', null, [
+  freq(noun('släkting', 'en', '亲戚', 'relative', 'släktingen', 'släktingar', 'släktingarna', [
     ['En släkting kommer på besök.', '一位亲戚要来做客。'],
     ['Släktingen bor i Malmö.', '那位亲戚住在马尔默。'],
     ['Hon har släktingar i Norge.', '她在挪威有亲戚。'],
@@ -161,7 +161,7 @@ export const list49: Word[] = [
     ['De låga molnen täcker dalen.', '那些低云盖着山谷。'],
     ['Håll rösten låg här inne.', '在这儿把声音放低。'],
   ]), 2419),
-  freq(noun('tårta', 'en', '蛋糕（多层／裱花）', 'cake (layered / decorated)', 'tårtan', 'tårtor', null, [
+  freq(noun('tårta', 'en', '蛋糕（多层／裱花）', 'cake (layered / decorated)', 'tårtan', 'tårtor', 'tårtorna', [
     ['Vi bakade en tårta till festen.', '我们为聚会烤了蛋糕。'],
     ['Tårtan smakar citron.', '这个蛋糕是柠檬味的。'],
     ['Hon köpte två tårtor.', '她买了两个蛋糕。'],
@@ -240,7 +240,7 @@ export const list49: Word[] = [
     ],
     '“由人民来表决”，就是全民公投。',
   )),
-  freq(noun('metod', 'en', '方法', 'method', 'metoden', 'metoder', null, [
+  freq(noun('metod', 'en', '方法', 'method', 'metoden', 'metoder', 'metoderna', [
     ['Hon har en ny metod.', '她有一种新方法。'],
     ['Metoden fungerar bra.', '这个方法很好用。'],
     ['Vi testade tre metoder.', '我们试了三种方法。'],
@@ -288,7 +288,7 @@ export const list49: Word[] = [
     ['De har hejat i nittio minuter.', '他们加了九十分钟油。'],
     ['Heja på henne!', '给她加油！'],
   ]), 2433),
-  freq(noun('övning', 'en', '练习；训练', 'exercise / practice / drill', 'övningen', 'övningar', null, [
+  freq(noun('övning', 'en', '练习；训练', 'exercise / practice / drill', 'övningen', 'övningar', 'övningarna', [
     ['Gör övningen på sidan tre.', '做第三页的练习。'],
     ['Övningen tar tjugo minuter.', '这项练习要二十分钟。'],
     ['Vi har tre övningar kvar.', '我们还剩三道练习。'],
@@ -312,7 +312,7 @@ export const list49: Word[] = [
     ],
     '“现在存在着的”，就是现在的、现任的。',
   )),
-  freq(noun('demon', 'en', '恶魔；魔鬼', 'demon', 'demonen', 'demoner', null, [
+  freq(noun('demon', 'en', '恶魔；魔鬼', 'demon', 'demonen', 'demoner', 'demonerna', [
     ['Sagan handlar om en demon.', '这个故事讲的是一个恶魔。'],
     ['Demonen skrämde barnen.', '那个魔鬼把孩子们吓坏了。'],
     ['Hon kämpar mot sina demoner.', '她在跟内心的魔鬼搏斗。'],
@@ -360,13 +360,13 @@ export const list49: Word[] = [
     ['Isen har tinat bort.', '冰已经化掉了。'],
     ['Tina maten i kylen.', '在冰箱里把食物解冻。'],
   ]), 2441),
-  freq(noun('serie', 'en', '系列；连续剧；连环画', 'series / TV series / comic', 'serien', 'serier', null, [
+  freq(noun('serie', 'en', '系列；连续剧；连环画', 'series / TV series / comic', 'serien', 'serier', 'serierna', [
     ['Vi tittar på en ny serie.', '我们在看一部新连续剧。'],
     ['Serien har åtta avsnitt.', '这部剧有八集。'],
     ['Hon läser serier på bussen.', '她在公交上看连环画。'],
     ['Börja serien från avsnitt ett.', '从第一集开始看这部剧。'],
   ]), 2442),
-  freq(noun('religion', 'en', '宗教', 'religion', 'religionen', 'religioner', null, [
+  freq(noun('religion', 'en', '宗教', 'religion', 'religionen', 'religioner', 'religionerna', [
     ['Religion är viktigt för henne.', '宗教对她很重要。'],
     ['Religionen präglar högtiderna.', '宗教影响着这些节日。'],
     ['Olika religioner möts här.', '不同宗教在这儿相遇。'],

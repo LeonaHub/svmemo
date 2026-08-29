@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 2201–2250. Primary POS is the high-frequency use, not every sense in the book. */
 export const list45: Word[] = [
-  freq(noun('teater', 'en', '剧院；戏剧', 'theatre / playhouse', 'teatern', 'teatrar', null, [
+  freq(noun('teater', 'en', '剧院；戏剧', 'theatre / playhouse', 'teatern', 'teatrar', 'teatrarna', [
     ['Teatern ligger vid torget.', '剧院在广场旁边。'],
     ['Vi såg en pjäs på teatern.', '我们在剧院看了一出戏。'],
     ['Staden har två teatrar.', '城里有两家剧院。'],
@@ -70,13 +70,13 @@ export const list45: Word[] = [
     ['De kommande dagarna blir kalla.', '接下来的几天会冷。'],
     ['Hon tänker på den kommande terminen.', '她在想即将到来的学期。'],
   ]), 2210),
-  freq(noun('pension', 'en', '养老金；退休', 'pension / retirement', 'pensionen', 'pensioner', null, [
+  freq(noun('pension', 'en', '养老金；退休', 'pension / retirement', 'pensionen', 'pensioner', 'pensionerna', [
     ['Han går i pension i år.', '他今年退休。'],
     ['Pensionen räcker knappt.', '这退休金几乎不够。'],
     ['Två pensioner betalas ut samtidigt.', '两笔退休金同时发放。'],
     ['Hon lever på pension nu.', '她现在靠退休金生活。'],
   ]), 2211),
-  freq(noun('fett', 'ett', '脂肪；油脂', 'fat / grease', 'fettet', 'fetter', null, [
+  freq(noun('fett', 'ett', '脂肪；油脂', 'fat / grease', 'fettet', 'fetter', 'fetterna', [
     ['Smöret innehåller mycket fett.', '黄油含很多脂肪。'],
     ['Fettet stelnar i kylen.', '这些油脂在冰箱里会凝固。'],
     ['Olika fetter påverkar kroppen olika.', '不同的脂肪对身体影响不同。'],
@@ -94,7 +94,7 @@ export const list45: Word[] = [
     ['Vi köpte vodka till festen.', '我们为聚会买了伏特加。'],
     ['Vodka görs av säd.', '伏特加是用谷物做的。'],
   ]), 2214),
-  freq(noun('konstnär', 'en', '艺术家；画家', 'artist', 'konstnären', 'konstnärer', null, [
+  freq(noun('konstnär', 'en', '艺术家；画家', 'artist', 'konstnären', 'konstnärer', 'konstnärerna', [
     ['Konstnären målar i ateljén.', '这位艺术家在画室里画画。'],
     ['En konstnär bor i huset bredvid.', '一位艺术家住在隔壁。'],
     ['Två konstnärer ställde ut tillsammans.', '两位艺术家一起办了展。'],
@@ -136,7 +136,7 @@ export const list45: Word[] = [
     ['Han flyttade tre pjäser.', '他走了三步棋子。'],
     ['Pjäserna i schacket är tunga.', '那些棋子很沉。'],
   ]), 2220),
-  freq(noun('bebis', 'en', '宝宝；婴儿（口）', 'baby (informal)', 'bebisen', 'bebisar', null, [
+  freq(noun('bebis', 'en', '宝宝；婴儿（口）', 'baby (informal)', 'bebisen', 'bebisar', 'bebisarna', [
     ['Bebisen sover i vagnen.', '宝宝在推车里睡觉。'],
     ['Hon väntar en bebis.', '她在等一个宝宝。'],
     ['Två bebisar grät samtidigt.', '两个宝宝同时哭了。'],
@@ -160,7 +160,7 @@ export const list45: Word[] = [
     ['De romantiska sångerna spelades sent.', '那些浪漫的歌很晚还在放。'],
     ['Kvällen blev romantisk vid sjön.', '湖边的夜晚变得很浪漫。'],
   ]), 2224),
-  freq(noun('chock', 'en', '震惊；休克', 'shock', 'chocken', 'chocker', null, [
+  freq(noun('chock', 'en', '震惊；休克', 'shock', 'chocken', 'chocker', 'chockerna', [
     ['Nyheten blev en chock.', '这消息让人震惊。'],
     ['Chocken satt i länge.', '那一阵震惊持续了很久。'],
     ['Hon fick flera chocker samma vecka.', '她同一周受了好几次惊吓。'],
@@ -256,7 +256,7 @@ export const list45: Word[] = [
     ['Ett nytt datum behövs.', '需要一个新日期。'],
     ['Datumen står i kalendern.', '那些日期在日历上。'],
   ]), 2237),
-  freq(noun('barnvakt', 'en', '保姆；看孩子的人', 'babysitter', 'barnvakten', 'barnvakter', null, [
+  freq(noun('barnvakt', 'en', '保姆；看孩子的人', 'babysitter', 'barnvakten', 'barnvakter', 'barnvakterna', [
     ['Vi behöver en barnvakt i kväll.', '我们今晚需要一个保姆。'],
     ['Barnvakten läste en saga.', '保姆读了一个故事。'],
     ['Två barnvakter turades om.', '两个保姆轮流。'],
@@ -280,7 +280,7 @@ export const list45: Word[] = [
     ],
     '“忠诚这种性质”，合起来就是忠诚。',
   )),
-  freq(noun('militär', 'en', '军人；军队', 'serviceman / the military', 'militären', 'militärer', null, [
+  freq(noun('militär', 'en', '军人；军队', 'serviceman / the military', 'militären', 'militärer', 'militärerna', [
     ['Militären tog över flygplatsen.', '军队接管了机场。'],
     ['En militär stod vid grinden.', '一名军人站在门口。'],
     ['Höga militärer kom till mötet.', '高级军官们来开会了。'],

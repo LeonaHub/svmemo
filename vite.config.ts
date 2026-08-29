@@ -26,7 +26,7 @@ export default defineConfig({
         short_name: 'Svmemo',
         description: '给中文母语者用的瑞典语背单词',
         theme_color: '#174d38',
-        background_color: '#f4f1ec',
+        background_color: '#f6f6f7',
         display: 'standalone',
         lang: 'zh-CN',
         start_url: base,

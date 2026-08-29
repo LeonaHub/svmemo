@@ -4,13 +4,13 @@ import type { Word } from '../../types/word'
 
 /** Ranks 1201–1250. Primary POS is the high-frequency use, not every sense in the book. */
 export const list25: Word[] = [
-  freq(noun('kniv', 'en', '刀', 'knife', 'kniven', 'knivar', null, [
+  freq(noun('kniv', 'en', '刀', 'knife', 'kniven', 'knivar', 'knivarna', [
     ['Skär brödet med en kniv.', '用刀切面包。'],
     ['Kniven är vass.', '这把刀很锋利。'],
     ['Två knivar ligger i lådan.', '抽屉里有两把刀。'],
     ['Ge mig kniven, tack.', '把刀给我，谢谢。'],
   ]), 1201),
-  freq(noun('katt', 'en', '猫', 'cat', 'katten', 'katter', null, [
+  freq(noun('katt', 'en', '猫', 'cat', 'katten', 'katter', 'katterna', [
     ['Vi har en katt hemma.', '我们家有一只猫。'],
     ['Katten sover i soffan.', '猫在沙发上睡觉。'],
     ['Tre katter sitter vid dörren.', '三只猫坐在门口。'],
@@ -34,7 +34,7 @@ export const list25: Word[] = [
     ['Har du förändrats mycket?', '你变化大吗？'],
     ['Förändras måste vi.', '我们得改变。'],
   ]), 1205, c([['för', '使／完全'], ['ändras', '被改变']], '被完全改变，合起来就是发生变化。')),
-  freq(noun('ring', 'en', '戒指；环；圈', 'ring', 'ringen', 'ringar', null, [
+  freq(noun('ring', 'en', '戒指；环；圈', 'ring', 'ringen', 'ringar', 'ringarna', [
     ['Hon har en ring på fingret.', '她手指上戴着一枚戒指。'],
     ['Ringen är för stor.', '这枚戒指太大了。'],
     ['Barnen satte sig i en ring.', '孩子们坐成一圈。'],
@@ -76,7 +76,7 @@ export const list25: Word[] = [
     ['Hon skrev till en lord.', '她写信给一位勋爵。'],
     ['Är han lord?', '他是勋爵吗？'],
   ]), 1212),
-  freq(noun('bar', 'en', '酒吧；吧台', 'bar / snack bar', 'baren', 'barer', null, [
+  freq(noun('bar', 'en', '酒吧；吧台', 'bar / snack bar', 'baren', 'barer', 'barerna', [
     ['Vi träffas på en bar.', '我们在一家酒吧见面。'],
     ['Baren stänger sent.', '这家酒吧关门晚。'],
     ['Två barer ligger vid torget.', '广场边有两家酒吧。'],
@@ -112,13 +112,13 @@ export const list25: Word[] = [
     ['Det är givetvis för sent.', '那当然太晚了。'],
     ['Givetvis får du sitta här.', '你当然可以坐这儿。'],
   ]), 1218, c([['givet', '给定的'], ['vis', '方式']], '以给定的方式，合起来就是当然。')),
-  freq(noun('klänning', 'en', '连衣裙', 'dress', 'klänningen', 'klänningar', null, [
+  freq(noun('klänning', 'en', '连衣裙', 'dress', 'klänningen', 'klänningar', 'klänningarna', [
     ['Hon har en röd klänning.', '她穿着一条红连衣裙。'],
     ['Klänningen är för lång.', '这条连衣裙太长了。'],
     ['Två klänningar hänger där.', '那里挂着两条连衣裙。'],
     ['Köp klänningen i dag.', '今天把这条连衣裙买下。'],
   ]), 1219),
-  freq(noun('färg', 'en', '颜色；颜料；油漆', 'colour / paint', 'färgen', 'färger', null, [
+  freq(noun('färg', 'en', '颜色；颜料；油漆', 'colour / paint', 'färgen', 'färger', 'färgerna', [
     ['Vilken färg vill du ha?', '你想要什么颜色？'],
     ['Färgen på väggen är ljus.', '墙上的颜色很浅。'],
     ['Hon blandar tre färger.', '她在调三种颜色。'],
@@ -142,13 +142,13 @@ export const list25: Word[] = [
     ['Har snön hindrat bussen?', '雪妨碍公交车了吗？'],
     ['Hindra inte barnen.', '别妨碍孩子们。'],
   ]), 1223),
-  freq(noun('brud', 'en', '新娘；（口）姑娘', 'bride / (informal) girl', 'bruden', 'brudar', null, [
+  freq(noun('brud', 'en', '新娘；（口）姑娘', 'bride / (informal) girl', 'bruden', 'brudar', 'brudarna', [
     ['Bruden har en vit klänning.', '新娘穿着白裙子。'],
     ['En brud väntar vid kyrkan.', '一位新娘在教堂等。'],
     ['Två brudar står där borta.', '两个姑娘站在那边。'],
     ['Titta på bruden nu.', '现在看新娘。'],
   ]), 1224),
-  freq(noun('prinsessa', 'en', '公主', 'princess', 'prinsessan', 'prinsessor', null, [
+  freq(noun('prinsessa', 'en', '公主', 'princess', 'prinsessan', 'prinsessor', 'prinsessorna', [
     ['En prinsessa bor i slottet.', '一位公主住在城堡里。'],
     ['Prinsessan vinkar till folket.', '公主在向人们挥手。'],
     ['Barnen läser om tre prinsessor.', '孩子们在读三个公主的故事。'],
@@ -160,7 +160,7 @@ export const list25: Word[] = [
     ['Vi talade om politiska ting.', '我们谈了政治方面的事。'],
     ['Tingen i lådan är tunga.', '盒子里那些东西很重。'],
   ]), 1226),
-  freq(noun('rock', 'en', '外套；摇滚乐', 'coat / rock (music)', 'rocken', 'rockar', null, [
+  freq(noun('rock', 'en', '外套；摇滚乐', 'coat / rock (music)', 'rocken', 'rockar', 'rockarna', [
     ['Ta på rocken, det är kallt.', '穿上外套，天很冷。'],
     ['Rocken hänger vid dörren.', '外套挂在门边。'],
     ['Två rockar är för stora.', '两件外套都太大了。'],
@@ -184,7 +184,7 @@ export const list25: Word[] = [
     ['Hon åkte annanstans i går.', '她昨天去了别处。'],
     ['Sök annanstans i huset.', '到房子别处找。'],
   ]), 1230, c([['annan', '别的'], ['stans', '地方']], '字面是“别的地方”，合起来就是别处。')),
-  freq(noun('drottning', 'en', '女王；王后', 'queen', 'drottningen', 'drottningar', null, [
+  freq(noun('drottning', 'en', '女王；王后', 'queen', 'drottningen', 'drottningar', 'drottningarna', [
     ['Drottningen talar i kväll.', '女王今晚讲话。'],
     ['En drottning styr landet.', '一位女王统治这个国家。'],
     ['Boken handlar om två drottningar.', '这本书讲两位女王。'],
@@ -196,25 +196,25 @@ export const list25: Word[] = [
     ['Hon har lyft pengarna.', '她已经把钱取出来了。'],
     ['Lyft väskan själv.', '自己把箱子提起。'],
   ]), 1232),
-  freq(noun('flygplats', 'en', '机场', 'airport', 'flygplatsen', 'flygplatser', null, [
+  freq(noun('flygplats', 'en', '机场', 'airport', 'flygplatsen', 'flygplatser', 'flygplatserna', [
     ['Vi åker till flygplatsen.', '我们去机场。'],
     ['Flygplatsen ligger långt bort.', '机场很远。'],
     ['Två flygplatser finns i stan.', '城里有两个机场。'],
     ['Möt mig vid flygplatsen.', '到机场接我。'],
   ]), 1233, c([['flyg', '飞行'], ['plats', '地方']], '飞行的地方，合起来就是机场。')),
-  freq(noun('tysk', 'en', '德国人', 'German (person)', 'tysken', 'tyskar', null, [
+  freq(noun('tysk', 'en', '德国人', 'German (person)', 'tysken', 'tyskar', 'tyskarna', [
     ['En tysk sitter där borta.', '一个德国人坐在那边。'],
     ['Tysken talar svenska.', '那个德国人说瑞典语。'],
     ['Två tyskar bor i huset.', '两个德国人住在这栋房子里。'],
     ['Hon känner en tysk på jobbet.', '她在工作中认识一个德国人。'],
   ]), 1234),
-  freq(noun('näsa', 'en', '鼻子', 'nose', 'näsan', 'näsor', null, [
+  freq(noun('näsa', 'en', '鼻子', 'nose', 'näsan', 'näsor', 'näsorna', [
     ['Han har en röd näsa.', '他有个红鼻子。'],
     ['Näsan är täppt i dag.', '今天鼻子堵住了。'],
     ['Barnen har kalla näsor.', '孩子们鼻子冰凉。'],
     ['Torka näsan, tack.', '请擦擦鼻子。'],
   ]), 1235),
-  freq(noun('adress', 'en', '地址', 'address', 'adressen', 'adresser', null, [
+  freq(noun('adress', 'en', '地址', 'address', 'adressen', 'adresser', 'adresserna', [
     ['Vad är din adress?', '你的地址是什么？'],
     ['Adressen står på kuvertet.', '地址写在信封上。'],
     ['Hon har två adresser nu.', '她现在有两个地址。'],
@@ -226,7 +226,7 @@ export const list25: Word[] = [
     ['Har ni bråkat igen?', '你们又吵了吗？'],
     ['Bråka inte om det.', '别为这事吵。'],
   ]), 1237),
-  freq(noun('syn', 'en', '视力；景象；看法', 'eyesight / sight / view', 'synen', 'syner', null, [
+  freq(noun('syn', 'en', '视力；景象；看法', 'eyesight / sight / view', 'synen', 'syner', 'synerna', [
     ['Hon har dålig syn.', '她视力不好。'],
     ['Synen från berget är vacker.', '山上的景象很美。'],
     ['Jag fick syn på henne där.', '我在那儿看见了她。'],
@@ -238,13 +238,13 @@ export const list25: Word[] = [
     ['Några faktum talar mot det.', '有几项事实与此相反。'],
     ['Faktumen övertygade oss.', '那些事实说服了我们。'],
   ]), 1239),
-  freq(noun('botten', 'en', '底部；（口）很差', 'bottom / (informal) terrible', 'bottnen', 'bottnar', null, [
+  freq(noun('botten', 'en', '底部；（口）很差', 'bottom / (informal) terrible', 'bottnen', 'bottnar', 'bottnarna', [
     ['Nyckeln ligger på bottnen.', '钥匙在底部。'],
     ['Bottnen i sjön är mjuk.', '湖底很软。'],
     ['Lådan har två bottnar.', '这个盒子有两层底。'],
     ['I grund och botten har hon rätt.', '说到底她是对的。'],
   ]), 1240),
-  freq(noun('sväng', 'en', '转弯；一圈；（口）一趟', 'turn / swing / (informal) short trip', 'svängen', 'svängar', null, [
+  freq(noun('sväng', 'en', '转弯；一圈；（口）一趟', 'turn / swing / (informal) short trip', 'svängen', 'svängar', 'svängarna', [
     ['Ta första svängen till höger.', '在第一个弯向右转。'],
     ['Svängen är skarp här.', '这儿这个弯很急。'],
     ['Vägen har flera svängar.', '这条路有好几个弯。'],
@@ -262,7 +262,7 @@ export const list25: Word[] = [
     ['De kom på fjärde plats.', '他们得了第四名。'],
     ['Vänta till den fjärde maj.', '等到五月四号。'],
   ]), 1243),
-  freq(noun('farmor', 'en', '奶奶；祖母', 'paternal grandmother', 'farmodern', 'farmödrar', null, [
+  freq(noun('farmor', 'en', '奶奶；祖母', 'paternal grandmother', 'farmodern', 'farmödrar', 'farmödrarna', [
     ['Min farmor bakar kaka.', '我奶奶在烤蛋糕。'],
     ['Farmodern sitter i stolen.', '奶奶坐在椅子上。'],
     ['Hon ringer farmor varje vecka.', '她每周给奶奶打电话。'],

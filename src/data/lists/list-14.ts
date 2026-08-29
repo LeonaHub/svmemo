@@ -4,13 +4,13 @@ import type { Word } from '../../types/word'
 
 /** Ranks 651–700. Primary POS is the high-frequency use, not every sense in the book. */
 export const list14: Word[] = [
-  freq(noun('mark', 'en', '土地；地面；地皮', 'land / ground / soil', 'marken', 'marker', null, [
+  freq(noun('mark', 'en', '土地；地面；地皮', 'land / ground / soil', 'marken', 'marker', 'markerna', [
     ['Sätt väskan på marken.', '把包放在地上。'],
     ['Marken är våt idag.', '地今天是湿的。'],
     ['De äger stora marker.', '他们拥有大片土地。'],
     ['Vi går över marken här.', '我们从这儿走过这片地。'],
   ]), 651),
-  freq(noun('fader', 'en', '父亲', 'father', 'fadern', 'fäder', null, [
+  freq(noun('fader', 'en', '父亲', 'father', 'fadern', 'fäder', 'fäderna', [
     ['Han är barnets fader.', '他是这孩子的父亲。'],
     ['Fadern väntar utanför.', '那位父亲在外面等。'],
     ['Fäder och mödrar kom dit.', '父亲们和母亲们去了那里。'],
@@ -70,7 +70,7 @@ export const list14: Word[] = [
     ['Polisen utreder två mord.', '警察在调查两起谋杀案。'],
     ['Morden chockade alla.', '那些谋杀案震惊了所有人。'],
   ]), 661),
-  freq(noun('film', 'en', '电影；胶卷', 'film / movie', 'filmen', 'filmer', null, [
+  freq(noun('film', 'en', '电影；胶卷', 'film / movie', 'filmen', 'filmer', 'filmerna', [
     ['Vi ser en film i kväll.', '我们今晚看一部电影。'],
     ['Filmen var lång.', '那部电影很长。'],
     ['Hon gillar gamla filmer.', '她喜欢老电影。'],
@@ -82,7 +82,7 @@ export const list14: Word[] = [
     ['Barnen spelar flera spel.', '孩子们玩好几个游戏。'],
     ['Spelen börjar imorgon.', '那些比赛明天开始。'],
   ]), 663),
-  freq(noun('gata', 'en', '街道', 'street', 'gatan', 'gator', null, [
+  freq(noun('gata', 'en', '街道', 'street', 'gatan', 'gator', 'gatorna', [
     ['Vi bor på den gatan.', '我们住在那条街上。'],
     ['Gatan är tyst i kväll.', '这条街今晚很安静。'],
     ['Det finns många gator här.', '这里有很多街道。'],
@@ -106,7 +106,7 @@ export const list14: Word[] = [
     ['Har du tackat honom än?', '你谢过他了吗？'],
     ['Tacka inte än.', '先别谢。'],
   ]), 667),
-  freq(noun('dröm', 'en', '梦；梦想', 'dream', 'drömmen', 'drömmar', null, [
+  freq(noun('dröm', 'en', '梦；梦想', 'dream', 'drömmen', 'drömmar', 'drömmarna', [
     ['Jag hade en lång dröm.', '我做了一个很长的梦。'],
     ['Drömmen var konstig.', '那个梦很奇怪。'],
     ['Hon har stora drömmar.', '她有很大的梦想。'],
@@ -130,7 +130,7 @@ export const list14: Word[] = [
     ['Tåget kom äntligen.', '火车终于来了。'],
     ['Äntligen förstår jag.', '我终于懂了。'],
   ]), 671),
-  freq(noun('baby', 'en', '婴儿；宝宝', 'baby', 'babyn', 'babyar', null, [
+  freq(noun('baby', 'en', '婴儿；宝宝', 'baby', 'babyn', 'babyar', 'babyarna', [
     ['De har fått en baby.', '他们生了一个宝宝。'],
     ['Babyn sover nu.', '宝宝现在在睡觉。'],
     ['Två babyar gråter.', '两个婴儿在哭。'],
@@ -178,7 +178,7 @@ export const list14: Word[] = [
     ['De speciella reglerna gäller här.', '那些特殊规则在这里适用。'],
     ['Han är lite speciell.', '他有点古怪。'],
   ]), 679),
-  freq(noun('nyhet', 'en', '新闻；消息；新事物', 'news / novelty', 'nyheten', 'nyheter', null, [
+  freq(noun('nyhet', 'en', '新闻；消息；新事物', 'news / novelty', 'nyheten', 'nyheter', 'nyheterna', [
     ['Det är en glad nyhet.', '这是个好消息。'],
     ['Nyheten spred sig fort.', '消息传得很快。'],
     ['Vi tittar på nyheterna.', '我们在看新闻。'],
@@ -208,7 +208,7 @@ export const list14: Word[] = [
     ['Hon är åtminstone ärlig.', '她至少是诚实的。'],
     ['Stanna åtminstone till i kväll.', '至少待到今晚。'],
   ]), 684),
-  freq(noun('fröken', 'en', '小姐；女老师（称呼）', 'Miss / (female) teacher', 'fröken', 'fröknar', null, [
+  freq(noun('fröken', 'en', '小姐；女老师（称呼）', 'Miss / (female) teacher', 'fröken', 'fröknar', 'fröknarna', [
     ['Fröken Andersson väntar.', 'Andersson 小姐在等。'],
     ['Fröken, kan jag få menyn?', '小姐，能给我菜单吗？'],
     ['Två fröknar gick förbi.', '两位小姐走过去了。'],
@@ -220,7 +220,7 @@ export const list14: Word[] = [
     ['Vi stannade trots att det var sent.', '尽管已经晚了我们还是留下了。'],
     ['Han log trots tröttheten.', '尽管累他还是笑了。'],
   ]), 686),
-  freq(noun('fest', 'en', '聚会；庆祝会', 'party', 'festen', 'fester', null, [
+  freq(noun('fest', 'en', '聚会；庆祝会', 'party', 'festen', 'fester', 'festerna', [
     ['Vi har fest i kväll.', '我们今晚有聚会。'],
     ['Festen börjar klockan sju.', '聚会七点开始。'],
     ['De går på tre fester.', '他们要去三个聚会。'],
@@ -238,7 +238,7 @@ export const list14: Word[] = [
     ['Vi sjöng grattis för henne.', '我们为她唱了祝贺歌。'],
     ['Säg grattis till honom.', '跟他道个喜。'],
   ]), 689),
-  freq(noun('agent', 'en', '间谍；代理人', 'spy / agent / representative', 'agenten', 'agenter', null, [
+  freq(noun('agent', 'en', '间谍；代理人', 'spy / agent / representative', 'agenten', 'agenter', 'agenterna', [
     ['Han är agent i filmen.', '他在电影里是间谍。'],
     ['Agenten väntar utanför.', '那个间谍／代理人在外面等。'],
     ['Två agenter kom in.', '两个间谍进来了。'],
@@ -250,7 +250,7 @@ export const list14: Word[] = [
     ['Ett omöjligt läge.', '一个没法办的局面。'],
     ['De omöjliga kraven stoppade oss.', '那些做不到的要求挡住了我们。'],
   ]), 691),
-  freq(noun('drink', 'en', '（一杯）酒；鸡尾酒', 'drink (alcoholic)', 'drinken', 'drinkar', null, [
+  freq(noun('drink', 'en', '（一杯）酒；鸡尾酒', 'drink (alcoholic)', 'drinken', 'drinkar', 'drinkarna', [
     ['Vill du ha en drink?', '你想喝一杯酒吗？'],
     ['Drinken är stark.', '这杯酒很烈。'],
     ['De tog två drinkar.', '他们喝了两杯酒。'],
@@ -292,7 +292,7 @@ export const list14: Word[] = [
     ['Hon får många brev.', '她收到很多信。'],
     ['Läs breven senare.', '稍后再读那些信。'],
   ]), 698),
-  freq(noun('lag', 'en', '法律', 'law', 'lagen', 'lagar', null, [
+  freq(noun('lag', 'en', '法律', 'law', 'lagen', 'lagar', 'lagarna', [
     ['Det är en ny lag.', '这是一条新法律。'],
     ['Lagen gäller här.', '这条法律在这里适用。'],
     ['De har stiftat flera lagar.', '他们立了好几条法律。'],

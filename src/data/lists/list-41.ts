@@ -76,13 +76,13 @@ export const list41: Word[] = [
     ],
     '“就当前在场的情况而言”，就是目前、眼下。',
   )),
-  freq(noun('cell', 'en', '细胞；牢房；（电池）电芯', 'cell', 'cellen', 'celler', null, [
+  freq(noun('cell', 'en', '细胞；牢房；（电池）电芯', 'cell', 'cellen', 'celler', 'cellerna', [
     ['En cell delar sig snabbt.', '一个细胞分裂得很快。'],
     ['Cellen i fängelset var kall.', '监狱里的那间牢房很冷。'],
     ['Kroppen har miljarder celler.', '身体里有数十亿个细胞。'],
     ['Byt cellen i fjärrkontrollen.', '把遥控器里的电芯换掉。'],
   ]), 2010),
-  freq(noun('get', 'en', '山羊', 'goat', 'geten', 'getter', null, [
+  freq(noun('get', 'en', '山羊', 'goat', 'geten', 'getter', 'getterna', [
     ['En get står i hagen.', '一只山羊站在围场里。'],
     ['Geten äter gräs vid staketet.', '这只山羊在篱笆边吃草。'],
     ['Två getter följde efter oss.', '两只山羊跟着我们。'],
@@ -130,7 +130,7 @@ export const list41: Word[] = [
     ],
     '“向某处陈述”，就是举报、报名、通知。',
   )),
-  freq(noun('artikel', 'en', '文章；（一类）商品；冠词', 'article / item', 'artikeln', 'artiklar', null, [
+  freq(noun('artikel', 'en', '文章；（一类）商品；冠词', 'article / item', 'artikeln', 'artiklar', 'artiklarna', [
     ['En artikel i tidningen retade många.', '报上的一篇文章惹恼了很多人。'],
     ['Artikeln kom ut i går.', '这篇文章昨天刊出。'],
     ['Butiken säljer tre artiklar i den serien.', '这家店卖该系列的三种商品。'],
@@ -190,7 +190,7 @@ export const list41: Word[] = [
     ['Vi har begravt katten i trädgården.', '我们已经把猫埋在花园里了。'],
     ['Begrav inte sanningen.', '别把真相埋掉。'],
   ]), 2022),
-  freq(noun('myndighet', 'en', '当局；政府机构；（法律上的）成年', 'authority / majority', 'myndigheten', 'myndigheter', null, [
+  freq(noun('myndighet', 'en', '当局；政府机构；（法律上的）成年', 'authority / majority', 'myndigheten', 'myndigheter', 'myndigheterna', [
     ['En myndighet skickade brevet.', '一个政府机构寄了这封信。'],
     ['Myndigheten svarar inom tre veckor.', '这个机构三周内答复。'],
     ['Två myndigheter samarbetar nu.', '两个当局现在在合作。'],
@@ -318,7 +318,7 @@ export const list41: Word[] = [
     ['Vi köpte ett kid till gården.', '我们给农场买了一只山羊羔。'],
     ['Kid behöver varm mjölk.', '山羊羔需要温牛奶。'],
   ]), 2039),
-  freq(noun('hamn', 'en', '港口；港湾', 'harbour / port', 'hamnen', 'hamnar', null, [
+  freq(noun('hamn', 'en', '港口；港湾', 'harbour / port', 'hamnen', 'hamnar', 'hamnarna', [
     ['Båten går in i en hamn.', '船驶进一个港口。'],
     ['Hamnen är stängd i natt.', '这个港口今夜关闭。'],
     ['Två hamnar ligger norrut.', '北边有两个港口。'],
@@ -336,7 +336,7 @@ export const list41: Word[] = [
     ],
     '“对着站着不让”，就是抵抗、阻力；电路里挡住电流的元件也叫 motstånd。',
   )),
-  freq(noun('helikopter', 'en', '直升机', 'helicopter', 'helikoptern', 'helikoptrar', null, [
+  freq(noun('helikopter', 'en', '直升机', 'helicopter', 'helikoptern', 'helikoptrar', 'helikoptrarna', [
     ['En helikopter landade på taket.', '一架直升机落在屋顶上。'],
     ['Helikoptern lyfte i dimman.', '这架直升机在雾里起飞了。'],
     ['Två helikoptrar flög över sjön.', '两架直升机从湖上飞过。'],
@@ -348,7 +348,7 @@ export const list41: Word[] = [
     ['Slottet har fyra torn.', '城堡有四座塔。'],
     ['Tornen i schacket står i hörnen.', '国际象棋里的车在边角。'],
   ]), 2043),
-  freq(noun('råtta', 'en', '老鼠；大鼠', 'rat', 'råttan', 'råttor', null, [
+  freq(noun('råtta', 'en', '老鼠；大鼠', 'rat', 'råttan', 'råttor', 'råttorna', [
     ['En råtta sprang över golvet.', '一只老鼠从地板上跑过。'],
     ['Råttan gömde sig bakom lådan.', '那只老鼠藏在箱子后面。'],
     ['Två råttor bor i källaren.', '两只老鼠住在地下室。'],
@@ -378,13 +378,13 @@ export const list41: Word[] = [
     ['Barnen räcker ut tungorna.', '孩子们把舌头伸出来。'],
     ['Tungorna var röda av saften.', '那些舌头被果汁染红了。'],
   ]), 2047),
-  freq(noun('onsdag', 'en', '星期三', 'Wednesday', 'onsdagen', 'onsdagar', null, [
+  freq(noun('onsdag', 'en', '星期三', 'Wednesday', 'onsdagen', 'onsdagar', 'onsdagarna', [
     ['Vi ses på onsdag.', '我们星期三见。'],
     ['Onsdagen blev regnig.', '这个星期三下雨了。'],
     ['Två onsdagar i rad var tomma.', '连续两个星期三都空着。'],
     ['Kom på onsdagen före lunch.', '星期三午饭前来。'],
   ]), 2048),
-  freq(noun('fabrik', 'en', '工厂', 'factory / plant', 'fabriken', 'fabriker', null, [
+  freq(noun('fabrik', 'en', '工厂', 'factory / plant', 'fabriken', 'fabriker', 'fabrikerna', [
     ['En fabrik ligger utanför stan.', '城外有一家工厂。'],
     ['Fabriken stänger i juli.', '这家工厂七月停工。'],
     ['Två fabriker släpper ut rök.', '两家工厂在冒烟。'],

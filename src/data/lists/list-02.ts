@@ -154,7 +154,7 @@ export const list02: Word[] = [
     ['Vi behövde mer tid.', '我们当时需要更多时间。'],
     ['Har du behövt hjälp?', '你需要过帮助吗？'],
   ]), 75),
-  freq(verb('finnas', '有；存在', 'to exist / there is', 'finns', 'fanns', 'funnits', null, [
+  freq(verb('finnas', '有；存在', 'to exist / there is', 'finns', 'fanns', 'funnits', 'funnitsen', [
     ['Finns det kaffe?', '有咖啡吗？'],
     ['Det finns en park här.', '这里有一座公园。'],
     ['Det fanns ingen hemma.', '当时家里没人。'],

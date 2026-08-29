@@ -16,7 +16,7 @@ export const list07: Word[] = [
     ['Det är långt bättre så.', '这样要好得多。'],
     ['Sitt inte så långt bak.', '别坐那么靠后。'],
   ]), 302),
-  freq(noun('kille', 'en', '小伙子；男孩（口）', 'guy / bloke (informal)', 'killen', 'killar', null, [
+  freq(noun('kille', 'en', '小伙子；男孩（口）', 'guy / bloke (informal)', 'killen', 'killar', 'killarna', [
     ['Han är en trevlig kille.', '他是个不错的小伙子。'],
     ['Killen heter Erik.', '这小伙子叫 Erik。'],
     ['Två killar spelar fotboll.', '两个小伙子在踢足球。'],
@@ -64,7 +64,7 @@ export const list07: Word[] = [
     ['De trevliga grannarna hälsade.', '那些友好的邻居打了招呼。'],
     ['Trevlig helg.', '周末愉快。'],
   ]), 310),
-  freq(noun('plats', 'en', '地方；空位；职位；名次', 'place / room / job / position', 'platsen', 'platser', null, [
+  freq(noun('plats', 'en', '地方；空位；职位；名次', 'place / room / job / position', 'platsen', 'platser', 'platserna', [
     ['Finns det en plats?', '有位子吗？'],
     ['Platsen är upptagen.', '这个位子有人了。'],
     ['Det finns två platser kvar.', '还剩两个位子。'],
@@ -76,7 +76,7 @@ export const list07: Word[] = [
     ['Har du ringt än?', '你打过电话了吗？'],
     ['Klockan ringer.', '铃在响。'],
   ]), 312),
-  freq(noun('familj', 'en', '家庭；家人', 'family', 'familjen', 'familjer', null, [
+  freq(noun('familj', 'en', '家庭；家人', 'family', 'familjen', 'familjer', 'familjerna', [
     ['Min familj bor här.', '我的家人住在这里。'],
     ['Familjen äter tillsammans.', '全家人一起吃饭。'],
     ['Två familjer bor i huset.', '两户人家住在这栋房子里。'],
@@ -142,7 +142,7 @@ export const list07: Word[] = [
     ['Har du jobbat här länge?', '你在这里工作很久了吗？'],
     ['Jobba inte för hårt.', '别工作得太拼命。'],
   ]), 321),
-  freq(noun('stad', 'en', '城市', 'city / town', 'staden', 'städer', null, [
+  freq(noun('stad', 'en', '城市', 'city / town', 'staden', 'städer', 'städerna', [
     ['Hon bor i en liten stad.', '她住在一座小城里。'],
     ['Staden är stor.', '这座城市很大。'],
     ['De besökte två städer.', '他们去了两座城市。'],
@@ -166,7 +166,7 @@ export const list07: Word[] = [
     ['Har du ätit?', '你吃过了吗？'],
     ['Ät upp maten.', '把饭吃完。'],
   ]), 325),
-  freq(noun('dörr', 'en', '门', 'door', 'dörren', 'dörrar', null, [
+  freq(noun('dörr', 'en', '门', 'door', 'dörren', 'dörrar', 'dörrarna', [
     ['En dörr står öppen.', '有一扇门开着。'],
     ['Stäng dörren.', '把门关上。'],
     ['Huset har två dörrar.', '这房子有两扇门。'],
@@ -196,7 +196,7 @@ export const list07: Word[] = [
     ['De tysta barnen läser.', '那些安静的孩子在看书。'],
     ['Hon satt tyst.', '她安静地坐着。'],
   ]), 330),
-  freq(noun('chans', 'en', '机会', 'chance / opportunity', 'chansen', 'chanser', null, [
+  freq(noun('chans', 'en', '机会', 'chance / opportunity', 'chansen', 'chanser', 'chanserna', [
     ['Ge mig en chans.', '给我一个机会。'],
     ['Chansen är liten.', '机会很小。'],
     ['Det finns två chanser kvar.', '还剩两次机会。'],
@@ -220,7 +220,7 @@ export const list07: Word[] = [
     ['Det var nära att jag föll.', '我差点摔倒。'],
     ['Nära hälften är klara.', '将近一半已经好了。'],
   ]), 334),
-  freq(noun('klocka', 'en', '钟；表；铃', 'clock / watch / bell', 'klockan', 'klockor', null, [
+  freq(noun('klocka', 'en', '钟；表；铃', 'clock / watch / bell', 'klockan', 'klockor', 'klockorna', [
     ['Vad är klockan?', '几点了？'],
     ['Klockan är tre.', '三点了。'],
     ['Hon har två klockor.', '她有两块表。'],
@@ -262,7 +262,7 @@ export const list07: Word[] = [
     ['På sista tiden har hon varit trött.', '最近她一直很累。'],
     ['Vi tar sista bussen.', '我们坐末班公交车。'],
   ]), 340),
-  freq(noun('ätt', 'en', '家族；氏族', 'family / clan / house', 'ätten', 'ätter', null, [
+  freq(noun('ätt', 'en', '家族；氏族', 'family / clan / house', 'ätten', 'ätter', 'ätterna', [
     ['En gammal ätt bodde där.', '一个古老的家族住在那里。'],
     ['Ätten har lång historia.', '这个家族历史悠久。'],
     ['Flera ätter styrde landet.', '好几个氏族曾统治这个国家。'],
@@ -304,7 +304,7 @@ export const list07: Word[] = [
     ['Skicka iväg brevet.', '把信寄走。'],
     ['Han for iväg i går.', '他昨天出发了。'],
   ]), 347),
-  freq(noun('bror', 'en', '哥哥；弟弟', 'brother', 'brodern', 'bröder', null, [
+  freq(noun('bror', 'en', '哥哥；弟弟', 'brother', 'brodern', 'bröder', 'bröderna', [
     ['Min bror bor här.', '我哥哥／弟弟住在这里。'],
     ['Brodern är äldre.', '那个哥哥／弟弟年纪更大。'],
     ['Hon har två bröder.', '她有两个兄弟。'],

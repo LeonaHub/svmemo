@@ -22,7 +22,7 @@ export const list40: Word[] = [
     ['Två krav måste uppfyllas.', '必须满足两项要求。'],
     ['Kraven ändrades i år.', '那些要求今年改了。'],
   ]), 1953),
-  freq(noun('spegel', 'en', '镜子', 'mirror', 'spegeln', 'speglar', null, [
+  freq(noun('spegel', 'en', '镜子', 'mirror', 'spegeln', 'speglar', 'speglarna', [
     ['Han tittar i spegeln.', '他在看镜子。'],
     ['Spegeln sitter snett.', '这面镜子挂歪了。'],
     ['Det hänger två speglar i hallen.', '门厅里挂着两面镜子。'],
@@ -34,13 +34,13 @@ export const list40: Word[] = [
     ['De gyllene skorna glänste.', '那双金色的鞋子在发亮。'],
     ['Ta den gyllene medelvägen.', '走中庸之道。'],
   ]), 1955),
-  freq(noun('vinter', 'en', '冬天', 'winter', 'vintern', 'vintrar', null, [
+  freq(noun('vinter', 'en', '冬天', 'winter', 'vintern', 'vintrar', 'vintrarna', [
     ['Vintern är kall i år.', '今年冬天很冷。'],
     ['Vi åker skidor på vintern.', '我们冬天去滑雪。'],
     ['Två vintrar i rad var milda.', '连续两个冬天都很温和。'],
     ['Klä dig varmt i vinter.', '今年冬天穿暖和点。'],
   ]), 1956),
-  freq(noun('kram', 'en', '拥抱', 'hug', 'kramen', 'kramar', null, [
+  freq(noun('kram', 'en', '拥抱', 'hug', 'kramen', 'kramar', 'kramarna', [
     ['Mormor ville ha en kram.', '外婆想要一个拥抱。'],
     ['Kramen varade länge.', '这个拥抱持续了很久。'],
     ['Vi bytte två kramar vid dörren.', '我们在门口抱了两次。'],
@@ -64,13 +64,13 @@ export const list40: Word[] = [
     ],
     '“用来航行的家伙”，就是船只。',
   )),
-  freq(noun('krona', 'en', '克朗；王冠', 'krona (currency) / crown', 'kronan', 'kronor', null, [
+  freq(noun('krona', 'en', '克朗；王冠', 'krona (currency) / crown', 'kronan', 'kronor', 'kronorna', [
     ['Det kostar tjugo kronor.', '这个要二十克朗。'],
     ['Kronan ligger på kudden.', '王冠放在枕头上。'],
     ['Hon har tre kronor kvar.', '她还剩三克朗。'],
     ['Betala i kronor, tack.', '请用克朗付款。'],
   ]), 1960),
-  freq(noun('lektion', 'en', '课；一节课', 'lesson / class', 'lektionen', 'lektioner', null, [
+  freq(noun('lektion', 'en', '课；一节课', 'lesson / class', 'lektionen', 'lektioner', 'lektionerna', [
     ['Lektionen börjar klockan nio.', '这节课九点开始。'],
     ['Hon har en lektion i svenska.', '她有一节瑞典语课。'],
     ['Vi har tre lektioner i dag.', '我们今天有三节课。'],
@@ -106,7 +106,7 @@ export const list40: Word[] = [
     ],
     '“到那种程度为止”，用来设条件：如果、只要。',
   )),
-  freq(noun('puss', 'en', '吻（口）；水洼', 'kiss (informal) / puddle', 'pussen', 'pussar', null, [
+  freq(noun('puss', 'en', '吻（口）；水洼', 'kiss (informal) / puddle', 'pussen', 'pussar', 'pussarna', [
     ['Hon gav honom en puss.', '她给了他一个吻。'],
     ['Pussen varade bara en sekund.', '那个吻只持续了一秒。'],
     ['Barnen ger mormor pussar.', '孩子们给外婆亲了几下。'],
@@ -148,13 +148,13 @@ export const list40: Word[] = [
     ],
     '由“表现自己”变成名词，就是行为、举止。',
   )),
-  freq(noun('art', 'en', '种；种类', 'species / kind / type', 'arten', 'arter', null, [
+  freq(noun('art', 'en', '种；种类', 'species / kind / type', 'arten', 'arter', 'arterna', [
     ['Den här arten är sällsynt.', '这个物种很稀有。'],
     ['Arten lever bara i norr.', '这个种只生活在北方。'],
     ['Flera arter häckar här.', '好几个物种在这儿筑巢。'],
     ['Den här arten finns bara här.', '这个种只在这儿有。'],
   ]), 1970),
-  freq(noun('källa', 'en', '泉；来源', 'spring / source', 'källan', 'källor', null, [
+  freq(noun('källa', 'en', '泉；来源', 'spring / source', 'källan', 'källor', 'källorna', [
     ['Vi drack ur en kall källa.', '我们喝了冷泉里的水。'],
     ['Källan ligger i skogen.', '那眼泉在树林里。'],
     ['Hon har flera källor till nyheten.', '这条新闻她有好几个来源。'],
@@ -190,7 +190,7 @@ export const list40: Word[] = [
     ['Vi har misstänkt det länge.', '我们怀疑这个已经很久了。'],
     ['Misstänk inte dina vänner.', '别怀疑你的朋友。'],
   ]), 1974, c([['miss-', '错／疑'], ['tänka', '想']], '往错处想，合起来就是怀疑。')),
-  freq(noun('tunnel', 'en', '隧道', 'tunnel', 'tunneln', 'tunnlar', null, [
+  freq(noun('tunnel', 'en', '隧道', 'tunnel', 'tunneln', 'tunnlar', 'tunnlarna', [
     ['Tåget går genom en tunnel.', '火车穿过一条隧道。'],
     ['Tunneln är mörk och lång.', '这条隧道又黑又长。'],
     ['Två tunnlar möts under berget.', '两条隧道在山下会合。'],
@@ -214,13 +214,13 @@ export const list40: Word[] = [
     ['Två experiment pågår parallellt.', '两项实验同时进行。'],
     ['Experimenten tar tid.', '那些实验需要时间。'],
   ]), 1978),
-  freq(noun('nigger', 'en', '对黑人的种族歧视称呼（歧，勿用）', 'racial slur for a Black person (do not use)', 'niggern', 'niggrar', null, [
+  freq(noun('nigger', 'en', '对黑人的种族歧视称呼（歧，勿用）', 'racial slur for a Black person (do not use)', 'niggern', 'niggrar', 'niggrarna', [
     ['Ordet nigger är rasistiskt.', '这个词是种族歧视用语。'],
     ['Använd inte det ordet.', '不要用那个词。'],
     ['Det är ett nedsättande ord.', '这是一个贬损的词。'],
     ['Säg inte så till någon.', '不要对任何人那样说。'],
   ]), 1979),
-  freq(noun('elev', 'en', '学生；学员', 'pupil / student', 'eleven', 'elever', null, [
+  freq(noun('elev', 'en', '学生；学员', 'pupil / student', 'eleven', 'elever', 'eleverna', [
     ['Eleven sitter längst fram.', '这个学生坐在最前面。'],
     ['Hon är elev på gymnasiet.', '她是高中学生。'],
     ['Klassen har tjugo elever.', '这个班有二十名学生。'],
@@ -286,7 +286,7 @@ export const list40: Word[] = [
     ],
     '“贴近到那里”，就是紧挨着、靠近。',
   )),
-  freq(noun('lampa', 'en', '灯', 'lamp', 'lampan', 'lampor', null, [
+  freq(noun('lampa', 'en', '灯', 'lamp', 'lampan', 'lampor', 'lamporna', [
     ['Lampan hänger över bordet.', '灯挂在桌子上方。'],
     ['Tänd lampan, tack.', '请开灯。'],
     ['Två lampor är trasiga.', '两盏灯坏了。'],
@@ -346,7 +346,7 @@ export const list40: Word[] = [
     ],
     '“彻底让人看见是真的”，就是说服、使确信。',
   )),
-  freq(noun('kanin', 'en', '兔子', 'rabbit', 'kaninen', 'kaniner', null, [
+  freq(noun('kanin', 'en', '兔子', 'rabbit', 'kaninen', 'kaniner', 'kaninerna', [
     ['Kaninen sitter i buren.', '兔子坐在笼子里。'],
     ['En kanin sprang över gården.', '一只兔子跑过院子。'],
     ['De har två kaniner hemma.', '他们家里有两只兔子。'],
@@ -364,13 +364,13 @@ export const list40: Word[] = [
     ],
     '旧时用钢件当钱，俚语里“钢”的复数就是钱。',
   )),
-  freq(noun('soppa', 'en', '汤；（口）一团糟', 'soup / (informal) mess', 'soppan', 'soppor', null, [
+  freq(noun('soppa', 'en', '汤；（口）一团糟', 'soup / (informal) mess', 'soppan', 'soppor', 'sopporna', [
     ['Vi äter soppa till lunch.', '我们午餐喝汤。'],
     ['Soppan är för salt.', '这汤太咸了。'],
     ['Hon kokade två soppor.', '她煮了两锅汤。'],
     ['Häll upp soppan nu.', '现在把汤盛出来。'],
   ]), 1998),
-  freq(noun('orm', 'en', '蛇', 'snake', 'ormen', 'ormar', null, [
+  freq(noun('orm', 'en', '蛇', 'snake', 'ormen', 'ormar', 'ormarna', [
     ['En orm låg i gräset.', '草里躺着一条蛇。'],
     ['Ormen är inte giftig.', '这条蛇没有毒。'],
     ['Två ormar solade på stenen.', '两条蛇在石头上晒太阳。'],

@@ -16,13 +16,13 @@ export const list24: Word[] = [
     ['Det gör satan ont.', '疼死了。'],
     ['Inte nu, satan.', '现在不行，该死。'],
   ]), 1152),
-  freq(noun('vind', 'en', '风；阁楼', 'wind / attic', 'vinden', 'vindar', null, [
+  freq(noun('vind', 'en', '风；阁楼', 'wind / attic', 'vinden', 'vindar', 'vindarna', [
     ['Det är mycket vind i dag.', '今天风很大。'],
     ['Vinden från havet är kall.', '从海里吹来的风很冷。'],
     ['Starka vindar fällde träd i natt.', '夜里大风把树刮倒了。'],
     ['Lådan står på vinden.', '箱子放在阁楼上。'],
   ]), 1153),
-  freq(noun('radio', 'en', '收音机；广播', 'radio', 'radion', 'radior', null, [
+  freq(noun('radio', 'en', '收音机；广播', 'radio', 'radion', 'radior', 'radiorna', [
     ['Jag lyssnar på radio i bilen.', '我在车里听广播。'],
     ['Radion är på i köket.', '厨房里收音机开着。'],
     ['Två radior stod på hyllan.', '架子上放着两台收音机。'],
@@ -34,13 +34,13 @@ export const list24: Word[] = [
     ['De vakna gästerna lyssnar.', '那些醒着的客人在听。'],
     ['Hon är vaken hela natten.', '她整晚都醒着。'],
   ]), 1155),
-  freq(noun('bro', 'en', '桥', 'bridge', 'bron', 'broar', null, [
+  freq(noun('bro', 'en', '桥', 'bridge', 'bron', 'broar', 'broarna', [
     ['Det går en bro över älven.', '河上有一座桥。'],
     ['Bron är stängd i natt.', '这座桥夜里关闭。'],
     ['Två broar leder in till stan.', '有两座桥通向城里。'],
     ['Gå inte över bron nu.', '现在别过这座桥。'],
   ]), 1156),
-  freq(noun('eftermiddag', 'en', '下午', 'afternoon', 'eftermiddagen', 'eftermiddagar', null, [
+  freq(noun('eftermiddag', 'en', '下午', 'afternoon', 'eftermiddagen', 'eftermiddagar', 'eftermiddagarna', [
     ['Vi ses på eftermiddagen.', '我们下午见。'],
     ['Eftermiddagen blev varm.', '这个下午变热了。'],
     ['Hon jobbar tre eftermiddagar i veckan.', '她一周上三个下午的班。'],
@@ -58,7 +58,7 @@ export const list24: Word[] = [
     ['Han har mod att säga nej.', '他有勇气说不。'],
     ['Vi gick dit med glatt mod.', '我们高高兴兴地去了。'],
   ]), 1159),
-  freq(noun('far', 'en', '爸爸；父亲', 'father', 'fadern', 'fäder', null, [
+  freq(noun('far', 'en', '爸爸；父亲', 'father', 'fadern', 'fäder', 'fäderna', [
     ['Min far bor i Malmö.', '我爸爸住在马尔默。'],
     ['Fadern väntar utanför skolan.', '那位父亲在学校外面等。'],
     ['Fäder och barn gick tillsammans.', '父亲们和孩子们一起走。'],
@@ -70,7 +70,7 @@ export const list24: Word[] = [
     ['Har ni firat färdigt än?', '你们庆祝完了吗？'],
     ['Fira med oss i kväll.', '今晚跟我们一起庆祝。'],
   ]), 1161),
-  freq(noun('lördag', 'en', '星期六', 'Saturday', 'lördagen', 'lördagar', null, [
+  freq(noun('lördag', 'en', '星期六', 'Saturday', 'lördagen', 'lördagar', 'lördagarna', [
     ['I morgon är det lördag.', '明天是星期六。'],
     ['Lördagen blev regnig.', '这个星期六下雨了。'],
     ['Vi handlar på lördagar.', '我们星期六去买东西。'],
@@ -95,7 +95,7 @@ export const list24: Word[] = [
     ['Plus att det är kallt ute.', '再加上外面很冷。'],
     ['Hennes erfarenhet är ett plus.', '她的经验是一个优点。'],
   ]), 1164),
-  freq(noun('station', 'en', '车站；站', 'station', 'stationen', 'stationer', null, [
+  freq(noun('station', 'en', '车站；站', 'station', 'stationen', 'stationer', 'stationerna', [
     ['Tåget stannar vid stationen.', '火车在车站停。'],
     ['Stationen ligger nära centrum.', '车站离市中心很近。'],
     ['Två stationer är stängda i dag.', '今天有两个站关闭。'],
@@ -113,7 +113,7 @@ export const list24: Word[] = [
     ['Bollen gick i nät.', '球进网了。'],
     ['Näten i hamnen torkar.', '港口里那些网在晾。'],
   ]), 1167),
-  freq(noun('situation', 'en', '情况；局势', 'situation', 'situationen', 'situationer', null, [
+  freq(noun('situation', 'en', '情况；局势', 'situation', 'situationen', 'situationer', 'situationerna', [
     ['Det är en ny situation för oss.', '这对我们是个新情况。'],
     ['Situationen blev bättre i natt.', '局势夜里好转了。'],
     ['Vi har varit i liknande situationer.', '我们遇到过类似的情况。'],
@@ -125,7 +125,7 @@ export const list24: Word[] = [
     ['Två pass ligger i lådan.', '抽屉里有两本护照。'],
     ['Det var så pass kallt att vi vände.', '冷到那种程度，我们就折回去了。'],
   ]), 1169),
-  freq(noun('byggnad', 'en', '建筑物；房子', 'building', 'byggnaden', 'byggnader', null, [
+  freq(noun('byggnad', 'en', '建筑物；房子', 'building', 'byggnaden', 'byggnader', 'byggnaderna', [
     ['Det är en gammal byggnad.', '这是一栋老房子。'],
     ['Byggnaden står tom nu.', '这栋建筑现在空着。'],
     ['Två byggnader brann i natt.', '夜里两栋建筑着火了。'],
@@ -168,7 +168,7 @@ export const list24: Word[] = [
     ],
     '借助于，合起来就是通过、靠。',
   )),
-  freq(noun('rapport', 'en', '报告', 'report', 'rapporten', 'rapporter', null, [
+  freq(noun('rapport', 'en', '报告', 'report', 'rapporten', 'rapporter', 'rapporterna', [
     ['Hon skrev en rapport i går.', '她昨天写了一份报告。'],
     ['Rapporten kom sent.', '这份报告来晚了。'],
     ['Vi läste tre rapporter före mötet.', '开会前我们读了三份报告。'],
@@ -186,7 +186,7 @@ export const list24: Word[] = [
     ['De är födda i samma stad.', '他们在同一座城市出生。'],
     ['Han är en född lärare.', '他是天生的老师。'],
   ]), 1178),
-  freq(noun('lögn', 'en', '谎言', 'lie / falsehood', 'lögnen', 'lögner', null, [
+  freq(noun('lögn', 'en', '谎言', 'lie / falsehood', 'lögnen', 'lögner', 'lögnerna', [
     ['Det är en lögn.', '那是谎话。'],
     ['Lögnen kom fram sent.', '谎言很晚才被揭穿。'],
     ['Hon spred inga lögner.', '她没有散布谎言。'],
@@ -300,7 +300,7 @@ export const list24: Word[] = [
     ['De har sparkat chefen.', '他们已经把上司开除了。'],
     ['Sparka inte så hårt.', '别踢那么狠。'],
   ]), 1197),
-  freq(noun('mage', 'en', '胃；肚子', 'stomach / belly', 'magen', 'magar', null, [
+  freq(noun('mage', 'en', '胃；肚子', 'stomach / belly', 'magen', 'magar', 'magarna', [
     ['Hon höll sig för magen.', '她捂着肚子。'],
     ['Magen är full efter lunchen.', '午饭后肚子饱了。'],
     ['Barnen sprang med nakna magar.', '孩子们光着肚子跑。'],

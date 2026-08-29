@@ -46,7 +46,7 @@ export const list38: Word[] = [
     ['Han lyssnade bara halvt.', '他只听进去一半。'],
     ['Det är halvt om halvt sant.', '这半真半假。'],
   ]), 1855, c([['halv', '一半的'], ['-t', '副词词尾']], '以一半的程度，合起来就是一半地、部分地。')),
-  freq(noun('tröja', 'en', '毛衣；针织衫', 'sweater', 'tröjan', 'tröjor', null, [
+  freq(noun('tröja', 'en', '毛衣；针织衫', 'sweater', 'tröjan', 'tröjor', 'tröjorna', [
     ['Hon har en röd tröja.', '她穿着一件红毛衣。'],
     ['Tröjan är för stor.', '这件毛衣太大了。'],
     ['Två tröjor torkar där.', '两件针织衫在那儿晾着。'],
@@ -58,7 +58,7 @@ export const list38: Word[] = [
     ['Brist på personal märks i dag.', '今天人手不够很明显。'],
     ['Tacka personalen före stängning.', '关门前谢谢员工。'],
   ]), 1857),
-  freq(noun('kaka', 'en', '蛋糕；饼干；圆面包', 'cake / biscuit / round loaf', 'kakan', 'kakor', null, [
+  freq(noun('kaka', 'en', '蛋糕；饼干；圆面包', 'cake / biscuit / round loaf', 'kakan', 'kakor', 'kakorna', [
     ['Vi äter kaka till kaffet.', '我们配咖啡吃蛋糕。'],
     ['Kakan är fortfarande varm.', '这块蛋糕还热着。'],
     ['Hon bakade tre kakor i går.', '她昨天烤了三块蛋糕。'],
@@ -82,7 +82,7 @@ export const list38: Word[] = [
     ['Har du röstat än?', '你投票了吗？'],
     ['Rösta inte blankt.', '别投空白票。'],
   ]), 1861),
-  freq(noun('hud', 'en', '皮肤', 'skin / hide', 'huden', 'hudar', null, [
+  freq(noun('hud', 'en', '皮肤', 'skin / hide', 'huden', 'hudar', 'hudarna', [
     ['Huden är torr i kyla.', '皮肤在冷天发干。'],
     ['Hon smörjer huden varje kväll.', '她每晚给皮肤抹油。'],
     ['Djurets hudar torkar i solen.', '那些兽皮在太阳下晾着。'],
@@ -118,7 +118,7 @@ export const list38: Word[] = [
     ['De hala stenarna ligger vid ån.', '那些滑石头在河边。'],
     ['Gå inte på den hala isen.', '别走那块滑冰。'],
   ]), 1867),
-  freq(noun('knapp', 'en', '纽扣；按钮', 'button', 'knappen', 'knappar', null, [
+  freq(noun('knapp', 'en', '纽扣；按钮', 'button', 'knappen', 'knappar', 'knapparna', [
     ['En knapp lossnade från skjortan.', '衬衫上掉了一颗纽扣。'],
     ['Knappen sitter löst.', '这颗纽扣松了。'],
     ['Hon sydde i tre knappar.', '她缝上了三颗纽扣。'],
@@ -130,7 +130,7 @@ export const list38: Word[] = [
     ['De stängda dörrarna måste öppnas.', '那些关着的门得打开。'],
     ['Vägen är stängd efter rasen.', '塌方之后路封闭了。'],
   ]), 1869, c([['stänga', '关上'], ['-d', '被……的']], '被关上的，合起来就是关闭的。')),
-  freq(noun('lillebror', 'en', '弟弟', 'little brother', 'lillebrodern', 'lillebröder', null, [
+  freq(noun('lillebror', 'en', '弟弟', 'little brother', 'lillebrodern', 'lillebröder', 'lillebröderna', [
     ['Min lillebror sover.', '我弟弟在睡觉。'],
     ['Lillebrodern följer efter oss.', '弟弟跟着我们。'],
     ['Hon har två lillebröder.', '她有两个弟弟。'],
@@ -166,13 +166,13 @@ export const list38: Word[] = [
     ],
     '“作为一的状态”，就是一个单位、单元。',
   )),
-  freq(noun('uniform', 'en', '制服', 'uniform', 'uniformen', 'uniformer', null, [
+  freq(noun('uniform', 'en', '制服', 'uniform', 'uniformen', 'uniformer', 'uniformerna', [
     ['Hon har uniform på jobbet.', '她上班穿制服。'],
     ['Uniformen hänger i skåpet.', '制服挂在柜子里。'],
     ['Två uniformer behöver tvättas.', '两套制服需要洗。'],
     ['Ta på uniformen före skiftet.', '上班前穿上制服。'],
   ]), 1874),
-  freq(noun('snygging', 'en', '长得好看的人（口）', 'looker (informal)', 'snyggingen', 'snyggingar', null, [
+  freq(noun('snygging', 'en', '长得好看的人（口）', 'looker (informal)', 'snyggingen', 'snyggingar', 'snyggingarna', [
     ['Han är en snygging, visst.', '他长得挺好看的，没错。'],
     ['Snyggingen vid baren vinkade.', '吧台边那个好看的人在招手。'],
     ['Två snyggingar gick förbi.', '两个长得好看的人走了过去。'],
@@ -202,7 +202,7 @@ export const list38: Word[] = [
     ['Huset har tre sovrum.', '这房子有三间卧室。'],
     ['Sovrummen vetter mot gården.', '那些卧室朝院子。'],
   ]), 1879, c([['sov', '睡（sova）'], ['rum', '房间']], '睡觉的房间，合起来就是卧室。')),
-  freq(noun('relation', 'en', '关系', 'relation / relationship', 'relationen', 'relationer', null, [
+  freq(noun('relation', 'en', '关系', 'relation / relationship', 'relationen', 'relationer', 'relationerna', [
     ['De har en god relation.', '他们关系很好。'],
     ['Relationen mellan länderna är kall.', '两国之间的关系很冷。'],
     ['Hon har flera relationer på jobbet.', '她在工作上有好几层关系。'],
@@ -232,7 +232,7 @@ export const list38: Word[] = [
     ['Planen har två syften.', '这个计划有两个目的。'],
     ['Syftena är tydliga.', '那些目的很清楚。'],
   ]), 1883),
-  freq(noun('modell', 'en', '模型；模式；款式', 'model / design', 'modellen', 'modeller', null, [
+  freq(noun('modell', 'en', '模型；模式；款式', 'model / design', 'modellen', 'modeller', 'modellerna', [
     ['Hon bygger en modell av huset.', '她在做这房子的模型。'],
     ['Modellen är gammal redan.', '这个款式已经旧了。'],
     ['Det finns flera modeller att välja.', '有好几种款式可选。'],
@@ -244,13 +244,13 @@ export const list38: Word[] = [
     ['Har ni beställt biljetterna?', '你们把票订了吗？'],
     ['Beställ kaffe till bordet.', '给这桌点咖啡。'],
   ]), 1885),
-  freq(noun('skjorta', 'en', '衬衫', 'shirt', 'skjortan', 'skjortor', null, [
+  freq(noun('skjorta', 'en', '衬衫', 'shirt', 'skjortan', 'skjortor', 'skjortorna', [
     ['Han har en vit skjorta.', '他穿着一件白衬衫。'],
     ['Skjortan behöver strykas.', '这件衬衫需要熨。'],
     ['Två skjortor hänger där.', '两件衬衫挂在那儿。'],
     ['Knyt slipsen till skjortan.', '把领带打在衬衫上。'],
   ]), 1886),
-  freq(noun('plånbok', 'en', '钱包', 'wallet', 'plånboken', 'plånböcker', null, [
+  freq(noun('plånbok', 'en', '钱包', 'wallet', 'plånboken', 'plånböcker', 'plånböckerna', [
     ['Han glömde plånboken hemma.', '他把钱包忘在家里了。'],
     ['Plånboken ligger i jackan.', '钱包在外套里。'],
     ['Två plånböcker hittades på bussen.', '公交上找到了两个钱包。'],
@@ -298,7 +298,7 @@ export const list38: Word[] = [
     ['Hon fyller år i juli.', '她七月过生日。'],
     ['Boka resan till juli.', '把旅行订在七月。'],
   ]), 1893),
-  freq(noun('sajt', 'en', '网站', 'website', 'sajten', 'sajter', null, [
+  freq(noun('sajt', 'en', '网站', 'website', 'sajten', 'sajter', 'sajterna', [
     ['Sajten ligger nere i dag.', '这个网站今天打不开。'],
     ['Hon har en sajt om resor.', '她有一个旅行网站。'],
     ['Två sajter länkar till oss.', '两个网站链到我们。'],
@@ -316,7 +316,7 @@ export const list38: Word[] = [
     ],
     '由“下令”而来，指指挥权，也指长官。',
   )),
-  freq(noun('mask', 'en', '蠕虫；面具', 'worm / mask', 'masken', 'maskar', null, [
+  freq(noun('mask', 'en', '蠕虫；面具', 'worm / mask', 'masken', 'maskar', 'maskarna', [
     ['En mask ligger i jorden.', '一条蠕虫在土里。'],
     ['Masken krälar över stenen.', '这条虫子爬过石头。'],
     ['Efter regnet syns många maskar.', '雨后能看见很多蠕虫。'],
@@ -328,7 +328,7 @@ export const list38: Word[] = [
     ['Vi räknade antalet platser.', '我们数了座位数。'],
     ['Hur stort är antalet?', '这个数目有多大？'],
   ]), 1897),
-  freq(noun('kamrat', 'en', '同伴；同学', 'friend / comrade / companion', 'kamraten', 'kamrater', null, [
+  freq(noun('kamrat', 'en', '同伴；同学', 'friend / comrade / companion', 'kamraten', 'kamrater', 'kamraterna', [
     ['Hon är min kamrat från skolan.', '她是我学校里的同伴。'],
     ['Kamraten väntar vid porten.', '同伴在门口等。'],
     ['Vi är gamla kamrater.', '我们是老同学。'],

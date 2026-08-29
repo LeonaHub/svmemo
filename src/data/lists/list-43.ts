@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 2101–2150. Primary POS is the high-frequency use, not every sense in the book. */
 export const list43: Word[] = [
-  freq(noun('garderob', 'en', '衣柜；衣橱；（剧院等的）衣帽间', 'wardrobe / closet / cloakroom', 'garderoben', 'garderober', null, [
+  freq(noun('garderob', 'en', '衣柜；衣橱；（剧院等的）衣帽间', 'wardrobe / closet / cloakroom', 'garderoben', 'garderober', 'garderoberna', [
     ['Häng jackan i garderoben.', '把外套挂进衣柜。'],
     ['Garderoben är full.', '这个衣柜已经满了。'],
     ['Vi har två garderober i hallen.', '门厅里有两个衣橱。'],
@@ -64,7 +64,7 @@ export const list43: Word[] = [
     ['Det finns två kön i den här arten.', '这个物种有两种性别。'],
     ['Könen behandlas olika i statistiken.', '统计里不同性别被区别对待。'],
   ]), 2110),
-  freq(noun('forskning', 'en', '研究；科研', 'research', 'forskningen', 'forskningar', null, [
+  freq(noun('forskning', 'en', '研究；科研', 'research', 'forskningen', 'forskningar', 'forskningarna', [
     ['Hon gör forskning om språk.', '她在做语言研究。'],
     ['Forskningen tar tid.', '这项研究很花时间。'],
     ['Nya forskningar publiceras varje år.', '每年都有新的研究发表。'],
@@ -76,7 +76,7 @@ export const list43: Word[] = [
     ['Hon samlade material till uppsatsen.', '她为论文收集了资料。'],
     ['Materialen är olika dyra.', '那些材料贵贱不一。'],
   ]), 2112),
-  freq(noun('korv', 'en', '香肠', 'sausage', 'korven', 'korvar', null, [
+  freq(noun('korv', 'en', '香肠', 'sausage', 'korven', 'korvar', 'korvarna', [
     ['Jag tar en korv med bröd.', '我要一根香肠配面包。'],
     ['Korven är varm.', '这根香肠是热的。'],
     ['Koka två korvar till.', '再煮两根香肠。'],
@@ -211,7 +211,7 @@ export const list43: Word[] = [
     ],
     '婚姻被分开、解除，合起来就是离婚。',
   )),
-  freq(noun('tår', 'en', '眼泪', 'tear', 'tåren', 'tårar', null, [
+  freq(noun('tår', 'en', '眼泪', 'tear', 'tåren', 'tårar', 'tårarna', [
     ['En tår rann längs kinden.', '一滴眼泪顺着脸颊流下。'],
     ['Tåren torkades bort.', '那滴眼泪被擦掉了。'],
     ['Hon hade tårar i ögonen.', '她眼里含着泪。'],
@@ -272,7 +272,7 @@ export const list43: Word[] = [
     ['Olika halter ger olika smak.', '不同含量味道不一样。'],
     ['Halterna har sjunkit i år.', '那些含量今年下降了。'],
   ]), 2138),
-  freq(noun('trädgård', 'en', '花园；园子', 'garden', 'trädgården', 'trädgårdar', null, [
+  freq(noun('trädgård', 'en', '花园；园子', 'garden', 'trädgården', 'trädgårdar', 'trädgårdarna', [
     ['Vi sitter i trädgården.', '我们坐在花园里。'],
     ['Trädgården är liten men fin.', '这个园子虽小但很漂亮。'],
     ['De har två trädgårdar.', '他们有两个花园。'],
@@ -308,7 +308,7 @@ export const list43: Word[] = [
     ['De törstiga hundarna drack.', '那些口渴的狗喝了水。'],
     ['Bli inte törstig på vägen.', '路上别渴着。'],
   ]), 2143, c([['törst', '渴'], ['-ig', '带有……的']], '带着渴的感觉，合起来就是渴的。')),
-  freq(noun('sport', 'en', '体育；运动', 'sport', 'sporten', 'sporter', null, [
+  freq(noun('sport', 'en', '体育；运动', 'sport', 'sporten', 'sporter', 'sporterna', [
     ['Hon gillar sport.', '她喜欢体育。'],
     ['Sporten på TV börjar nu.', '电视上的体育节目现在开始。'],
     ['Han prövar tre sporter i år.', '他今年试三项运动。'],

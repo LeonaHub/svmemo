@@ -4,7 +4,7 @@ import type { Word } from '../../types/word'
 
 /** Ranks 2901–2950. Primary POS is the high-frequency use, not every sense in the book. */
 export const list59: Word[] = [
-  freq(noun('cigg', 'en', '烟（口，香烟）', 'cig (informal cigarette)', 'ciggen', 'ciggar', null, [
+  freq(noun('cigg', 'en', '烟（口，香烟）', 'cig (informal cigarette)', 'ciggen', 'ciggar', 'ciggarna', [
     ['Han tände en cigg ute.', '他在外面点了一根烟。'],
     ['Ciggen slocknade i vinden.', '那根烟被风吹灭了。'],
     ['Hon rökte två ciggar bakom huset.', '她在房子后面抽了两根烟。'],
@@ -16,7 +16,7 @@ export const list59: Word[] = [
     ['Mät två centimeter från vecket.', '从折痕量两厘米。'],
     ['Centimeterna adderas fort.', '那些厘米很快就加起来了。'],
   ]), 2902, c([['centi', '百分之一'], ['meter', '米']], '一米的百分之一，就是厘米。')),
-  freq(noun('vision', 'en', '愿景；幻象', 'vision', 'visionen', 'visioner', null, [
+  freq(noun('vision', 'en', '愿景；幻象', 'vision', 'visionen', 'visioner', 'visionerna', [
     ['Bolaget saknar en tydlig vision.', '公司缺少一个清晰的愿景。'],
     ['Visionen lockade nya medarbetare.', '那个愿景吸引了新同事。'],
     ['Hon beskrev tre visioner för staden.', '她描述了这座城市的三个愿景。'],
@@ -28,19 +28,19 @@ export const list59: Word[] = [
     ['Har ni boxats på riktigt?', '你们真的打过拳吗？'],
     ['Boxas inte utan handskar.', '别不戴手套打拳。'],
   ]), 2904),
-  freq(noun('dom', 'en', '判决；裁定', 'judgment / verdict / sentence', 'domen', 'domar', null, [
+  freq(noun('dom', 'en', '判决；裁定', 'judgment / verdict / sentence', 'domen', 'domar', 'domarna', [
     ['Rätten meddelar en dom i morgon.', '法庭明天宣布一项判决。'],
     ['Domen överraskade båda parter.', '这项判决让双方都意外。'],
     ['Tre domar överklagades samma vecka.', '三份判决同一周被上诉。'],
     ['Vänta på domen i korridoren.', '在走廊里等判决。'],
   ]), 2905),
-  freq(noun('anka', 'en', '鸭子；（报上的）谣言', 'duck / canard', 'ankan', 'ankor', null, [
+  freq(noun('anka', 'en', '鸭子；（报上的）谣言', 'duck / canard', 'ankan', 'ankor', 'ankorna', [
     ['En anka simmar i dammen.', '一只鸭子在池塘里游。'],
     ['Ankan kvackade högt.', '那只鸭子大声叫。'],
     ['Två ankor kom fram till brödet.', '两只鸭子游到面包那儿。'],
     ['Mata inte ankan vid bryggan.', '别在码头喂那只鸭子。'],
   ]), 2906),
-  freq(noun('leverans', 'en', '交货；送达', 'delivery', 'leveransen', 'leveranser', null, [
+  freq(noun('leverans', 'en', '交货；送达', 'delivery', 'leveransen', 'leveranser', 'leveranserna', [
     ['Vi väntar på en leverans i eftermiddag.', '我们下午等一票货。'],
     ['Leveransen kom tre dagar för sent.', '这票货晚到了三天。'],
     ['Två leveranser står i hallen.', '门厅里放着两票货。'],
@@ -52,7 +52,7 @@ export const list59: Word[] = [
     ],
     '交付这件事，合起来就是交货、送达。',
   )),
-  freq(noun('muskel', 'en', '肌肉', 'muscle', 'muskeln', 'muskler', null, [
+  freq(noun('muskel', 'en', '肌肉', 'muscle', 'muskeln', 'muskler', 'musklerna', [
     ['Han drog en muskel i vaden.', '他拉伤了小腿一块肌肉。'],
     ['Muskeln värker efter passet.', '练完这块肌肉在疼。'],
     ['Hon tränar alla muskler i ryggen.', '她在练背上所有肌肉。'],
@@ -64,13 +64,13 @@ export const list59: Word[] = [
     ['De medicinska råden var tydliga.', '那些医嘱很清楚。'],
     ['Be om medicinsk rådgivning först.', '先去问医疗建议。'],
   ]), 2909, c([['medicin', '医学；药'], ['-sk', '……的']], '跟医学有关的，就是医学的、医疗的。')),
-  freq(noun('like', 'en', '匹敌者；对手', 'equal / peer / match', 'liken', 'likar', null, [
+  freq(noun('like', 'en', '匹敌者；对手', 'equal / peer / match', 'liken', 'likar', 'likarna', [
     ['Hon har inte sin like i klassen.', '班上没人能跟她匹敌。'],
     ['Liken till den här sångerskan är sällsynt.', '能跟这位歌手匹敌的人很少见。'],
     ['De två är likar i spelet.', '这两人在比赛里势均力敌。'],
     ['Möt din like med respekt.', '对等的对手要尊重。'],
   ]), 2910),
-  freq(noun('palm', 'en', '棕榈', 'palm (tree)', 'palmen', 'palmer', null, [
+  freq(noun('palm', 'en', '棕榈', 'palm (tree)', 'palmen', 'palmer', 'palmerna', [
     ['En palm står i fönstret.', '窗边立着一棵棕榈。'],
     ['Palmen fäller damm på golvet.', '那棵棕榈往地上掉灰。'],
     ['Två palmer skuggar caféet.', '两棵棕榈给咖啡馆遮阴。'],
@@ -88,19 +88,19 @@ export const list59: Word[] = [
     ['Har ni korsat gränsen än?', '你们过境了吗？'],
     ['Korsa inte här, bilarna kommer fort.', '别在这儿过，车开得很快。'],
   ]), 2913, c([['kors', '十字；交叉'], ['-a', '动词词尾']], '做成十字或横穿过去，合起来就是穿过、交叉。')),
-  freq(noun('konung', 'en', '国王（庄重）', 'king (formal)', 'konungen', 'konungar', null, [
+  freq(noun('konung', 'en', '国王（庄重）', 'king (formal)', 'konungen', 'konungar', 'konungarna', [
     ['En konung styrde landet länge.', '一位国王长期统治这个国家。'],
     ['Konungen talade till folket.', '国王向人民讲话。'],
     ['Två konungar nämns i sagan.', '故事里提到两位国王。'],
     ['Hylla konungen i salen.', '在大厅里向国王致敬。'],
   ]), 2914),
-  freq(noun('änka', 'en', '寡妇', 'widow', 'änkan', 'änkor', null, [
+  freq(noun('änka', 'en', '寡妇', 'widow', 'änkan', 'änkor', 'änkorna', [
     ['En änka bor i huset bredvid.', '隔壁住着一位寡妇。'],
     ['Änkan sålde sommarstugan.', '那位寡妇卖掉了避暑小屋。'],
     ['Två änkor fikade i köket.', '两位寡妇在厨房喝咖啡。'],
     ['Hjälp änkan med räkningarna.', '帮那位寡妇处理账单。'],
   ]), 2915),
-  freq(noun('medalj', 'en', '奖牌；勋章', 'medal', 'medaljen', 'medaljer', null, [
+  freq(noun('medalj', 'en', '奖牌；勋章', 'medal', 'medaljen', 'medaljer', 'medaljerna', [
     ['Hon vann en medalj i simning.', '她在游泳比赛中得了一枚奖牌。'],
     ['Medaljen hänger i montern.', '那枚奖牌挂在展柜里。'],
     ['Laget tog tre medaljer totalt.', '队伍一共拿了三枚奖牌。'],
@@ -166,7 +166,7 @@ export const list59: Word[] = [
     ['De långsamma köerna rörde sig äntligen.', '那些慢吞吞的队伍终于动了。'],
     ['Var inte så långsam i dörren.', '在门口别这么慢。'],
   ]), 2926, c([['lång', '长的'], ['sam', '带有……性质']], '用很长的时间才完成的，合起来就是慢的。')),
-  freq(noun('rast', 'en', '课间／工间休息', 'break', 'rasten', 'raster', null, [
+  freq(noun('rast', 'en', '课间／工间休息', 'break', 'rasten', 'raster', 'rasterna', [
     ['Vi tar en rast klockan tio.', '我们十点休息一会儿。'],
     ['Rasten är slut, gå in.', '休息结束了，进去吧。'],
     ['Två raster räcker på förmiddagen.', '上午休息两次就够。'],
@@ -208,13 +208,13 @@ export const list59: Word[] = [
     ['Dammet har yrt in genom fönstret.', '灰尘已经从窗户旋进来了。'],
     ['Låt det yra, vi stannar inne.', '让它飞吧，我们待在屋里。'],
   ]), 2933),
-  freq(noun('pil', 'en', '箭；箭头；柳树', 'arrow / willow', 'pilen', 'pilar', null, [
+  freq(noun('pil', 'en', '箭；箭头；柳树', 'arrow / willow', 'pilen', 'pilar', 'pilarna', [
     ['Barnet ritade en pil på kartan.', '孩子在地图上画了一个箭头。'],
     ['Pilen pekar mot utgången.', '那个箭头指向出口。'],
     ['Två pilar sitter kvar i tavlan.', '靶上还插着两支箭。'],
     ['Följ pilen till perrongen.', '顺着箭头去站台。'],
   ]), 2934),
-  freq(noun('motsats', 'en', '对立；相反', 'opposite / contrast', 'motsatsen', 'motsatser', null, [
+  freq(noun('motsats', 'en', '对立；相反', 'opposite / contrast', 'motsatsen', 'motsatser', 'motsatserna', [
     ['Kallt är motsatsen till varmt.', '冷是热的反面。'],
     ['Motsatsen visade sig vara sann.', '相反的情况反而被证明是真的。'],
     ['Texten rymmer flera motsatser.', '这篇文章里有好几处对立。'],
@@ -232,13 +232,13 @@ export const list59: Word[] = [
     ['Hon tar järn varje morgon.', '她每天早上补铁。'],
     ['Låt järnet svalna först.', '先让这块铁凉下来。'],
   ]), 2937),
-  freq(noun('lada', 'en', '谷仓；仓房', 'barn', 'ladan', 'lador', null, [
+  freq(noun('lada', 'en', '谷仓；仓房', 'barn', 'ladan', 'lador', 'ladorna', [
     ['Höet ligger i en lada.', '干草堆在一座谷仓里。'],
     ['Ladan läcker när det regnar.', '下雨时这座谷仓漏水。'],
     ['Två lador står vid åkern.', '田边立着两座仓房。'],
     ['Stäng ladan efter dig.', '随手关上谷仓。'],
   ]), 2938),
-  freq(noun('bokstav', 'en', '字母', 'letter (of the alphabet)', 'bokstaven', 'bokstäver', null, [
+  freq(noun('bokstav', 'en', '字母', 'letter (of the alphabet)', 'bokstaven', 'bokstäver', 'bokstäverna', [
     ['Skriv en bokstav i varje ruta.', '每个格子写一个字母。'],
     ['Bokstaven saknas i slutet.', '结尾缺了那个字母。'],
     ['Barnet kan redan tretton bokstäver.', '这孩子已经认识十三个字母。'],
@@ -280,13 +280,13 @@ export const list59: Word[] = [
     ['De sällsynta mynten ligger i lådan.', '那些稀有硬币在抽屉里。'],
     ['Sådant är sällsynt nuförtiden.', '这种事如今很少见。'],
   ]), 2945, c([['säll', '很少'], ['synt', '被看见的']], '很少被看见的，合起来就是罕见的。')),
-  freq(noun('disk', 'en', '柜台；待洗碗碟', 'counter / washing-up', 'disken', 'diskar', null, [
+  freq(noun('disk', 'en', '柜台；待洗碗碟', 'counter / washing-up', 'disken', 'diskar', 'diskarna', [
     ['Hon står bakom disken.', '她站在柜台后面。'],
     ['Disken är full efter middagen.', '晚饭后待洗的碗碟堆满了。'],
     ['Två diskar är öppna i banken.', '银行开了两个柜台。'],
     ['Jag tar disken i kväll.', '今晚我来洗碗。'],
   ]), 2946),
-  freq(noun('final', 'en', '决赛；终场', 'final / finale', 'finalen', 'finaler', null, [
+  freq(noun('final', 'en', '决赛；终场', 'final / finale', 'finalen', 'finaler', 'finalerna', [
     ['Laget nådde final i år.', '这支队伍今年进了决赛。'],
     ['Finalen spelas på lördag.', '决赛星期六举行。'],
     ['Två finaler sänds i tv i kväll.', '今晚电视转播两场决赛。'],

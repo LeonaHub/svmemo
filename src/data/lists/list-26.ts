@@ -10,7 +10,7 @@ export const list26: Word[] = [
     ['Har du kontaktat läkaren?', '你联系过医生了吗？'],
     ['Kontakta oss om det krånglar.', '出问题就联系我们。'],
   ]), 1251),
-  freq(noun('stjärna', 'en', '星星；明星', 'star', 'stjärnan', 'stjärnor', null, [
+  freq(noun('stjärna', 'en', '星星；明星', 'star', 'stjärnan', 'stjärnor', 'stjärnorna', [
     ['En stjärna lyser där uppe.', '一颗星星在上面亮着。'],
     ['Stjärnan är svag i natt.', '今晚这颗星很暗。'],
     ['Vi ser flera stjärnor nu.', '我们现在看见好几颗星星。'],
@@ -40,13 +40,13 @@ export const list26: Word[] = [
     ['I början av filmen händer lite.', '电影开头没发生多少事。'],
     ['Vi bodde där i början.', '开始时我们住在那儿。'],
   ]), 1256, c([['i', '在'], ['början', '开头']], '在开头，合起来就是起初、开始时。')),
-  freq(noun('flaska', 'en', '瓶子', 'bottle', 'flaskan', 'flaskor', null, [
+  freq(noun('flaska', 'en', '瓶子', 'bottle', 'flaskan', 'flaskor', 'flaskorna', [
     ['Köp en flaska vatten.', '买一瓶水。'],
     ['Flaskan är tom.', '这瓶子是空的。'],
     ['Tre flaskor står i kylen.', '冰箱里有三瓶。'],
     ['Öppna flaskan, tack.', '请打开瓶子。'],
   ]), 1257),
-  freq(noun('måndag', 'en', '星期一', 'Monday', 'måndagen', 'måndagar', null, [
+  freq(noun('måndag', 'en', '星期一', 'Monday', 'måndagen', 'måndagar', 'måndagarna', [
     ['Vi ses på måndag.', '我们星期一见。'],
     ['Måndagen gick fort.', '这个星期一过得很快。'],
     ['Hon jobbar tre måndagar i rad.', '她连续三个星期一上班。'],
@@ -76,13 +76,13 @@ export const list26: Word[] = [
     ['Har ni städat färdigt?', '你们打扫完了吗？'],
     ['Städa undan pappren.', '把那些纸收拾掉。'],
   ]), 1262),
-  freq(noun('våning', 'en', '楼层；一套住房', 'floor / apartment', 'våningen', 'våningar', null, [
+  freq(noun('våning', 'en', '楼层；一套住房', 'floor / apartment', 'våningen', 'våningar', 'våningarna', [
     ['Vi bor på tredje våningen.', '我们住在三楼。'],
     ['Våningen är ljus och stor.', '这套住房又亮又大。'],
     ['Huset har fyra våningar.', '这栋房子有四层。'],
     ['De hyr ut våningen i sommar.', '他们夏天出租这套房子。'],
   ]), 1263),
-  freq(noun('prins', 'en', '王子', 'prince', 'prinsen', 'prinsar', null, [
+  freq(noun('prins', 'en', '王子', 'prince', 'prinsen', 'prinsar', 'prinsarna', [
     ['En prins bor i slottet.', '一位王子住在城堡里。'],
     ['Prinsen kommer klockan tolv.', '王子十二点来。'],
     ['Två prinsar står på balkongen.', '两位王子站在阳台上。'],
@@ -94,7 +94,7 @@ export const list26: Word[] = [
     ['De otroliga nyheterna spred sig.', '那些惊人的消息传开了。'],
     ['Resan var otrolig.', '这次旅行令人难以置信。'],
   ]), 1265, c([['o-', '不'], ['trolig', '可信的']], '不可信的，合起来就是难以置信的。')),
-  freq(noun('sång', 'en', '歌唱；歌曲', 'song / singing', 'sången', 'sånger', null, [
+  freq(noun('sång', 'en', '歌唱；歌曲', 'song / singing', 'sången', 'sånger', 'sångerna', [
     ['Hon sjunger en sång.', '她在唱一首歌。'],
     ['Sången är enkel att lära.', '这首歌很好学。'],
     ['Vi kan tre sånger utantill.', '我们能背三首歌。'],
@@ -137,13 +137,13 @@ export const list26: Word[] = [
     ['Hon är rädd för flyg.', '她害怕坐飞机。'],
     ['Marinen och flyget övar tillsammans.', '海军和空军一起演习。'],
   ]), 1271),
-  freq(noun('vakt', 'en', '守卫；值班；看守', 'guard / watch', 'vakten', 'vakter', null, [
+  freq(noun('vakt', 'en', '守卫；值班；看守', 'guard / watch', 'vakten', 'vakter', 'vakterna', [
     ['En vakt står vid dörren.', '一名守卫站在门口。'],
     ['Vakten släppte in oss.', '门卫放我们进去了。'],
     ['Två vakter går runt huset.', '两名看守围着房子转。'],
     ['Var på din vakt här.', '在这儿要当心。'],
   ]), 1272),
-  freq(noun('grad', 'en', '度；程度；军衔', 'degree / extent / rank', 'graden', 'grader', null, [
+  freq(noun('grad', 'en', '度；程度；军衔', 'degree / extent / rank', 'graden', 'grader', 'graderna', [
     ['Det är tio grader varmt.', '现在是十度。'],
     ['Graden av skada är oklar.', '损伤程度还不清楚。'],
     ['Vinkeln är nittio grader.', '这个角是九十度。'],
@@ -185,13 +185,13 @@ export const list26: Word[] = [
     ['Har ni förväntat er det här?', '你们料到这个了吗？'],
     ['Förvänta dig inte för mycket.', '别指望太多。'],
   ]), 1279, c([['för', '预先'], ['vänta', '等待']], '预先等着，合起来就是期待、指望。')),
-  freq(noun('gäst', 'en', '客人', 'guest', 'gästen', 'gäster', null, [
+  freq(noun('gäst', 'en', '客人', 'guest', 'gästen', 'gäster', 'gästerna', [
     ['Vi får en gäst i kväll.', '今晚我们有一位客人。'],
     ['Gästen sitter i soffan.', '客人坐在沙发上。'],
     ['Tre gäster kommer klockan sju.', '三位客人七点来。'],
     ['Ta emot gästen vid dörren.', '到门口迎接客人。'],
   ]), 1280),
-  freq(noun('söndag', 'en', '星期日', 'Sunday', 'söndagen', 'söndagar', null, [
+  freq(noun('söndag', 'en', '星期日', 'Sunday', 'söndagen', 'söndagar', 'söndagarna', [
     ['Vi vilar på söndag.', '我们星期天休息。'],
     ['Söndagen var solig.', '那个星期天是晴天。'],
     ['Hon jobbar två söndagar i månaden.', '她一个月上两个星期天的班。'],
@@ -245,31 +245,31 @@ export const list26: Word[] = [
     ['Han dricker whisky till maten.', '他吃饭时喝威士忌。'],
     ['Vill du ha whisky eller vin?', '你要威士忌还是葡萄酒？'],
   ]), 1289),
-  freq(noun('scen', 'en', '舞台；场景；场面', 'stage / scene', 'scenen', 'scener', null, [
+  freq(noun('scen', 'en', '舞台；场景；场面', 'stage / scene', 'scenen', 'scener', 'scenerna', [
     ['Hon går upp på scenen.', '她走上舞台。'],
     ['Scenen är mörk nu.', '舞台现在是黑的。'],
     ['Pjäsen har tre scener.', '这出戏有三场。'],
     ['Ställ inte till en scen här.', '别在这儿闹场面。'],
   ]), 1290),
-  freq(noun('träff', 'en', '会面；约会；命中', 'meeting / date / hit', 'träffen', 'träffar', null, [
+  freq(noun('träff', 'en', '会面；约会；命中', 'meeting / date / hit', 'träffen', 'träffar', 'träffarna', [
     ['Vi har en träff klockan fem.', '我们五点有个会面。'],
     ['Träffen blev kort.', '这次会面很短。'],
     ['Hon har tre träffar i veckan.', '她一周有三次约会。'],
     ['Skottet var en fullträff.', '这一枪正中目标。'],
   ]), 1291),
-  freq(noun('präst', 'en', '牧师；神父', 'priest / clergyman', 'prästen', 'präster', null, [
+  freq(noun('präst', 'en', '牧师；神父', 'priest / clergyman', 'prästen', 'präster', 'prästerna', [
     ['Prästen talar i kyrkan.', '牧师在教堂讲话。'],
     ['En präst väntar vid altaret.', '一位牧师在祭坛边等。'],
     ['Två präster bor i huset.', '两位牧师住在这栋房子里。'],
     ['Prata med prästen efteråt.', '事后跟牧师谈谈。'],
   ]), 1292),
-  freq(noun('sjö', 'en', '湖；海面', 'lake / sea', 'sjön', 'sjöar', null, [
+  freq(noun('sjö', 'en', '湖；海面', 'lake / sea', 'sjön', 'sjöar', 'sjöarna', [
     ['Vi badar i sjön.', '我们在湖里游泳。'],
     ['Sjön ligger stilla i dag.', '湖今天很平静。'],
     ['Tre sjöar finns i närheten.', '附近有三个湖。'],
     ['Båten går ut på sjön.', '船驶到湖上。'],
   ]), 1293),
-  freq(noun('kurs', 'en', '课程；航向；汇率', 'course / class / rate', 'kursen', 'kurser', null, [
+  freq(noun('kurs', 'en', '课程；航向；汇率', 'course / class / rate', 'kursen', 'kurser', 'kurserna', [
     ['Hon går en kurs i svenska.', '她在上瑞典语课。'],
     ['Kursen börjar i augusti.', '这门课八月开始。'],
     ['Två kurser krockar på måndag.', '两门课星期一撞期。'],

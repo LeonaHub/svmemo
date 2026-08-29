@@ -10,7 +10,7 @@ export const list08: Word[] = [
     ['De har räddat huset.', '他们保住了那栋房子。'],
     ['Rädda honom!', '救他！'],
   ]), 351),
-  freq(noun('mor', 'en', '母亲', 'mother', 'modern', 'mödrar', null, [
+  freq(noun('mor', 'en', '母亲', 'mother', 'modern', 'mödrar', 'mödrarna', [
     ['Min mor bor i Umeå.', '我母亲住在于默奥。'],
     ['Modern väntar utanför.', '那位母亲在外面等。'],
     ['Mödrar och barn går först.', '母亲和孩子先走。'],
@@ -40,7 +40,7 @@ export const list08: Word[] = [
     ['Sådana dagar är sällsynta.', '那样的日子很少。'],
     ['Hon sa något sådant.', '她说了类似的话。'],
   ]), 356),
-  freq(noun('timme', 'en', '小时；（一节）课', 'hour', 'timmen', 'timmar', null, [
+  freq(noun('timme', 'en', '小时；（一节）课', 'hour', 'timmen', 'timmar', 'timmarna', [
     ['Det tar en timme.', '这要一个小时。'],
     ['Timmen gick fort.', '这一个小时过得很快。'],
     ['Vi väntade två timmar.', '我们等了两个小时。'],
@@ -58,7 +58,7 @@ export const list08: Word[] = [
     ['Vi skyndade hem.', '我们当时赶紧回家。'],
     ['De har skyndat sig i dag.', '他们今天已经赶过了。'],
   ]), 359),
-  freq(noun('kapten', 'en', '船长；机长；上尉', 'captain / lieutenant', 'kaptenen', 'kaptener', null, [
+  freq(noun('kapten', 'en', '船长；机长；上尉', 'captain / lieutenant', 'kaptenen', 'kaptener', 'kaptenerna', [
     ['Kaptenen är ombord.', '船长在船上。'],
     ['Hon är kapten på planet.', '她是这架飞机的机长。'],
     ['Två kaptener pratade.', '两位上尉在交谈。'],
@@ -76,7 +76,7 @@ export const list08: Word[] = [
     ['Hon är inte alls sen.', '她一点都不晚。'],
     ['Ingen alls kom.', '根本没人来。'],
   ]), 362),
-  freq(noun('jack', 'en', '插孔；插头（电话）', 'jack / plug', 'jacken', 'jackar', null, [
+  freq(noun('jack', 'en', '插孔；插头（电话）', 'jack / plug', 'jacken', 'jackar', 'jackarna', [
     ['Jacken sitter på väggen.', '插孔在墙上。'],
     ['Koppla in jacken.', '把插头插上。'],
     ['Det finns två jackar här.', '这里有两个插孔。'],
@@ -94,7 +94,7 @@ export const list08: Word[] = [
     ['Vapnen är inlåsta.', '那些武器锁起来了。'],
     ['Ord kan vara ett vapen.', '话也可以是武器。'],
   ]), 365),
-  freq(noun('dotter', 'en', '女儿', 'daughter', 'dottern', 'döttrar', null, [
+  freq(noun('dotter', 'en', '女儿', 'daughter', 'dottern', 'döttrar', 'döttrarna', [
     ['Deras dotter är fem år.', '他们的女儿五岁。'],
     ['Dottern går i skolan.', '那个女儿在上学。'],
     ['Två döttrar leker ute.', '两个女儿在外面玩。'],
@@ -149,13 +149,13 @@ export const list08: Word[] = [
     ['Vi bor uppe på backen.', '我们住在坡上。'],
     ['Hon är redan uppe.', '她已经起来了。'],
   ]), 373),
-  freq(noun('flicka', 'en', '女孩；姑娘', 'girl', 'flickan', 'flickor', null, [
+  freq(noun('flicka', 'en', '女孩；姑娘', 'girl', 'flickan', 'flickor', 'flickorna', [
     ['En flicka leker där.', '一个女孩在那边玩。'],
     ['Flickan läser en bok.', '那个女孩在看书。'],
     ['Två flickor springer.', '两个女孩在跑。'],
     ['Hon är en duktig flicka.', '她是个能干的姑娘。'],
   ]), 374),
-  freq(noun('miss', 'en', '失误；错误（口语）', 'miss / mistake (informal)', 'missen', 'missar', null, [
+  freq(noun('miss', 'en', '失误；错误（口语）', 'miss / mistake (informal)', 'missen', 'missar', 'missarna', [
     ['Det var en miss.', '那是一次失误。'],
     ['Missen kostade oss spelet.', '这个失误让我们丢了比赛。'],
     ['Hon gjorde två missar.', '她出了两次错。'],
@@ -179,13 +179,13 @@ export const list08: Word[] = [
     ['Det finns många ställen här.', '这里有很多地方。'],
     ['Ställena är fulla.', '那些地方都满了。'],
   ]), 378),
-  freq(noun('idiot', 'en', '白痴；笨蛋（骂人，口语）', 'idiot (insult; informal)', 'idioten', 'idioter', null, [
+  freq(noun('idiot', 'en', '白痴；笨蛋（骂人，口语）', 'idiot (insult; informal)', 'idioten', 'idioter', 'idioterna', [
     ['Var inte en idiot.', '别当傻瓜。'],
     ['Idioten glömde nyckeln.', '那个笨蛋把钥匙忘了。'],
     ['Två idioter skrek.', '两个笨蛋在喊。'],
     ['Sluta, din idiot.', '停下，你这个笨蛋。'],
   ]), 379),
-  freq(noun('herr', 'en', '先生', 'Mr. / sir', 'herrn', 'herrar', null, [
+  freq(noun('herr', 'en', '先生', 'Mr. / sir', 'herrn', 'herrar', 'herrarna', [
     ['Herr Andersson är här.', 'Andersson 先生在这儿。'],
     ['Herrn vid dörren väntar.', '门口那位先生在等。'],
     ['Två herrar sitter där.', '两位先生坐在那里。'],
@@ -204,13 +204,13 @@ export const list08: Word[] = [
     ],
     '当说到某件事的时候，就是至于、就……而言。',
   )),
-  freq(noun('syster', 'en', '姐姐／妹妹；护士（称呼）', 'sister / nurse (form of address)', 'systern', 'systrar', null, [
+  freq(noun('syster', 'en', '姐姐／妹妹；护士（称呼）', 'sister / nurse (form of address)', 'systern', 'systrar', 'systrarna', [
     ['Min syster bor här.', '我姐姐／妹妹住在这里。'],
     ['Systern kommer snart.', '那位护士马上到。'],
     ['Hon har två systrar.', '她有两个姐妹。'],
     ['Hon är min syster.', '她是我姐姐／妹妹。'],
   ]), 382),
-  freq(noun('skola', 'en', '学校', 'school', 'skolan', 'skolor', null, [
+  freq(noun('skola', 'en', '学校', 'school', 'skolan', 'skolor', 'skolorna', [
     ['Barnen går i skolan.', '孩子们在上学。'],
     ['Skolan slutar klockan tre.', '学校三点下课。'],
     ['Två skolor ligger här.', '这里有两所学校。'],
@@ -246,7 +246,7 @@ export const list08: Word[] = [
     ['De har satt upp en lampa.', '他们已经装了一盏灯。'],
     ['Sätt dig här.', '坐这儿。'],
   ]), 388),
-  freq(noun('idé', 'en', '主意；想法；（没有）意义', 'idea / point', 'idén', 'idéer', null, [
+  freq(noun('idé', 'en', '主意；想法；（没有）意义', 'idea / point', 'idén', 'idéer', 'idéerna', [
     ['Det är en bra idé.', '这是个好主意。'],
     ['Idén är enkel.', '这个想法很简单。'],
     ['Hon har många idéer.', '她有很多想法。'],
