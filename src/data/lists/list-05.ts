@@ -166,7 +166,7 @@ export const list05: Word[] = [
     ['De säkra uppgifterna kom sent.', '那些可靠的消息来得很晚。'],
     ['Är du säker?', '你确定吗？'],
   ]), 227),
-  freq(verb('hoppas', '希望', 'to hope', 'hoppas', 'hoppades', 'hoppats', null, [
+  freq(verb('hoppas', '希望', 'to hope', 'hoppas', 'hoppades', 'hoppats', 'hoppatsen', [
     ['Jag hoppas det går bra.', '我希望一切顺利。'],
     ['Hon hoppades på sol.', '她当时盼着出太阳。'],
     ['Vi har hoppats länge.', '我们盼了很久。'],

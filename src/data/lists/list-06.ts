@@ -118,7 +118,7 @@ export const list06: Word[] = [
     ['Har du mints adressen?', '你还记得地址吗？'],
     ['Minns du vägen?', '你记得路吗？'],
   ]), 269),
-  freq(verb('betyda', '意思是；意味着', 'to mean / to matter', 'betyder', 'betydde', 'betytt', null, [
+  freq(verb('betyda', '意思是；意味着', 'to mean / to matter', 'betyder', 'betydde', 'betytt', 'betytten', [
     ['Vad betyder det?', '那是什么意思？'],
     ['Det betydde mycket för henne.', '这对她意义重大。'],
     ['Ordet har betytt samma sak länge.', '这个词很久以来都是这个意思。'],

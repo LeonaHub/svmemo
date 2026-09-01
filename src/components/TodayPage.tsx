@@ -169,7 +169,11 @@ export function TodayPage({
     try {
       const items = await startSentenceSession('plan')
       if (items.length === 0) {
-        setMessage('计划里还没有带例句的词。先去词库加入，或打开例句页。')
+        setMessage(
+          overview?.learnedCount
+            ? '计划里能练的句子都答对了。答错过的词在单词本里。'
+            : '计划里还没有带例句的词。先去词库加入，或打开例句页。',
+        )
         return
       }
       onStartSentences(items)
@@ -371,7 +375,7 @@ export function TodayPage({
               >
                 <span className="today-action-copy">
                   <strong>例句填空</strong>
-                  <span>看中文写词 · 不改间隔</span>
+                  <span>看中文写词 · 答错进单词本</span>
                 </span>
                 <span className="today-action-go">
                   {starting === 'sentences' ? '…' : '开始'}
@@ -385,7 +389,11 @@ export function TodayPage({
               >
                 <span className="today-action-copy">
                   <strong>例句填空</strong>
-                  <span>词进计划后，就可以在这里练句子</span>
+                  <span>
+                    {overview.learnedCount > 0
+                      ? '能练的句子都答对了'
+                      : '词进计划后，就可以在这里练句子'}
+                  </span>
                 </span>
                 <span className="today-action-go">看看</span>
               </button>

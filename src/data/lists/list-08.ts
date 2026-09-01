@@ -276,7 +276,7 @@ export const list08: Word[] = [
     ['De roliga filmerna börjar sent.', '那些有趣的电影很晚才开始。'],
     ['Det var roligt att träffa dig.', '见到你很高兴。'],
   ]), 393),
-  freq(noun('reda', 'en', '条理；（ta reda på）弄清楚', 'order / (ta reda på) find out', 'redan', null, null, [
+  freq(noun('reda', 'en', '条理；（ta reda på）弄清楚', 'order / (ta reda på) find out', 'redan', 'redana', null, [
     ['Ta reda på tiden.', '把时间查清楚。'],
     ['Jag fick reda på det i går.', '我昨天才知道这件事。'],
     ['Hon gillar ordning och reda.', '她喜欢井井有条。'],

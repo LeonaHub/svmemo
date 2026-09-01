@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { SentenceItem } from '../lib/sentence-drill'
 import { sentenceKicker } from '../lib/sentence-drill'
+import { markSentenceCleared, recordSentenceMiss } from '../db/study'
 import { useSwipeNav, type SwipeNav } from '../lib/swipe'
 import { SentenceCard } from './SentenceCard'
 
@@ -72,6 +73,7 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
   const [spellOutcome, setSpellOutcome] = useState<{ exact: boolean } | null>(
     null,
   )
+  const missedForFsrs = useRef(new Set<string>())
 
   const item = items[index]
   const remaining = Math.max(0, items.length - index)
@@ -109,6 +111,27 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
       setCheckpoint(`第 ${current.round} 组过完了。下一组还是看中文，把要学的词写进句子。`)
     }
     setIndex(nextIndex)
+  }
+
+  async function handleReveal(exact: boolean) {
+    setSpellOutcome({ exact })
+    if (!item) {
+      return
+    }
+    if (exact) {
+      await markSentenceCleared(item.word.id, item.example.sv)
+      return
+    }
+    const wordId = item.word.id
+    if (missedForFsrs.current.has(wordId)) {
+      return
+    }
+    missedForFsrs.current.add(wordId)
+    try {
+      await recordSentenceMiss(wordId)
+    } catch {
+      missedForFsrs.current.delete(wordId)
+    }
   }
 
   function handleContinue(passed: boolean) {
@@ -196,7 +219,7 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
     return (
       <ActionScreen
         title="例句先到这里"
-        message="这只是加练，不会改单词的复习间隔。想接着练可以再点进来。"
+        message="答对的句子下次不会再出。答错过的词已经进单词本，并按间隔复习。"
         actionLabel="返回"
         onAction={onExit}
         nav={swipeNav}
@@ -240,7 +263,9 @@ export function SentenceSession({ items: initialItems, onExit }: SentenceSession
         key={`${item.word.id}-${item.example.sv}-${index}-${attemptKey}`}
         item={item}
         kicker={sentenceKicker(item)}
-        onReveal={(exact) => setSpellOutcome({ exact })}
+        onReveal={(exact) => {
+          void handleReveal(exact)
+        }}
         onContinue={handleContinue}
         onMasteredChange={handleMasteredChange}
       />

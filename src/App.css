@@ -1461,12 +1461,39 @@ button.today-pill:disabled {
   background: var(--surface-2);
 }
 
+.example-sv {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 .examples strong {
   display: block;
+  flex: 1;
+  min-width: 0;
   font-family: var(--font-word);
   font-weight: 600;
   color: var(--text-h);
   font-size: 16px;
+}
+
+.examples .speak {
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.speak.is-compact .icon-btn {
+  width: 36px;
+  height: 36px;
+}
+
+.speak.is-compact .icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.speak.is-compact .hint {
+  display: none;
 }
 
 .examples span {
@@ -2203,6 +2230,11 @@ html.is-keyboard .page-study .study-dock {
   height: 40px;
 }
 
+.word-detail .speak.is-compact .icon-btn {
+  width: 36px;
+  height: 36px;
+}
+
 .word-detail .examples-label {
   display: block;
   margin: 8px 0 0;
@@ -2646,6 +2678,10 @@ html.is-keyboard .page-study .study-dock {
 
   .flashcard.is-flipped .speak {
     margin-top: 6px;
+  }
+
+  .flashcard.is-flipped .examples .speak {
+    margin-top: 0;
   }
 
   .flashcard.is-flipped .spell-slots,

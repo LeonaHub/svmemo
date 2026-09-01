@@ -15,8 +15,13 @@ import {
   shuffle,
   type SessionKind,
 } from '../lib/queue'
-import { buildSentenceQueue, type SentenceItem } from '../lib/sentence-drill'
+import {
+  buildSentenceQueue,
+  unclearedExamples,
+  type SentenceItem,
+} from '../lib/sentence-drill'
 import { listWordMarks, setWordMark } from './marks'
+import { listClearedSentenceIds, markSentenceCleared } from './sentences'
 import {
   A1_CORE_DECK_ID,
   DEFAULT_SETTINGS,
@@ -157,7 +162,7 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
   const dayStart = startOfLocalDay(now)
   const dayEnd = startOfNextLocalDay(now)
 
-  const [settings, cards, unlearnedWordIds, catalog, todayLogs, marks, todayStats] =
+  const [settings, cards, unlearnedWordIds, catalog, todayLogs, marks, todayStats, cleared] =
     await Promise.all([
       getSettings(),
       db.cards.toArray(),
@@ -169,6 +174,7 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
         .toArray(),
       listWordMarks(),
       db.dailyStats.get(localDateString(now)),
+      listClearedSentenceIds(),
     ])
 
   const mastered = new Set(
@@ -186,7 +192,10 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
   const starredIds = new Set(
     marks.filter((mark) => mark.starred).map((mark) => mark.wordId),
   )
-  const exampleCount = (wordId: string) => byId.get(wordId)?.examples?.length ?? 0
+  const remainingExamples = (wordId: string) => {
+    const word = byId.get(wordId)
+    return word ? unclearedExamples(word, cleared).length : 0
+  }
 
   return {
     settings,
@@ -202,9 +211,12 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
     ]).size,
     masteredCount: mastered.size,
     starredCount: starredIds.size,
-    sentenceCount: active.reduce((sum, card) => sum + exampleCount(card.wordId), 0),
+    sentenceCount: active.reduce(
+      (sum, card) => sum + remainingExamples(card.wordId),
+      0,
+    ),
     starredSentenceCount: [...starredIds].reduce(
-      (sum, wordId) => sum + exampleCount(wordId),
+      (sum, wordId) => sum + remainingExamples(wordId),
       0,
     ),
   }
@@ -357,10 +369,11 @@ export async function startStarredSession(): Promise<StudyItem[]> {
 export async function startSentenceSession(
   pool: 'plan' | 'starred' = 'plan',
 ): Promise<SentenceItem[]> {
-  const [catalog, cards, marks] = await Promise.all([
+  const [catalog, cards, marks, cleared] = await Promise.all([
     db.words.toArray(),
     db.cards.toArray(),
     listWordMarks(),
+    listClearedSentenceIds(),
   ])
   const mastered = new Set(
     marks.filter((mark) => mark.mastered).map((mark) => mark.wordId),
@@ -370,7 +383,7 @@ export async function startSentenceSession(
   )
   const enrolled = new Set(cards.map((card) => card.wordId))
   const source = catalog.filter((word) => {
-    if (!word.examples?.length) {
+    if (unclearedExamples(word, cleared).length === 0) {
       return false
     }
     if (pool === 'starred') {
@@ -378,7 +391,25 @@ export async function startSentenceSession(
     }
     return enrolled.has(word.id) && !mastered.has(word.id)
   })
-  return buildSentenceQueue(source)
+  return buildSentenceQueue(source, undefined, cleared)
+}
+
+export { markSentenceCleared }
+
+export async function recordSentenceMiss(
+  wordId: string,
+  now = new Date(),
+): Promise<void> {
+  await setWordMark(wordId, { starred: true, mastered: false }, now)
+  await enrollWords([wordId], now)
+  const card = await db.cards
+    .where('[wordId+cardType]')
+    .equals([wordId, PROGRESS_CARD_TYPE])
+    .first()
+  if (!card?.id) {
+    throw new Error('找不到这张卡片')
+  }
+  await submitReview(card as SavedCard, Rating.Again, now)
 }
 
 export async function submitReview(

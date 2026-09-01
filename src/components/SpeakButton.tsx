@@ -12,12 +12,14 @@ type SpeakButtonProps = {
   text: string
   label?: string
   autoPlay?: boolean
+  compact?: boolean
 }
 
 export function SpeakButton({
   text,
   label = '发音',
   autoPlay = false,
+  compact = false,
 }: SpeakButtonProps) {
   const [hint, setHint] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -67,7 +69,7 @@ export function SpeakButton({
   }
 
   return (
-    <div className="speak">
+    <div className={compact ? 'speak is-compact' : 'speak'}>
       <button
         type="button"
         className={busy ? 'icon-btn is-speaking' : 'icon-btn'}

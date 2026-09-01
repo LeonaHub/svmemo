@@ -2,6 +2,7 @@ import Dexie, { type EntityTable } from 'dexie'
 import type { Word } from '../types/word'
 import type {
   CardRecord,
+  ClearedSentence,
   DailyStats,
   Deck,
   DeckWord,
@@ -19,6 +20,7 @@ export class SvmemoDB extends Dexie {
   settings!: EntityTable<Settings, 'id'>
   dailyStats!: EntityTable<DailyStats, 'date'>
   wordMarks!: EntityTable<WordMark, 'wordId'>
+  clearedSentences!: EntityTable<ClearedSentence, 'id'>
 
   constructor() {
     super('svmemo')
@@ -69,6 +71,9 @@ export class SvmemoDB extends Dexie {
         delete next.llmModel
         await transaction.table('settings').put(next)
       })
+    this.version(5).stores({
+      clearedSentences: 'id, wordId',
+    })
   }
 }
 

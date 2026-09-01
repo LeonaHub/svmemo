@@ -196,7 +196,7 @@ export const list09: Word[] = [
     ['Flera herrar sitter där.', '几位先生坐在那里。'],
     ['Mina damer och herrar!', '女士们先生们！'],
   ]), 432),
-  freq(noun('kärlek', 'en', '爱；爱情', 'love', 'kärleken', null, null, [
+  freq(noun('kärlek', 'en', '爱；爱情', 'love', 'kärleken', 'kärlekena', null, [
     ['Det är kärlek, inte plikt.', '这是爱，不是义务。'],
     ['Kärleken växte med tiden.', '爱随着时间增长。'],
     ['Vi pratar om kärlek.', '我们在谈爱情。'],

@@ -2,6 +2,7 @@ import { db } from '../db'
 import { syncCatalog } from '../db/seed'
 import type {
   CardRecord,
+  ClearedSentence,
   DailyStats,
   Deck,
   DeckWord,
@@ -11,7 +12,7 @@ import type {
 } from '../types/progress'
 import type { Word } from '../types/word'
 
-export const BACKUP_VERSION = 2
+export const BACKUP_VERSION = 3
 
 export type SvmemoBackup = {
   version: number
@@ -24,6 +25,7 @@ export type SvmemoBackup = {
   settings: Settings[]
   dailyStats: DailyStats[]
   wordMarks?: WordMark[]
+  clearedSentences?: ClearedSentence[]
 }
 
 function asDate(value: unknown): Date {
@@ -45,6 +47,7 @@ export async function exportBackup(): Promise<SvmemoBackup> {
     settings: await db.settings.toArray(),
     dailyStats: await db.dailyStats.toArray(),
     wordMarks: await db.wordMarks.toArray(),
+    clearedSentences: await db.clearedSentences.toArray(),
   }
 }
 
@@ -96,6 +99,7 @@ export async function importBackup(raw: unknown): Promise<void> {
       db.settings,
       db.dailyStats,
       db.wordMarks,
+      db.clearedSentences,
     ],
     async () => {
       await db.cards.clear()
@@ -103,6 +107,7 @@ export async function importBackup(raw: unknown): Promise<void> {
       await db.settings.clear()
       await db.dailyStats.clear()
       await db.wordMarks.clear()
+      await db.clearedSentences.clear()
 
       await db.cards.bulkAdd(
         backup.cards.map((card) => ({
@@ -134,6 +139,14 @@ export async function importBackup(raw: unknown): Promise<void> {
             ...mark,
             masteredAt: mark.masteredAt ? asDate(mark.masteredAt) : undefined,
             starredAt: mark.starredAt ? asDate(mark.starredAt) : undefined,
+          })),
+        )
+      }
+      if (backup.clearedSentences && backup.clearedSentences.length > 0) {
+        await db.clearedSentences.bulkAdd(
+          backup.clearedSentences.map((row) => ({
+            ...row,
+            clearedAt: asDate(row.clearedAt),
           })),
         )
       }

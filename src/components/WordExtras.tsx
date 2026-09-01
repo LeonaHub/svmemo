@@ -61,7 +61,10 @@ export function WordExamples({ word }: WordExtrasProps) {
       <ul className="examples">
         {examples.map((example) => (
           <li key={example.sv}>
-            <strong>{example.sv}</strong>
+            <div className="example-sv">
+              <strong>{example.sv}</strong>
+              <SpeakButton compact text={example.sv} label="听这句" />
+            </div>
             <span>{example.zh}</span>
           </li>
         ))}

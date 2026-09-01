@@ -285,12 +285,26 @@ export function clozeAnswer(segments: readonly SentenceSegment[]): string {
     .join(' ')
 }
 
+export function sentenceProgressId(wordId: string, exampleSv: string): string {
+  return `${wordId}\n${exampleSv}`
+}
+
+export function unclearedExamples(
+  word: Word,
+  cleared: ReadonlySet<string>,
+): Example[] {
+  return (word.examples ?? []).filter(
+    (example) => !cleared.has(sentenceProgressId(word.id, example.sv)),
+  )
+}
+
 export function buildSentenceQueue(
   words: readonly Word[],
   roundSize = ROUND_SIZE,
+  cleared: ReadonlySet<string> = new Set(),
 ): SentenceItem[] {
   const pairs = words.flatMap((word) =>
-    (word.examples ?? []).map((example) => ({ word, example })),
+    unclearedExamples(word, cleared).map((example) => ({ word, example })),
   )
   const queue: SentenceItem[] = []
   chunkRounds(shuffle(pairs), roundSize).forEach((group, roundOffset) => {

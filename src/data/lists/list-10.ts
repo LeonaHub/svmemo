@@ -238,7 +238,7 @@ export const list10: Word[] = [
     ['Flera miljoner bor där.', '好几百万人住在那里。'],
     ['Hon vann en miljon kronor.', '她赢了一百万克朗。'],
   ]), 490),
-  freq(noun('tv', 'en', '电视', 'TV / television', 'tv:n', null, null, [
+  freq(noun('tv', 'en', '电视', 'TV / television', 'tv:n', 'tv:na', null, [
     ['Barnen tittar på tv.', '孩子们在看电视。'],
     ['Tv:n är trasig.', '电视坏了。'],
     ['Är det något på tv i kväll?', '今晚电视有什么节目吗？'],

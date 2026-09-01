@@ -31,8 +31,10 @@ export function SentencePage({ onStart, onBrowseWords }: SentencePageProps) {
       if (items.length === 0) {
         setMessage(
           pool === 'starred'
-            ? '单词本还没有带例句的词。先去词库收藏，或从计划里练。'
-            : '计划里还没有带例句的词。先去词库加入计划。',
+            ? '单词本里没有还能练的句子。'
+            : learnedCount > 0
+              ? '计划里能练的句子都答对了。答错过的词在单词本里。'
+              : '计划里还没有带例句的词。先去词库加入计划。',
         )
         return
       }
@@ -68,9 +70,11 @@ export function SentencePage({ onStart, onBrowseWords }: SentencePageProps) {
               <span>句</span>
             </p>
             <p className="sentence-choice-meta">
-              {learnedCount > 0
-                ? `来自 ${learnedCount} 个未掌握的词，打乱后每 7 句一组。`
-                : '加入计划的词，例句会出现在这里。'}
+              {planCount > 0
+                ? `还剩 ${planCount} 句，打乱后每 7 句一组。答对的句子会拿掉。`
+                : learnedCount > 0
+                  ? '这些词的句子都答对了。'
+                  : '加入计划的词，例句会出现在这里。'}
             </p>
             <button
               type="button"
@@ -94,8 +98,8 @@ export function SentencePage({ onStart, onBrowseWords }: SentencePageProps) {
             </p>
             <p className="sentence-choice-meta">
               {starredCount > 0
-                ? '收藏过的难词，含已掌握的收藏。'
-                : '学习时点星星，难词会进单词本。'}
+                ? '收藏过的难词，含已掌握的收藏。答对的句子会拿掉。'
+                : '学习时点星星，难词会进单词本。答错例句也会进来。'}
             </p>
             <button
               type="button"
@@ -124,7 +128,7 @@ export function SentencePage({ onStart, onBrowseWords }: SentencePageProps) {
         </li>
         <li>
           <strong>补上这个词</strong>
-          <span>前后的瑞典语已经写好，加练不改间隔</span>
+          <span>答对这句下次不再出；答错进单词本并按间隔复习</span>
         </li>
       </ol>
 

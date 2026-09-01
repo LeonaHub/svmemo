@@ -24,7 +24,7 @@ export async function syncCatalog(): Promise<SeedResult> {
 
   await db.transaction(
     'rw',
-    [db.words, db.decks, db.deckWords, db.cards, db.reviewLogs, db.settings, db.wordMarks],
+    [db.words, db.decks, db.deckWords, db.cards, db.reviewLogs, db.settings, db.wordMarks, db.clearedSentences],
     async () => {
       await db.words.clear()
       await db.words.bulkPut(words)
@@ -80,6 +80,13 @@ export async function syncCatalog(): Promise<SeedResult> {
       )
       if (staleMarks.length > 0) {
         await db.wordMarks.bulkDelete(staleMarks.map((mark) => mark.wordId))
+      }
+
+      const staleSentences = (await db.clearedSentences.toArray()).filter(
+        (row) => !keepIds.has(row.wordId),
+      )
+      if (staleSentences.length > 0) {
+        await db.clearedSentences.bulkDelete(staleSentences.map((row) => row.id))
       }
 
       const settings = await db.settings.get('default')

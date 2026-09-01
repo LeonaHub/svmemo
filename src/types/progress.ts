@@ -74,6 +74,14 @@ export const wordMarkSchema = z.object({
   starredAt: z.date().optional(),
 })
 
+export const clearedSentenceSchema = z.object({
+  /** `{wordId}\\n{example.sv}` */
+  id: z.string().min(1),
+  wordId: z.string().min(1),
+  exampleSv: z.string().min(1),
+  clearedAt: z.date(),
+})
+
 export type CardType = z.infer<typeof cardTypeSchema>
 export type Deck = z.infer<typeof deckSchema>
 export type DeckWord = z.infer<typeof deckWordSchema>
@@ -83,6 +91,7 @@ export type ReviewLogRecord = z.infer<typeof reviewLogSchema>
 export type Settings = z.infer<typeof settingsSchema>
 export type DailyStats = z.infer<typeof dailyStatsSchema>
 export type WordMark = z.infer<typeof wordMarkSchema>
+export type ClearedSentence = z.infer<typeof clearedSentenceSchema>
 
 export const DEFAULT_SETTINGS: Settings = {
   id: 'default',
