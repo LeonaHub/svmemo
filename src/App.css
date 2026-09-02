@@ -427,6 +427,14 @@ button.today-pill:disabled {
   color: var(--gold);
 }
 
+.today-pill.is-mastered {
+  background: var(--ok-soft);
+}
+
+.today-pill.is-mastered strong {
+  color: var(--ok);
+}
+
 .today-flash {
   margin: 0;
   padding: 12px 14px;

@@ -590,7 +590,7 @@ export function WordList() {
                         void toggleMastered(word.id)
                       }}
                       aria-label={isMastered ? '取消已掌握' : '标记为已掌握'}
-                      title={isMastered ? '已掌握，点此恢复学习' : '已掌握，不再学'}
+                      title={isMastered ? '已掌握，隔一段时间还会抽查' : '已掌握，至少 30 天后再抽查'}
                     >
                       掌握
                     </button>

@@ -67,8 +67,8 @@ export function CardMarks({ wordId, onMasteredChange }: CardMarksProps) {
         aria-label={current.mastered ? '取消已掌握' : '标记为已掌握'}
         title={
           current.mastered
-            ? '已掌握，点此恢复学习'
-            : shortcutTitle('已掌握，不再学', 'Ctrl+M')
+            ? '已掌握，隔一段时间还会抽查'
+            : shortcutTitle('已掌握，至少 30 天后再抽查', 'Ctrl+M')
         }
       >
         掌握

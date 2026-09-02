@@ -1,11 +1,12 @@
 import {
   createEmptyCard,
   fsrs,
+  Rating,
   State,
   type Card,
   type Grade,
 } from 'ts-fsrs'
-import { asDate, startOfNextLocalDay } from './date'
+import { addLocalDays, asDate, startOfLocalDay, startOfNextLocalDay } from './date'
 import type { CardRecord, CardType } from '../types/progress'
 
 const scheduler = fsrs({
@@ -18,6 +19,9 @@ const scheduler = fsrs({
 
 /** MVP 一词一卡，题型在学习时再选，进度都记在这张卡上。 */
 export const PROGRESS_CARD_TYPE: CardType = 'recognition'
+
+/** 标掌握后至少隔这么多天再抽查，之后仍走 FSRS。 */
+export const MASTERED_MIN_DAYS = 30
 
 /**
  * 复习态按本地自然日到期（接近墨墨 / Anki）：今天下午才到点的词，早上也算今日待学。
@@ -115,5 +119,68 @@ export function schedule(
   return {
     next: fromFsrsCard(card),
     dueBefore: asDate(record.due),
+  }
+}
+
+function progressOf(
+  record: Pick<
+    CardRecord,
+    | 'due'
+    | 'stability'
+    | 'difficulty'
+    | 'elapsed_days'
+    | 'scheduled_days'
+    | 'learning_steps'
+    | 'reps'
+    | 'lapses'
+    | 'state'
+    | 'last_review'
+  >,
+): Omit<CardRecord, 'id' | 'wordId' | 'cardType'> {
+  return {
+    due: record.due,
+    stability: record.stability,
+    difficulty: record.difficulty,
+    elapsed_days: record.elapsed_days,
+    scheduled_days: record.scheduled_days,
+    learning_steps: record.learning_steps,
+    reps: record.reps,
+    lapses: record.lapses,
+    state: record.state,
+    last_review: record.last_review,
+  }
+}
+
+/** 把卡片从短间隔里拿出来，至少隔 `minDays` 天再抽查。 */
+export function graduateMasteredProgress(
+  record: CardRecord,
+  now: Date,
+  minDays = MASTERED_MIN_DAYS,
+): Omit<CardRecord, 'id' | 'wordId' | 'cardType'> {
+  let next = progressOf(record)
+  if (
+    next.reps === 0 ||
+    next.state === State.New ||
+    next.state === State.Learning ||
+    next.state === State.Relearning
+  ) {
+    next = schedule({ ...record, ...next }, Rating.Easy, now).next
+  }
+
+  const floor = addLocalDays(startOfLocalDay(now), minDays)
+  const due = asDate(next.due)
+  if (due.getTime() >= floor.getTime() && next.scheduled_days >= minDays) {
+    return next
+  }
+
+  return {
+    ...next,
+    due: floor,
+    stability: Math.max(next.stability, minDays),
+    scheduled_days: Math.max(next.scheduled_days, minDays),
+    learning_steps: 0,
+    reps: Math.max(next.reps, 1),
+    state: State.Review,
+    last_review: now,
   }
 }

@@ -19,6 +19,7 @@ function ReviewRow({ row }: { row: DueReviewRow }) {
           <span className="lemma">{row.word.lemma}</span>
           <span className={row.dueNow ? 'pill is-due' : 'pill'}>
             {row.when}
+            {row.mastered ? ' · 掌握' : ''}
             {row.word.gender ? ` · ${row.word.gender}` : ''}
             {` · ${POS_LABEL[row.word.pos]}`}
             {row.word.rank ? ` · #${row.word.rank}` : ''}
@@ -37,10 +38,14 @@ function ReviewRow({ row }: { row: DueReviewRow }) {
         />
         <button
           type="button"
-          className="mark-btn"
+          className={row.mastered ? 'mark-btn is-mastered' : 'mark-btn'}
           onClick={() => void toggleMastered(row.word.id)}
-          aria-label="标记为已掌握"
-          title="已掌握，不再学"
+          aria-label={row.mastered ? '取消已掌握' : '标记为已掌握'}
+          title={
+            row.mastered
+              ? '取消后回到普通复习'
+              : '已掌握，至少 30 天后再抽查'
+          }
         >
           掌握
         </button>
@@ -54,9 +59,12 @@ export function DueReviewPage({ onExit, onStart }: DueReviewPageProps) {
   const [starting, setStarting] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
   const ready = rows !== undefined
-  const dueRows = rows?.filter((row) => row.dueNow) ?? []
+  const dueRows = rows?.filter((row) => row.dueNow && !row.mastered) ?? []
+  const masteredDueRows = rows?.filter((row) => row.dueNow && row.mastered) ?? []
   const laterRows = rows?.filter((row) => !row.dueNow) ?? []
   const dueCount = dueRows.length
+  const masteredDueCount = masteredDueRows.length
+  const workCount = dueCount + masteredDueCount
   const laterCount = laterRows.length
 
   async function handleStart() {
@@ -87,7 +95,7 @@ export function DueReviewPage({ onExit, onStart }: DueReviewPageProps) {
           结束
         </button>
         <p className="remain">
-          {ready ? `到期 ${dueCount} · 已学 ${dueCount + laterCount}` : '读取中…'}
+          {ready ? `到期 ${workCount} · 已学 ${workCount + laterCount}` : '读取中…'}
         </p>
       </div>
 
@@ -95,7 +103,7 @@ export function DueReviewPage({ onExit, onStart }: DueReviewPageProps) {
         <p className="due-kicker">今日</p>
         <h1 className="due-title">到期复习</h1>
         <p className="due-hint">
-          间隔算法只会把这一刻到期的词拿来拼写。今天刚背过、答对的词会排到后面几天，不是丢了。下面先列到期的，再列还没到点的。
+          间隔算法只会把这一刻到期的词拿来拼写。已掌握的词隔至少 30 天再抽查一次，答对间隔会更长。今天刚背过、答对的词会排到后面几天，不是丢了。
         </p>
       </div>
 
@@ -103,13 +111,13 @@ export function DueReviewPage({ onExit, onStart }: DueReviewPageProps) {
         <button
           type="button"
           className="btn btn-primary"
-          disabled={!ready || dueCount === 0 || starting}
+          disabled={!ready || workCount === 0 || starting}
           onClick={() => void handleStart()}
         >
           {starting
             ? '准备中…'
-            : dueCount > 0
-              ? `开始拼写到期的 ${dueCount} 个`
+            : workCount > 0
+              ? `开始拼写到期的 ${workCount} 个`
               : '现在没有到期的词'}
         </button>
       </div>
@@ -119,8 +127,8 @@ export function DueReviewPage({ onExit, onStart }: DueReviewPageProps) {
       <div className="due-list">
         {!ready ? <p className="lede">正在读取…</p> : null}
 
-        {ready && dueCount === 0 && laterCount === 0 ? (
-          <p className="lede">还没有已学、未掌握的词。先去今日背一些。</p>
+        {ready && dueCount === 0 && masteredDueCount === 0 && laterCount === 0 ? (
+          <p className="lede">还没有已学的词。先去今日背一些。</p>
         ) : null}
 
         {dueCount > 0 ? (
@@ -128,6 +136,17 @@ export function DueReviewPage({ onExit, onStart }: DueReviewPageProps) {
             <h2 className="due-section-title">到期 {dueCount}</h2>
             <div className="word-list">
               {dueRows.map((row) => (
+                <ReviewRow key={row.word.id} row={row} />
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {masteredDueCount > 0 ? (
+          <section className="due-section">
+            <h2 className="due-section-title">掌握抽查 {masteredDueCount}</h2>
+            <div className="word-list">
+              {masteredDueRows.map((row) => (
                 <ReviewRow key={row.word.id} row={row} />
               ))}
             </div>

@@ -21,6 +21,10 @@ export function startOfNextLocalDay(now = new Date()): Date {
   return new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
 }
 
+export function addLocalDays(now: Date, days: number): Date {
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate() + days)
+}
+
 export function parseLocalDate(date: string): Date {
   const [year, month, day] = date.split('-').map(Number)
   return new Date(year, (month ?? 1) - 1, day ?? 1)

@@ -101,14 +101,19 @@ export function TodayPage({
   >(null)
 
   const remaining = overview
-    ? (overview.dueCount ?? 0) + (overview.newCount ?? 0)
+    ? (overview.dueCount ?? 0) +
+      (overview.newCount ?? 0) +
+      (overview.masteredDueCount ?? 0)
     : 0
   const reviewable = overview?.reviewableCount ?? 0
+  const masteredDueCount = overview?.masteredDueCount ?? 0
   const starredCount = overview?.starredCount ?? 0
   const canStartToday = remaining > 0
-  const canOpenDueList = reviewable > 0
+  const canOpenDueList = reviewable > 0 || (overview?.masteredCount ?? 0) > 0
   const canReviewStarred = starredCount > 0
-  const needsWords = Boolean(overview && overview.learnedCount === 0)
+  const needsWords = Boolean(
+    overview && overview.learnedCount === 0 && overview.masteredCount === 0,
+  )
 
   async function handleStart() {
     if (starting) {
@@ -222,10 +227,12 @@ export function TodayPage({
 
   const sentenceCount = overview?.sentenceCount ?? 0
   const heroMeta = canStartToday
-    ? '先复习到期的，再学新词。每 7 个一组。'
-    : overview && overview.learnedCount === 0
+    ? masteredDueCount > 0
+      ? '先复习到期的，再抽查已掌握的，最后学新词。'
+      : '先复习到期的，再学新词。每 7 个一组。'
+    : overview && overview.learnedCount === 0 && overview.masteredCount === 0
       ? '还没有词在计划里。先去词库勾选，再回来开始。'
-      : '今天的到期和新词都过完了。下次出现由间隔算法决定。点「到期复习」能看到已学的词还要几天。'
+      : '今天的到期和新词都过完了。已掌握的词隔一段时间还会抽查。点「到期复习」能看到还要几天。'
 
   return (
     <section className="today-page">
@@ -288,6 +295,18 @@ export function TodayPage({
                     <strong>{overview.newCount}</strong>
                     新词
                   </span>
+                  {overview.masteredCount > 0 ? (
+                    <button
+                      type="button"
+                      className="today-pill is-mastered"
+                      disabled={!canOpenDueList}
+                      onClick={handleOpenDueList}
+                      title="已掌握的词到期也会抽查，免得忘了"
+                    >
+                      <strong>{masteredDueCount}</strong>
+                      掌握抽查
+                    </button>
+                  ) : null}
                 </div>
               )}
               <p className="today-hero-meta">{heroMeta}</p>

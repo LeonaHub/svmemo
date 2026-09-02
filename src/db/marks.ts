@@ -1,4 +1,5 @@
 import { db } from './index'
+import { graduateMasteredWord } from './mastery'
 import type { WordMark } from '../types/progress'
 
 export function emptyMark(wordId: string): WordMark {
@@ -40,6 +41,9 @@ export async function setWordMark(
   }
 
   await db.wordMarks.put(next)
+  if (patch.mastered === true && !current.mastered) {
+    await graduateMasteredWord(wordId, now)
+  }
   return next
 }
 

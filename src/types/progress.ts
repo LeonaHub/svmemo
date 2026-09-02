@@ -66,7 +66,7 @@ export const dailyStatsSchema = z.object({
 
 export const wordMarkSchema = z.object({
   wordId: z.string().min(1),
-  /** 已掌握：不再进入每日学习和普通复习 */
+  /** 已掌握：退出每日新词和普通到期，仍按长间隔抽查 */
   mastered: z.boolean(),
   /** 收藏进单词本，方便以后加练难词 */
   starred: z.boolean(),

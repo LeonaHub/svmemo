@@ -2,7 +2,7 @@ import type { SavedCard } from '../types/progress'
 
 export const ROUND_SIZE = 7
 
-export type SessionKind = 'due' | 'learn' | 'round-review'
+export type SessionKind = 'due' | 'learn' | 'round-review' | 'mastered'
 
 export type QueueSpec<T> = {
   card: T
@@ -50,10 +50,11 @@ export function chunkRounds<T>(items: readonly T[], size = ROUND_SIZE): T[][] {
   return rounds
 }
 
-/** Quizlet 式：到期复习在前；新词每 7 个先学习再立刻拼写复习。 */
+/** Quizlet 式：到期复习在前；已掌握抽查；新词每 7 个先学习再立刻拼写。 */
 export function buildQuizletQueue(
   dueCards: readonly SavedCard[],
   newCards: readonly SavedCard[],
+  masteredCards: readonly SavedCard[] = [],
   roundSize = ROUND_SIZE,
 ): QueueSpec<SavedCard>[] {
   const queue: QueueSpec<SavedCard>[] = []
@@ -69,8 +70,24 @@ export function buildQuizletQueue(
     })
   })
 
-  chunkRounds(newCards, roundSize).forEach((group, roundOffset) => {
+  const masteredGroups = chunkRounds(masteredCards, roundSize)
+  masteredGroups.forEach((group, roundOffset) => {
     const round = roundOffset + 1
+    group.forEach((card, index) => {
+      queue.push({
+        card,
+        mode: 'spelling',
+        kind: 'mastered',
+        round,
+        roundIndex: index + 1,
+        roundTotal: group.length,
+      })
+    })
+  })
+
+  const newRoundBase = masteredGroups.length + 1
+  chunkRounds(newCards, roundSize).forEach((group, roundOffset) => {
+    const round = newRoundBase + roundOffset
     group.forEach((card, index) => {
       queue.push({
         card,
@@ -124,6 +141,9 @@ export function itemKicker(item: {
 }): string {
   if (item.kind === 'due') {
     return `到期复习 ${item.roundIndex}/${item.roundTotal}`
+  }
+  if (item.kind === 'mastered') {
+    return `掌握抽查 ${item.roundIndex}/${item.roundTotal}`
   }
   if (item.kind === 'learn') {
     return `学习 ${item.roundIndex}/${item.roundTotal}`

@@ -78,7 +78,16 @@ function checkpointMessage(current: StudyItem, next: StudyItem): string | null {
     return null
   }
   if (current.kind === 'due') {
+    if (next.kind === 'mastered') {
+      return '到期复习过完了。下面抽查已经掌握的词，隔得比较久才出现一次。'
+    }
     return '到期复习过完了。下面按每组 7 个学新词：先看卡片，再拼写。'
+  }
+  if (current.kind === 'mastered') {
+    if (next.kind === 'learn') {
+      return '掌握抽查过完了。下面按每组 7 个学新词：先看卡片，再拼写。'
+    }
+    return '这一组掌握抽查过完了。'
   }
   if (current.kind === 'round-review') {
     return `第 ${current.round} 组过完了。下一组还是先熟悉，再立刻复习。`
