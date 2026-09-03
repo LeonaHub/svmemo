@@ -18,15 +18,32 @@ type Session =
   | { type: 'sentences'; items: SentenceItem[] }
 
 export default function App() {
+  const [ready, setReady] = useState(false)
   const [seedError, setSeedError] = useState<string | null>(null)
   const [tab, setTab] = useState<Tab>('today')
   const [session, setSession] = useState<Session | null>(null)
 
   useEffect(() => {
-    void seedIfEmpty().catch((error: unknown) => {
-      setSeedError(error instanceof Error ? error.message : '词库导入失败')
-    })
+    void seedIfEmpty()
+      .then(() => setReady(true))
+      .catch((error: unknown) => {
+        setSeedError(error instanceof Error ? error.message : '词库导入失败')
+      })
   }, [])
+
+  if (!ready) {
+    return (
+      <div className="shell">
+        <main className="page">
+          {seedError ? (
+            <p className="error">{seedError}</p>
+          ) : (
+            <p className="hint boot-hint">正在打开词库…</p>
+          )}
+        </main>
+      </div>
+    )
+  }
 
   if (session?.type === 'words') {
     return (
@@ -98,7 +115,6 @@ export default function App() {
       </nav>
 
       <main className="page">
-        {seedError ? <p className="error">{seedError}</p> : null}
         {tab === 'today' ? (
           <TodayPage
             onStart={(items, options) =>

@@ -52,6 +52,8 @@ export const settingsSchema = z.object({
   spellingRatio: z.number().min(0).max(1),
   /** 最近消过的配对词，下次优先换一批。不写 FSRS。 */
   recentMatchWordIds: z.array(z.string()).default([]),
+  /** 已写入本地库的词表版本；对得上就跳过整表重写 */
+  catalogRevision: z.string().min(1).optional(),
 })
 
 export const dailyStatsSchema = z.object({

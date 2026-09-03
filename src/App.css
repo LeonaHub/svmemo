@@ -928,6 +928,12 @@ button.today-pill:disabled {
   font-size: 13px;
 }
 
+.boot-hint {
+  margin: 48px 0 0;
+  text-align: center;
+  color: var(--text);
+}
+
 .error {
   color: var(--danger);
   background: var(--danger-soft);
