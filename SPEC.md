@@ -36,6 +36,7 @@
 - 字体自托管，不依赖 Google Fonts。
 - 无网时 Google 朗读不可用；有系统瑞典语语音时仍可读。
 - 电脑和手机进度不自动同步，出门前备份。
+- **主屏幕图标**和 Safari 不是同一份进度。加词后启动不得整表重写、不得在 `useLiveQuery` 里写库、今日页不得 `words.toArray()` 整库加载，否则 iPhone 会白屏或报 `Readwrite transaction in liveQuery context`。详见 `.cursor/rules/catalog-ios.mdc`。
 
 设置表里仍存着 `dailyLimit: 40` / `maxNewPerDay: 15` / `spellingRatio: 0.5` 的默认值，但**没有设置页**，每日队列也**不再按这两个上限截断**。
 
@@ -105,6 +106,7 @@
 2. 中文释义只写词典里有的义项；多义词标出来，不要把名词义和动词义写进同一张动词卡
 3. 变形跟词典走；不可数、词典没有的复数不要编。可数名词若只有不定复数，按规则补定式复数（`-or/-ar/-er` → `-na`，零复数 ett → `-en`，`-n` → `-a`，`-are` → `-arna`）
 4. 复合词或明显前缀/后缀，补上构词
+5. 加完一组后只改组数 / `CATALOG_REVISION`；已有本地词库的设备启动时不要整表灌入。导入备份才 `syncCatalog({ force: true })`
 
 ## 学习计划
 

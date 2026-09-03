@@ -1,0 +1,31 @@
+---
+description: Adding frequency lists must not brick the iPhone home-screen PWA (full catalog rewrite, liveQuery writes, loading all words on Today).
+alwaysApply: true
+---
+
+# iPhone 主屏幕：加词不要整库灌内存
+
+Safari、电脑、主屏幕图标各存一份 IndexedDB，互不同步。用户的进度在主屏幕图标里。加词、改 `seed` / `study` / `useLiveQuery` 时必须保住这个入口。
+
+## 启动
+
+- 本地 `words` 已有数据：跳过整表 `clear` + `bulkPut`。只在库空或 `syncCatalog({ force: true })`（导入备份）时才写入。
+- 不要静态 `import` `src/data/a1.ts` 或 `lists/`。词表用 `await import('../data/a1')`，且只在真正写入时加载。
+- 不要在启动路径上对整表跑 Zod `wordListSchema.parse`。
+- 界面（今日页 liveQuery）出来之前不要并行整表读写。
+
+## liveQuery 只读
+
+`useLiveQuery` 回调里禁止任何写入（含 `put` / `update` / `bulkPut` / `repairMasteredSchedules`）。
+
+- `getTodayOverview`、`listDueReviews`、`loadDayDetails`：只读。
+- 掌握日程修补：在 `App` 里 `seedIfEmpty()` 之后、`setReady(true)` 之前调用一次。
+- `getSettings()` 找不到行时返回默认值，不要在查询路径 `put`。
+
+## 今日页不要 `words.toArray()`
+
+概览、日历、到期列表、例句队列只用 `count()` 或对计划内 / 日志里的 id `bulkGet`。整库 `toArray()` 仅限用户点进词库页之后。
+
+## 加完第 N 组之后
+
+更新 `FREQUENCY_GROUP_COUNT` 和 `CATALOG_REVISION`（`g${FREQUENCY_GROUP_COUNT}`）。部署后用主屏幕图标打开：应直接进今日，不能白屏、不能「Readwrite transaction in liveQuery context」。
