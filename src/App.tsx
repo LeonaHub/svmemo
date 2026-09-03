@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { seedIfEmpty } from './db/seed'
+import { repairMasteredSchedules } from './db/mastery'
 import { StudySession } from './components/StudySession'
 import { DueReviewPage } from './components/DueReviewPage'
 import { SentenceSession } from './components/SentenceSession'
@@ -25,6 +26,7 @@ export default function App() {
 
   useEffect(() => {
     void seedIfEmpty()
+      .then(() => repairMasteredSchedules())
       .then(() => setReady(true))
       .catch((error: unknown) => {
         setSeedError(error instanceof Error ? error.message : '词库导入失败')

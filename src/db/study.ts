@@ -104,7 +104,6 @@ export async function getSettings(): Promise<Settings> {
       recentMatchWordIds: row.recentMatchWordIds ?? [],
     }
   }
-  await db.settings.put(DEFAULT_SETTINGS)
   return DEFAULT_SETTINGS
 }
 
@@ -179,7 +178,6 @@ export async function unenrollWords(wordIds: readonly string[]): Promise<number>
 }
 
 export async function getTodayOverview(now = new Date()): Promise<TodayOverview> {
-  await repairMasteredSchedules(now)
   const dayStart = startOfLocalDay(now)
   const dayEnd = startOfNextLocalDay(now)
 
@@ -353,7 +351,6 @@ function reviewWhen(card: SavedCard, now: Date): { dueNow: boolean; when: string
 }
 
 export async function listDueReviews(now = new Date()): Promise<DueReviewRow[]> {
-  await repairMasteredSchedules(now)
   const [saved, marks] = await Promise.all([savedCards(), listWordMarks()])
   const starred = new Set(
     marks.filter((mark) => mark.starred).map((mark) => mark.wordId),
