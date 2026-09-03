@@ -153,5 +153,5 @@ export async function importBackup(raw: unknown): Promise<void> {
     },
   )
 
-  await syncCatalog()
+  await syncCatalog({ force: true })
 }

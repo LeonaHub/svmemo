@@ -3,7 +3,6 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../db'
 import { toggleMastered, toggleStarred } from '../db/marks'
 import { enrollWords, unenrollWords } from '../db/study'
-import { a1Words } from '../data/a1'
 import {
   FREQUENCY_GROUP_COUNT,
   frequencyGroup,
@@ -28,7 +27,9 @@ const FILTERS: { id: WordFilter; label: string }[] = [
   { id: 'mastered', label: '已掌握' },
 ]
 
-const CATALOG_ORDER = new Map(a1Words.map((word, index) => [word.id, index]))
+function catalogOrder(word: Word): number {
+  return word.rank ?? 50_000
+}
 
 function inFilter(
   wordId: string,
@@ -193,8 +194,9 @@ export function WordList() {
         }
       }
       return (
-        (CATALOG_ORDER.get(left.id) ?? Number.MAX_SAFE_INTEGER) -
-        (CATALOG_ORDER.get(right.id) ?? Number.MAX_SAFE_INTEGER)
+        catalogOrder(left) - catalogOrder(right) ||
+        left.lemma.localeCompare(right.lemma, 'sv') ||
+        left.pos.localeCompare(right.pos)
       )
     })
   }, [words, needle, enrolled, mastered, starred, filter, openList])

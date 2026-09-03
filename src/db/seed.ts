@@ -1,10 +1,8 @@
-import { a1Words } from '../data/a1'
 import { FREQUENCY_GROUP_COUNT } from '../data/freq'
 import {
   A1_CORE_DECK_ID,
   DEFAULT_SETTINGS,
 } from '../types/progress'
-import { wordListSchema } from '../types/word'
 import { db } from './index'
 
 export type SeedResult = {
@@ -12,10 +10,10 @@ export type SeedResult = {
   wordCount: number
 }
 
-const WRITE_CHUNK = 200
+const WRITE_CHUNK = 80
 
-/** 词表内容变了就改这里：组数 + 词数。对得上本地记录则不整表重写。 */
-export const CATALOG_REVISION = `g${FREQUENCY_GROUP_COUNT}:${a1Words.length}`
+/** 词表大改时改组数即可。手机上已有词条则启动不整表重写。 */
+export const CATALOG_REVISION = `g${FREQUENCY_GROUP_COUNT}`
 
 let inFlight: Promise<SeedResult> | null = null
 
@@ -40,24 +38,37 @@ async function writeInChunks<T>(
   }
 }
 
-export async function syncCatalog(): Promise<SeedResult> {
-  const existingCount = await db.words.count()
+async function stampRevision(): Promise<void> {
   const settings = await db.settings.get('default')
-  if (
-    existingCount === a1Words.length &&
-    settings?.catalogRevision === CATALOG_REVISION
-  ) {
+  if (!settings) {
+    await db.settings.add({
+      ...DEFAULT_SETTINGS,
+      catalogRevision: CATALOG_REVISION,
+    })
+    return
+  }
+  if (settings.catalogRevision !== CATALOG_REVISION) {
+    await db.settings.update('default', { catalogRevision: CATALOG_REVISION })
+  }
+}
+
+export async function syncCatalog(
+  options: { force?: boolean } = {},
+): Promise<SeedResult> {
+  const existingCount = await db.words.count()
+  if (!options.force && existingCount > 0) {
+    await stampRevision()
     return {
       seeded: false,
       wordCount: existingCount,
     }
   }
 
-  const words = wordListSchema.parse(a1Words)
-  const keepIds = new Set(words.map((word) => word.id))
+  const { a1Words } = await import('../data/a1')
+  const keepIds = new Set(a1Words.map((word) => word.id))
 
   await db.words.clear()
-  await writeInChunks(words, (chunk) => db.words.bulkPut(chunk))
+  await writeInChunks(a1Words, (chunk) => db.words.bulkPut(chunk))
 
   const deck = await db.decks.get(A1_CORE_DECK_ID)
   if (!deck) {
@@ -77,7 +88,7 @@ export async function syncCatalog(): Promise<SeedResult> {
 
   await db.deckWords.clear()
   await writeInChunks(
-    words.map((word) => ({
+    a1Words.map((word) => ({
       deckId: A1_CORE_DECK_ID,
       wordId: word.id,
     })),
@@ -120,14 +131,7 @@ export async function syncCatalog(): Promise<SeedResult> {
     await db.clearedSentences.bulkDelete(staleSentences.map((row) => row.id))
   }
 
-  if (!settings) {
-    await db.settings.add({
-      ...DEFAULT_SETTINGS,
-      catalogRevision: CATALOG_REVISION,
-    })
-  } else {
-    await db.settings.update('default', { catalogRevision: CATALOG_REVISION })
-  }
+  await stampRevision()
 
   return {
     seeded: true,

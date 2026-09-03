@@ -88,7 +88,7 @@
 
 ## 词库
 
-- 当前词表在 `src/data/custom-words.ts`（自选 B1）和 `src/data/lists/list-01.ts`–`list-100.ts`（词频第 1–100 组，#1–5000，CEFR A1）。`src/data/a1.ts` 合并后按编号排序。启动时 `seedIfEmpty()` 对照 `catalogRevision`：词表变了才整表写入（覆盖释义、变形、例句、构词、编号），学习进度留在 `cards` / `reviewLogs` / `wordMarks`。界面等写入完成再读进度，避免和今日页抢同一份 IndexedDB。
+- 当前词表在 `src/data/custom-words.ts`（自选 B1）和 `src/data/lists/list-01.ts`–`list-100.ts`（词频第 1–100 组，#1–5000，CEFR A1）。`src/data/a1.ts` 合并后按编号排序。启动时若本地已有词条就跳过整表重写（导入备份时仍强制同步）。今日页、日历只按需要读取词条，不把整库一次性载入内存。学习进度留在 `cards` / `reviewLogs` / `wordMarks`。
 - 词库页先列出各组，点进一组才看词；组内可一键把未加入的词加入计划。第 10 组少一张：书里 `spela` 出现两次，只保留编号更前的那张。
 - 编号来自 MostUsedWords《Swedish Frequency Dictionary》本地对照，只存 lemma → 数字，不复制书中的英文释义
 - 现在约 **4999** 个词：前 100 组词频 #1–5000（A1；第 10 组少一张重复的 `spela`）。`src/data/custom-words.ts` 目前是空的；以后加的自选词标 B1，编号落在已开放组的会整张移入对应组

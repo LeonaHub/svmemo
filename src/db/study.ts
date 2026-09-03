@@ -71,6 +71,23 @@ export type StudyItem = {
 
 const MAX_REQUEUES = 2
 
+async function loadWordMap(
+  ids: readonly string[],
+): Promise<Map<string, Word>> {
+  const unique = [...new Set(ids)]
+  if (unique.length === 0) {
+    return new Map()
+  }
+  const rows = await db.words.bulkGet(unique)
+  const map = new Map<string, Word>()
+  for (const word of rows) {
+    if (word) {
+      map.set(word.id, word)
+    }
+  }
+  return map
+}
+
 export function shouldRequeue(rating: Grade, alreadyRequeued: number): boolean {
   if (alreadyRequeued >= MAX_REQUEUES) {
     return false
@@ -166,12 +183,12 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
   const dayStart = startOfLocalDay(now)
   const dayEnd = startOfNextLocalDay(now)
 
-  const [settings, cards, unlearnedWordIds, catalog, todayLogs, marks, todayStats, cleared] =
+  const [settings, cards, unlearnedWordIds, wordCount, todayLogs, marks, todayStats, cleared] =
     await Promise.all([
       getSettings(),
       db.cards.toArray(),
       listUnlearnedWordIds(),
-      db.words.toArray(),
+      db.words.count(),
       db.reviewLogs
         .where('reviewedAt')
         .between(dayStart, dayEnd, true, false)
@@ -196,10 +213,13 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
     .filter((card) => card.reps === 0)
     .map((card) => card.wordId)
   const { newWordIds } = planDailyQueue(newPoolIds)
-  const byId = new Map(catalog.map((word) => [word.id, word]))
   const starredIds = new Set(
     marks.filter((mark) => mark.starred).map((mark) => mark.wordId),
   )
+  const byId = await loadWordMap([
+    ...active.map((card) => card.wordId),
+    ...starredIds,
+  ])
   const remainingExamples = (wordId: string) => {
     const word = byId.get(wordId)
     return word ? unclearedExamples(word, cleared).length : 0
@@ -212,7 +232,7 @@ export async function getTodayOverview(now = new Date()): Promise<TodayOverview>
     learnedCount: active.length,
     reviewableCount,
     unlearnedCount: unlearnedWordIds.length,
-    wordCount: catalog.length,
+    wordCount,
     wordsToday: new Set([
       ...todayLogs.map((log) => log.wordId),
       ...(todayStats?.matchedWordIds ?? []),
@@ -334,11 +354,7 @@ function reviewWhen(card: SavedCard, now: Date): { dueNow: boolean; when: string
 
 export async function listDueReviews(now = new Date()): Promise<DueReviewRow[]> {
   await repairMasteredSchedules(now)
-  const [saved, marks, catalog] = await Promise.all([
-    savedCards(),
-    listWordMarks(),
-    db.words.toArray(),
-  ])
+  const [saved, marks] = await Promise.all([savedCards(), listWordMarks()])
   const starred = new Set(
     marks.filter((mark) => mark.starred).map((mark) => mark.wordId),
   )
@@ -346,6 +362,7 @@ export async function listDueReviews(now = new Date()): Promise<DueReviewRow[]> 
     marks.filter((mark) => mark.mastered).map((mark) => mark.wordId),
   )
   const learned = saved.filter((card) => card.reps > 0)
+  const byId = await loadWordMap(learned.map((card) => card.wordId))
   const due = sortByForgetting(
     learned.filter(
       (card) => !mastered.has(card.wordId) && isDueReview(card, now),
@@ -362,7 +379,6 @@ export async function listDueReviews(now = new Date()): Promise<DueReviewRow[]> 
     learned.filter((card) => !isDueReview(card, now)),
     now,
   )
-  const byId = new Map(catalog.map((word) => [word.id, word]))
   return [...due, ...masteredDue, ...later].flatMap((card) => {
     const word = byId.get(card.wordId)
     if (!word) {
@@ -411,8 +427,7 @@ export async function startStarredSession(): Promise<StudyItem[]> {
 export async function startSentenceSession(
   pool: 'plan' | 'starred' = 'plan',
 ): Promise<SentenceItem[]> {
-  const [catalog, cards, marks, cleared] = await Promise.all([
-    db.words.toArray(),
+  const [cards, marks, cleared] = await Promise.all([
     db.cards.toArray(),
     listWordMarks(),
     listClearedSentenceIds(),
@@ -424,7 +439,10 @@ export async function startSentenceSession(
     marks.filter((mark) => mark.starred).map((mark) => mark.wordId),
   )
   const enrolled = new Set(cards.map((card) => card.wordId))
-  const source = catalog.filter((word) => {
+  const byId = await loadWordMap(
+    pool === 'starred' ? [...starred] : [...enrolled],
+  )
+  const source = [...byId.values()].filter((word) => {
     if (unclearedExamples(word, cleared).length === 0) {
       return false
     }

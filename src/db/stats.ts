@@ -142,11 +142,22 @@ export function buildDayDetails(
 }
 
 export async function loadDayDetails(): Promise<Map<string, DayDetail>> {
-  const [logs, stats, catalog] = await Promise.all([
+  const [logs, stats] = await Promise.all([
     db.reviewLogs.toArray(),
     db.dailyStats.toArray(),
-    db.words.toArray(),
   ])
+  const ids = new Set<string>()
+  for (const log of logs) {
+    ids.add(log.wordId)
+  }
+  for (const row of stats) {
+    for (const wordId of row.matchedWordIds ?? []) {
+      ids.add(wordId)
+    }
+  }
+  const catalog = (await db.words.bulkGet([...ids])).flatMap((word) =>
+    word ? [word] : [],
+  )
   return buildDayDetails(logs, stats, catalog)
 }
 
