@@ -5,6 +5,7 @@ import {
   speakSwedish,
   stopSpeaking,
   ttsHint,
+  unlockSpeech,
   type SpeakResult,
 } from '../lib/tts'
 
@@ -61,6 +62,7 @@ export function SpeakButton({
     event.stopPropagation()
     setBusy(true)
     setHint(null)
+    unlockSpeech()
     const pending: Promise<SpeakResult> = speakSwedish(text)
     void pending.then((result) => {
       setHint(ttsHint(result))

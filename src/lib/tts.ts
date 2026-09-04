@@ -259,6 +259,17 @@ function audioUrl(text: string, client: 'gtx' | 'tw-ob'): string {
   return `${host}?ie=UTF-8&client=${client}&tl=sv&q=${encodeURIComponent(text)}`
 }
 
+function youdaoUrl(text: string): string {
+  return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&le=sv`
+}
+
+/** 实例在服务端代取瑞典语音频，手机不用连 Google。CORS 为 *。 */
+const LINGVA_AUDIO = [
+  'https://lingva.lunar.icu/api/v1/audio/sv/',
+  'https://lingva.ml/api/v1/audio/sv/',
+  'https://translate.plausibility.cloud/api/v1/audio/sv/',
+]
+
 function attachAudio(url: string, token: number): HTMLAudioElement | null {
   if (!isCurrent(token)) {
     return null
@@ -272,32 +283,101 @@ function attachAudio(url: string, token: number): HTMLAudioElement | null {
   return audio
 }
 
-function playElement(audio: HTMLAudioElement, token: number): Promise<boolean> {
-  try {
-    return audio
-      .play()
-      .then(() => isCurrent(token))
-      .catch(() => false)
-  } catch {
-    return Promise.resolve(false)
-  }
+function playElement(
+  audio: HTMLAudioElement,
+  token: number,
+  timeoutMs: number,
+): Promise<boolean> {
+  return new Promise((resolve) => {
+    let settled = false
+    const done = (ok: boolean) => {
+      if (settled) {
+        return
+      }
+      settled = true
+      window.clearTimeout(timer)
+      audio.removeEventListener('playing', onPlaying)
+      audio.removeEventListener('error', onError)
+      resolve(ok && isCurrent(token))
+    }
+    const onPlaying = () => done(true)
+    const onError = () => done(false)
+    const timer = window.setTimeout(() => done(false), timeoutMs)
+    audio.addEventListener('playing', onPlaying)
+    audio.addEventListener('error', onError)
+    try {
+      void audio.play().catch(() => done(false))
+    } catch {
+      done(false)
+    }
+  })
 }
 
-function speakWithAudio(text: string, token: number): Promise<boolean> {
-  const first = attachAudio(audioUrl(text, 'tw-ob'), token)
-  if (!first) {
+function playUrl(
+  url: string,
+  token: number,
+  timeoutMs: number,
+): Promise<boolean> {
+  const audio = attachAudio(url, token)
+  if (!audio) {
     return Promise.resolve(false)
   }
-  return playElement(first, token).then((ok) => {
-    if (ok || !isCurrent(token)) {
-      return ok
-    }
-    const second = attachAudio(audioUrl(text, 'gtx'), token)
-    if (!second) {
+  return playElement(audio, token, timeoutMs)
+}
+
+async function speakWithLingva(text: string, token: number): Promise<boolean> {
+  const path = encodeURIComponent(text)
+  for (const base of LINGVA_AUDIO) {
+    if (!isCurrent(token)) {
       return false
     }
-    return playElement(second, token)
-  })
+    const controller = new AbortController()
+    const timer = window.setTimeout(() => controller.abort(), 7000)
+    try {
+      const response = await fetch(`${base}${path}`, { signal: controller.signal })
+      if (!response.ok) {
+        continue
+      }
+      const data = (await response.json()) as { audio?: unknown }
+      if (!Array.isArray(data.audio) || data.audio.length === 0) {
+        continue
+      }
+      const bytes = Uint8Array.from(data.audio as number[])
+      const objectUrl = URL.createObjectURL(
+        new Blob([bytes], { type: 'audio/mpeg' }),
+      )
+      const ok = await playUrl(objectUrl, token, 5000)
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 30_000)
+      if (ok) {
+        return true
+      }
+    } catch {
+      continue
+    } finally {
+      window.clearTimeout(timer)
+    }
+  }
+  return false
+}
+
+async function speakWithAudio(
+  text: string,
+  token: number,
+  preferChina: boolean,
+): Promise<boolean> {
+  const google = [audioUrl(text, 'tw-ob'), audioUrl(text, 'gtx')]
+  const youdao = youdaoUrl(text)
+  const direct = preferChina ? [youdao, ...google] : [...google, youdao]
+  const directTimeout = preferChina ? 2500 : 4000
+  for (const url of direct) {
+    if (await playUrl(url, token, directTimeout)) {
+      return true
+    }
+    if (!isCurrent(token)) {
+      return false
+    }
+  }
+  return speakWithLingva(text, token)
 }
 
 function wakeIosSpeech() {
@@ -337,19 +417,28 @@ export async function speakSwedish(text: string): Promise<SpeakResult> {
   const voice = pickSwedishVoice(voices, false)
 
   if (tapUnlock) {
-    const audioPromise = speakWithAudio(trimmed, token)
-    if ('speechSynthesis' in window) {
-      if (isIos()) {
+    if (isIos()) {
+      const audioPromise = speakWithAudio(trimmed, token, false)
+      if ('speechSynthesis' in window) {
         wakeIosSpeech()
+        const chosen =
+          isLetterSpelled(trimmed) && osVoice ? osVoice : (osVoice ?? voice)
+        void speakWithSynthesis(trimmed, chosen, token, true)
       }
-      const chosen =
-        isLetterSpelled(trimmed) && osVoice ? osVoice : (osVoice ?? voice)
-      void speakWithSynthesis(trimmed, chosen, token, true)
+      if (await audioPromise) {
+        return { ok: true }
+      }
+      if (!isCurrent(token)) {
+        return { ok: false, reason: 'aborted' }
+      }
+      if ('speechSynthesis' in window) {
+        return { ok: true }
+      }
+      return { ok: false, reason: 'no-swedish-voice' }
     }
-    if (await audioPromise) {
-      // 电脑/安卓：网络音频响了就停掉系统朗读，避免叠音。
-      // iPhone 静音拨杆会让网页音频没声，系统朗读仍可能出声，所以不要停。
-      if (!isIos() && isCurrent(token) && 'speechSynthesis' in window) {
+
+    if (await speakWithAudio(trimmed, token, true)) {
+      if (isCurrent(token) && 'speechSynthesis' in window) {
         window.speechSynthesis.cancel()
       }
       return { ok: true }
@@ -357,8 +446,13 @@ export async function speakSwedish(text: string): Promise<SpeakResult> {
     if (!isCurrent(token)) {
       return { ok: false, reason: 'aborted' }
     }
-    if ('speechSynthesis' in window) {
+    const chosen =
+      isLetterSpelled(trimmed) && osVoice ? osVoice : (osVoice ?? voice)
+    if (chosen && (await speakWithSynthesis(trimmed, chosen, token, false))) {
       return { ok: true }
+    }
+    if (!isCurrent(token)) {
+      return { ok: false, reason: 'aborted' }
     }
     return { ok: false, reason: 'no-swedish-voice' }
   }
@@ -389,7 +483,7 @@ export async function speakSwedish(text: string): Promise<SpeakResult> {
     }
   }
 
-  if (await speakWithAudio(trimmed, token)) {
+  if (await speakWithAudio(trimmed, token, false)) {
     return { ok: true }
   }
   if (!isCurrent(token)) {
@@ -419,5 +513,5 @@ export function ttsHint(result: SpeakResult): string | null {
   if (isIos()) {
     return '现在读不出来。请联网，并打开手机侧面的铃声开关后再点一次。'
   }
-  return '现在读不出来。请联网后重试，或换 Chrome。'
+  return '现在读不出来。请确认手机已联网后再点一次。国内安卓一般不用翻墙。'
 }
