@@ -511,8 +511,7 @@ export function WordList() {
                   className={[
                     'word-row',
                     isSelected ? 'is-selected' : '',
-                    isEnrolled ? 'is-enrolled' : '',
-                    isMastered ? 'is-mastered' : '',
+                    isMastered ? 'is-mastered' : isEnrolled ? 'is-enrolled' : '',
                     isStarred ? 'is-starred' : '',
                   ]
                     .filter(Boolean)

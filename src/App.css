@@ -1262,8 +1262,8 @@ button.today-pill:disabled {
 }
 
 .mark-btn.is-mastered {
-  background: var(--brand-soft);
-  color: var(--brand);
+  background: var(--gold-soft);
+  color: var(--gold);
 }
 
 .mark-btn:focus {
@@ -2023,11 +2023,6 @@ html.is-keyboard .page-study .study-dock {
   opacity: 0.72;
 }
 
-.word-row.is-mastered .pick {
-  border-color: var(--gold);
-  background: var(--gold);
-}
-
 .pick {
   width: 20px;
   height: 20px;
@@ -2049,6 +2044,11 @@ html.is-keyboard .page-study .study-dock {
 .word-row.is-enrolled .pick {
   border-color: var(--brand);
   background: var(--brand);
+}
+
+.word-row.is-mastered .pick {
+  border-color: var(--gold);
+  background: var(--gold);
 }
 
 .word-body {
