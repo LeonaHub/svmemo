@@ -1,7 +1,7 @@
 import type { Compound, Word } from '../types/word'
 
 export const FREQUENCY_GROUP_SIZE = 50
-export const FREQUENCY_GROUP_COUNT = 100
+export const FREQUENCY_GROUP_COUNT = 110
 export const FREQUENCY_RANK_MAX = FREQUENCY_GROUP_SIZE * FREQUENCY_GROUP_COUNT
 
 export function frequencyGroup(rank: number | undefined): number | null {
