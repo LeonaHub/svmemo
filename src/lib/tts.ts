@@ -418,21 +418,19 @@ export async function speakSwedish(text: string): Promise<SpeakResult> {
 
   if (tapUnlock) {
     if (isIos()) {
-      const audioPromise = speakWithAudio(trimmed, token, false)
+      // 只走系统朗读，避免和网络音频叠成两遍。有道 / Lingva 仅安卓使用。
       if ('speechSynthesis' in window) {
         wakeIosSpeech()
         const chosen =
           isLetterSpelled(trimmed) && osVoice ? osVoice : (osVoice ?? voice)
         void speakWithSynthesis(trimmed, chosen, token, true)
+        return { ok: true }
       }
-      if (await audioPromise) {
+      if (await speakWithAudio(trimmed, token, false)) {
         return { ok: true }
       }
       if (!isCurrent(token)) {
         return { ok: false, reason: 'aborted' }
-      }
-      if ('speechSynthesis' in window) {
-        return { ok: true }
       }
       return { ok: false, reason: 'no-swedish-voice' }
     }
