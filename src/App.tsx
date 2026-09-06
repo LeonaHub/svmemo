@@ -40,7 +40,7 @@ export default function App() {
           {seedError ? (
             <p className="error">{seedError}</p>
           ) : (
-            <p className="hint boot-hint">正在打开词库…</p>
+            <p className="hint boot-hint">正在打开词库，新词组会自动补上…</p>
           )}
         </main>
       </div>

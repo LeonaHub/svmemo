@@ -9,7 +9,9 @@ Safari、电脑、主屏幕图标各存一份 IndexedDB，互不同步。用户�
 
 ## 启动
 
-- 本地 `words` 已有数据：跳过整表 `clear` + `bulkPut`。只在库空或 `syncCatalog({ force: true })`（导入备份）时才写入。
+- 本地 `words` 已有数据且版本、数量对得上：跳过写入。
+- 加新组后版本变了、或词数明显不够：只 `bulkPut` 缺失的 id，禁止 `clear` + 整表重写。
+- 只在库空或 `syncCatalog({ force: true })`（导入备份）时才整表写入。
 - 不要静态 `import` `src/data/a1.ts` 或 `lists/`。词表用 `await import('../data/a1')`，且只在真正写入时加载。
 - 不要在启动路径上对整表跑 Zod `wordListSchema.parse`。
 - 界面（今日页 liveQuery）出来之前不要并行整表读写。
@@ -28,4 +30,4 @@ Safari、电脑、主屏幕图标各存一份 IndexedDB，互不同步。用户�
 
 ## 加完第 N 组之后
 
-更新 `FREQUENCY_GROUP_COUNT` 和 `CATALOG_REVISION`（`g${FREQUENCY_GROUP_COUNT}`）。部署后用主屏幕图标打开：应直接进今日，不能白屏、不能「Readwrite transaction in liveQuery context」。
+更新 `FREQUENCY_GROUP_COUNT` 和 `CATALOG_REVISION`（`g${FREQUENCY_GROUP_COUNT}`）。部署后用主屏幕图标打开：应直接进今日，新组会在启动时补进，不能白屏、不能「Readwrite transaction in liveQuery context」。

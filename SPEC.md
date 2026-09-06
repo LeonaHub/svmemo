@@ -89,7 +89,7 @@
 
 ## 词库
 
-- 当前词表在 `src/data/custom-words.ts`（自选 B1）和 `src/data/lists/list-01.ts`–`list-110.ts`（词频第 1–110 组，#1–5500，CEFR A1）。`src/data/a1.ts` 合并后按编号排序。启动时若本地已有词条就跳过整表重写（导入备份时仍强制同步）。今日页、日历只按需要读取词条，不把整库一次性载入内存。学习进度留在 `cards` / `reviewLogs` / `wordMarks`。
+- 当前词表在 `src/data/custom-words.ts`（自选 B1）和 `src/data/lists/list-01.ts`–`list-110.ts`（词频第 1–110 组，#1–5500，CEFR A1）。`src/data/a1.ts` 合并后按编号排序。启动时若本地已有词条且版本、数量对得上，就跳过写入；加新组只补缺失的词，不整表清空。导入备份才强制整表同步。今日页、日历只按需要读取词条，不把整库一次性载入内存。学习进度留在 `cards` / `reviewLogs` / `wordMarks`。
 - 词库页先列出各组，点进一组才看词；组内可一键把未加入的词加入计划。第 10 组少一张：书里 `spela` 出现两次，只保留编号更前的那张。
 - 编号来自 MostUsedWords《Swedish Frequency Dictionary》本地对照，只存 lemma → 数字，不复制书中的英文释义
 - 现在约 **5499** 个词：前 110 组词频 #1–5500（A1；第 10 组少一张重复的 `spela`）。`src/data/custom-words.ts` 目前是空的；以后加的自选词标 B1，编号落在已开放组的会整张移入对应组
@@ -106,7 +106,7 @@
 2. 中文释义只写词典里有的义项；多义词标出来，不要把名词义和动词义写进同一张动词卡
 3. 变形跟词典走；不可数、词典没有的复数不要编。可数名词若只有不定复数，按规则补定式复数（`-or/-ar/-er` → `-na`，零复数 ett → `-en`，`-n` → `-a`，`-are` → `-arna`）
 4. 复合词或明显前缀/后缀，补上构词
-5. 加完一组后只改组数 / `CATALOG_REVISION`；已有本地词库的设备启动时不要整表灌入。导入备份才 `syncCatalog({ force: true })`
+5. 加完一组后只改组数 / `CATALOG_REVISION`。已有本地词库的设备启动时只补缺失词条，不要 `clear` + 整表灌入。导入备份才 `syncCatalog({ force: true })`
 
 ## 学习计划
 

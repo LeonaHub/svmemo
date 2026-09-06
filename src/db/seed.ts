@@ -1,4 +1,4 @@
-import { FREQUENCY_GROUP_COUNT } from '../data/freq'
+import { FREQUENCY_GROUP_COUNT, FREQUENCY_GROUP_SIZE } from '../data/freq'
 import {
   A1_CORE_DECK_ID,
   DEFAULT_SETTINGS,
@@ -12,8 +12,11 @@ export type SeedResult = {
 
 const WRITE_CHUNK = 80
 
-/** 词表大改时改组数即可。手机上已有词条则启动不整表重写。 */
+/** 词表大改时改组数即可。已有词库只补缺失，不整表重写。 */
 export const CATALOG_REVISION = `g${FREQUENCY_GROUP_COUNT}`
+
+/** 第 10 组少一张重复的 `spela`，所以比 50×组数少 1。 */
+const EXPECTED_CATALOG_MIN = FREQUENCY_GROUP_SIZE * FREQUENCY_GROUP_COUNT - 20
 
 let inFlight: Promise<SeedResult> | null = null
 
@@ -52,24 +55,7 @@ async function stampRevision(): Promise<void> {
   }
 }
 
-export async function syncCatalog(
-  options: { force?: boolean } = {},
-): Promise<SeedResult> {
-  const existingCount = await db.words.count()
-  if (!options.force && existingCount > 0) {
-    await stampRevision()
-    return {
-      seeded: false,
-      wordCount: existingCount,
-    }
-  }
-
-  const { a1Words } = await import('../data/a1')
-  const keepIds = new Set(a1Words.map((word) => word.id))
-
-  await db.words.clear()
-  await writeInChunks(a1Words, (chunk) => db.words.bulkPut(chunk))
-
+async function ensureCoreDeck(): Promise<void> {
   const deck = await db.decks.get(A1_CORE_DECK_ID)
   if (!deck) {
     await db.decks.add({
@@ -78,13 +64,73 @@ export async function syncCatalog(
       cefr: 'B1',
       description: '当前词表：你选定的单词，含变形和例句。',
     })
-  } else {
-    await db.decks.update(A1_CORE_DECK_ID, {
-      name: '万词计划',
-      cefr: 'B1',
-      description: '当前词表：你选定的单词，含变形和例句。',
-    })
+    return
   }
+  await db.decks.update(A1_CORE_DECK_ID, {
+    name: '万词计划',
+    cefr: 'B1',
+    description: '当前词表：你选定的单词，含变形和例句。',
+  })
+}
+
+async function appendMissingWords(): Promise<SeedResult> {
+  const { a1Words } = await import('../data/a1')
+  const existingIds = new Set(await db.words.toCollection().primaryKeys())
+  const missing = a1Words.filter((word) => !existingIds.has(word.id))
+
+  if (missing.length > 0) {
+    await writeInChunks(missing, (chunk) => db.words.bulkPut(chunk))
+    await ensureCoreDeck()
+    const linked = new Set(
+      (
+        await db.deckWords.where('deckId').equals(A1_CORE_DECK_ID).toArray()
+      ).map((row) => row.wordId),
+    )
+    const newLinks = missing
+      .filter((word) => !linked.has(word.id))
+      .map((word) => ({
+        deckId: A1_CORE_DECK_ID,
+        wordId: word.id,
+      }))
+    if (newLinks.length > 0) {
+      await writeInChunks(newLinks, (chunk) => db.deckWords.bulkAdd(chunk))
+    }
+  }
+
+  await stampRevision()
+  return {
+    seeded: missing.length > 0,
+    wordCount: await db.words.count(),
+  }
+}
+
+export async function syncCatalog(
+  options: { force?: boolean } = {},
+): Promise<SeedResult> {
+  const existingCount = await db.words.count()
+  const settings = await db.settings.get('default')
+  const alreadyCurrent =
+    existingCount >= EXPECTED_CATALOG_MIN &&
+    settings?.catalogRevision === CATALOG_REVISION
+
+  if (!options.force && existingCount > 0 && alreadyCurrent) {
+    return {
+      seeded: false,
+      wordCount: existingCount,
+    }
+  }
+
+  if (!options.force && existingCount > 0) {
+    return appendMissingWords()
+  }
+
+  const { a1Words } = await import('../data/a1')
+  const keepIds = new Set(a1Words.map((word) => word.id))
+
+  await db.words.clear()
+  await writeInChunks(a1Words, (chunk) => db.words.bulkPut(chunk))
+
+  await ensureCoreDeck()
 
   await db.deckWords.clear()
   await writeInChunks(
