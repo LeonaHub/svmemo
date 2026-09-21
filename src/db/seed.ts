@@ -15,7 +15,7 @@ const WRITE_CHUNK = 80
 /** 词表大改时改组数即可。已有词库只补缺失，不整表重写。 */
 export const CATALOG_REVISION = `g${FREQUENCY_GROUP_COUNT}`
 
-/** 第 10 组少一张重复的 `spela`，所以比 50×组数少 1。 */
+/** 第 10 组少一张重复的 `spela`，第 148 组少一张重复的 `medborgarskap`。 */
 const EXPECTED_CATALOG_MIN = FREQUENCY_GROUP_SIZE * FREQUENCY_GROUP_COUNT - 20
 
 let inFlight: Promise<SeedResult> | null = null
