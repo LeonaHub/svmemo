@@ -168,6 +168,16 @@ import { list167 } from './list-167'
 import { list168 } from './list-168'
 import { list169 } from './list-169'
 import { list170 } from './list-170'
+import { list171 } from './list-171'
+import { list172 } from './list-172'
+import { list173 } from './list-173'
+import { list174 } from './list-174'
+import { list175 } from './list-175'
+import { list176 } from './list-176'
+import { list177 } from './list-177'
+import { list178 } from './list-178'
+import { list179 } from './list-179'
+import { list180 } from './list-180'
 import type { Word } from '../../types/word'
 
 export const frequencyLists: Word[] = [
@@ -341,4 +351,14 @@ export const frequencyLists: Word[] = [
   ...list168,
   ...list169,
   ...list170,
+  ...list171,
+  ...list172,
+  ...list173,
+  ...list174,
+  ...list175,
+  ...list176,
+  ...list177,
+  ...list178,
+  ...list179,
+  ...list180,
 ]
